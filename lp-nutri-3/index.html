@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Nutricionista Esportiva | Performance e Saúde</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===============================
+         GOOGLE FONT
+         Fonte mais firme e direta
+    ================================ -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- ===============================
+         CSS EMBUTIDO – MOBILE FIRST
+         Paleta energética controlada
+    ================================ -->
+    <style>
+        :root {
+            --verde-escuro: #1f5e53;
+            --verde-energia: #2f8f6b;
+            --cinza-claro: #f4f6f6;
+            --off-white: #fbfcfc;
+            --texto-principal: #1f2d2a;
+            --texto-secundario: #5f6f6a;
+            --borda-firme: #d3ddda;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--off-white);
+            color: var(--texto-principal);
+            line-height: 1.65;
+        }
+
+        /* ===============================
+           CONTAINER MOBILE-FIRST
+        ================================ */
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 56px 0;
+        }
+
+        h1 {
+            font-size: 2.1rem;
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+
+        h2 {
+            font-size: 1.45rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1rem;
+            color: var(--texto-secundario);
+            margin-bottom: 14px;
+        }
+
+        /* ===============================
+           BOTÃO WHATSAPP – CTA FIRME
+        ================================ */
+        .btn-whatsapp {
+            display: block;
+            width: 100%;
+            background-color: var(--verde-escuro);
+            color: #ffffff;
+            text-align: center;
+            padding: 18px;
+            border-radius: 10px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            text-decoration: none;
+            margin-top: 16px;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: var(--verde-energia);
+        }
+
+        .microtexto {
+            font-size: 0.85rem;
+            color: var(--texto-secundario);
+            margin-top: 8px;
+            text-align: center;
+        }
+
+        /* ===============================
+           HERO ENERGÉTICO
+        ================================ */
+        .hero {
+            background: linear-gradient(135deg, var(--verde-escuro), var(--verde-energia));
+            color: #ffffff;
+        }
+
+        .hero h1,
+        .hero p {
+            color: #ffffff;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 240px;
+            background-color: rgba(255,255,255,0.15);
+            border-radius: 14px;
+            margin: 24px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            color: #e6f2ef;
+        }
+
+        /* ===============================
+           BLOCOS OBJETIVOS
+        ================================ */
+        .cards {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border: 1px solid var(--borda-firme);
+            border-radius: 14px;
+            padding: 22px;
+            font-size: 0.95rem;
+            color: var(--texto-secundario);
+        }
+
+        /* ===============================
+           FUNDO CINZA CLARO
+        ================================ */
+        .bg-claro {
+            background-color: var(--cinza-claro);
+        }
+
+        /* ===============================
+           CTA FINAL
+        ================================ */
+        .cta-final {
+            background-color: var(--verde-escuro);
+            text-align: center;
+        }
+
+        .cta-final h2,
+        .cta-final p {
+            color: #ffffff;
+        }
+
+        .cta-final .btn-whatsapp {
+            background-color: #ffffff;
+            color: var(--verde-escuro);
+        }
+
+        /* ===============================
+           DESKTOP (ADAPTAÇÃO)
+        ================================ */
+        @media (min-width: 900px) {
+            .container {
+                max-width: 1100px;
+            }
+
+            .hero-grid {
+                display: grid;
+                grid-template-columns: 1.1fr 0.9fr;
+                gap: 60px;
+                align-items: center;
+            }
+
+            h1 {
+                font-size: 2.6rem;
+            }
+
+            .btn-whatsapp {
+                width: auto;
+                display: inline-block;
+                padding: 16px 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===============================
+         HERO ENERGÉTICO
+    ================================ -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div>
+                <h1>Nutrição para evoluir no treino e no desempenho</h1>
+
+                <p>
+                    Sou <strong>Ricardo Almeida</strong>, nutricionista esportivo.
+                    Trabalho com atletas e praticantes de atividade física
+                    que buscam melhorar performance com responsabilidade.
+                </p>
+
+                <a href="https://wa.me/5500000000000" target="_blank" class="btn-whatsapp">
+                    Falar com a nutricionista
+                </a>
+
+                <div class="microtexto">
+                    Acompanhamento profissional e responsável
+                </div>
+            </div>
+
+            <!-- PLACEHOLDER IMAGEM ESPORTIVA -->
+            <!-- Substituir por imagem com sensação de ação / treino -->
+            <div class="hero-image">
+                Imagem esportiva / Foto da nutricionista
+            </div>
+        </div>
+    </section>
+
+    <!-- ===============================
+         BENEFÍCIOS
+    ================================ -->
+    <section>
+        <div class="container">
+            <h2>Benefícios do acompanhamento esportivo</h2>
+
+            <div class="cards">
+                <div class="card">Mais energia e rendimento nos treinos</div>
+                <div class="card">Melhor recuperação muscular</div>
+                <div class="card">Apoio nutricional alinhado ao seu objetivo</div>
+                <div class="card">Consistência sem extremos</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===============================
+         COMO A NUTRIÇÃO APOIA
+    ================================ -->
+    <section class="bg-claro">
+        <div class="container">
+            <h2>Como a nutrição apoia o desempenho</h2>
+
+            <p>
+                A alimentação correta ajuda a sustentar treinos,
+                melhorar a recuperação e favorecer a composição corporal
+                de forma saudável.
+            </p>
+
+            <p>
+                O foco está em estratégia, constância e acompanhamento,
+                não em soluções rápidas.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===============================
+         SOBRE
+    ================================ -->
+    <section>
+        <div class="container">
+            <h2>Sobre a nutricionista</h2>
+
+            <p>
+                Sou nutricionista com atuação em nutrição esportiva,
+                acompanhando pessoas fisicamente ativas em diferentes níveis.
+            </p>
+
+            <p>
+                O trabalho é baseado em ciência, planejamento
+                e acompanhamento contínuo.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===============================
+         FORMAÇÃO
+    ================================ -->
+    <section class="bg-claro">
+        <div class="container">
+            <h2>Formação e especializações</h2>
+
+            <p>Graduação em Nutrição – Universidade Anhembi Morumbi</p>
+            <p>Registro profissional – CRN 3-98765</p>
+            <p>Especialização em Nutrição Esportiva e Performance</p>
+        </div>
+    </section>
+
+    <!-- ===============================
+         PARA QUEM É
+    ================================ -->
+    <section>
+        <div class="container">
+            <h2>Para quem é o atendimento</h2>
+
+            <div class="cards">
+                <div class="card">Praticantes de musculação e treinos funcionais</div>
+                <div class="card">Atletas amadores</div>
+                <div class="card">Pessoas fisicamente ativas</div>
+                <div class="card">Quem busca melhorar desempenho com saúde</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===============================
+         DIFERENCIAIS
+    ================================ -->
+    <section class="bg-claro">
+        <div class="container">
+            <h2>Diferenciais</h2>
+
+            <div class="cards">
+                <div class="card">Acompanhamento individualizado</div>
+                <div class="card">Planejamento alinhado ao treino</div>
+                <div class="card">Foco em saúde e performance</div>
+                <div class="card">Sem promessas irreais</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===============================
+         CTA FINAL
+    ================================ -->
+    <section class="cta-final">
+        <div class="container">
+            <h2>Vamos alinhar sua nutrição ao seu treino</h2>
+
+            <p>
+                Se você busca melhorar desempenho com orientação profissional,
+                estou à disposição para conversar.
+            </p>
+
+            <a href="https://wa.me/5500000000000" target="_blank" class="btn-whatsapp">
+                Falar com a nutricionista
+            </a>
+
+            <div class="microtexto">
+                Acompanhamento profissional e responsável
+            </div>
+
+            <!-- PLACEHOLDER IMAGEM FINAL -->
+            <!-- Substituir por imagem esportiva de apoio -->
+        </div>
+    </section>
+
+</body>
+</html>

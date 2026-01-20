@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Nutricionista Comportamental | Acompanhamento Acolhedor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===============================
+         GOOGLE FONT
+         Fonte suave e humana
+    ================================ -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- ===============================
+         CSS EMBUTIDO – MOBILE FIRST
+         Paleta acolhedora
+    ================================ -->
+    <style>
+        :root {
+            --verde-suave: #7fa8a0;
+            --verde-claro: #f2f7f5;
+            --bege: #f7f3ef;
+            --off-white: #fcfdfc;
+            --texto-principal: #2a3a38;
+            --texto-secundario: #5f6f6a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--off-white);
+            color: var(--texto-principal);
+            line-height: 1.75;
+        }
+
+        /* ===============================
+           CONTAINER MOBILE-FIRST
+        ================================ */
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 22px;
+        }
+
+        section {
+            padding: 56px 0;
+        }
+
+        h1 {
+            font-size: 1.9rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        h2 {
+            font-size: 1.45rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1rem;
+            color: var(--texto-secundario);
+            margin-bottom: 16px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            margin-bottom: 12px;
+            color: var(--texto-secundario);
+        }
+
+        /* ===============================
+           BOTÃO WHATSAPP – SUAVE
+        ================================ */
+        .btn-whatsapp {
+            display: block;
+            width: 100%;
+            background-color: var(--verde-suave);
+            color: #ffffff;
+            text-align: center;
+            padding: 18px;
+            border-radius: 12px;
+            font-size: 1.05rem;
+            font-weight: 500;
+            text-decoration: none;
+            margin-top: 18px;
+        }
+
+        .btn-whatsapp:hover {
+            opacity: 0.9;
+        }
+
+        .microtexto {
+            font-size: 0.85rem;
+            color: var(--texto-secundario);
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        /* ===============================
+           HERO ACOLHEDOR
+        ================================ */
+        .hero {
+            background-color: var(--bege);
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 240px;
+            background-color: #e6ded7;
+            border-radius: 16px;
+            margin-bottom: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #8a7f76;
+            font-size: 0.9rem;
+        }
+
+        /* ===============================
+           BLOCOS SUAVES (SEM BORDA)
+        ================================ */
+        .blocos {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .bloco {
+            background-color: var(--verde-claro);
+            padding: 22px;
+            border-radius: 16px;
+            color: var(--texto-secundario);
+        }
+
+        /* ===============================
+           FUNDO ALTERNADO
+        ================================ */
+        .bg-suave {
+            background-color: var(--verde-claro);
+        }
+
+        /* ===============================
+           CTA FINAL
+        ================================ */
+        .cta-final {
+            background-color: var(--bege);
+            text-align: center;
+        }
+
+        /* ===============================
+           DESKTOP (ADAPTAÇÃO LEVE)
+        ================================ */
+        @media (min-width: 900px) {
+            .container {
+                max-width: 1100px;
+            }
+
+            .hero-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 60px;
+                align-items: center;
+            }
+
+            h1 {
+                font-size: 2.4rem;
+            }
+
+            .btn-whatsapp {
+                width: auto;
+                display: inline-block;
+                padding: 16px 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===============================
+         HERO ACOLHEDOR
+    ================================ -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <!-- PLACEHOLDER IMAGEM -->
+            <!-- Substituir por imagem acolhedora ou foto da nutricionista -->
+            <div class="hero-image">
+                Imagem acolhedora / Foto da nutricionista
+            </div>
+
+            <div>
+                <h1>Nutrição sem culpa, sem pressão e com mais cuidado</h1>
+
+                <p>
+                    Sou <strong>Laura Mendes</strong>, nutricionista comportamental.
+                    Acompanho pessoas que desejam construir uma relação mais tranquila
+                    e respeitosa com a comida.
+                </p>
+
+                <p>
+                    Aqui, o processo acontece com escuta, constância e sem julgamentos.
+                    Um passo de cada vez.
+                </p>
+
+                <a href="https://wa.me/5500000000000" target="_blank" class="btn-whatsapp">
+                    Conversar pelo WhatsApp
+                </a>
+
+                <div class="microtexto">
+                    Atendimento respeitoso e sem julgamentos
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===============================
+         PARA QUEM É
+    ================================ -->
+    <section>
+        <div class="container">
+            <h2>Para quem é o acompanhamento</h2>
+
+            <ul>
+                <li>Para quem se sente cansado(a) de dietas restritivas</li>
+                <li>Para quem deseja melhorar a relação com a comida</li>
+                <li>Para quem convive com culpa ou ansiedade ao se alimentar</li>
+                <li>Para quem busca um processo mais humano e possível</li>
+                <li>Para quem valoriza acompanhamento contínuo</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ===============================
+         COMO FUNCIONA
+    ================================ -->
+    <section class="bg-suave">
+        <div class="container">
+            <h2>Como funciona o processo nutricional</h2>
+
+            <div class="blocos">
+                <div class="bloco">Escuta atenta e acolhimento da sua história alimentar</div>
+                <div class="bloco">Construção de objetivos realistas e individualizados</div>
+                <div class="bloco">Orientações alimentares flexíveis e possíveis</div>
+                <div class="bloco">Acompanhamento contínuo, sem cobranças</div>
+                <div class="bloco">Ajustes ao longo do tempo, respeitando seu ritmo</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===============================
+         SOBRE A NUTRICIONISTA
+    ================================ -->
+    <section>
+        <div class="container">
+            <h2>Sobre a nutricionista</h2>
+
+            <p>
+                Sou nutricionista clínica com formação em nutrição comportamental.
+                Acredito que a alimentação não deve ser fonte de medo, culpa ou controle excessivo.
+            </p>
+
+            <p>
+                Meu trabalho é ajudar você a se reconectar com a comida de forma mais consciente,
+                respeitando o corpo, a rotina e o momento de vida.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===============================
+         FORMAÇÃO
+    ================================ -->
+    <section class="bg-suave">
+        <div class="container">
+            <h2>Formação e especializações</h2>
+
+            <ul>
+                <li>Graduação em Nutrição – Universidade Presbiteriana Mackenzie</li>
+                <li>Registro profissional – CRN 3-45678</li>
+                <li>Especialização em Nutrição Comportamental</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ===============================
+         EXPERIÊNCIA
+    ================================ -->
+    <section>
+        <div class="container">
+            <h2>Experiência e resultados</h2>
+
+            <p>
+                Mais de 250 pacientes acompanhados, com foco em melhorar a relação com a comida
+                e promover mudanças sustentáveis ao longo do tempo.
+            </p>
+
+            <p>
+                O processo respeita o ritmo individual e prioriza constância, não perfeição.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===============================
+         DIFERENCIAIS
+    ================================ -->
+    <section class="bg-suave">
+        <div class="container">
+            <h2>Diferenciais do atendimento</h2>
+
+            <div class="blocos">
+                <div class="bloco">Atendimento humano e acolhedor</div>
+                <div class="bloco">Sem dietas restritivas ou regras rígidas</div>
+                <div class="bloco">Foco na relação com a comida</div>
+                <div class="bloco">Processo respeitoso e sem julgamentos</div>
+                <div class="bloco">Acompanhamento contínuo</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===============================
+         CTA FINAL
+    ================================ -->
+    <section class="cta-final">
+        <div class="container">
+            <h2>Podemos conversar com calma</h2>
+
+            <p>
+                Se você sente que precisa de um acompanhamento mais leve,
+                humano e possível, estou aqui para te ouvir.
+            </p>
+
+            <a href="https://wa.me/5500000000000" target="_blank" class="btn-whatsapp">
+                Conversar pelo WhatsApp
+            </a>
+
+            <div class="microtexto">
+                Atendimento respeitoso e sem julgamentos
+            </div>
+
+            <!-- PLACEHOLDER IMAGEM FINAL -->
+            <!-- Substituir por imagem suave de apoio emocional -->
+        </div>
+    </section>
+
+</body>
+</html>

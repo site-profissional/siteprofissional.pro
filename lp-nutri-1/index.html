@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Nutricionista Clínica | Atendimento Personalizado</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===============================
+         GOOGLE FONT
+         Pode trocar a fonte aqui
+    ================================ -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- ===============================
+         CSS EMBUTIDO – MOBILE FIRST
+         Alterar cores nas variáveis
+    ================================ -->
+    <style>
+        :root {
+            --verde-principal: #2f8f6b;
+            --verde-escuro: #256e54;
+            --verde-claro: #eef7f3;
+            --off-white: #fafcfc;
+            --cinza-texto: #5f6f6a;
+            --texto-principal: #1f2d2a;
+            --borda-suave: #dbe7e2;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--off-white);
+            color: var(--texto-principal);
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 680px; /* Mobile-first */
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 48px 0;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1rem;
+            color: var(--cinza-texto);
+            margin-bottom: 16px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 12px;
+            color: var(--cinza-texto);
+        }
+
+        ul li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--verde-principal);
+            font-weight: bold;
+        }
+
+        /* ===============================
+           BOTÃO WHATSAPP
+        ================================ */
+        .btn-whatsapp {
+            display: block;
+            width: 100%;
+            background-color: var(--verde-principal);
+            color: #ffffff;
+            text-align: center;
+            padding: 18px;
+            border-radius: 10px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            text-decoration: none;
+            margin-top: 16px;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: var(--verde-escuro);
+        }
+
+        .microtexto {
+            font-size: 0.85rem;
+            color: var(--cinza-texto);
+            margin-top: 8px;
+            text-align: center;
+        }
+
+        /* ===============================
+           HERO
+        ================================ */
+        .hero {
+            background-color: #ffffff;
+        }
+
+        .hero strong {
+            color: var(--texto-principal);
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 220px;
+            background-color: #ddebe6;
+            border-radius: 12px;
+            margin-top: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #7c928a;
+            font-size: 0.9rem;
+        }
+
+        /* ===============================
+           SELOS DE AUTORIDADE
+        ================================ */
+        .selos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .selo {
+            background-color: var(--verde-claro);
+            padding: 10px 14px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            color: var(--texto-principal);
+        }
+
+        /* ===============================
+           CARDS
+        ================================ */
+        .cards {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border: 1px solid var(--borda-suave);
+            border-radius: 14px;
+            padding: 20px;
+            font-size: 0.95rem;
+            color: var(--cinza-texto);
+        }
+
+        /* ===============================
+           FUNDO SUAVE
+        ================================ */
+        .bg-suave {
+            background-color: var(--verde-claro);
+        }
+
+        /* ===============================
+           CTA FINAL
+        ================================ */
+        .cta-final {
+            background-color: var(--verde-principal);
+            text-align: center;
+        }
+
+        .cta-final h2,
+        .cta-final p {
+            color: #ffffff;
+        }
+
+        .cta-final .btn-whatsapp {
+            background-color: #ffffff;
+            color: var(--verde-principal);
+        }
+
+        /* ===============================
+           DESKTOP (ADAPTAÇÃO)
+        ================================ */
+        @media (min-width: 900px) {
+            .container {
+                max-width: 1100px;
+            }
+
+            .hero-grid {
+                display: grid;
+                grid-template-columns: 1.1fr 0.9fr;
+                gap: 60px;
+                align-items: center;
+            }
+
+            h1 {
+                font-size: 2.6rem;
+            }
+
+            .btn-whatsapp {
+                width: auto;
+                display: inline-block;
+                padding: 16px 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===============================
+         HERO
+    ================================ -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div>
+                <h1>Nutricionista Clínica<br>Mariana Alves</h1>
+
+                <p><strong>Atendimento nutricional individualizado para promover saúde, equilíbrio e qualidade de vida.</strong></p>
+
+                <p>
+                    Acompanhamento profissional baseado em ciência, respeito à sua rotina
+                    e construção de hábitos alimentares sustentáveis.
+                </p>
+
+                <!-- ALTERAR LINK DO WHATSAPP -->
+                <a href="https://wa.me/5500000000000" target="_blank" class="btn-whatsapp">
+                    👉 Agendar atendimento pelo WhatsApp
+                </a>
+
+                <div class="microtexto">
+                    Atendimento ético e sem compromisso inicial
+                </div>
+
+                <div class="selos">
+                    <div class="selo">CRN 3-12345</div>
+                    <div class="selo">Atendimento presencial e online</div>
+                    <div class="selo">+300 pacientes acompanhados</div>
+                </div>
+            </div>
+
+            <!-- PLACEHOLDER FOTO PROFISSIONAL -->
+            <!-- Substituir por <img src="foto.jpg"> -->
+            <div class="hero-image">
+                Foto da nutricionista (substituir)
+            </div>
+        </div>
+    </section>
+
+    <!-- ===============================
+         SOBRE
+    ================================ -->
+    <section>
+        <div class="container">
+            <h2>Sobre a nutricionista</h2>
+
+            <p>
+                Sou nutricionista clínica, formada pela Universidade São Camilo, com atuação
+                focada em promover uma relação saudável com a alimentação.
+            </p>
+
+            <p>
+                Meu trabalho é baseado em escuta, orientação clara e acompanhamento contínuo,
+                respeitando a individualidade e os objetivos de cada paciente.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===============================
+         FORMAÇÃO
+    ================================ -->
+    <section class="bg-suave">
+        <div class="container">
+            <h2>Formação e especializações</h2>
+
+            <ul>
+                <li>Graduação em Nutrição – Universidade São Camilo</li>
+                <li>Registro profissional – CRN 3-12345</li>
+                <li>Cursos em Nutrição Clínica e Comportamento Alimentar</li>
+            </ul>
+
+            <p>Atendimento presencial e/ou online.</p>
+        </div>
+    </section>
+
+    <!-- ===============================
+         COMO FUNCIONA
+    ================================ -->
+    <section>
+        <div class="container">
+            <h2>Como funciona o atendimento</h2>
+
+            <div class="cards">
+                <div class="card">Avaliação nutricional completa e individual</div>
+                <div class="card">Definição de objetivos alinhados à sua rotina</div>
+                <div class="card">Plano alimentar personalizado</div>
+                <div class="card">Orientações práticas para o dia a dia</div>
+                <div class="card">Acompanhamento e ajustes conforme evolução</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===============================
+         ÁREAS DE ATUAÇÃO
+    ================================ -->
+    <section class="bg-suave">
+        <div class="container">
+            <h2>Áreas de atuação</h2>
+
+            <ul>
+                <li>Reeducação alimentar</li>
+                <li>Emagrecimento saudável</li>
+                <li>Manutenção de peso</li>
+                <li>Qualidade de vida</li>
+                <li>Organização da rotina alimentar</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ===============================
+         EXPERIÊNCIA
+    ================================ -->
+    <section>
+        <div class="container">
+            <h2>Experiência e resultados</h2>
+
+            <p>
+                Mais de 300 pacientes acompanhados, com foco na melhoria da saúde,
+                dos hábitos alimentares e da relação com a comida.
+            </p>
+
+            <p>
+                O objetivo é construir resultados consistentes e sustentáveis a longo prazo.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===============================
+         DIFERENCIAIS
+    ================================ -->
+    <section class="bg-suave">
+        <div class="container">
+            <h2>Diferenciais do atendimento</h2>
+
+            <div class="cards">
+                <div class="card">Atendimento humanizado e individual</div>
+                <div class="card">Planos alimentares realistas e flexíveis</div>
+                <div class="card">Comunicação clara e acessível</div>
+                <div class="card">Foco em saúde e bem-estar</div>
+                <div class="card">Acompanhamento profissional contínuo</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===============================
+         CTA FINAL
+    ================================ -->
+    <section class="cta-final">
+        <div class="container">
+            <h2>Chamada final para ação</h2>
+
+            <p>
+                Se você busca um acompanhamento nutricional responsável,
+                ético e alinhado à sua rotina, entre em contato.
+            </p>
+
+            <a href="https://wa.me/5500000000000" target="_blank" class="btn-whatsapp">
+                👉 Falar comigo pelo WhatsApp
+            </a>
+
+            <div class="microtexto">
+                Atendimento profissional, humano e sem promessas milagrosas
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

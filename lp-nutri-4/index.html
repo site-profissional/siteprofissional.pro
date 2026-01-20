@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Nutricionista Online | Atendimento Nutricional à Distância</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===============================
+         GOOGLE FONT
+         Fonte moderna e legível
+    ================================ -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- ===============================
+         CSS EMBUTIDO – MOBILE FIRST
+         Paleta focada em praticidade e digital
+    ================================ -->
+    <style>
+        :root {
+            --verde-digital: #3f8f88;
+            --verde-escuro: #32746f;
+            --off-white: #f9fbfb;
+            --cinza-claro: #eef2f2;
+            --texto-principal: #223332;
+            --texto-secundario: #5f6f6a;
+            --borda-suave: #dfe7e6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--off-white);
+            color: var(--texto-principal);
+            line-height: 1.7;
+        }
+
+        /* ===============================
+           CONTAINER MOBILE-FIRST
+        ================================ */
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 56px 0;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+
+        h2 {
+            font-size: 1.45rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1rem;
+            color: var(--texto-secundario);
+            margin-bottom: 16px;
+        }
+
+        /* ===============================
+           BOTÃO WHATSAPP – PRÁTICO
+        ================================ */
+        .btn-whatsapp {
+            display: block;
+            width: 100%;
+            background-color: var(--verde-digital);
+            color: #ffffff;
+            text-align: center;
+            padding: 18px;
+            border-radius: 12px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            text-decoration: none;
+            margin-top: 16px;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: var(--verde-escuro);
+        }
+
+        .microtexto {
+            font-size: 0.85rem;
+            color: var(--texto-secundario);
+            margin-top: 8px;
+            text-align: center;
+        }
+
+        /* ===============================
+           HERO – PRATICIDADE
+        ================================ */
+        .hero {
+            background-color: #ffffff;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 240px;
+            background-color: var(--cinza-claro);
+            border-radius: 18px;
+            margin-bottom: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #7b8c8a;
+            font-size: 0.9rem;
+        }
+
+        /* ===============================
+           CARDS ORGANIZADOS
+        ================================ */
+        .cards {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border: 1px solid var(--borda-suave);
+            border-radius: 16px;
+            padding: 22px;
+            font-size: 0.95rem;
+            color: var(--texto-secundario);
+        }
+
+        /* ===============================
+           FUNDO ALTERNADO
+        ================================ */
+        .bg-suave {
+            background-color: var(--cinza-claro);
+        }
+
+        /* ===============================
+           CTA FINAL
+        ================================ */
+        .cta-final {
+            background-color: var(--verde-digital);
+            text-align: center;
+        }
+
+        .cta-final h2,
+        .cta-final p {
+            color: #ffffff;
+        }
+
+        .cta-final .btn-whatsapp {
+            background-color: #ffffff;
+            color: var(--verde-escuro);
+        }
+
+        /* ===============================
+           DESKTOP (ADAPTAÇÃO)
+        ================================ */
+        @media (min-width: 900px) {
+            .container {
+                max-width: 1100px;
+            }
+
+            .hero-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 60px;
+                align-items: center;
+            }
+
+            h1 {
+                font-size: 2.6rem;
+            }
+
+            .btn-whatsapp {
+                width: auto;
+                display: inline-block;
+                padding: 16px 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===============================
+         HERO – PRATICIDADE E ALCANCE
+    ================================ -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <!-- PLACEHOLDER IMAGEM DIGITAL -->
+            <!-- Substituir por imagem de atendimento online ou foto da nutricionista -->
+            <div class="hero-image">
+                Imagem de atendimento online / Foto da nutricionista
+            </div>
+
+            <div>
+                <h1>Atendimento nutricional online, prático e organizado</h1>
+
+                <p>
+                    Sou <strong>Fernanda Lopes</strong>, nutricionista com foco em atendimento online.
+                    Acompanho pacientes de diferentes lugares com um método estruturado,
+                    próximo e eficiente.
+                </p>
+
+                <p>
+                    O atendimento é pensado para facilitar sua rotina,
+                    sem perder a qualidade e o cuidado profissional.
+                </p>
+
+                <a href="https://wa.me/5500000000000" target="_blank" class="btn-whatsapp">
+                    Agendar atendimento online
+                </a>
+
+                <div class="microtexto">
+                    Atendimento profissional, onde você estiver
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===============================
+         POR QUE FUNCIONA
+    ================================ -->
+    <section>
+        <div class="container">
+            <h2>Por que o atendimento online funciona</h2>
+
+            <div class="cards">
+                <div class="card">Acompanhamento estruturado e contínuo</div>
+                <div class="card">Facilidade para encaixar na rotina</div>
+                <div class="card">Comunicação clara e organizada</div>
+                <div class="card">Resultados construídos com constância</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===============================
+         COMO FUNCIONA
+    ================================ -->
+    <section class="bg-suave">
+        <div class="container">
+            <h2>Como funciona o acompanhamento online</h2>
+
+            <div class="cards">
+                <div class="card">Consulta online por chamada de vídeo</div>
+                <div class="card">Avaliação nutricional individual</div>
+                <div class="card">Plano alimentar enviado de forma digital</div>
+                <div class="card">Acompanhamento e ajustes à distância</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===============================
+         PARA QUEM É
+    ================================ -->
+    <section>
+        <div class="container">
+            <h2>Para quem é o atendimento</h2>
+
+            <div class="cards">
+                <div class="card">Quem busca praticidade e flexibilidade</div>
+                <div class="card">Quem mora longe ou tem rotina corrida</div>
+                <div class="card">Quem prefere acompanhamento à distância</div>
+                <div class="card">Quem valoriza organização e método</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===============================
+         SOBRE
+    ================================ -->
+    <section class="bg-suave">
+        <div class="container">
+            <h2>Sobre a nutricionista</h2>
+
+            <p>
+                Sou nutricionista com experiência em atendimento online,
+                acompanhando pacientes de forma próxima, mesmo à distância.
+            </p>
+
+            <p>
+                Acredito que o cuidado nutricional pode ser eficiente
+                e humano também no formato digital.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===============================
+         FORMAÇÃO
+    ================================ -->
+    <section>
+        <div class="container">
+            <h2>Formação e especializações</h2>
+
+            <p>Graduação em Nutrição – Universidade São Judas Tadeu</p>
+            <p>Registro profissional – CRN 3-78901</p>
+            <p>Experiência em Atendimento Nutricional Online</p>
+        </div>
+    </section>
+
+    <!-- ===============================
+         DIFERENCIAIS
+    ================================ -->
+    <section class="bg-suave">
+        <div class="container">
+            <h2>Diferenciais do atendimento online</h2>
+
+            <div class="cards">
+                <div class="card">Flexibilidade de horários</div>
+                <div class="card">Organização e método estruturado</div>
+                <div class="card">Acompanhamento contínuo à distância</div>
+                <div class="card">Proximidade mesmo no digital</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===============================
+         CTA FINAL
+    ================================ -->
+    <section class="cta-final">
+        <div class="container">
+            <h2>Vamos cuidar da sua alimentação de forma prática</h2>
+
+            <p>
+                Se você busca um acompanhamento nutricional organizado,
+                flexível e profissional, estou à disposição para conversar.
+            </p>
+
+            <a href="https://wa.me/5500000000000" target="_blank" class="btn-whatsapp">
+                Agendar atendimento online
+            </a>
+
+            <div class="microtexto">
+                Atendimento profissional, onde você estiver
+            </div>
+
+            <!-- PLACEHOLDER IMAGEM FINAL -->
+            <!-- Substituir por imagem digital de apoio -->
+        </div>
+    </section>
+
+</body>
+</html>

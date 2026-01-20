@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Nutricionista Premium | Atendimento Personalizado</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===============================
+         GOOGLE FONT
+         Tipografia sofisticada e limpa
+    ================================ -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- ===============================
+         CSS EMBUTIDO – MOBILE FIRST
+         Paleta premium e elegante
+    ================================ -->
+    <style>
+        :root {
+            --verde-profundo: #1f3d36;
+            --verde-secundario: #2f5d52;
+            --off-white: #fafbfa;
+            --bege-claro: #f3f2ef;
+            --texto-principal: #1e2a27;
+            --texto-secundario: #5f6f6a;
+            --detalhe-dourado: #c2a66d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--off-white);
+            color: var(--texto-principal);
+            line-height: 1.8;
+        }
+
+        /* ===============================
+           CONTAINER MOBILE-FIRST
+        ================================ */
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 22px;
+        }
+
+        section {
+            padding: 64px 0;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin-bottom: 18px;
+        }
+
+        h2 {
+            font-size: 1.35rem;
+            font-weight: 600;
+            margin-bottom: 22px;
+            letter-spacing: 0.2px;
+        }
+
+        p {
+            font-size: 1rem;
+            color: var(--texto-secundario);
+            margin-bottom: 18px;
+        }
+
+        /* ===============================
+           BOTÃO WHATSAPP – PREMIUM
+        ================================ */
+        .btn-whatsapp {
+            display: inline-block;
+            background-color: var(--verde-profundo);
+            color: #ffffff;
+            padding: 16px 34px;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            text-decoration: none;
+            margin-top: 24px;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: var(--verde-secundario);
+        }
+
+        .microtexto {
+            font-size: 0.8rem;
+            color: var(--texto-secundario);
+            margin-top: 10px;
+        }
+
+        /* ===============================
+           HERO PREMIUM
+        ================================ */
+        .hero {
+            background-color: var(--bege-claro);
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 260px;
+            background-color: #e4e2dd;
+            border-radius: 20px;
+            margin-bottom: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #8a867f;
+            font-size: 0.9rem;
+        }
+
+        /* ===============================
+           SEÇÕES MINIMALISTAS
+        ================================ */
+        .divider {
+            width: 48px;
+            height: 2px;
+            background-color: var(--detalhe-dourado);
+            margin: 28px 0;
+        }
+
+        /* ===============================
+           CTA FINAL
+        ================================ */
+        .cta-final {
+            background-color: var(--verde-profundo);
+            color: #ffffff;
+        }
+
+        .cta-final h2,
+        .cta-final p {
+            color: #ffffff;
+        }
+
+        .cta-final .btn-whatsapp {
+            background-color: #ffffff;
+            color: var(--verde-profundo);
+        }
+
+        /* ===============================
+           DESKTOP (ADAPTAÇÃO)
+        ================================ */
+        @media (min-width: 900px) {
+            .container {
+                max-width: 1100px;
+            }
+
+            .hero-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 80px;
+                align-items: center;
+            }
+
+            h1 {
+                font-size: 2.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===============================
+         HERO PREMIUM
+    ================================ -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <!-- PLACEHOLDER FOTO PROFISSIONAL -->
+            <!-- Substituir por foto profissional da nutricionista -->
+            <div class="hero-image">
+                Foto profissional da nutricionista
+            </div>
+
+            <div>
+                <h1>Nutrição com critério, experiência e profundidade</h1>
+
+                <p>
+                    Sou <strong>Renata Moreira</strong>, nutricionista com atuação focada
+                    em acompanhamento nutricional individualizado, saúde e bem-estar a longo prazo.
+                </p>
+
+                <a href="https://wa.me/5500000000000" target="_blank" class="btn-whatsapp">
+                    Solicitar atendimento
+                </a>
+
+                <div class="microtexto">
+                    Atendimento individual e personalizado
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===============================
+         AUTORIDADE
+    ================================ -->
+    <section>
+        <div class="container">
+            <h2>Autoridade e posicionamento profissional</h2>
+
+            <div class="divider"></div>
+
+            <p>
+                Mais de 10 anos de atuação clínica, com acompanhamento de
+                pacientes que valorizam cuidado profissional, consistência
+                e decisões baseadas em ciência.
+            </p>
+
+            <p>
+                Mais de 500 pacientes acompanhados ao longo da trajetória.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===============================
+         PARA QUEM É
+    ================================ -->
+    <section>
+        <div class="container">
+            <h2>Para quem é o acompanhamento</h2>
+
+            <div class="divider"></div>
+
+            <p>
+                Pessoas que buscam um acompanhamento nutricional criterioso,
+                com visão de longo prazo e atenção aos detalhes.
+            </p>
+
+            <p>
+                Pacientes que valorizam saúde, equilíbrio e orientação profissional contínua.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===============================
+         MÉTODO
+    ================================ -->
+    <section>
+        <div class="container">
+            <h2>Método de trabalho</h2>
+
+            <div class="divider"></div>
+
+            <p>
+                O trabalho é conduzido por meio de avaliação individual,
+                planejamento nutricional personalizado e acompanhamento contínuo.
+            </p>
+
+            <p>
+                As estratégias são ajustadas ao longo do tempo,
+                respeitando a rotina, o contexto e os objetivos de cada paciente.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===============================
+         FORMAÇÃO
+    ================================ -->
+    <section>
+        <div class="container">
+            <h2>Formação e trajetória profissional</h2>
+
+            <div class="divider"></div>
+
+            <p>Graduação em Nutrição – Universidade de São Paulo</p>
+            <p>Registro profissional – CRN 3-11223</p>
+            <p>Pós-graduação em Nutrição Clínica e Longevidade</p>
+        </div>
+    </section>
+
+    <!-- ===============================
+         DIFERENCIAIS
+    ================================ -->
+    <section>
+        <div class="container">
+            <h2>Diferenciais do atendimento</h2>
+
+            <div class="divider"></div>
+
+            <p>Acompanhamento individual e criterioso</p>
+            <p>Foco em saúde, longevidade e bem-estar</p>
+            <p>Atendimento exclusivo e personalizado</p>
+        </div>
+    </section>
+
+    <!-- ===============================
+         CTA FINAL
+    ================================ -->
+    <section class="cta-final">
+        <div class="container">
+            <h2>Solicitação de atendimento</h2>
+
+            <p>
+                Se você busca um acompanhamento nutricional profissional,
+                estruturado e personalizado, entre em contato.
+            </p>
+
+            <a href="https://wa.me/5500000000000" target="_blank" class="btn-whatsapp">
+                Solicitar atendimento
+            </a>
+
+            <div class="microtexto">
+                Atendimento individual e personalizado
+            </div>
+
+            <!-- PLACEHOLDER IMAGEM FINAL -->
+            <!-- Substituir por imagem discreta e elegante -->
+        </div>
+    </section>
+
+</body>
+</html>

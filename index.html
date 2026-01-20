@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Criação de Sites de Alta Performance e Consultoria Digital | Victor Tech</title>
+    
+    <meta name="description" content="Desenvolvimento de sites profissionais, rápidos e seguros para empresas e autônomos. Estratégia digital focada em conversão e autoridade. Solicite um orçamento.">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sites Profissionais de Alta Performance | Victor Tech">
+    <meta property="og:description" content="Sua presença digital com engenharia de ponta. Sites rápidos, seguros e prontos para vender.">
+    <meta property="og:url" content="https://seusite.com.br/">
+    <meta property="og:image" content="https://seusite.com.br/social-share.jpg"> 
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sites Profissionais de Alta Performance">
+    <meta name="twitter:description" content="Engenharia de software aplicada ao seu negócio.">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Victor Tech",
+      "image": "https://seusite.com.br/logo.png",
+      "description": "Desenvolvimento de sites de alta performance e engenharia web.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ourinhos",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      },
+      "priceRange": "$$"
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* :ROOT (VARIÁVEIS GLOBAIS)
+           Centraliza as cores e espaçamentos. Se precisar mudar a cor da marca,
+           mude apenas aqui e o site todo atualiza. Facilita manutenção futura.
+        */
+        :root {
+            /* Cores Neutras (Fundo e Texto) */
+            --bg-body: #F8FAFC;       /* Cinza muito claro, mais confortável que branco puro */
+            --bg-surface: #FFFFFF;    /* Branco para cartões e destaques */
+            --text-primary: #0F172A;  /* Azul quase preto (Slate 900) - Cor de texto principal */
+            --text-secondary: #475569;/* Cinza médio (Slate 600) - Para parágrafos */
+            --text-light: #94A3B8;    /* Cinza claro - Para detalhes */
+
+            /* Cores da Marca (Brand) */
+            --primary: #2563EB;       /* Azul Royal Moderno (Blue 600) */
+            --primary-dark: #1E40AF;  /* Azul mais escuro para Hover */
+            --accent: #0EA5E9;        /* Azul Ciano para gradientes ou detalhes */
+            
+            /* Cores de Ação */
+            --cta-color: #16A34A;     /* Verde Sucesso (Green 600) - Para botão de WhatsApp */
+            --cta-hover: #15803D;     /* Verde escuro hover */
+
+            /* Estrutura */
+            --container-width: 1200px;
+            --header-height: 80px;
+            --border-radius: 12px;    /* Bordas arredondadas (Tendência UI 2025) */
+            
+            /* Sombras Suaves (Soft Shadows) - Estilo Clean */
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        /* RESET CSS (Zerar padrões do navegador) */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* Garante que padding não aumente a largura dos elementos */
+        }
+
+        /* CONFIGURAÇÃO DE TIPOGRAFIA */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-primary);
+            line-height: 1.6; /* Leitura confortável */
+            overflow-x: hidden; /* Evita rolagem horizontal indesejada */
+            -webkit-font-smoothing: antialiased; /* Fontes mais nítidas no Mac/iOS */
+        }
+
+        /* TIPOGRAFIA ESCALÁVEL */
+        h1, h2, h3, h4 {
+            line-height: 1.2;
+            font-weight: 700;
+            letter-spacing: -0.02em; /* Aproximação leve das letras (Estilo Moderno) */
+        }
+
+        /* CLAMP: O tamanho da fonte se adapta matematicamente entre celular e desktop */
+        h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); }
+        h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
+        p { font-size: 1.125rem; color: var(--text-secondary); }
+
+        /* UTILITÁRIOS DE LAYOUT */
+        .container {
+            width: 100%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        section {
+            padding: 100px 0; /* Espaço generoso entre seções (Respiro visual) */
+        }
+
+        /* COMPONENTE: BOTÃO PRIMÁRIO */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 32px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease; /* Animação suave */
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+            box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.39);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px); /* Efeito de "levantar" */
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.23);
+        }
+
+        .btn-cta {
+            background-color: var(--cta-color);
+            color: white;
+            width: 100%; /* No mobile fica full width */
+            text-align: center;
+        }
+        
+        @media(min-width: 768px) { .btn-cta { width: auto; } }
+
+        .btn-cta:hover { background-color: var(--cta-hover); }
+
+        /* ==========================================================================
+           SEÇÕES ESPECÍFICAS
+           ========================================================================== */
+
+        /* HERO SECTION (Topo) */
+        .hero {
+            min-height: 90vh; /* Ocupa quase a tela toda */
+            display: flex;
+            align-items: center;
+            background: radial-gradient(circle at top right, #E0F2FE 0%, transparent 40%); /* Efeito de luz sutil */
+            padding-top: var(--header-height);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        /* Badge (Etiqueta acima do título) */
+        .badge {
+            display: inline-block;
+            padding: 8px 16px;
+            background: #DBEAFE;
+            color: var(--primary);
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Efeito no texto do H1 */
+        .highlight {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Container abstrato para imagem (Substitui o celular na mão) */
+        .hero-visual {
+            position: relative;
+            height: 400px;
+            background: white;
+            border-radius: 20px;
+            border: 1px solid #E2E8F0;
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        /* Mockup abstrato CSS puro (Representa estrutura/código) */
+        .abstract-code {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            opacity: 0.6;
+        }
+        .code-line { height: 12px; background: #E2E8F0; border-radius: 6px; width: 100%; }
+        .code-line.short { width: 60%; }
+        .code-line.medium { width: 80%; }
+        
+        /* SEÇÃO DE BENEFÍCIOS (GRID) */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsivo automático */
+            gap: 32px;
+        }
+
+        .card {
+            background: var(--bg-surface);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            border: 1px solid #F1F5F9;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: #E2E8F0;
+        }
+
+        .icon-box {
+            width: 56px;
+            height: 56px;
+            background: #EFF6FF;
+            color: var(--primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+        .icon-box svg { width: 28px; height: 28px; }
+
+        /* SEÇÃO TÉCNICA (DARK MODE PARCIAL) */
+        .tech-section {
+            background-color: #0F172A; /* Fundo escuro para contraste */
+            color: white;
+        }
+        .tech-section h2, .tech-section p { color: #E2E8F0; }
+        .tech-section .card {
+            background: rgba(255, 255, 255, 0.05); /* Efeito vidro */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .tech-section .icon-box { background: rgba(255, 255, 255, 0.1); color: #38BDF8; }
+
+        /* PORTFOLIO */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+        
+        .portfolio-item {
+            group: relative;
+        }
+        
+        .browser-mockup {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid #E2E8F0;
+            overflow: hidden;
+            aspect-ratio: 16/9; /* Proporção padrão de tela */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #F8FAFC;
+            position: relative;
+        }
+
+        .browser-header {
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 30px;
+            background: #F1F5F9;
+            border-bottom: 1px solid #E2E8F0;
+            display: flex;
+            align-items: center;
+            padding-left: 12px;
+            gap: 6px;
+        }
+        .dot { width: 8px; height: 8px; border-radius: 50%; background: #CBD5E1; }
+        
+        /* Placeholder de imagem (Instrução visual) */
+        .placeholder-text {
+            color: #94A3B8;
+            font-weight: 500;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: white;
+            border-top: 1px solid #E2E8F0;
+            padding: 60px 0 30px;
+        }
+
+        /* MEDIA QUERIES (Ajustes para Desktop) */
+        @media (min-width: 992px) {
+            .hero-grid {
+                grid-template-columns: 1fr 1fr; /* 2 colunas no desktop */
+            }
+            .hero-visual {
+                height: 550px; /* Mais alto no desktop */
+            }
+        }
+
+        /* ANIMAÇÃO DE ENTRADA (Fade In) */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    </style>
+</head>
+<body>
+
+    <header style="position: fixed; width: 100%; top: 0; z-index: 1000; background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-bottom: 1px solid #f1f5f9;">
+        <div class="container" style="height: var(--header-height); display: flex; align-items: center; justify-content: space-between;">
+            <div style="font-weight: 800; font-size: 1.5rem; color: var(--primary);">Victor<span style="color: var(--text-primary);">Tech</span>.</div>
+            <nav>
+                <a href="https://wa.me/5500000000000" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.9rem;">Falar no WhatsApp</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content fade-in">
+                    <span class="badge">Engenharia Web & Performance</span>
+                    <h1>Não construo apenas sites. Construo <span class="highlight">ativos digitais</span> que vendem.</h1>
+                    <p style="margin: 24px 0 32px;">
+                        Para advogados, médicos e empresas de serviço que cansaram de amadorismo. 
+                        Tenha uma presença digital segura, rápida e otimizada para o Google.
+                    </p>
+                    <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+                        <a href="#contato" class="btn btn-cta">Solicitar Orçamento</a>
+                        <a href="#portfolio" class="btn" style="background: white; border: 1px solid #E2E8F0; color: var(--text-primary);">Ver Projetos</a>
+                    </div>
+                    <p style="font-size: 0.875rem; margin-top: 16px; color: var(--text-light);">
+                        ⚡ Carregamento em menos de 2s • 🔒 Certificado SSL Incluso
+                    </p>
+                </div>
+
+                <div class="hero-visual fade-in">
+                    <div class="abstract-code">
+                        <div class="code-line medium" style="background: var(--primary); opacity: 0.2; height: 20px;"></div>
+                        <div class="code-line"></div>
+                        <div class="code-line short"></div>
+                        <div class="code-line"></div>
+                        <div class="code-line medium"></div>
+                        <div style="margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                            <div class="code-line" style="height: 80px;"></div>
+                            <div class="code-line" style="height: 80px;"></div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </section>
+
+        <section id="problemas">
+            <div class="container">
+                <div style="max-width: 700px; margin: 0 auto; text-align: center; margin-bottom: 60px;" class="fade-in">
+                    <h2>O mercado mudou. O amadorismo custa caro.</h2>
+                    <p>Em 2026, seu cliente pesquisa no Google antes de fechar negócio. O que ele encontra define se você ganha ou perde a venda.</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="card fade-in">
+                        <div class="icon-box">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        </div>
+                        <h3>Invisível no Google</h3>
+                        <p>Sem um site otimizado (SEO), você entrega todos os clientes da sua região para o concorrente que aparece na primeira página.</p>
+                    </div>
+
+                    <div class="card fade-in">
+                        <div class="icon-box">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3>Lentidão afasta clientes</h3>
+                        <p>53% dos usuários abandonam sites que levam mais de 3 segundos para carregar. Site lento é dinheiro jogado fora.</p>
+                    </div>
+
+                    <div class="card fade-in">
+                        <div class="icon-box">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                        </div>
+                        <h3>Passar Credibilidade</h3>
+                        <p>Instagram é importante, mas um site próprio transmite a autoridade institucional que empresas grandes possuem.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tech-section">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 60px;" class="fade-in">
+                    <span style="color: #38BDF8; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Engenharia de Software</span>
+                    <h2 style="margin-top: 10px;">Não é apenas design. É tecnologia.</h2>
+                    <p style="color: #94A3B8;">Desenvolvo com foco em métricas, performance e segurança de dados.</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="card fade-in">
+                        <div class="icon-box">⚡</div>
+                        <h3>Performance Extrema</h3>
+                        <p>Otimização focada nos Core Web Vitals do Google. Código limpo, sem excesso de plugins que travam o site.</p>
+                    </div>
+                    <div class="card fade-in">
+                        <div class="icon-box">📱</div>
+                        <h3>Mobile First Real</h3>
+                        <p>O site é projetado primeiro para celulares (onde estão 90% dos seus clientes) e depois adaptado para desktop.</p>
+                    </div>
+                    <div class="card fade-in">
+                        <div class="icon-box">🛡️</div>
+                        <h3>Segurança & SSL</h3>
+                        <p>Proteção contra ataques básicos, conexão criptografada (cadeado verde) e boas práticas de cibersegurança.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio">
+            <div class="container">
+                <div style="margin-bottom: 50px;" class="fade-in">
+                    <h2>Modelos de Projetos</h2>
+                    <p>Estruturas validadas para converter visitantes em contatos.</p>
+                </div>
+
+                <div class="portfolio-grid">
+                    <div class="portfolio-item fade-in">
+                        <div class="browser-mockup">
+                            <div class="browser-header">
+                                <div class="dot" style="background:#FF5F56"></div>
+                                <div class="dot" style="background:#FFBD2E"></div>
+                                <div class="dot" style="background:#27C93F"></div>
+                            </div>
+                            <div class="placeholder-text">
+                                [Imagem: Site Institucional Advocacia]<br>
+                                <span style="font-size:0.8rem; font-weight:normal;">Design Sóbrio & Autoritário</span>
+                            </div>
+                        </div>
+                        <h3 style="margin-top: 20px;">Escritórios de Advocacia</h3>
+                        <p style="font-size: 0.95rem;">Foco na biografia dos sócios e áreas de atuação.</p>
+                    </div>
+
+                    <div class="portfolio-item fade-in">
+                        <div class="browser-mockup">
+                            <div class="browser-header">
+                                <div class="dot" style="background:#FF5F56"></div>
+                                <div class="dot" style="background:#FFBD2E"></div>
+                                <div class="dot" style="background:#27C93F"></div>
+                            </div>
+                            <div class="placeholder-text">
+                                [Imagem: Landing Page Clínica]<br>
+                                <span style="font-size:0.8rem; font-weight:normal;">Clean, Branco & Tons Suaves</span>
+                            </div>
+                        </div>
+                        <h3 style="margin-top: 20px;">Clínicas e Saúde</h3>
+                        <p style="font-size: 0.95rem;">Foco em agendamento fácil e descrição de procedimentos.</p>
+                    </div>
+
+                    <div class="portfolio-item fade-in">
+                        <div class="browser-mockup">
+                            <div class="browser-header">
+                                <div class="dot" style="background:#FF5F56"></div>
+                                <div class="dot" style="background:#FFBD2E"></div>
+                                <div class="dot" style="background:#27C93F"></div>
+                            </div>
+                            <div class="placeholder-text">
+                                [Imagem: Site Prestador de Serviços]<br>
+                                <span style="font-size:0.8rem; font-weight:normal;">Cores Vibrantes & CTA Forte</span>
+                            </div>
+                        </div>
+                        <h3 style="margin-top: 20px;">Consultoria & Serviços</h3>
+                        <p style="font-size: 0.95rem;">Foco na promessa de valor e captura de leads.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section style="background: #F8FAFC; border-top: 1px solid #E2E8F0;">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 50px;">Como funciona</h2>
+                <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px;">
+                    
+                    <div style="flex: 1; min-width: 250px;" class="fade-in">
+                        <h3 style="color: var(--primary); margin-bottom: 10px;">01. Briefing</h3>
+                        <p>Conversamos para entender seu negócio, público-alvo e objetivos. Defino a estratégia.</p>
+                    </div>
+                    
+                    <div style="flex: 1; min-width: 250px;" class="fade-in">
+                        <h3 style="color: var(--primary); margin-bottom: 10px;">02. Desenvolvimento</h3>
+                        <p>Crio o layout e programo o site com as melhores tecnologias, focado em performance.</p>
+                    </div>
+                    
+                    <div style="flex: 1; min-width: 250px;" class="fade-in">
+                        <h3 style="color: var(--primary); margin-bottom: 10px;">03. Entrega & Otimização</h3>
+                        <p>Site no ar, indexado no Google, configurado com Analytics e pronto para receber clientes.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: white; text-align: center;">
+            <div class="container fade-in">
+                <h2 style="color: white; margin-bottom: 24px;">Pronto para profissionalizar sua imagem?</h2>
+                <p style="color: #BFDBFE; max-width: 600px; margin: 0 auto 40px;">
+                    Pare de perder oportunidades. Tenha uma ferramenta de vendas trabalhando 24h por dia para você.
+                </p>
+                <a href="https://wa.me/5500000000000?text=Olá,%20gostaria%20de%20um%20orçamento%20para%20site." class="btn" style="background: var(--cta-color); color: white; padding: 20px 40px; font-size: 1.2rem;">
+                    Falar com Especialista no WhatsApp
+                </a>
+                <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.8;">Orçamento sem compromisso.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+                <div>
+                    <h4 style="color: var(--text-primary);">Victor Tech</h4>
+                    <p style="font-size: 0.9rem;">Soluções digitais de alta performance.</p>
+                </div>
+                <div>
+                    <p style="font-size: 0.9rem;">&copy; 2026 Victor Tech. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        /**
+         * SCROLL REVEAL (Animação ao rolar a página)
+         * Usa a API 'IntersectionObserver' do navegador.
+         * É muito mais performática do que usar 'window.onscroll'.
+         * Ela detecta quando o elemento entra na tela e adiciona a classe .visible
+         */
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // Seleciona todos os elementos com a classe .fade-in
+            const observerOptions = {
+                root: null, // observa em relação à viewport
+                threshold: 0.1, // dispara quando 10% do elemento estiver visível
+                rootMargin: "0px"
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // Para de observar depois que animou (performance)
+                    }
+                });
+            }, observerOptions);
+
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach(el => observer.observe(el));
+        });
+
+        /**
+         * SMOOTH SCROLL (Rolagem Suave para links internos)
+         * Garante que clicar em "Contato" deslize suavemente até a seção.
+         */
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

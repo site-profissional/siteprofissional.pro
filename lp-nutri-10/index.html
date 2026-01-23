@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutricionista em Londrina e Cambé | Rafaela Nutrific - Emagrecimento Saudável</title>
+    <meta name="description" content="Alcance seus objetivos sem dietas restritivas. Atendimento clínico e reeducação alimentar em Londrina e Cambé. Agende sua consulta com a Dra. Rafaela.">
+    <meta name="keywords" content="Nutricionista Londrina, Nutricionista Cambé, Emagrecimento, Reeducação Alimentar, Dieta Saudável, Rafaela Nutrific">
+    <meta name="author" content="Rafaela Nutrific">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="business.business">
+    <meta property="og:title" content="Nutricionista em Londrina e Cambé | Rafaela Nutrific">
+    <meta property="og:description" content="Nutrição clínica e emagrecimento saudável. Agende sua consulta!">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1000&auto=format&fit=crop">
+    <meta property="og:url" content="https://rafaelanutrific.com.br">
+    <meta property="business:contact_data:street_address" content="Av. Dos Ipês, 1830-1080">
+    <meta property="business:contact_data:locality" content="Cambé">
+    <meta property="business:contact_data:region" content="Paraná">
+    <meta property="business:contact_data:postal_code" content="86180-000">
+    <meta property="business:contact_data:country_name" content="Brasil">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* VARIÁVEIS DE COR - Mude aqui para alterar a identidade visual */
+        :root {
+            /* Cor Principal (Verde Sálvia/Vivo) */
+            --primary-color: #74B72E; 
+            --primary-hover: #5a9620;
+            
+            /* Cores Neutras */
+            --text-color: #333333; /* Cinza Chumbo Suave */
+            --text-light: #666666;
+            --bg-white: #FFFFFF;
+            --bg-offwhite: #F9FBF9; /* Levemente esverdeado para conforto */
+            
+            /* Espaçamentos e Bordas */
+            --border-radius: 12px;
+            --container-width: 1200px;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            
+            /* Transições */
+            --transition: all 0.3s ease;
+        }
+
+        /* Reset Básico */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        html { scroll-behavior: smooth; }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: var(--bg-white);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-color);
+            font-weight: 600;
+        }
+
+        a { text-decoration: none; color: inherit; transition: var(--transition); }
+        ul { list-style: none; }
+        img { max-width: 100%; display: block; }
+
+        /* Utilitários */
+        .container {
+            width: 90%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--bg-white);
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 15px rgba(116, 183, 46, 0.4);
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+        }
+
+        .section-padding { padding: 80px 0; }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .section-title p { color: var(--text-light); }
+
+        /* A. HEADER */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 999;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            backdrop-filter: blur(5px);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .logo span { color: var(--text-color); }
+
+        nav ul { display: flex; gap: 30px; }
+        
+        nav a {
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover { color: var(--primary-color); }
+
+        /* Menu Mobile simplificado */
+        @media (max-width: 768px) {
+            nav ul { display: none; } /* Em produção usaria JS para toggle */
+            .logo { font-size: 1.2rem; }
+        }
+
+        /* B. HERO SECTION */
+        .hero {
+            padding: 160px 0 100px;
+            background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.6)), url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-color);
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .hero { padding-top: 120px; text-align: center; }
+            .hero-content { margin: 0 auto; }
+        }
+
+        /* C. SOBRE A DRA. RAFAELA */
+        .about { background-color: var(--bg-white); }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-img img {
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .about-text h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .about-text p { margin-bottom: 15px; color: var(--text-light); }
+
+        @media (max-width: 768px) {
+            .about-grid { grid-template-columns: 1fr; }
+            .about-img { order: -1; } /* Imagem primeiro no mobile */
+        }
+
+        /* D. SERVIÇOS */
+        .services { background-color: var(--bg-offwhite); }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--bg-white);
+            padding: 40px 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .service-card:hover { transform: translateY(-10px); }
+
+        .icon-box {
+            width: 70px;
+            height: 70px;
+            background-color: rgba(116, 183, 46, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        .icon-box svg {
+            width: 35px;
+            height: 35px;
+            fill: var(--primary-color);
+        }
+
+        .service-card h3 { margin-bottom: 15px; }
+        .service-card p { font-size: 0.95rem; color: var(--text-light); }
+
+        /* E. DEPOIMENTOS */
+        .testimonials { background-color: var(--bg-white); }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background-color: var(--bg-offwhite);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        .client-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .client-info h4 { font-size: 1rem; margin: 0; }
+        .stars { color: #FFD700; font-size: 0.9rem; }
+
+        /* F. LOCALIZAÇÃO */
+        .location { background-color: var(--bg-offwhite); }
+
+        .location-content {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .address-box {
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+
+        .map-container {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+        }
+
+        /* G. FOOTER */
+        footer {
+            background-color: #2C3E50;
+            color: #ecf0f1;
+            padding: 50px 0 20px;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .social-links {
+            margin-bottom: 30px;
+        }
+
+        .social-links a {
+            color: #ecf0f1;
+            margin: 0 10px;
+            font-size: 1.2rem;
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.6);
+        }
+        
+        .copyright a { color: var(--primary-color); }
+
+        /* 5. BOTÃO FLUTUANTE WHATSAPP */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float svg {
+            width: 35px;
+            height: 35px;
+            fill: white;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "name": "Rafaela Nutrific - Nutricionista",
+      "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=1000&auto=format&fit=crop",
+      "@id": "https://rafaelanutrific.com.br",
+      "url": "https://rafaelanutrific.com.br",
+      "telephone": "+5543999998888",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Dos Ipês, 1830-1080",
+        "addressLocality": "Cambé",
+        "addressRegion": "PR",
+        "postalCode": "86180-000",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -23.351672,
+        "longitude": -51.240987
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "08:00",
+        "closes": "18:00"
+      },
+      "priceRange": "$$"
+    }
+    </script>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">Rafaela <span>Nutrific</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#contato">Localização</a></li>
+                    <li><a href="https://wa.me/5543999998888" class="btn" style="padding: 8px 20px; font-size: 0.8rem;">Agendar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Nutrição que transforma sua vida de dentro para fora.</h1>
+                    <p>Emagrecimento definitivo, reeducação alimentar e saúde plena em Londrina e região.</p>
+                    <a href="https://wa.me/5543999998888" class="btn">Agendar Minha Consulta</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding about" id="sobre">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-img">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dra Rafaela Nutricionista" loading="lazy">
+                    </div>
+                    <div class="about-text">
+                        <h2>Olá, sou a Dra. Rafaela</h2>
+                        <p>Acredito que a alimentação deve ser fonte de prazer e saúde, não de culpa. Minha missão é ajudar você a fazer as pazes com a comida através de uma abordagem humanizada e acolhedora.</p>
+                        <p>Especialista em Nutrição Clínica e Emagrecimento, trabalho com estratégias personalizadas que respeitam sua rotina, suas preferências e seu corpo. Nada de dietas malucas; aqui focamos em resultados reais e duradouros.</p>
+                        <p>Atendo presencialmente em Cambé (ao lado de Londrina) com um ambiente preparado para te receber com todo carinho.</p>
+                        <br>
+                        <a href="#servicos" style="color: var(--primary-color); font-weight: 600;">Conheça meus serviços →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding services" id="servicos">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Como posso te ajudar</h2>
+                    <p>Soluções completas para sua saúde e bem-estar</p>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="icon-box">
+                            <svg viewBox="0 0 24 24"><path d="M20.59,10.74C20.59,11.23 20.21,11.58 19.82,12C19.23,12.63 17.5,14.28 17.5,14.28C17.5,14.28 17.56,14.33 17.59,14.39C19.78,14.95 22,17.22 22,19.33C22,20.8 20.8,22 19.33,22C17.22,22 14.95,19.78 14.39,17.59C14.33,17.56 14.28,17.5 14.28,17.5C14.28,17.5 12.63,19.23 12,19.82C11.58,20.21 11.23,20.59 10.74,20.59C7.88,20.59 4.29,17 4.29,14.14C4.29,13.65 4.67,13.3 5.08,12.88C5.67,12.25 7.4,10.6 7.4,10.6C7.4,10.6 7.34,10.55 7.31,10.49C5.12,9.93 2.9,7.66 2.9,5.55C2.9,4.08 4.1,2.88 5.55,2.88C7.66,2.88 9.93,5.12 10.49,7.31C10.55,7.34 10.6,7.4 10.6,7.4C10.6,7.4 12.25,5.67 12.88,5.08C13.3,4.67 13.65,4.29 14.14,4.29C17,4.29 20.59,7.88 20.59,10.74Z"/></svg>
+                        </div>
+                        <h3>Reeducação Alimentar</h3>
+                        <p>Aprenda a fazer escolhas inteligentes sem abrir mão do que você gosta. Um plano alimentar flexível para toda a vida.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="icon-box">
+                            <svg viewBox="0 0 24 24"><path d="M12,3A4,4 0 0,1 16,7C16,7.73 15.81,8.41 15.46,9C16.96,9.28 18.1,10.5 18.1,12V21H5.9V12C5.9,10.5 7.03,9.28 8.54,9C8.19,8.41 8,7.73 8,7A4,4 0 0,1 12,3M12,5A2,2 0 0,0 10,7A2,2 0 0,0 12,9A2,2 0 0,0 14,7A2,2 0 0,0 12,5M8.9,12C8.35,12 7.9,12.45 7.9,13V19H11.9V13C11.9,12.45 11.45,12 10.9,12H8.9M13.1,12C12.55,12 12.1,12.45 12.1,13V19H16.1V13C16.1,12.45 15.65,12 15.1,12H13.1Z"/></svg>
+                        </div>
+                        <h3>Emagrecimento</h3>
+                        <p>Perda de peso sustentável e saudável, focada na redução de gordura corporal e manutenção da massa magra.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="icon-box">
+                            <svg viewBox="0 0 24 24"><path d="M19,3H14.82C14.4,1.84 13.3,1 12,1C10.7,1 9.6,1.84 9.18,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M12,3A1,1 0 0,1 13,4A1,1 0 0,1 12,5A1,1 0 0,1 11,4A1,1 0 0,1 12,3M7,7H17V9H7V7M7,11H17V13H7V11M7,15H14V17H7V15Z"/></svg>
+                        </div>
+                        <h3>Nutrição Clínica</h3>
+                        <p>Tratamento dietoterápico para diabetes, hipertensão, colesterol alto e outras condições. Análise de exames laboratoriais.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding testimonials" id="depoimentos">
+            <div class="container">
+                <div class="section-title">
+                    <h2>O que dizem meus pacientes</h2>
+                    <p>Histórias reais de transformação</p>
+                </div>
+                
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"A Dra. Rafaela mudou minha relação com a comida. Perdi 10kg sem passar fome e hoje me sinto muito mais disposta. Recomendo de olhos fechados!"</p>
+                        <div class="client-info">
+                            <h4>Mariana S.</h4>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Profissional excelente em Cambé! O atendimento é super acolhedor e o plano alimentar foi feito sob medida para minha rotina corrida."</p>
+                        <div class="client-info">
+                            <h4>Carlos Eduardo</h4>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Já tinha tentado de tudo, mas só com a Rafaela consegui manter o peso. A abordagem sem julgamentos faz toda a diferença."</p>
+                        <div class="client-info">
+                            <h4>Fernanda L.</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding location" id="contato">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Visite meu consultório</h2>
+                    <p>Fácil acesso em Cambé, próximo a Londrina</p>
+                </div>
+
+                <div class="location-content">
+                    <p class="address-box">
+                        <strong>Endereço:</strong><br>
+                        Av. Dos Ipês, 1830-1080, Cambé - PR
+                    </p>
+                    
+                    <a href="https://maps.app.goo.gl/CcR7zmmnFYp447J17" target="_blank" class="btn">Traçar Rota no Google Maps</a>
+                </div>
+
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22082.78027784855!2d-51.24681377928972!3d-23.35091204364244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94eb435a57af586d%3A0x23ac11a5c614f971!2sLondrina%2C%20PR!5e1!3m2!1spt-BR!2sbr!4v1769139835745!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <a href="#" class="footer-logo">Rafaela Nutrific</a>
+            
+            <div class="social-links">
+                <a href="https://instagram.com/rafaelanutrific_fake" target="_blank" aria-label="Instagram">Instagram</a>
+                <a href="https://wa.me/5543999998888" target="_blank" aria-label="WhatsApp">WhatsApp</a>
+            </div>
+
+            <p class="copyright">
+                &copy; 2023 Rafaela Nutrific. Todos os direitos reservados.<br>
+                Desenvolvido por <a href="https://siteprofissional.pro/" target="_blank">siteprofissional.pro</a>
+            </p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5543999998888" class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+    </a>
+
+</body>
+</html>

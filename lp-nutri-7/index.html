@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nutrição estratégica para hipertrofia, definição e performance máxima. Transforme seu corpo com estratégia nutricional, não com fome.">
+    <meta name="keywords" content="nutricionista esportivo, dieta para hipertrofia, emagrecimento definitivo, nutrição performance, crossfit nutrição">
+    
+    <!-- Open Graph para WhatsApp -->
+    <meta property="og:title" content="NUTRI PERFORMANCE - Coma para Performar">
+    <meta property="og:description" content="Transforme seu corpo com estratégia nutricional. Hipertrofia, Definição e Performance Máxima.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://source.unsplash.com/1200x630/?gym,athlete">
+    
+    <title>NUTRI PERFORMANCE | Nutrição Esportiva de Alta Performance</title>
+    
+    <!-- Google Fonts: Teko para títulos, Roboto para texto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ========================
+           VARIÁVEIS CSS - ALTERE AQUI AS CORES PRINCIPAIS
+           ======================== */
+        :root {
+            --cor-primaria: #E3FF00;        /* Amarelo Neon - Mude para #FF0055 (vermelho) ou #00E5FF (azul) */
+            --cor-primaria-escura: #b3cc00;
+            --fundo-escuro: #0a0a0a;        /* Preto Fosco */
+            --fundo-cinza: #121212;         /* Cinza Chumbo */
+            --fundo-card: #1a1a1a;
+            --texto-branco: #F5F5F5;
+            --texto-cinza: #B0B0B0;
+            --borda-sutil: #2a2a2a;
+        }
+        
+        /* ========================
+           RESET E BASE
+           ======================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--fundo-escuro);
+            color: var(--texto-branco);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Teko', sans-serif;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
+        /* ========================
+           HEADER STICKY
+           ======================== */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--borda-sutil);
+        }
+        
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-family: 'Teko', sans-serif;
+            font-weight: 700;
+            color: var(--cor-primaria);
+            letter-spacing: 2px;
+        }
+        
+        .btn-header {
+            background: var(--cor-primaria);
+            color: var(--fundo-escuro);
+            padding: 0.7rem 1.8rem;
+            border: none;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-header:hover {
+            background: var(--cor-primaria-escura);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(227, 255, 0, 0.4);
+        }
+        
+        /* ========================
+           HERO SECTION
+           ======================== */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), 
+                        url('https://source.unsplash.com/1920x1080/?crossfit,gym,dark') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 8rem 2rem 4rem;
+            position: relative;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            animation: fadeInUp 1s ease;
+        }
+        
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: var(--texto-branco);
+            text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.8);
+        }
+        
+        .hero h1 span {
+            color: var(--cor-primaria);
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            color: var(--texto-cinza);
+            margin-bottom: 3rem;
+            font-weight: 300;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn-cta {
+            background: var(--cor-primaria);
+            color: var(--fundo-escuro);
+            padding: 1.2rem 3rem;
+            border: none;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 30px rgba(227, 255, 0, 0.5);
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 50px rgba(227, 255, 0, 0.8);
+        }
+        
+        /* ========================
+           CONTAINER PADRÃO
+           ======================== */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+        
+        .section-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--texto-branco);
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: var(--texto-cinza);
+            font-size: 1.2rem;
+            margin-bottom: 4rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* ========================
+           SEÇÃO: PARA QUEM É
+           ======================== */
+        .para-quem {
+            background: var(--fundo-cinza);
+        }
+        
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .card {
+            background: var(--fundo-card);
+            border: 1px solid var(--borda-sutil);
+            border-radius: 8px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--cor-primaria);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: var(--cor-primaria);
+            box-shadow: 0 10px 40px rgba(227, 255, 0, 0.2);
+        }
+        
+        .card-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            stroke: var(--cor-primaria);
+            stroke-width: 1.5;
+        }
+        
+        .card h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--cor-primaria);
+        }
+        
+        .card p {
+            color: var(--texto-cinza);
+            font-size: 1rem;
+        }
+        
+        /* ========================
+           SEÇÃO: METODOLOGIA
+           ======================== */
+        .metodologia {
+            background: var(--fundo-escuro);
+        }
+        
+        .metodologia-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .metodo-item {
+            background: var(--fundo-card);
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--cor-primaria);
+        }
+        
+        .metodo-item h4 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--cor-primaria);
+        }
+        
+        .metodo-item p {
+            color: var(--texto-cinza);
+        }
+        
+        /* ========================
+           SEÇÃO: RESULTADOS
+           ======================== */
+        .resultados {
+            background: var(--fundo-cinza);
+        }
+        
+        .resultados-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .depoimento {
+            background: var(--fundo-card);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--borda-sutil);
+            position: relative;
+        }
+        
+        .depoimento::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-size: 5rem;
+            color: var(--cor-primaria);
+            opacity: 0.3;
+            font-family: serif;
+        }
+        
+        .depoimento-texto {
+            color: var(--texto-cinza);
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+        
+        .depoimento-autor {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .depoimento-foto {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--cor-primaria);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--fundo-escuro);
+        }
+        
+        .depoimento-info h5 {
+            font-size: 1.1rem;
+            color: var(--texto-branco);
+            margin-bottom: 0.2rem;
+        }
+        
+        .depoimento-info p {
+            color: var(--texto-cinza);
+            font-size: 0.9rem;
+        }
+        
+        /* ========================
+           SEÇÃO: LOCALIZAÇÃO
+           ======================== */
+        .localizacao {
+            background: var(--fundo-escuro);
+        }
+        
+        .localizacao-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .localizacao-info h3 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--cor-primaria);
+        }
+        
+        .localizacao-item {
+            margin-bottom: 1.5rem;
+        }
+        
+        .localizacao-item h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .localizacao-item p {
+            color: var(--texto-cinza);
+        }
+        
+        .mapa {
+            width: 100%;
+            height: 400px;
+            border-radius: 8px;
+            border: 1px solid var(--borda-sutil);
+            filter: grayscale(100%) contrast(1.2);
+        }
+        
+        /* ========================
+           CTA FINAL
+           ======================== */
+        .cta-final {
+            background: linear-gradient(135deg, var(--fundo-cinza) 0%, var(--fundo-escuro) 100%);
+            text-align: center;
+            padding: 6rem 2rem;
+        }
+        
+        .cta-final h2 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-final p {
+            font-size: 1.3rem;
+            color: var(--texto-cinza);
+            margin-bottom: 3rem;
+        }
+        
+        /* ========================
+           FOOTER
+           ======================== */
+        footer {
+            background: var(--fundo-escuro);
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid var(--borda-sutil);
+        }
+        
+        footer p {
+            color: var(--texto-cinza);
+            font-size: 0.9rem;
+        }
+        
+        footer a {
+            color: var(--cor-primaria);
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        /* ========================
+           BOTÃO FLUTUANTE WHATSAPP
+           ======================== */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            border-radius: 50%;
+            box-shadow: 0 5px 25px rgba(37, 211, 102, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 999;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 35px rgba(37, 211, 102, 0.7);
+        }
+        
+        .whatsapp-float svg {
+            width: 35px;
+            height: 35px;
+            fill: white;
+        }
+        
+        /* ========================
+           ANIMAÇÕES
+           ======================== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* ========================
+           RESPONSIVIDADE
+           ======================== */
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem;
+            }
+            
+            .logo {
+                font-size: 1.4rem;
+            }
+            
+            .btn-header {
+                padding: 0.5rem 1rem;
+                font-size: 0.8rem;
+            }
+            
+            .hero {
+                padding: 6rem 1rem 3rem;
+            }
+            
+            .container {
+                padding: 3rem 1rem;
+            }
+            
+            .localizacao-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .cards-grid,
+            .resultados-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .whatsapp-float svg {
+                width: 28px;
+                height: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========================
+         HEADER FIXO
+         ======================== -->
+    <header>
+        <nav>
+            <div class="logo">NUTRI PERFORMANCE</div>
+            <a href="#contato" class="btn-header">Agendar Consultoria</a>
+        </nav>
+    </header>
+
+    <!-- ========================
+         HERO SECTION
+         ======================== -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Sua Evolução <span>Começa no Prato</span></h1>
+            <p class="hero-subtitle">
+                Nutrição estratégica para hipertrofia, definição e performance máxima. 
+                Chega de dietas de gaveta.
+            </p>
+            <a href="#contato" class="btn-cta">Quero Atingir Minha Meta</a>
+        </div>
+    </section>
+
+    <!-- ========================
+         SEÇÃO: PARA QUEM É
+         ======================== -->
+    <section class="para-quem">
+        <div class="container">
+            <h2 class="section-title">Para Quem É?</h2>
+            <p class="section-subtitle">
+                Protocolo nutricional personalizado baseado no seu objetivo e metabolismo
+            </p>
+            
+            <div class="cards-grid">
+                <div class="card">
+                    <svg class="card-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <h3>Hipertrofia</h3>
+                    <p>Para quem quer ganhar massa muscular bruta com estratégia de macronutrientes e timing perfeito de refeições.</p>
+                </div>
+                
+                <div class="card">
+                    <svg class="card-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10" stroke="currentColor"/>
+                        <path d="M12 6V12L16 14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <h3>Definição</h3>
+                    <p>Para quem quer secar gordura mantendo massa muscular. Déficit calórico inteligente sem perda de performance.</p>
+                </div>
+                
+                <div class="card">
+                    <svg class="card-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <h3>Performance</h3>
+                    <p>Para atletas de CrossFit, luta e corrida. Otimização energética para treinos de alta intensidade.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================
+         SEÇÃO: METODOLOGIA
+         ======================== -->
+    <section class="metodologia">
+        <div class="container">
+            <h2 class="section-title">A Diferença</h2>
+            <p class="section-subtitle">
+                Sem terrorismo nutricional. Protocolo baseado em ciência e resultado real.
+            </p>
+            
+            <div class="metodologia-content">
+                <div class="metodo-item">
+                    <h4>01. Anamnese Completa</h4>
+                    <p>Avaliação detalhada do seu histórico, rotina de treino, metabolismo e objetivos específicos. Entendemos seu corpo antes de prescrever.</p>
+                </div>
+                
+                <div class="metodo-item">
+                    <h4>02. Bioimpedância</h4>
+                    <p>Análise precisa da composição corporal: percentual de gordura, massa magra, água e metabolismo basal. Dados reais, não achismos.</p>
+                </div>
+                
+                <div class="metodo-item">
+                    <h4>03. Plano Estratégico</h4>
+                    <p>Cardápio personalizado com macronutrientes calculados. Flexibilidade para sua rotina sem abrir mão dos resultados.</p>
+                </div>
+                
+                <div class="metodo-item">
+                    <h4>04. App Exclusivo</h4>
+                    <p>Acompanhamento em tempo real via aplicativo. Ajustes semanais baseados na sua evolução e feedback constante.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================
+         SEÇÃO: RESULTADOS
+         ======================== -->
+    <section class="resultados">
+        <div class="container">
+            <h2 class="section-title">Resultados Reais</h2>
+            <p class="section-subtitle">
+                Protocolo testado e aprovado por atletas e praticantes sérios
+            </p>
+            
+            <div class="resultados-grid">
+                <div class="depoimento">
+                    <p class="depoimento-texto">
+                        "Baixei meu percentual de gordura de 18% para 12% em 8 semanas mantendo toda a força no agachamento. O protocolo é agressivo mas funciona."
+                    </p>
+                    <div class="depoimento-autor">
+                        <div class="depoimento-foto">RC</div>
+                        <div class="depoimento-info">
+                            <h5>Rafael Costa</h5>
+                            <p>CrossFit Athlete</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="depoimento">
+                    <p class="depoimento-texto">
+                        "Ganhei 6kg de massa limpa em 4 meses. Primeira vez que consigo evoluir sem encher de gordura. A estratégia de macros fez toda diferença."
+                    </p>
+                    <div class="depoimento-autor">
+                        <div class="depoimento-foto">MS</div>
+                        <div class="depoimento-info">
+                            <h5>Mariana Silva</h5>
+                            <p>Musculação - Hipertrofia</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="depoimento">
+                    <p class="depoimento-texto">
+                        "Melhorei meu tempo de corrida em 15% ajustando a nutrição pré-treino. Finalmente entendi como comer para performar, não só para emagrecer."
+                    </p>
+                    <div class="depoimento-autor">
+                        <div class="depoimento-foto">TP</div>
+                        <div class="depoimento-info">
+                            <h5>Thiago Prado</h5>
+                            <p>Corredor de Longa Distância</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================
+         SEÇÃO: LOCALIZAÇÃO
+         ======================== -->
+    <section class="localizacao">
+        <div class="container">
+            <h2 class="section-title">Atendimento</h2>
+            <p class="section-subtitle">
+                Consultoria presencial e online para todo Brasil
+            </p>
+            
+            <div class="localizacao-content">
+                <div class="localizacao-info">
+                    <h3>Híbrido & Flexível</h3>
+                    
+                    <div class="localizacao-item">
+                        <h4>Presencial</h4>
+                        <p>Consultório equipado com bioimpedância profissional e espaço de avaliação completo.</p>
+                        <p style="margin-top: 0.5rem; color: var(--texto-cinza);">📍 São Paulo - SP</p>
+                    </div>
+                    
+                    <div class="localizacao-item">
+                        <h4>Online</h4>
+                        <p>Atendimento via videochamada para qualquer lugar do Brasil. Mesma qualidade, maior comodidade.</p>
+                        <p style="margin-top: 0.5rem; color: var(--texto-cinza);">🌎 Todo Brasil</p>
+                    </div>
+                </div>
+                
+                <iframe 
+                    class="mapa"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0978!2d-46.6333824!3d-23.5505199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================
+         CTA FINAL
+         ======================== -->
+    <section class="cta-final" id="contato">
+        <div class="container">
+            <h2>Pronto Para Transformar?</h2>
+            <p>Agende sua consultoria e comece a comer para performar.</p>
+            <a href="https://wa.me/5511999999999?text=Olá!%20Quero%20agendar%20uma%20consultoria%20nutricional" 
+               target="_blank" 
+               class="btn-cta">
+                Agendar Consultoria Agora
+            </a>
+        </div>
+    </section>
+
+    <!-- ========================
+         FOOTER
+         ======================== -->
+    <footer>
+        <p>&copy; 2026 NUTRI PERFORMANCE. Todos os direitos reservados.</p>
+        <p style="margin-top: 0.5rem;">
+            Desenvolvido por <a href="https://siteprofissional.pro" target="_blank">siteprofissional.pro</a>
+        </p>
+    </footer>
+
+    <!-- ========================
+         BOTÃO FLUTUANTE WHATSAPP
+         ======================== -->
+    <a href="https://wa.me/5511999999999?text=Olá!%20Quero%20agendar%20uma%20consultoria%20nutricional" 
+       target="_blank" 
+       class="whatsapp-float"
+       aria-label="WhatsApp">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 0C7.164 0 0 7.164 0 16c0 2.828.736 5.484 2.012 7.796L0 32l8.396-2.004A15.935 15.935 0 0016 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm9.204 22.796c-.396.996-1.968 1.828-2.836 1.932-.732.084-1.668.132-2.696-.168-1.044-.3-2.388-.708-4.104-1.392-3.636-1.452-6.012-5.124-6.192-5.364-.18-.24-1.464-1.944-1.464-3.708s.924-2.628 1.26-2.988c.336-.36.732-.444 1.008-.444.252 0 .504.012.72.012.228 0 .54-.084.84.648.3.732 1.032 2.52 1.128 2.7.096.18.18.42.06.66-.12.24-.192.396-.372.612-.18.216-.36.48-.516.648-.18.192-.

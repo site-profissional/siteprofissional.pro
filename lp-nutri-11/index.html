@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Nutricionista Esportivo | Performance e Emagrecimento Estratégico</title>
+    <meta name="description" content="Nutrição Esportiva de Alta Performance. Protocolos individualizados para hipertrofia, definição e saúde metabólica. Agende sua avaliação presencial ou online.">
+    <meta name="keywords" content="nutricionista esportivo, hipertrofia, emagrecimento, performance, dieta personalizada, saúde metabólica">
+    <meta name="author" content="siteprofissional.pro">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#121212">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Nutrição Esportiva de Alta Performance">
+    <meta property="og:description" content="Estratégias nutricionais baseadas em ciência para resultados reais. Atendimento Online e Presencial.">
+    <meta property="og:url" content="https://seusite.com.br">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/121212/FFD000?text=Nutricao+Performance">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HealthAndBeautyBusiness",
+      "name": "Dr. Nutricionista Performance",
+      "image": "https://via.placeholder.com/1200x630",
+      "telephone": "+5511999999999",
+      "url": "https://seusite.com.br",
+      "priceRange": "$$$",
+      "description": "Nutricionista especializado em nutrição esportiva, emagrecimento e performance.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "São Paulo",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "214"
+      },
+      "sameAs": [
+        "https://instagram.com/seunutri"
+      ]
+    }
+    </script>
+
+    <style>
+        /* 1. VARIÁVEIS DE COR E RESET */
+        :root {
+            /* Paleta Dark Premium */
+            --bg-dark: #121212;        /* Preto Profundo */
+            --bg-card: #1E1E1E;        /* Cinza Chumbo */
+            --bg-light: #F4F4F4;       /* Branco Suave */
+            
+            /* Cor de Ação (Energia) */
+            --accent-color: #FFD000;   /* Amarelo Elétrico */
+            --accent-hover: #E6BC00;
+            
+            /* Texto */
+            --text-primary: #FFFFFF;
+            --text-secondary: #B0B0B0;
+            --text-dark: #121212;
+
+            /* Tipografia */
+            --font-title: 'Oswald', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            
+            /* Espaçamento */
+            --container-width: 1100px;
+            --section-padding: 80px 20px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* 2. TIPOGRAFIA */
+        h1, h2, h3 {
+            font-family: var(--font-title);
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+        }
+        
+        h3 {
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+        }
+
+        /* 3. UTILITÁRIOS E LAYOUT */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: var(--section-padding);
+        }
+
+        /* 4. BOTÕES (CTA) */
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--text-dark);
+            font-family: var(--font-title);
+            font-weight: 700;
+            font-size: 1rem;
+            text-transform: uppercase;
+            padding: 16px 32px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(255, 208, 0, 0.2);
+        }
+
+        .btn:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 208, 0, 0.3);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--accent-color);
+            color: var(--text-dark);
+        }
+
+        /* 5. HEADER */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(18, 18, 18, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-title);
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            letter-spacing: 1px;
+        }
+
+        .social-link {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        
+        .social-link:hover { color: var(--accent-color); }
+
+        /* 6. HERO SECTION (IMPACTO) */
+        .hero {
+            padding-top: 140px; /* Compensa o header fixo */
+            padding-bottom: 80px;
+            background: radial-gradient(circle at top right, rgba(30,30,30,1) 0%, rgba(18,18,18,1) 70%);
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero-badges {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--accent-color);
+            border: 1px solid rgba(255, 208, 0, 0.3);
+        }
+
+        /* 7. GRID DE PÚBLICO ALVO */
+        .audience-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-5px);
+        }
+
+        .icon-box {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 20px;
+            fill: var(--accent-color);
+        }
+
+        /* 8. MÉTODO DE TRABALHO */
+        .method-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .step {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            font-family: var(--font-title);
+            font-size: 3rem;
+            color: rgba(255, 255, 255, 0.1);
+            line-height: 1;
+            font-weight: 700;
+        }
+
+        /* 9. AUTORIDADE */
+        .authority-stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 40px 0;
+            text-align: center;
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        .stat-number {
+            display: block;
+            font-family: var(--font-title);
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            font-weight: 700;
+        }
+
+        /* 10. RODAPÉ */
+        footer {
+            background-color: #000;
+            padding: 60px 0 20px;
+            text-align: center;
+            border-top: 1px solid #222;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 0.9rem;
+        }
+
+        .copyright {
+            margin-top: 40px;
+            font-size: 0.8rem;
+            color: #444;
+        }
+        
+        .copyright a { color: #666; text-decoration: none; }
+        .copyright a:hover { color: var(--accent-color); }
+
+        /* 11. BOTÃO FLUTUANTE */
+        .float-btn {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 9999;
+            animation: pulse 2s infinite;
+        }
+
+        .float-btn svg {
+            width: 32px;
+            height: 32px;
+            fill: white;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { transform: scale(1.1); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        /* MEDIA QUERIES (DESKTOP) */
+        @media (min-width: 768px) {
+            h1 { font-size: 4rem; }
+            .audience-grid { grid-template-columns: repeat(2, 1fr); }
+            .method-steps { flex-direction: row; }
+            .step { flex-direction: column; flex: 1; }
+        }
+        
+        @media (min-width: 1024px) {
+            .audience-grid { grid-template-columns: repeat(4, 1fr); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo">DR. NUTRI <span style="color:var(--accent-color)">SPORT</span></div>
+            <a href="https://instagram.com/" target="_blank" class="social-link">INSTAGRAM</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-badges">
+                <span class="badge">HIPERTROFIA</span>
+                <span class="badge">EMAGRECIMENTO</span>
+                <span class="badge">PERFORMANCE</span>
+            </div>
+            
+            <h1>Nutrição Esportiva para <span class="highlight">Performance</span> e Resultados Reais</h1>
+            
+            <p style="font-size: 1.2rem; max-width: 600px;">
+                Abordagem individualizada, baseada em evidência científica e focada na sua evolução física sustentável. Chega de dietas restritivas sem lógica.
+            </p>
+            
+            <br>
+            <a href="https://wa.me/5511999999999" class="btn">
+                Agendar Avaliação
+            </a>
+            
+            <p style="margin-top: 15px; font-size: 0.9rem; opacity: 0.7;">
+                *Atendimento Presencial e Online
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2>Foco nos seus objetivos</h2>
+            <p>Estratégias nutricionais desenhadas especificamente para:</p>
+
+            <div class="audience-grid">
+                <div class="card">
+                    <svg class="icon-box" viewBox="0 0 24 24">
+                        <path d="M20.57 14.86L22 13.43L20.57 12L17 15.57L8.43 7L12 3.43L10.57 2L9.14 3.43L7.71 2L5.57 4.14L4.14 2.71L2.71 4.14L4.14 5.57L2 7.71L3.43 9.14L2 10.57L3.43 12L7 8.43L15.57 17L12 20.57L13.43 22L14.86 20.57L16.29 22L18.43 19.86L19.86 21.29L21.29 19.86L19.86 18.43L22 16.29L20.57 14.86Z" />
+                    </svg>
+                    <h3>Hipertrofia</h3>
+                    <p>Ganho de massa muscular limpa com estratégias de superávit calórico controlado e timing de nutrientes.</p>
+                </div>
+
+                <div class="card">
+                    <svg class="icon-box" viewBox="0 0 24 24">
+                        <path d="M13,2.05V2.05C17.24,2.58 20.65,5.83 21.68,10H15.11L13,2.05M11,2.05L8.89,10H2.32C3.35,5.83 6.76,2.58 11,2.05M12,14.33C10.74,14.33 9.6,13.88 8.7,13.14L10.32,7.05H13.68L15.3,13.14C14.4,13.88 13.26,14.33 12,14.33M4.22,12H19.78C20.3,13.23 20.35,14.61 19.92,15.88L15.65,11.61L14.73,15.08C15.68,15.7 16.31,16.71 16.45,17.88L12.7,21.63C12.5,21.83 12.25,21.94 12,21.94C11.75,21.94 11.5,21.83 11.3,21.63L7.55,17.88C7.69,16.71 8.32,15.7 9.27,15.08L8.35,11.61L4.08,15.88C3.65,14.61 3.7,13.23 4.22,12Z" />
+                    </svg>
+                    <h3>Performance</h3>
+                    <p>Melhora do rendimento em Crossfit, corrida e esportes de alta intensidade. Mais energia e recuperação.</p>
+                </div>
+
+                <div class="card">
+                    <svg class="icon-box" viewBox="0 0 24 24">
+                        <path d="M17,8C17,10.76 14.76,13 12,13C9.24,13 7,10.76 7,8C7,5.24 9.24,3 12,3C14.76,3 17,5.24 17,8M12,15C16.42,15 20,16.79 20,19V21H4V19C4,16.79 7.58,15 12,15Z" />
+                    </svg>
+                    <h3>Emagrecimento</h3>
+                    <p>Perda de gordura preservando a massa magra. Sem fome excessiva e com adesão facilitada à rotina.</p>
+                </div>
+
+                <div class="card">
+                    <svg class="icon-box" viewBox="0 0 24 24">
+                        <path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z" />
+                    </svg>
+                    <h3>Longevidade</h3>
+                    <p>Melhora de exames bioquímicos, saúde intestinal e qualidade de sono através da modulação nutricional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: #161616;">
+        <div class="container">
+            <h2>Como funciona o acompanhamento</h2>
+            <p>Processo estruturado para garantir sua evolução.</p>
+
+            <div class="method-steps">
+                <div class="step">
+                    <div class="step-number">01.</div>
+                    <div>
+                        <h3>Avaliação Completa</h3>
+                        <p>Anamnese detalhada, análise de exames laboratoriais e avaliação da composição corporal.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">02.</div>
+                    <div>
+                        <h3>Planejamento</h3>
+                        <p>Montagem de um plano alimentar calculado para sua rotina, preferências e objetivos.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">03.</div>
+                    <div>
+                        <h3>Acompanhamento</h3>
+                        <p>Suporte contínuo para ajustes na dieta, dúvidas e monitoramento de resultados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="authority-stats">
+                <div>
+                    <span class="stat-number">+200</span>
+                    <span>Pacientes Atendidos</span>
+                </div>
+                <div>
+                    <span class="stat-number">5.0</span>
+                    <span>★★★★★<br>Avaliação Média</span>
+                </div>
+                <div>
+                    <span class="stat-number">100%</span>
+                    <span>Baseado em Ciência</span>
+                </div>
+            </div>
+            
+            <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+                <h2>Compromisso com o Resultado</h2>
+                <p>
+                    Meu trabalho não é vender dietas de gaveta. É entender a fisiologia do seu corpo e aplicar a bioquímica da nutrição para destravar seus resultados, seja você um atleta de alto nível ou alguém buscando saúde.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: var(--bg-card);">
+        <div class="container">
+            <h2>Sobre o Profissional</h2>
+            <h3>Dr. Nutri Sport</h3>
+            <p>
+                Nutricionista Esportivo (CRN-3 0000) apaixonado pela ciência da performance humana.
+            </p>
+            <ul style="list-style: none; color: var(--text-secondary); margin-bottom: 20px;">
+                <li>✓ Especialista em Fisiologia do Exercício</li>
+                <li>✓ Pós-graduado em Nutrição Esportiva Funcional</li>
+                <li>✓ Formação em Modulação Intestinal</li>
+            </ul>
+            <p>
+                Minha missão é simplificar a nutrição e mostrar que é possível ter um físico estético e performático comendo comida de verdade, sem terrorismo nutricional.
+            </p>
+        </div>
+    </section>
+
+    <section class="section" style="text-align: center;">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Pronto para evoluir seu físico?</h2>
+            <p style="margin-bottom: 40px;">Agende sua consulta agora e comece seu novo protocolo.</p>
+            
+            <a href="https://wa.me/5511999999999" class="btn">
+                Falar com o Nutricionista no WhatsApp
+            </a>
+            
+            <p style="margin-top: 20px; font-size: 0.9rem;">
+                Atendimento Profissional • Presencial e Online
+            </p>
+        </div>
+    </section>
+
+    <a href="https://wa.me/5511999999999" class="float-btn" aria-label="Fale conosco no WhatsApp">
+        <svg viewBox="0 0 24 24">
+            <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.9 7 8.5 7 9.71C7 10.93 7.89 12.1 8 12.27C8.14 12.44 9.76 14.94 12.25 16C12.84 16.25 13.3 16.4 13.66 16.51C14.22 16.69 14.73 16.66 15.14 16.6C15.59 16.53 16.54 16.03 16.73 15.48C16.93 14.93 16.93 14.46 16.87 14.36C16.81 14.26 16.66 14.2 16.36 14.05C16.05 13.9 14.54 13.16 14.26 13.06C13.97 12.96 13.76 12.91 13.56 13.21C13.35 13.51 12.76 14.2 12.58 14.41C12.39 14.63 12.2 14.65 11.9 14.5C11.59 14.35 10.61 14.03 9.44 12.99C8.54 12.19 7.93 11.2 7.74 10.87C7.54 10.54 7.71 10.37 7.87 10.21C8 10.07 8.24 9.83 8.39 9.66C8.55 9.48 8.6 9.35 8.7 9.15C8.8 8.95 8.75 8.78 8.67 8.63C8.6 8.48 8.01 7.03 7.77 6.44C7.53 5.86 7.29 5.94 7.12 5.94C6.96 5.94 6.77 5.93 6.58 5.93C6.38 5.93 6.06 6 5.8 6.29C5.53 6.56 4.78 7.27 4.78 8.71" />
+        </svg>
+    </a>
+
+    <footer>
+        <div class="container">
+            <div class="logo" style="margin-bottom: 20px;">DR. NUTRI <span style="color:var(--accent-color)">SPORT</span></div>
+            
+            <div class="footer-links">
+                <a href="https://instagram.com/" target="_blank">Instagram</a>
+                <a href="https://wa.me/5511999999999" target="_blank">WhatsApp</a>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2024 Nutrição Esportiva. Todos os direitos reservados.</p>
+                <p>Criado por <a href="https://siteprofissional.pro/" target="_blank">siteprofissional.pro</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        console.log("Nutri Sport Landing Page Carregada");
+        console.log("SEO e Schema Markup ativos.");
+    </script>
+</body>
+</html>

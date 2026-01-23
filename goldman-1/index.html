@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO: Title otimizado para busca local -->
+    <title>Goldman Metais Preciosos - Compra e Venda de Ouro em Ourinhos SP | Avaliação 5 Estrelas</title>
+    
+    <!-- SEO: Meta description com palavras-chave locais -->
+    <meta name="description" content="Goldman Metais Preciosos: compra e venda de ouro e prata em Ourinhos SP. Atendimento no Mercadão Municipal, avaliação 5 estrelas no Google. Transparência e confiança em metais preciosos.">
+    
+    <!-- SEO: Keywords relevantes -->
+    <meta name="keywords" content="compra de ouro em Ourinhos, venda de ouro em Ourinhos, ouro Ourinhos SP, metais preciosos Ourinhos, prata Ourinhos, Goldman Metais">
+    
+    <!-- Favicon (ícone genérico, pode ser substituído) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💰</text></svg>">
+
+    <style>
+        /* ============================================
+           RESET E VARIÁVEIS CSS
+           ============================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Paleta de cores: dourado elegante, preto, branco */
+            --cor-dourado: #D4AF37;
+            --cor-dourado-escuro: #B8941F;
+            --cor-preto: #1a1a1a;
+            --cor-grafite: #2d2d2d;
+            --cor-branco: #ffffff;
+            --cor-cinza-claro: #f5f5f5;
+            --cor-texto: #333333;
+            
+            /* Espaçamentos */
+            --espacamento-section: 60px;
+            --espacamento-mobile: 40px;
+            
+            /* Fontes */
+            --font-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            font-family: var(--font-principal);
+            color: var(--cor-texto);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ============================================
+           TIPOGRAFIA SEMÂNTICA
+           ============================================ */
+        h1, h2, h3 {
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            color: var(--cor-preto);
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        /* ============================================
+           CONTAINER RESPONSIVO
+           ============================================ */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ============================================
+           SEÇÃO 1: HERO SECTION
+           ============================================ */
+        .hero {
+            background: linear-gradient(135deg, var(--cor-preto) 0%, var(--cor-grafite) 100%);
+            color: var(--cor-branco);
+            padding: var(--espacamento-mobile) 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Efeito sutil de brilho dourado */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(1.1); opacity: 0.5; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            color: var(--cor-dourado);
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .hero-destaque {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.2);
+            padding: 8px 16px;
+            border-radius: 25px;
+            margin-bottom: 2rem;
+            border: 1px solid var(--cor-dourado);
+        }
+
+        /* ============================================
+           BOTÕES (CTA)
+           ============================================ */
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: var(--cor-branco);
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-whatsapp:hover {
+            background: #20BA5A;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .btn-instagram {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: var(--cor-branco);
+            box-shadow: 0 4px 15px rgba(188, 24, 136, 0.3);
+        }
+
+        .btn-instagram:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(188, 24, 136, 0.4);
+        }
+
+        .btn-secundario {
+            background: transparent;
+            color: var(--cor-dourado);
+            border: 2px solid var(--cor-dourado);
+        }
+
+        .btn-secundario:hover {
+            background: var(--cor-dourado);
+            color: var(--cor-preto);
+            transform: translateY(-2px);
+        }
+
+        /* Ícones nos botões */
+        .btn::before {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .btn-whatsapp::before {
+            content: '📱';
+        }
+
+        .btn-instagram::before {
+            content: '📷';
+        }
+
+        /* ============================================
+           SEÇÕES GERAIS
+           ============================================ */
+        section {
+            padding: var(--espacamento-mobile) 0;
+        }
+
+        .section-light {
+            background: var(--cor-branco);
+        }
+
+        .section-dark {
+            background: var(--cor-cinza-claro);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--cor-dourado);
+            border-radius: 2px;
+        }
+
+        /* ============================================
+           SEÇÃO 2: SOBRE A GOLDMAN
+           ============================================ */
+        .sobre-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .sobre-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        /* ============================================
+           SEÇÃO 3: COMPRA E VENDA
+           ============================================ */
+        .servicos-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-top: 2rem;
+        }
+
+        .servico-card {
+            background: var(--cor-branco);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid var(--cor-dourado);
+        }
+
+        .servico-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .servico-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* ============================================
+           SEÇÃO 4: DIFERENCIAIS
+           ============================================ */
+        .diferenciais-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+            margin-top: 2rem;
+        }
+
+        .diferencial-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            background: var(--cor-branco);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+        }
+
+        .diferencial-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .diferencial-text h3 {
+            color: var(--cor-preto);
+            margin-bottom: 0.5rem;
+        }
+
+        .diferencial-text p {
+            margin: 0;
+            color: #666;
+        }
+
+        /* ============================================
+           SEÇÃO 5: AVALIAÇÃO 5 ESTRELAS
+           ============================================ */
+        .avaliacao-box {
+            background: linear-gradient(135deg, var(--cor-dourado) 0%, var(--cor-dourado-escuro) 100%);
+            color: var(--cor-branco);
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 30px rgba(212, 175, 55, 0.3);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .estrelas {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: 5px;
+        }
+
+        .avaliacao-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .avaliacao-box p {
+            font-size: 1.1rem;
+            margin: 0;
+            opacity: 0.95;
+        }
+
+        /* ============================================
+           SEÇÃO 6: LOCALIZAÇÃO
+           ============================================ */
+        .localizacao-info {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+        }
+
+        .endereco-box {
+            background: var(--cor-branco);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            margin-top: 2rem;
+            border-left: 5px solid var(--cor-dourado);
+        }
+
+        .endereco-box p {
+            margin: 0;
+            font-size: 1.1rem;
+        }
+
+        .endereco-icon {
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+
+        /* ============================================
+           SEÇÃO 7: MAPA DO GOOGLE
+           ============================================ */
+        .mapa-container {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            margin-top: 2rem;
+        }
+
+        .mapa-container iframe {
+            display: block;
+            width: 100%;
+        }
+
+        /* ============================================
+           SEÇÃO 8: CHAMADA PARA CONTATO
+           ============================================ */
+        .contato-cta {
+            background: linear-gradient(135deg, var(--cor-preto) 0%, var(--cor-grafite) 100%);
+            color: var(--cor-branco);
+            text-align: center;
+            padding: var(--espacamento-mobile) 20px;
+        }
+
+        .contato-cta h2 {
+            color: var(--cor-dourado);
+            margin-bottom: 1rem;
+        }
+
+        .contato-cta p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        /* ============================================
+           SEÇÃO 9: RODAPÉ
+           ============================================ */
+        footer {
+            background: var(--cor-preto);
+            color: var(--cor-branco);
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-info {
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-info p {
+            margin: 0.5rem 0;
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 1.5rem 0;
+        }
+
+        .footer-social a {
+            color: var(--cor-dourado);
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            transform: scale(1.2);
+        }
+
+        .footer-creditos {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .footer-creditos a {
+            color: var(--cor-dourado);
+            text-decoration: none;
+            font-weight: 600;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-creditos a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        /* ============================================
+           RESPONSIVIDADE: TABLET E DESKTOP
+           ============================================ */
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 3rem;
+            }
+
+            h2 {
+                font-size: 2.25rem;
+            }
+
+            .hero {
+                padding: 80px 0;
+            }
+
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+
+            .hero p {
+                font-size: 1.25rem;
+            }
+
+            section {
+                padding: var(--espacamento-section) 0;
+            }
+
+            .btn-container {
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .btn {
+                width: auto;
+            }
+
+            .servicos-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .diferenciais-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .diferenciais-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* ============================================
+           ANIMAÇÕES SUAVES
+           ============================================ */
+        @media (prefers-reduced-motion: no-preference) {
+            .servico-card,
+            .diferencial-item {
+                animation: fadeInUp 0.6s ease-out backwards;
+            }
+
+            .servico-card:nth-child(1) { animation-delay: 0.1s; }
+            .servico-card:nth-child(2) { animation-delay: 0.2s; }
+            .diferencial-item:nth-child(1) { animation-delay: 0.1s; }
+            .diferencial-item:nth-child(2) { animation-delay: 0.2s; }
+            .diferencial-item:nth-child(3) { animation-delay: 0.3s; }
+            .diferencial-item:nth-child(4) { animation-delay: 0.4s; }
+
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================
+         SEÇÃO 1: HERO SECTION
+         ============================================ -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <!-- H1 otimizado para SEO local -->
+                <h1>Goldman Metais Preciosos</h1>
+                <p>Compra e Venda de Ouro e Prata com Transparência e Confiança</p>
+                
+                <!-- Destaque para localização (importante para SEO local) -->
+                <div class="hero-destaque">
+                    📍 Atendimento em Ourinhos/SP
+                </div>
+
+                <!-- CTAs principais -->
+                <div class="btn-container">
+                    <a href="https://wa.me/5514997692967" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                        Falar no WhatsApp
+                    </a>
+                    <a href="https://www.instagram.com/goldmanmetais/" class="btn btn-instagram" target="_blank" rel="noopener noreferrer">
+                        Seguir no Instagram
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SEÇÃO 2: SOBRE A GOLDMAN METAIS PRECIOSOS
+         ============================================ -->
+    <section class="section-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Sobre a Goldman Metais Preciosos</h2>
+            </div>
+            <div class="sobre-content">
+                <p>
+                    A <strong>Goldman Metais Preciosos</strong> é referência em <strong>compra e venda de ouro e prata em Ourinhos SP</strong>. Com atendimento personalizado e transparente, oferecemos as melhores condições do mercado para negociação de metais preciosos.
+                </p>
+                <p>
+                    Nossa loja está localizada no <strong>Mercadão Municipal de Ourinhos</strong>, um ponto tradicional e de fácil acesso na cidade. Trabalhamos com total transparência nas avaliações e prezamos pela confiança e satisfação de cada cliente.
+                </p>
+                <p>
+                    Com <strong>avaliação 5 estrelas no Google</strong>, construímos nossa reputação através de negociações justas, atendimento profissional e compromisso com a excelência.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SEÇÃO 3: COMPRA E VENDA DE OURO E PRATA
+         ============================================ -->
+    <section class="section-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossos Serviços</h2>
+            </div>
+            <div class="servicos-grid">
+                <!-- Card: Compra de Ouro -->
+                <div class="servico-card">
+                    <div class="servico-icon">💰</div>
+                    <h3>Compra de Ouro</h3>
+                    <p>
+                        Compramos ouro com avaliação justa e transparente. Joias, moedas, barras e sucata de ouro. Pagamento imediato e seguro em Ourinhos SP.
+                    </p>
+                </div>
+
+                <!-- Card: Venda de Ouro -->
+                <div class="servico-card">
+                    <div class="servico-icon">✨</div>
+                    <h3>Venda de Ouro</h3>
+                    <p>
+                        Comercializamos ouro e prata com certificação e garantia. Produtos de qualidade para investimento e colecionadores em toda a região de Ourinhos.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SEÇÃO 4: POR QUE ESCOLHER A GOLDMAN
+         ============================================ -->
+    <section class="section-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Por Que Escolher a Goldman?</h2>
+            </div>
+            <div class="diferenciais-grid">
+                <!-- Diferencial 1 -->
+                <div class="diferencial-item">
+                    <div class="diferencial-icon">✅</div>
+                    <div class="diferencial-text">
+                        <h3>Transparência Total</h3>
+                        <p>Avaliações claras e honestas, sem taxas ocultas. Você sabe exatamente o valor do seu ouro ou prata antes de negociar.</p>
+                    </div>
+                </div>
+
+                <!-- Diferencial 2 -->
+                <div class="diferencial-item">
+                    <div class="diferencial-icon">🏆</div>
+                    <div class="diferencial-text">
+                        <h3>Reputação Comprovada</h3>
+                        <p>Avaliação 5 estrelas no Google. Nossa reputação é construída através da confiança de centenas de clientes satisfeitos.</p>
+                    </div>
+                </div>
+
+                <!-- Diferencial 3 -->
+                <div class="diferencial-item">
+                    <div class="diferencial-icon">📍</div>
+                    <div class="diferencial-text">
+                        <h3>Localização Física</h3>
+                        <p>Loja física no Mercadão Municipal de Ourinhos. Você pode nos visitar pessoalmente e conhecer nossa estrutura.</p>
+                    </div>
+                </div>
+
+                <!-- Diferencial 4 -->
+                <div class="diferencial-item">
+                    <div class="diferencial-icon">🤝</div>
+                    <div class="diferencial-text">
+                        <h3>Atendimento Profissional</h3>
+                        <p>Equipe capacitada e experiente em metais preciosos. Atendimento personalizado para cada tipo de negociação.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SEÇÃO 5: AVALIAÇÃO 5 ESTRELAS NO GOOGLE
+         ============================================ -->
+    <section class="section-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2>Reconhecimento dos Nossos Clientes</h2>
+            </div>
+            <div class="avaliacao-box">
+                <div class="estrelas">⭐⭐⭐⭐⭐</div>
+                <h3>5 Estrelas no Google</h3>
+                <p>
+                    Nossa avaliação máxima reflete nosso compromisso com transparência, honestidade e satisfação de cada cliente em Ourinhos e região.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SEÇÃO 6: LOCALIZAÇÃO E ATENDIMENTO
+         ============================================ -->
+    <section class="section-light" id="localizacao">
+        <div class="container">
+            <div class="section-header">
+                <h2>Onde Estamos</h2>
+            </div>
+            <div class="localizacao-info">
+                <p>
+                    Estamos localizados no <strong>Mercadão Municipal de Ourinhos</strong>, um dos pontos mais tradicionais e acessíveis da cidade. Venha nos visitar e conheça pessoalmente nossos serviços de compra e venda de ouro e prata.
+                </p>
+                
+                <!-- Box com endereço completo (importante para SEO local) -->
+                <div class="endereco-box">
+                    <p>
+                        <span class="endereco-icon">📍</span>
+                        <strong>Mercadão Municipal de Ourinhos – Loja 44</strong><br>
+                        Ourinhos, São Paulo
+                    </p>
+                </div>
+            </div>
+
+            <!-- ============================================
+                 SEÇÃO 7: MAPA DO GOOGLE (IFRAME)
+                 ============================================ -->
+            <div class="mapa-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14922.196805433783!2d-49.87506884612372!3d-22.981285267240587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c0197bfb6e8ec5%3A0x6380acb0ef2669c5!2sGoldman%20Metais!5e1!3m2!1spt-BR!2sbr!4v1769126554390!5m2!1spt-BR!2sbr"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SEÇÃO 8: CHAMADA PARA CONTATO
+         ============================================ -->
+    <section class="contato-cta">
+        <div class="container">
+            <h2>Pronto para Negociar?</h2>
+            <p>
+                Entre em contato conosco agora mesmo pelo WhatsApp ou Instagram. Estamos prontos para atender você com transparência e profissionalismo na compra e venda de ouro e prata em Ourinhos SP.
+            </p>
+            
+            <div class="btn-container">
+                <a href="https://wa.me/5514997692967" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                    Falar no WhatsApp
+                </a>
+                <a href="https://www.instagram.com/goldmanmetais/" class="btn btn-instagram" target="_blank" rel="noopener noreferrer">
+                    Seguir no Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SEÇÃO 9: RODAPÉ INSTITUCIONAL
+         ============================================ -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Goldman Metais Preciosos</h3>
+                <p><strong>Compra e Venda de Ouro e Prata em Ourinhos SP</strong></p>
+                <p>📍 Mercadão Municipal de Ourinhos – Loja 44</p>
+                <p>Ourinhos, São Paulo</p>
+            </div>
+
+            <!-- Links sociais no rodapé -->
+            <div class="footer-social">
+                <a href="https://wa.me/5514997692967" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">📱</a>
+                <a href="https://www.instagram.com/goldmanmetais/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">📷</a>
+            </div>
+
+            <!-- Créditos (obrigatório conforme solicitação) -->
+            <div class="footer-creditos">
+                <p>
+                    Criado por <a href="https://siteprofissional.pro/" target="_blank" rel="noopener noreferrer">siteprofissional.pro</a>
+                </p>
+                <p>&copy; 2026 Goldman Metais Preciosos. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

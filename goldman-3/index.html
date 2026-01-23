@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Goldman Metais | Compra e Venda de Ouro em Ourinhos - SP</title>
+    <meta name="description" content="Compra e venda de ouro em Ourinhos com segurança total. Avaliação 5 estrelas, pagamento imediato. Visite nossa loja no Mercadão Municipal - Loja 44.">
+    <meta name="keywords" content="ouro ourinhos, vender ouro, cotação ouro, comprar ouro, mercadão municipal ourinhos">
+    
+    <!-- Open Graph Tags para WhatsApp/Redes Sociais -->
+    <meta property="og:title" content="Goldman Metais | Compra e Venda de Ouro em Ourinhos">
+    <meta property="og:description" content="Avaliação 5 estrelas. Pagamento à vista. Segurança total no Mercadão Municipal de Ourinhos.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://goldmanmetais.com.br">
+    <meta property="og:image" content="https://goldmanmetais.com.br/og-image.jpg">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    
+    <!-- Schema Markup JSON-LD para SEO Local -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "PawnShop",
+      "name": "Goldman Metais Preciosos",
+      "image": "https://goldmanmetais.com.br/logo.jpg",
+      "description": "Compra e venda de ouro em Ourinhos com segurança e transparência",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Mercadão Municipal - Loja 44",
+        "addressLocality": "Ourinhos",
+        "addressRegion": "SP",
+        "postalCode": "19900-000",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-22.981285",
+        "longitude": "-49.875068"
+      },
+      "telephone": "+55-14-99769-2967",
+      "priceRange": "$$$",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "100"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "08:00",
+        "closes": "18:00"
+      }
+    }
+    </script>
+    
+    <style>
+        /* ========================================
+           RESET E CONFIGURAÇÕES GLOBAIS
+        ======================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #0F0F0F;
+            color: #F4F4F4;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* ========================================
+           TIPOGRAFIA
+        ======================================== */
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        
+        h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+        
+        h2 {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        p {
+            font-size: clamp(1rem, 2vw, 1.125rem);
+            color: #CCCCCC;
+            margin-bottom: 1rem;
+        }
+        
+        /* ========================================
+           HEADER - Fixo no Topo
+        ======================================== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(15, 15, 15, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 2px;
+        }
+        
+        .social-link {
+            color: #D4AF37;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border: 1px solid #D4AF37;
+            border-radius: 4px;
+        }
+        
+        .social-link:hover {
+            background: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728);
+            color: #0F0F0F;
+            transform: translateY(-2px);
+        }
+        
+        /* ========================================
+           HERO SECTION - Impacto Visual
+        ======================================== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 8rem 5% 4rem;
+            background: linear-gradient(180deg, #0F0F0F 0%, #1A1A1A 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Efeito de brilho sutil no fundo */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.05) 0%, transparent 70%);
+            animation: glow 8s ease-in-out infinite;
+        }
+        
+        @keyframes glow {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(10%, 10%) scale(1.1); }
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+        }
+        
+        .subheadline {
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            color: #D4AF37;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+        }
+        
+        /* ========================================
+           BOTÕES - Call to Action
+        ======================================== */
+        .btn-primary {
+            display: inline-block;
+            background: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728);
+            color: #0F0F0F;
+            padding: 1.2rem 3rem;
+            font-size: 1.125rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.5);
+        }
+        
+        .btn-secondary {
+            display: inline-block;
+            background: transparent;
+            color: #D4AF37;
+            padding: 1rem 2.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            border: 2px solid #D4AF37;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+        
+        .btn-secondary:hover {
+            background: #D4AF37;
+            color: #0F0F0F;
+        }
+        
+        /* ========================================
+           SEÇÃO DE AUTORIDADE - 3 Pilares
+        ======================================== */
+        .trust-section {
+            padding: 5rem 5%;
+            background: #1A1A1A;
+        }
+        
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 3rem auto 0;
+        }
+        
+        .trust-card {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            background: rgba(212, 175, 55, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        
+        .trust-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(212, 175, 55, 0.5);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.15);
+        }
+        
+        .trust-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .trust-card h3 {
+            font-size: 1.5rem;
+            color: #D4AF37;
+            margin-bottom: 1rem;
+        }
+        
+        .trust-card p {
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+        
+        /* ========================================
+           SEÇÃO LOCALIZAÇÃO - Mapa e Endereço
+        ======================================== */
+        .location-section {
+            padding: 5rem 5%;
+            background: #0F0F0F;
+        }
+        
+        .location-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .location-text {
+            margin: 2rem 0 3rem;
+            font-size: 1.125rem;
+            line-height: 1.8;
+        }
+        
+        .map-container {
+            margin: 3rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            border: 2px solid rgba(212, 175, 55, 0.3);
+        }
+        
+        .map-container iframe {
+            display: block;
+            width: 100%;
+        }
+        
+        /* ========================================
+           BOTÃO FLUTUANTE WHATSAPP - Sticky
+        ======================================== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            z-index: 9999;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.6);
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            }
+            50% {
+                box-shadow: 0 8px 35px rgba(37, 211, 102, 0.7);
+            }
+        }
+        
+        .whatsapp-float svg {
+            width: 35px;
+            height: 35px;
+            fill: white;
+        }
+        
+        /* ========================================
+           FOOTER - Rodapé
+        ======================================== */
+        footer {
+            background: #0A0A0A;
+            padding: 3rem 5% 2rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            color: #D4AF37;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-section p,
+        .footer-section a {
+            color: #CCCCCC;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            text-decoration: none;
+        }
+        
+        .footer-section a:hover {
+            color: #D4AF37;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+            color: #888;
+            font-size: 0.9rem;
+        }
+        
+        .footer-bottom a {
+            color: #D4AF37;
+            text-decoration: none;
+        }
+        
+        .footer-bottom a:hover {
+            text-decoration: underline;
+        }
+        
+        /* ========================================
+           RESPONSIVIDADE MOBILE-FIRST
+        ======================================== */
+        @media (max-width: 768px) {
+            header {
+                padding: 1rem 5%;
+            }
+            
+            .logo {
+                font-size: 1.4rem;
+            }
+            
+            .social-link {
+                font-size: 0.8rem;
+                padding: 0.4rem 0.8rem;
+            }
+            
+            .hero {
+                padding: 6rem 5% 3rem;
+                min-height: 90vh;
+            }
+            
+            .trust-grid {
+                gap: 2rem;
+            }
+            
+            .whatsapp-float {
+                width: 55px;
+                height: 55px;
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .whatsapp-float svg {
+                width: 28px;
+                height: 28px;
+            }
+            
+            .btn-primary {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- ========================================
+         HEADER - Navegação Fixa
+    ======================================== -->
+    <header>
+        <div class="logo">GOLDMAN</div>
+        <a href="https://www.instagram.com/goldmanmetais/" target="_blank" rel="noopener noreferrer" class="social-link">Instagram</a>
+    </header>
+    
+    <!-- ========================================
+         HERO SECTION - Primeira Impressão
+    ======================================== -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Compra e Venda de Ouro em Ourinhos com Segurança Total</h1>
+            <p class="subheadline">Avaliação 5 Estrelas • Pagamento à Vista • Localização Segura no Mercadão Municipal</p>
+            <a href="https://wa.me/5514997692967" target="_blank" rel="noopener noreferrer" class="btn-primary">Avaliar Meu Ouro no WhatsApp</a>
+        </div>
+    </section>
+    
+    <!-- ========================================
+         SEÇÃO CONFIANÇA - Autoridade
+    ======================================== -->
+    <section class="trust-section">
+        <div class="trust-content">
+            <h2 style="text-align: center;">Por Que Escolher a Goldman Metais?</h2>
+            <div class="trust-grid">
+                
+                <!-- Card 1: Segurança -->
+                <div class="trust-card">
+                    <svg class="trust-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L4 6V11C4 16.55 7.84 21.74 12 23C16.16 21.74 20 16.55 20 11V6L12 2ZM10 17L6 13L7.41 11.59L10 14.17L16.59 7.58L18 9L10 17Z" fill="#D4AF37"/>
+                    </svg>
+                    <h3>Segurança Garantida</h3>
+                    <p>Operamos em localização fixa e segura no Mercadão Municipal de Ourinhos. Transparência e confiança em todas as transações.</p>
+                </div>
+                
+                <!-- Card 2: Rapidez -->
+                <div class="trust-card">
+                    <svg class="trust-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM15.5 16H11V7H13V14H15.5V16Z" fill="#D4AF37"/>
+                        <path d="M18 12C18 15.31 15.31 18 12 18V20C16.42 20 20 16.42 20 12H18Z" fill="#FCF6BA"/>
+                    </svg>
+                    <h3>Pagamento Imediato</h3>
+                    <p>Avaliação rápida e profissional do seu ouro. Pagamento à vista na hora, sem burocracia e sem espera.</p>
+                </div>
+                
+                <!-- Card 3: Qualidade -->
+                <div class="trust-card">
+                    <svg class="trust-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#D4AF37"/>
+                    </svg>
+                    <h3>Avaliação 5 Estrelas</h3>
+                    <p>Mais de 100 clientes satisfeitos. Nota máxima no Google. Atendimento diferenciado e preços justos baseados na cotação atual.</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <!-- ========================================
+         SEÇÃO LOCALIZAÇÃO - Onde Estamos
+    ======================================== -->
+    <section class="location-section">
+        <div class="location-content">
+            <h2>Visite Nossa Loja</h2>
+            <p class="location-text">
+                Estamos localizados no coração de Ourinhos, dentro do tradicional <strong>Mercadão Municipal</strong>, na <strong>Loja 44</strong>. 
+                Um ambiente seguro, de fácil acesso e com amplo estacionamento. Venha nos visitar e faça sua avaliação sem compromisso.
+            </p>
+            
+            <!-- Google Maps Embed -->
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14922.196805433783!2d-49.87506884612372!3d-22.981285267240587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c0197bfb6e8ec5%3A0x6380acb0ef2669c5!2sGoldman%20Metais!5e1!3m2!1spt-BR!2sbr!4v1769126554390!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            
+            <!-- Botão Traçar Rota -->
+            <a href="https://maps.app.goo.gl/72jm43AqykKZLUMv7" target="_blank" rel="noopener noreferrer" class="btn-secondary">Traçar Rota Agora</a>
+        </div>
+    </section>
+    
+    <!-- ========================================
+         BOTÃO FLUTUANTE WHATSAPP
+    ======================================== -->
+    <a href="https://wa.me/5514997692967" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Contato WhatsApp">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 0C7.164 0 0 7.164 0 16c0 2.833.744 5.497 2.047 7.813L0 32l8.387-2.047C10.703 31.256 13.367 32 16 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm9.188 22.547c-.384 1.088-2.26 2.004-3.104 2.128-.844.124-1.628.38-5.484-1.172-4.856-1.952-7.952-6.808-8.192-7.124-.24-.316-1.952-2.596-1.952-4.952s1.24-3.512 1.68-3.996c.44-.484.96-.604 1.28-.604.32 0 .64.004.92.016.296.016.692-.112 1.08.824.392.944 1.34 3.26 1.456 3.496.116.236.192.512.04.828-.152.316-.228.512-.456.788-.228.276-.48.616-.684.828-.228.228-.464.472-.2.928.264.456 1.176 1.94 2.524 3.14 1.736 1.548 3.196 2.028 3.652 2.256.456.228.724.192.992-.116.268-.308 1.148-1.34 1.456-1.8.308-.46.616-.384 1.036-.228.42.156 2.66 1.256 3.116 1.484.456.228.76.34.872.528.112.188.112 1.088-.272 2.176z"/>
+        </svg>
+    </a>
+    
+    <!-- ========================================
+         FOOTER - Rodapé com Informações
+    ======================================== -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Goldman Metais</h3>
+                <p>Compra e venda de ouro com segurança e transparência em Ourinhos.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Endereço</h3>
+                <p>Mercadão Municipal de Ourinhos<br>Loja 44<br>Ourinhos - SP</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p>WhatsApp: <a href="https://wa.me/5514997692967">(14) 99769-2967</a></p>
+                <p><a href="https://www.instagram.com/goldmanmetais/" target="_blank" rel="noopener noreferrer">@goldmanmetais</a></p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Goldman Metais Preciosos. Todos os direitos reservados.</p>
+            <p>Criado por <a href="https://siteprofissional.pro/" target="_blank" rel="noopener noreferrer">siteprofissional.pro</a></p>
+        </div>
+    </footer>
+    
+</body>
+</html>

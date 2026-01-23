@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Goldman Metais Preciosos | Compra e Venda de Ouro em Ourinhos/SP</title>
+    <meta name="description" content="Especialistas em compra e venda de ouro em Ourinhos. Avaliação justa, pagamento seguro e atendimento discreto no Mercadão Municipal, Loja 44. Mais de 100 clientes satisfeitos.">
+    <meta name="keywords" content="compra de ouro em Ourinhos, venda de ouro em Ourinhos, ouro Ourinhos SP, ouro Mercadão Municipal de Ourinhos, avaliação de ouro 18k, cotação ouro ourinhos">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Goldman Metais Preciosos">
+    
+    <meta name="geo.region" content="BR-SP">
+    <meta name="geo.placename" content="Ourinhos">
+    <meta name="geo.position" content="-22.9786;-49.8703"> <meta name="ICBM" content="-22.9786, -49.8703">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- VARIÁVEIS DE COR E RESET --- */
+        :root {
+            --gold-primary: #D4AF37;       /* Dourado Metálico */
+            --gold-light: #F3E5AB;         /* Dourado Claro para brilho */
+            --bg-dark: #121212;            /* Preto Profundo */
+            --bg-card: #1E1E1E;            /* Cinza Escuro para cartões */
+            --text-white: #F9F9F9;         /* Off-white */
+            --text-gray: #B0B0B0;          /* Cinza para textos longos */
+            --whatsapp-green: #25D366;     /* Verde WhatsApp Oficial */
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Lato', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-dark);
+            color: var(--text-white);
+            line-height: 1.6;
+            overflow-x: hidden; /* Evita rolagem lateral no mobile */
+        }
+
+        /* --- TIPOGRAFIA --- */
+        h1, h2, h3 {
+            font-family: var(--font-heading);
+            color: var(--gold-primary);
+            line-height: 1.2;
+        }
+
+        h1 { font-size: 2.2rem; margin-bottom: 1rem; }
+        h2 { font-size: 1.8rem; margin-bottom: 1.5rem; text-align: center; }
+        h3 { font-size: 1.3rem; margin-bottom: 0.5rem; color: #fff; }
+        p { margin-bottom: 1rem; color: var(--text-gray); font-size: 1rem; }
+        
+        strong { color: var(--text-white); }
+        
+        a { text-decoration: none; transition: 0.3s ease; }
+
+        /* --- UTILITÁRIOS --- */
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .section-padding { padding: 60px 0; }
+        .text-center { text-align: center; }
+        .gold-text { color: var(--gold-primary); }
+
+        /* --- BOTÕES --- */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 28px;
+            border-radius: 4px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin: 10px 5px;
+            cursor: pointer;
+            letter-spacing: 1px;
+        }
+
+        .btn-whatsapp {
+            background-color: var(--whatsapp-green);
+            color: #fff;
+            border: 2px solid var(--whatsapp-green);
+        }
+        .btn-whatsapp:hover {
+            background-color: transparent;
+            color: var(--whatsapp-green);
+        }
+
+        .btn-gold {
+            background-color: var(--gold-primary);
+            color: #121212;
+            border: 2px solid var(--gold-primary);
+        }
+        .btn-gold:hover {
+            background-color: transparent;
+            color: var(--gold-primary);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid #fff;
+            color: #fff;
+        }
+        .btn-outline:hover {
+            border-color: var(--gold-primary);
+            color: var(--gold-primary);
+        }
+
+        .btn-map {
+            background-color: #4285F4; /* Azul Google Maps */
+            color: white;
+            border: none;
+            width: 100%;
+            max-width: 300px;
+            font-size: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+        .btn-map:hover { background-color: #3367d6; }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.75)), url('https://images.unsplash.com/photo-1610375460969-d21a231362b1?q=80&w=1920&auto=format&fit=crop'); 
+            background-size: cover;
+            background-position: center;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            border-bottom: 3px solid var(--gold-primary);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .location-tag {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.2);
+            color: var(--gold-primary);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            margin-bottom: 20px;
+            border: 1px solid var(--gold-primary);
+            text-transform: uppercase;
+        }
+
+        .hero h1 span {
+            display: block;
+            font-size: 1.2rem;
+            color: #fff;
+            font-family: var(--font-body);
+            font-weight: 300;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        /* --- SEÇÕES GERAIS --- */
+        .about-section { background-color: var(--bg-card); }
+        
+        .services-section { background-color: var(--bg-dark); }
+        
+        .service-box {
+            border: 1px solid #333;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.02);
+            transition: transform 0.3s;
+        }
+        .service-box:hover {
+            border-color: var(--gold-primary);
+            transform: translateY(-5px);
+        }
+
+        /* --- LISTA DE CONFIANÇA --- */
+        .trust-list {
+            list-style: none;
+            padding: 0;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .trust-list li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+            font-size: 1.1rem;
+        }
+        .trust-list li::before {
+            content: '✓';
+            color: var(--gold-primary);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* --- REPUTAÇÃO --- */
+        .reputation-banner {
+            background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+            border-top: 1px solid var(--gold-primary);
+            border-bottom: 1px solid var(--gold-primary);
+            text-align: center;
+        }
+        .stars {
+            color: var(--gold-primary);
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            letter-spacing: 5px;
+        }
+        .client-count {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #fff;
+            font-family: var(--font-heading);
+        }
+
+        /* --- MAPA E LOCALIZAÇÃO --- */
+        .map-wrapper {
+            margin-top: 30px;
+            position: relative;
+            padding-bottom: 56.25%; /* Aspect Ratio 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            border: 1px solid #444;
+        }
+        .map-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100% !important;
+            height: 100% !important;
+        }
+        
+        .route-btn-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* --- RODAPÉ --- */
+        footer {
+            background-color: #000;
+            padding: 40px 0 20px;
+            border-top: 1px solid #222;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        footer a { color: var(--gold-primary); }
+        footer a:hover { text-decoration: underline; }
+
+        /* --- RESPONSIVIDADE (MEDIA QUERIES) --- */
+        @media (min-width: 768px) {
+            h1 { font-size: 3.5rem; }
+            .hero h1 span { font-size: 1.5rem; }
+            
+            .grid-2 {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+                align-items: center;
+            }
+            
+            .service-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="container hero-content">
+            <span class="location-tag">📍 Ourinhos, SP</span>
+            <h1>
+                <span>Goldman Metais Preciosos</span>
+                Compra e Venda de Ouro
+            </h1>
+            <p style="font-size: 1.1rem; color: #ddd; max-width: 600px; margin: 0 auto 30px auto;">
+                Especialistas em metais nobres no Mercadão Municipal de Ourinhos. Segurança, sigilo e avaliação profissional para o seu ouro.
+            </p>
+            
+            <div>
+                <a href="https://wa.me/5514997692967" class="btn btn-whatsapp" target="_blank" rel="noopener">
+                    Falar no WhatsApp
+                </a>
+                <a href="https://www.instagram.com/goldmanmetais/" class="btn btn-outline" target="_blank" rel="noopener">
+                    Ver Instagram
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="about-section section-padding">
+        <div class="container">
+            <div class="grid-2">
+                <div>
+                    <h2>Institucional</h2>
+                    <p>A <strong>Goldman Metais Preciosos</strong> é uma empresa consolidada na região de Ourinhos, dedicada exclusivamente ao mercado de ouro. Nossa missão é proporcionar um ambiente seguro e profissional para quem deseja comprar ou vender joias e peças em ouro.</p>
+                    <p>Localizados estrategicamente no <strong>Mercadão Municipal de Ourinhos (Loja 44)</strong>, oferecemos um atendimento presencial humanizado, onde a transparência é o pilar de todas as nossas negociações.</p>
+                </div>
+                <div class="text-center" style="margin-top: 20px;">
+                    <div style="border: 1px solid var(--gold-primary); padding: 20px; border-radius: 8px;">
+                        <h3 style="color: var(--gold-primary)">Horário de Atendimento</h3>
+                        <p style="margin: 0;">Segunda a Sexta: 09h às 18h</p>
+                        <p>Sábado: 09h às 13h</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-section section-padding">
+        <div class="container">
+            <h2>Especialistas em Ouro</h2>
+            <p class="text-center" style="margin-bottom: 40px;">Trabalhamos com seriedade na avaliação de diversos tipos de peças.</p>
+            
+            <div class="service-container">
+                <div class="service-box">
+                    <h3>Compra de Ouro</h3>
+                    <p>Compramos suas joias de ouro (anéis, alianças, correntes, pulseiras), moedas e ouro amassado. Realizamos a avaliação do teor do metal (18k, 24k, etc.) com equipamentos adequados e transparência total na pesagem.</p>
+                </div>
+                <div class="service-box">
+                    <h3>Venda de Peças</h3>
+                    <p>Se você busca investir em ouro ou adquirir uma peça especial, a Goldman oferece opções selecionadas com procedência garantida. Negocie diretamente em nosso balcão com total segurança.</p>
+                </div>
+            </div>
+            
+            <p class="text-center" style="font-size: 0.9rem; margin-top: 20px;">
+                <em>*Nota: Não realizamos compra ou venda de prata ou outros metais. Foco exclusivo em Ouro.</em>
+            </p>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background-color: #151515;">
+        <div class="container">
+            <h2>Por Que Escolher a Goldman?</h2>
+            <ul class="trust-list">
+                <li><strong>Empresa Física e Estabelecida:</strong> Não somos compradores itinerantes. Temos endereço fixo no Mercadão de Ourinhos.</li>
+                <li><strong>Avaliação Técnica:</strong> Utilizamos métodos profissionais para verificar a pureza do seu ouro.</li>
+                <li><strong>Segurança Total:</strong> Ambiente monitorado e discreto para sua tranquilidade.</li>
+                <li><strong>Sem Promessas Falsas:</strong> Não prometemos valores irreais. Trabalhamos com cotações sérias e justas de mercado.</li>
+                <li><strong>Pagamento Ágil:</strong> Negociações concluídas com rapidez e eficiência.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="reputation-banner section-padding">
+        <div class="container">
+            <div class="stars">★★★★★</div>
+            <div class="client-count">+100</div>
+            <p style="font-size: 1.2rem; color: #fff;">Clientes Atendidos em Ourinhos</p>
+            <p style="max-width: 600px; margin: 20px auto 0;">
+                "Excelente atendimento, honestidade e transparência. Recomendo a todos de Ourinhos que buscam negociar ouro com segurança."
+            </p>
+            <p style="color: var(--gold-primary); font-size: 0.9rem; margin-top: 10px;">— Avaliação via Google</p>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background-color: var(--bg-card);">
+        <div class="container">
+            <h2>Visite Nossa Loja</h2>
+            <div class="text-center">
+                <address style="font-style: normal; font-size: 1.1rem; color: #fff; margin-bottom: 20px;">
+                    <strong>Goldman Metais Preciosos</strong><br>
+                    Mercadão Municipal de Ourinhos – Loja 44<br>
+                    Ourinhos, SP
+                </address>
+                <p>Venha tomar um café conosco e faça sua avaliação sem compromisso.</p>
+            </div>
+
+            <div class="map-wrapper">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14922.196805433783!2d-49.87506884612372!3d-22.981285267240587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c0197bfb6e8ec5%3A0x6380acb0ef2669c5!2sGoldman%20Metais!5e1!3m2!1spt-BR!2sbr!4v1769126554390!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localização Goldman Metais"></iframe>
+            </div>
+
+            <div class="route-btn-container">
+                <a href="https://maps.app.goo.gl/72jm43AqykKZLUMv7" class="btn btn-map" target="_blank" rel="noopener">
+                    👉 Como chegar até a loja
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding text-center" style="background-color: var(--bg-dark);">
+        <div class="container">
+            <h2>Fale Conosco</h2>
+            <p>Dúvidas sobre cotação ou como chegar? Estamos online.</p>
+            
+            <div style="margin-top: 30px; display: flex; flex-direction: column; align-items: center;">
+                <a href="https://wa.me/5514997692967" class="btn btn-whatsapp" style="width: 100%; max-width: 350px;">
+                    <span style="margin-right: 8px; font-size: 1.2rem;">📱</span> Chamar no WhatsApp
+                </a>
+                
+                <a href="https://www.instagram.com/goldmanmetais/" class="btn btn-outline" style="width: 100%; max-width: 350px; border-color: #C13584; color: #fff;">
+                    <span style="margin-right: 8px; font-size: 1.2rem;">📸</span> Acessar Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p style="color: #666; margin-bottom: 10px;">&copy; <span id="year">2024</span> Goldman Metais Preciosos. Todos os direitos reservados.</p>
+            
+            <p>
+                Criado por <a href="https://siteprofissional.pro/" target="_blank" rel="noopener">siteprofissional.pro</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Atualiza o ano no rodapé automaticamente
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Script para log de controle e boas-vindas no console (Debug)
+        console.log("%c Goldman Metais Preciosos ", "background: #D4AF37; color: #000; font-weight: bold; padding: 5px;");
+        console.log("SEO Local ativado para Ourinhos/SP");
+        
+        // Rolagem suave para âncoras (fallback para navegadores antigos)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

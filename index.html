@@ -2,120 +2,104 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Criação de Sites de Alta Performance e Consultoria Digital | Victor Tech</title>
+    <title>Site Profissional | Criação de Sites para Profissionais e Empresas</title>
+    <meta name="description" content="Desenvolvimento de sites profissionais com metodologia exclusiva. Segurança, performance e foco em autoridade para médicos, advogados e empresas.">
     
-    <meta name="description" content="Desenvolvimento de sites profissionais, rápidos e seguros para empresas e autônomos. Estratégia digital focada em conversão e autoridade. Solicite um orçamento.">
+    <meta name="geo.region" content="BR-SP" />
+    <meta name="geo.placename" content="Ourinhos" />
+    <meta name="geo.position" content="-22.9788;-49.8705" />
+    <meta name="ICBM" content="-22.9788, -49.8705" />
     
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Sites Profissionais de Alta Performance | Victor Tech">
-    <meta property="og:description" content="Sua presença digital com engenharia de ponta. Sites rápidos, seguros e prontos para vender.">
-    <meta property="og:url" content="https://seusite.com.br/">
-    <meta property="og:image" content="https://seusite.com.br/social-share.jpg"> 
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Sites Profissionais de Alta Performance">
-    <meta name="twitter:description" content="Engenharia de software aplicada ao seu negócio.">
-
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
-      "name": "Victor Tech",
-      "image": "https://seusite.com.br/logo.png",
-      "description": "Desenvolvimento de sites de alta performance e engenharia web.",
+      "name": "Site Profissional",
+      "description": "Criação de sites profissionais de alta performance e landing pages.",
+      "image": "https://siteprofissional.com.br/logo.png",
+      "url": "https://siteprofissional.com.br",
+      "telephone": "+5514997715865",
+      "priceRange": "R$1000-R$3000",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Ourinhos",
         "addressRegion": "SP",
         "addressCountry": "BR"
       },
-      "priceRange": "$$"
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -22.9788,
+        "longitude": -49.8705
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Victor",
+        "jobTitle": "Programador Web"
+      }
     }
     </script>
 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0HMR2DE2SL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
-        /* :ROOT (VARIÁVEIS GLOBAIS)
-           Centraliza as cores e espaçamentos. Se precisar mudar a cor da marca,
-           mude apenas aqui e o site todo atualiza. Facilita manutenção futura.
-        */
+        /* --- VARIÁVEIS GLOBAIS --- */
         :root {
-            /* Cores Neutras (Fundo e Texto) */
-            --bg-body: #F8FAFC;       /* Cinza muito claro, mais confortável que branco puro */
-            --bg-surface: #FFFFFF;    /* Branco para cartões e destaques */
-            --text-primary: #0F172A;  /* Azul quase preto (Slate 900) - Cor de texto principal */
-            --text-secondary: #475569;/* Cinza médio (Slate 600) - Para parágrafos */
-            --text-light: #94A3B8;    /* Cinza claro - Para detalhes */
-
-            /* Cores da Marca (Brand) */
-            --primary: #2563EB;       /* Azul Royal Moderno (Blue 600) */
-            --primary-dark: #1E40AF;  /* Azul mais escuro para Hover */
-            --accent: #0EA5E9;        /* Azul Ciano para gradientes ou detalhes */
-            
-            /* Cores de Ação */
-            --cta-color: #16A34A;     /* Verde Sucesso (Green 600) - Para botão de WhatsApp */
-            --cta-hover: #15803D;     /* Verde escuro hover */
-
-            /* Estrutura */
-            --container-width: 1200px;
-            --header-height: 80px;
-            --border-radius: 12px;    /* Bordas arredondadas (Tendência UI 2025) */
-            
-            /* Sombras Suaves (Soft Shadows) - Estilo Clean */
+            --bg-body: #F8FAFC;
+            --bg-surface: #FFFFFF;
+            --text-primary: #0F172A;
+            --text-secondary: #475569;
+            --text-light: #94A3B8;
+            --primary: #2563EB;
+            --primary-dark: #1E40AF;
+            --cta-color: #16A34A;
+            --cta-hover: #15803D;
+            --border-color: #E2E8F0;
+            --container-width: 1100px;
             --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
             --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-            --shadow-lg: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 20px 25px -5px rgb(0 0 0 / 0.1);
         }
 
-        /* RESET CSS (Zerar padrões do navegador) */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box; /* Garante que padding não aumente a largura dos elementos */
-        }
-
-        /* CONFIGURAÇÃO DE TIPOGRAFIA */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--bg-body);
             color: var(--text-primary);
-            line-height: 1.6; /* Leitura confortável */
-            overflow-x: hidden; /* Evita rolagem horizontal indesejada */
-            -webkit-font-smoothing: antialiased; /* Fontes mais nítidas no Mac/iOS */
+            line-height: 1.6;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
         }
 
-        /* TIPOGRAFIA ESCALÁVEL */
-        h1, h2, h3, h4 {
-            line-height: 1.2;
-            font-weight: 700;
-            letter-spacing: -0.02em; /* Aproximação leve das letras (Estilo Moderno) */
-        }
+        h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; letter-spacing: -0.02em; }
+        h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
+        h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); }
+        h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
+        p { color: var(--text-secondary); }
 
-        /* CLAMP: O tamanho da fonte se adapta matematicamente entre celular e desktop */
-        h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
-        h2 { font-size: clamp(2rem, 4vw, 3rem); }
-        h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
-        p { font-size: 1.125rem; color: var(--text-secondary); }
-
-        /* UTILITÁRIOS DE LAYOUT */
         .container {
             width: 100%;
             max-width: var(--container-width);
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 0 20px;
         }
 
-        section {
-            padding: 100px 0; /* Espaço generoso entre seções (Respiro visual) */
-        }
+        section { padding: 80px 0; }
 
-        /* COMPONENTE: BOTÃO PRIMÁRIO */
+        /* BOTÕES */
         .btn {
             display: inline-flex;
             align-items: center;
@@ -124,122 +108,112 @@
             font-weight: 600;
             text-decoration: none;
             border-radius: 8px;
-            transition: all 0.3s ease; /* Animação suave */
+            transition: all 0.3s ease;
+            text-align: center;
             cursor: pointer;
             font-size: 1rem;
         }
-
+        
         .btn-primary {
             background-color: var(--primary);
             color: white;
-            box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.39);
+            box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.3);
         }
-
+        
         .btn-primary:hover {
             background-color: var(--primary-dark);
-            transform: translateY(-2px); /* Efeito de "levantar" */
-            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.23);
+            transform: translateY(-2px);
         }
-
+        
         .btn-cta {
             background-color: var(--cta-color);
             color: white;
-            width: 100%; /* No mobile fica full width */
-            text-align: center;
+            box-shadow: 0 10px 15px -3px rgba(22, 163, 74, 0.3);
+            width: 100%;
+            font-size: 1.1rem;
         }
         
         @media(min-width: 768px) { .btn-cta { width: auto; } }
+        
+        .btn-cta:hover { 
+            background-color: var(--cta-hover); 
+            transform: translateY(-2px);
+        }
 
-        .btn-cta:hover { background-color: var(--cta-hover); }
+        /* HEADER */
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+        
+        .logo {
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            width: 100%;
+            text-align: center;
+        }
+        
+        .logo span { color: var(--primary); }
 
-        /* ==========================================================================
-           SEÇÕES ESPECÍFICAS
-           ========================================================================== */
-
-        /* HERO SECTION (Topo) */
+        /* HERO */
         .hero {
-            min-height: 90vh; /* Ocupa quase a tela toda */
-            display: flex;
-            align-items: center;
-            background: radial-gradient(circle at top right, #E0F2FE 0%, transparent 40%); /* Efeito de luz sutil */
-            padding-top: var(--header-height);
+            padding: 80px 0 60px;
+            background: radial-gradient(circle at top right, #DBEAFE 0%, transparent 35%);
         }
-
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        /* Badge (Etiqueta acima do título) */
-        .badge {
-            display: inline-block;
-            padding: 8px 16px;
-            background: #DBEAFE;
+        
+        .hero-badge {
+            background: #EFF6FF;
             color: var(--primary);
+            padding: 8px 16px;
             border-radius: 50px;
             font-size: 0.875rem;
             font-weight: 600;
-            margin-bottom: 24px;
             text-transform: uppercase;
+            border: 1px solid #BFDBFE;
+            display: inline-block;
+            margin-bottom: 24px;
             letter-spacing: 0.05em;
         }
 
-        /* Efeito no texto do H1 */
-        .highlight {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        /* Container abstrato para imagem (Substitui o celular na mão) */
-        .hero-visual {
-            position: relative;
-            height: 400px;
-            background: white;
-            border-radius: 20px;
-            border: 1px solid #E2E8F0;
-            box-shadow: var(--shadow-lg);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-
-        /* Mockup abstrato CSS puro (Representa estrutura/código) */
-        .abstract-code {
-            width: 80%;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            opacity: 0.6;
-        }
-        .code-line { height: 12px; background: #E2E8F0; border-radius: 6px; width: 100%; }
-        .code-line.short { width: 60%; }
-        .code-line.medium { width: 80%; }
-        
-        /* SEÇÃO DE BENEFÍCIOS (GRID) */
-        .features-grid {
+        /* GRIDS */
+        .grid-2 {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsivo automático */
+            grid-template-columns: 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        @media(min-width: 900px) { 
+            .grid-2 { grid-template-columns: 1fr 1fr; } 
+        }
+        
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 32px;
         }
 
+        /* CARDS */
         .card {
             background: var(--bg-surface);
             padding: 40px;
-            border-radius: var(--border-radius);
+            border-radius: 12px;
             border: 1px solid #F1F5F9;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: all 0.3s ease;
         }
-
+        
         .card:hover {
             transform: translateY(-5px);
             box-shadow: var(--shadow-md);
-            border-color: #E2E8F0;
+            border-color: var(--border-color);
         }
-
+        
         .icon-box {
             width: 56px;
             height: 56px;
@@ -249,365 +223,721 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 24px;
+            font-size: 1.75rem;
+            margin-bottom: 20px;
         }
-        .icon-box svg { width: 28px; height: 28px; }
 
-        /* SEÇÃO TÉCNICA (DARK MODE PARCIAL) */
-        .tech-section {
-            background-color: #0F172A; /* Fundo escuro para contraste */
-            color: white;
+        /* CARROSSEL INFINITO */
+        .scroller {
+            max-width: 100%;
+            overflow: hidden;
+            -webkit-mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
+            mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
         }
-        .tech-section h2, .tech-section p { color: #E2E8F0; }
-        .tech-section .card {
-            background: rgba(255, 255, 255, 0.05); /* Efeito vidro */
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .tech-section .icon-box { background: rgba(255, 255, 255, 0.1); color: #38BDF8; }
 
-        /* PORTFOLIO */
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
+        .scroller-inner {
+            padding-block: 1rem;
+            display: flex;
+            gap: 2rem;
+            width: max-content;
+            animation: scroll 60s linear infinite;
         }
-        
-        .portfolio-item {
-            group: relative;
+
+        .scroller-inner:hover {
+            animation-play-state: paused;
         }
-        
-        .browser-mockup {
-            background: #fff;
+
+        @keyframes scroll {
+            to { transform: translate(calc(-50% - 1rem)); }
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 30px;
             border-radius: 12px;
             box-shadow: var(--shadow-md);
-            border: 1px solid #E2E8F0;
-            overflow: hidden;
-            aspect-ratio: 16/9; /* Proporção padrão de tela */
+            border: 1px solid #F1F5F9;
+            width: 350px;
+            flex-shrink: 0;
+        }
+
+        .stars { color: #F59E0B; margin-bottom: 10px; }
+
+        .client-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .client-avatar {
+            width: 45px;
+            height: 45px;
+            background: #E2E8F0;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #F8FAFC;
-            position: relative;
+            font-weight: 700;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
         }
 
-        .browser-header {
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 30px;
-            background: #F1F5F9;
-            border-bottom: 1px solid #E2E8F0;
+        /* SEÇÃO EXPERT */
+        .expert-photo {
+            width: 100%;
+            height: 420px;
+            background: linear-gradient(135deg, #1E293B 0%, #334155 100%);
+            border-radius: 12px;
             display: flex;
             align-items: center;
-            padding-left: 12px;
-            gap: 6px;
+            justify-content: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
         }
-        .dot { width: 8px; height: 8px; border-radius: 50%; background: #CBD5E1; }
-        
-        /* Placeholder de imagem (Instrução visual) */
-        .placeholder-text {
-            color: #94A3B8;
-            font-weight: 500;
+        .expert-label {
+            position: absolute; bottom: 30px; left: 30px;
+            background: var(--primary); color: white;
+            padding: 12px 24px; font-weight: 700;
+            border-radius: 8px; box-shadow: var(--shadow-md);
+        }
+
+        /* PRICING */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        @media(min-width: 768px) { .pricing-grid { grid-template-columns: 1fr 1fr; } }
+
+        .pricing-box {
+            background: #0F172A;
+            color: white;
+            border-radius: 16px;
+            padding: 40px 30px;
             text-align: center;
-            padding: 20px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #1E293B;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .pricing-box.featured {
+            background: #1E293B;
+            border: 2px solid var(--primary);
+            transform: scale(1.02);
         }
 
-        /* FOOTER */
-        footer {
+        .pricing-badge {
+            background: var(--cta-color); padding: 6px 16px; 
+            border-radius: 20px; font-size: 0.8rem; font-weight: bold; 
+            text-transform: uppercase; display: inline-block; margin-bottom: 20px;
+        }
+
+        /* FAQ */
+        .faq-item {
             background: white;
-            border-top: 1px solid #E2E8F0;
-            padding: 60px 0 30px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin-bottom: 16px;
+            overflow: hidden;
+        }
+        .faq-question {
+            width: 100%; padding: 20px 24px; background: transparent; border: none;
+            text-align: left; font-weight: 600; font-size: 1rem; color: var(--text-primary);
+            cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+            transition: background 0.2s;
+        }
+        .faq-question:hover { background: #F8FAFC; }
+        .faq-answer {
+            max-height: 0; overflow: hidden; transition: max-height 0.3s ease; padding: 0 24px;
+        }
+        .faq-answer.active { max-height: 300px; padding: 0 24px 20px 24px; }
+        .faq-icon { transition: transform 0.3s; font-size: 1.2rem; color: var(--primary); }
+        .faq-question.active .faq-icon { transform: rotate(45deg); }
+
+        /* LISTAS */
+        .check-list { list-style: none; text-align: left; }
+        .check-list li { margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px; color: #E2E8F0; font-size: 0.95rem; }
+        .check-list svg { color: var(--cta-color); width: 20px; flex-shrink: 0; margin-top: 3px; }
+
+        /* TIMELINE */
+        .timeline { max-width: 800px; margin: 0 auto; }
+        .timeline-item { display: flex; gap: 24px; margin-bottom: 40px; position: relative; }
+        .timeline-number {
+            width: 50px; height: 50px; background: var(--primary); color: white;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 1.25rem; flex-shrink: 0;
+        }
+        .timeline-content { flex: 1; padding-top: 8px; }
+
+        /* SOCIAL LINKS FOOTER */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .social-btn {
+            width: 40px; height: 40px; background: #F1F5F9; border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s ease; color: var(--text-secondary);
+        }
+        .social-btn:hover { background: var(--primary); color: white; transform: translateY(-2px); }
+        .social-btn svg { width: 20px; height: 20px; fill: currentColor; }
+
+        /* BOTÃO FLUTUANTE */
+        .floating-whatsapp {
+            position: fixed; bottom: 24px; right: 24px; background: #25D366;
+            color: white; width: 64px; height: 64px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2); z-index: 1000;
+            transition: transform 0.3s; text-decoration: none;
+        }
+        .floating-whatsapp:hover { transform: scale(1.1); }
+        .notification-badge {
+            position: absolute; top: -2px; right: -2px; background: #EF4444;
+            color: white; font-size: 0.7rem; width: 22px; height: 22px;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-weight: bold; border: 2px solid white;
         }
 
-        /* MEDIA QUERIES (Ajustes para Desktop) */
-        @media (min-width: 992px) {
-            .hero-grid {
-                grid-template-columns: 1fr 1fr; /* 2 colunas no desktop */
-            }
-            .hero-visual {
-                height: 550px; /* Mais alto no desktop */
-            }
-        }
-
-        /* ANIMAÇÃO DE ENTRADA (Fade In) */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
+        /* UTILITÁRIOS */
+        .text-center { text-align: center; }
+        .mb-1 { margin-bottom: 8px; }
+        .mb-2 { margin-bottom: 16px; }
+        .mb-3 { margin-bottom: 24px; }
+        .mb-4 { margin-bottom: 32px; }
+        .mb-5 { margin-bottom: 40px; }
+        .mt-4 { margin-top: 32px; }
     </style>
 </head>
 <body>
 
-    <header style="position: fixed; width: 100%; top: 0; z-index: 1000; background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-bottom: 1px solid #f1f5f9;">
-        <div class="container" style="height: var(--header-height); display: flex; align-items: center; justify-content: space-between;">
-            <div style="font-weight: 800; font-size: 1.5rem; color: var(--primary);">Victor<span style="color: var(--text-primary);">Tech</span>.</div>
-            <nav>
-                <a href="https://wa.me/5500000000000" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.9rem;">Falar no WhatsApp</a>
-            </nav>
+    <header>
+        <div class="container">
+            <div class="logo">Site<span>Profissional</span></div>
         </div>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="container hero-grid">
-                <div class="hero-content fade-in">
-                    <span class="badge">Engenharia Web & Performance</span>
-                    <h1>Não construo apenas sites. Construo <span class="highlight">ativos digitais</span> que vendem.</h1>
-                    <p style="margin: 24px 0 32px;">
-                        Para advogados, médicos e empresas de serviço que cansaram de amadorismo. 
-                        Tenha uma presença digital segura, rápida e otimizada para o Google.
-                    </p>
-                    <div style="display: flex; gap: 16px; flex-wrap: wrap;">
-                        <a href="#contato" class="btn btn-cta">Solicitar Orçamento</a>
-                        <a href="#portfolio" class="btn" style="background: white; border: 1px solid #E2E8F0; color: var(--text-primary);">Ver Projetos</a>
-                    </div>
-                    <p style="font-size: 0.875rem; margin-top: 16px; color: var(--text-light);">
-                        ⚡ Carregamento em menos de 2s • 🔒 Certificado SSL Incluso
-                    </p>
-                </div>
-
-                <div class="hero-visual fade-in">
-                    <div class="abstract-code">
-                        <div class="code-line medium" style="background: var(--primary); opacity: 0.2; height: 20px;"></div>
-                        <div class="code-line"></div>
-                        <div class="code-line short"></div>
-                        <div class="code-line"></div>
-                        <div class="code-line medium"></div>
-                        <div style="margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-                            <div class="code-line" style="height: 80px;"></div>
-                            <div class="code-line" style="height: 80px;"></div>
-                        </div>
-                    </div>
-                    </div>
-            </div>
-        </section>
-
-        <section id="problemas">
-            <div class="container">
-                <div style="max-width: 700px; margin: 0 auto; text-align: center; margin-bottom: 60px;" class="fade-in">
-                    <h2>O mercado mudou. O amadorismo custa caro.</h2>
-                    <p>Em 2026, seu cliente pesquisa no Google antes de fechar negócio. O que ele encontra define se você ganha ou perde a venda.</p>
-                </div>
-
-                <div class="features-grid">
-                    <div class="card fade-in">
-                        <div class="icon-box">
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-                        </div>
-                        <h3>Invisível no Google</h3>
-                        <p>Sem um site otimizado (SEO), você entrega todos os clientes da sua região para o concorrente que aparece na primeira página.</p>
-                    </div>
-
-                    <div class="card fade-in">
-                        <div class="icon-box">
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        </div>
-                        <h3>Lentidão afasta clientes</h3>
-                        <p>53% dos usuários abandonam sites que levam mais de 3 segundos para carregar. Site lento é dinheiro jogado fora.</p>
-                    </div>
-
-                    <div class="card fade-in">
-                        <div class="icon-box">
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
-                        </div>
-                        <h3>Passar Credibilidade</h3>
-                        <p>Instagram é importante, mas um site próprio transmite a autoridade institucional que empresas grandes possuem.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="tech-section">
-            <div class="container">
-                <div style="text-align: center; margin-bottom: 60px;" class="fade-in">
-                    <span style="color: #38BDF8; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Engenharia de Software</span>
-                    <h2 style="margin-top: 10px;">Não é apenas design. É tecnologia.</h2>
-                    <p style="color: #94A3B8;">Desenvolvo com foco em métricas, performance e segurança de dados.</p>
-                </div>
-
-                <div class="features-grid">
-                    <div class="card fade-in">
-                        <div class="icon-box">⚡</div>
-                        <h3>Performance Extrema</h3>
-                        <p>Otimização focada nos Core Web Vitals do Google. Código limpo, sem excesso de plugins que travam o site.</p>
-                    </div>
-                    <div class="card fade-in">
-                        <div class="icon-box">📱</div>
-                        <h3>Mobile First Real</h3>
-                        <p>O site é projetado primeiro para celulares (onde estão 90% dos seus clientes) e depois adaptado para desktop.</p>
-                    </div>
-                    <div class="card fade-in">
-                        <div class="icon-box">🛡️</div>
-                        <h3>Segurança & SSL</h3>
-                        <p>Proteção contra ataques básicos, conexão criptografada (cadeado verde) e boas práticas de cibersegurança.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="portfolio">
-            <div class="container">
-                <div style="margin-bottom: 50px;" class="fade-in">
-                    <h2>Modelos de Projetos</h2>
-                    <p>Estruturas validadas para converter visitantes em contatos.</p>
-                </div>
-
-                <div class="portfolio-grid">
-                    <div class="portfolio-item fade-in">
-                        <div class="browser-mockup">
-                            <div class="browser-header">
-                                <div class="dot" style="background:#FF5F56"></div>
-                                <div class="dot" style="background:#FFBD2E"></div>
-                                <div class="dot" style="background:#27C93F"></div>
-                            </div>
-                            <div class="placeholder-text">
-                                [Imagem: Site Institucional Advocacia]<br>
-                                <span style="font-size:0.8rem; font-weight:normal;">Design Sóbrio & Autoritário</span>
-                            </div>
-                        </div>
-                        <h3 style="margin-top: 20px;">Escritórios de Advocacia</h3>
-                        <p style="font-size: 0.95rem;">Foco na biografia dos sócios e áreas de atuação.</p>
-                    </div>
-
-                    <div class="portfolio-item fade-in">
-                        <div class="browser-mockup">
-                            <div class="browser-header">
-                                <div class="dot" style="background:#FF5F56"></div>
-                                <div class="dot" style="background:#FFBD2E"></div>
-                                <div class="dot" style="background:#27C93F"></div>
-                            </div>
-                            <div class="placeholder-text">
-                                [Imagem: Landing Page Clínica]<br>
-                                <span style="font-size:0.8rem; font-weight:normal;">Clean, Branco & Tons Suaves</span>
-                            </div>
-                        </div>
-                        <h3 style="margin-top: 20px;">Clínicas e Saúde</h3>
-                        <p style="font-size: 0.95rem;">Foco em agendamento fácil e descrição de procedimentos.</p>
-                    </div>
-
-                    <div class="portfolio-item fade-in">
-                        <div class="browser-mockup">
-                            <div class="browser-header">
-                                <div class="dot" style="background:#FF5F56"></div>
-                                <div class="dot" style="background:#FFBD2E"></div>
-                                <div class="dot" style="background:#27C93F"></div>
-                            </div>
-                            <div class="placeholder-text">
-                                [Imagem: Site Prestador de Serviços]<br>
-                                <span style="font-size:0.8rem; font-weight:normal;">Cores Vibrantes & CTA Forte</span>
-                            </div>
-                        </div>
-                        <h3 style="margin-top: 20px;">Consultoria & Serviços</h3>
-                        <p style="font-size: 0.95rem;">Foco na promessa de valor e captura de leads.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section style="background: #F8FAFC; border-top: 1px solid #E2E8F0;">
-            <div class="container">
-                <h2 style="text-align: center; margin-bottom: 50px;">Como funciona</h2>
-                <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px;">
-                    
-                    <div style="flex: 1; min-width: 250px;" class="fade-in">
-                        <h3 style="color: var(--primary); margin-bottom: 10px;">01. Briefing</h3>
-                        <p>Conversamos para entender seu negócio, público-alvo e objetivos. Defino a estratégia.</p>
-                    </div>
-                    
-                    <div style="flex: 1; min-width: 250px;" class="fade-in">
-                        <h3 style="color: var(--primary); margin-bottom: 10px;">02. Desenvolvimento</h3>
-                        <p>Crio o layout e programo o site com as melhores tecnologias, focado em performance.</p>
-                    </div>
-                    
-                    <div style="flex: 1; min-width: 250px;" class="fade-in">
-                        <h3 style="color: var(--primary); margin-bottom: 10px;">03. Entrega & Otimização</h3>
-                        <p>Site no ar, indexado no Google, configurado com Analytics e pronto para receber clientes.</p>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <section id="contato" style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: white; text-align: center;">
-            <div class="container fade-in">
-                <h2 style="color: white; margin-bottom: 24px;">Pronto para profissionalizar sua imagem?</h2>
-                <p style="color: #BFDBFE; max-width: 600px; margin: 0 auto 40px;">
-                    Pare de perder oportunidades. Tenha uma ferramenta de vendas trabalhando 24h por dia para você.
-                </p>
-                <a href="https://wa.me/5500000000000?text=Olá,%20gostaria%20de%20um%20orçamento%20para%20site." class="btn" style="background: var(--cta-color); color: white; padding: 20px 40px; font-size: 1.2rem;">
-                    Falar com Especialista no WhatsApp
-                </a>
-                <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.8;">Orçamento sem compromisso.</p>
-            </div>
-        </section>
-
-    </main>
-
-    <footer>
+    <section class="hero">
         <div class="container">
-            <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
-                <div>
-                    <h4 style="color: var(--text-primary);">Victor Tech</h4>
-                    <p style="font-size: 0.9rem;">Soluções digitais de alta performance.</p>
-                </div>
-                <div>
-                    <p style="font-size: 0.9rem;">&copy; 2026 Victor Tech. Todos os direitos reservados.</p>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <span class="hero-badge">Desenvolvimento Web Profissional</span>
+                <h1 class="mb-3">Tenha um site que <span style="color: var(--primary);">trabalha 24h</span> vendendo para você</h1>
+                <p style="font-size: 1.25rem; margin-bottom: 40px; max-width: 750px; margin-left: auto; margin-right: auto;">
+                    Ideal para profissionais e empresas que querem mostrar autoridade e profissionalismo na internet quando os clientes buscam pelo serviço que você presta.
+                </p>
+                
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 16px;">
+                    <a href="https://bit.ly/3NFNl6U" class="btn btn-cta">
+                        Solicitar Orçamento Gratuito
+                    </a>
+                    <p style="font-size: 0.9rem; color: var(--text-light);">
+                        <span style="color: var(--cta-color);">●</span> Atendimento direto com programador
+                    </p>
                 </div>
             </div>
         </div>
+    </section>
+
+    <section style="background: white; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="mb-2">Por que você precisa de um site profissional?</h2>
+                <p style="color: var(--text-secondary);">Seu cliente pesquisa no Google antes de fechar negócio</p>
+            </div>
+
+            <div class="grid-3">
+                <div class="card">
+                    <div class="icon-box">🔍</div>
+                    <h3 class="mb-2">Aparecer no Google</h3>
+                    <p>Se você não aparece nas buscas, está entregando clientes para o concorrente que aparece.</p>
+                </div>
+
+                <div class="card">
+                    <div class="icon-box">💼</div>
+                    <h3 class="mb-2">Credibilidade</h3>
+                    <p>Instagram é bom, mas um site próprio transmite autoridade institucional e profissionalismo.</p>
+                </div>
+
+                <div class="card">
+                    <div class="icon-box">📱</div>
+                    <h3 class="mb-2">Vendas 24/7</h3>
+                    <p>Enquanto você dorme, seu site apresenta seus serviços e captura contatos de clientes.</p>
+                </div>
+
+                <div class="card">
+                    <div class="icon-box">⚡</div>
+                    <h3 class="mb-2">Performance Extrema</h3>
+                    <p>Otimização focada nos Core Web Vitals do Google. Código limpo, sem excesso de plugins que travam o site.</p>
+                </div>
+
+                <div class="card">
+                    <div class="icon-box">📱</div>
+                    <h3 class="mb-2">Mobile First Real</h3>
+                    <p>O site é projetado primeiro para celulares (onde estão 90% dos seus clientes) e depois adaptado para desktop.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre">
+        <div class="container">
+            <div class="grid-2">
+                <div>
+                    <div class="expert-photo">
+                        <span style="opacity: 0.5; font-size: 0.9rem;">[Sua Foto Profissional Aqui]</span>
+                        <div class="expert-label">Victor • Programador Web</div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h2 class="mb-3">Quem desenvolve seu site</h2>
+                    
+                    <p class="mb-2">Diferente de agências que usam construtores prontos e lentos, eu programo cada site do zero em código puro, garantindo velocidade e segurança.</p>
+                    
+                    <p class="mb-4">Sou <strong>Victor</strong>, programador web com formação técnica em desenvolvimento. Já criei mais de 100 projetos entre sites, ferramentas e automações.</p>
+                    
+                    <div style="background: #F8FAFC; padding: 24px; border-radius: 12px; border: 1px solid var(--border-color);">
+                        <h4 style="margin-bottom: 16px; color: var(--primary);">Formação Técnica:</h4>
+                        <ul class="check-list" style="color: var(--text-primary);">
+                            <li style="color: var(--text-primary);">
+                                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                                <span><strong>Análise e Desenvolvimento de Sistemas</strong></span>
+                            </li>
+                            <li style="color: var(--text-primary);">
+                                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                                <span><strong>Cibersegurança</strong></span>
+                            </li>
+                            <li style="color: var(--text-primary);">
+                                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                                <span><strong>Engenharia de Software</strong> (Cursando)</span>
+                            </li>
+                            <li style="color: var(--text-primary);">
+                                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                                <span><strong>+100 Projetos Desenvolvidos</strong></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: white; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="mb-2">Metodologia A.D.S.</h2>
+                <p>Processo de desenvolvimento exclusivo para alta performance</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-number">1</div>
+                    <div class="timeline-content">
+                        <h3 class="mb-1">Análise (Analysis)</h3>
+                        <p>Análise do profissional e público-alvo, psicologia das cores e identidade da marca para criar a estratégia visual correta.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-number">2</div>
+                    <div class="timeline-content">
+                        <h3 class="mb-1">Desenvolvimento (Development)</h3>
+                        <p>Construção do site com base nas informações obtidas, usando código puro e otimizado.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-number">3</div>
+                    <div class="timeline-content">
+                        <h3 class="mb-1">Sistema (System)</h3>
+                        <p>Site programado, seguro e disponível para ser usado nas redes sociais, Google Business e Google Ads.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: #F8FAFC;">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="mb-2">Modelos de Projetos</h2>
+                <p>Veja o padrão visual profissional que você vai receber</p>
+            </div>
+
+            <div class="grid-3">
+                <div class="card" style="padding: 0; overflow: hidden; border: none;">
+                    <div style="height: 200px; background: #CBD5E1; display: flex; align-items: center; justify-content: center; color: #64748B; font-weight: 600;">
+                        [Print: Site Advocacia]
+                    </div>
+                    <div style="padding: 24px;">
+                        <h3 style="font-size: 1.1rem; margin-bottom: 8px;">Advocacia & Direito</h3>
+                        <p style="font-size: 0.9rem; margin-bottom: 0;">Design sóbrio e elegante que transmite autoridade e confiança institucional.</p>
+                    </div>
+                </div>
+
+                <div class="card" style="padding: 0; overflow: hidden; border: none;">
+                    <div style="height: 200px; background: #CBD5E1; display: flex; align-items: center; justify-content: center; color: #64748B; font-weight: 600;">
+                        [Print: Clínica Médica]
+                    </div>
+                    <div style="padding: 24px;">
+                        <h3 style="font-size: 1.1rem; margin-bottom: 8px;">Saúde & Clínicas</h3>
+                        <p style="font-size: 0.9rem; margin-bottom: 0;">Layout limpo e acolhedor focado em agendamento e informações de tratamentos.</p>
+                    </div>
+                </div>
+
+                <div class="card" style="padding: 0; overflow: hidden; border: none;">
+                    <div style="height: 200px; background: #CBD5E1; display: flex; align-items: center; justify-content: center; color: #64748B; font-weight: 600;">
+                        [Print: Empresa Local]
+                    </div>
+                    <div style="padding: 24px;">
+                        <h3 style="font-size: 1.1rem; margin-bottom: 8px;">Empresas & Serviços</h3>
+                        <p style="font-size: 0.9rem; margin-bottom: 0;">Focado em conversão com call-to-action forte e botão de WhatsApp em destaque.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 24px;">
+                    Todos os modelos são personalizados com suas cores, logo e conteúdo.
+                </p>
+                <a href="https://bit.ly/3NFNl6U" class="btn btn-primary" style="padding: 14px 40px; font-size: 1.1rem;">
+                    Falar com o Desenvolvedor
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container-fluid" style="overflow: hidden;">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="mb-2">O que os clientes falam</h2>
+                    <p>Resultados reais de quem já tem um site profissional</p>
+                </div>
+            </div>
+
+            <div class="scroller">
+                <div class="scroller-inner">
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p style="font-style: italic; font-size: 0.9rem;">"A agenda do consultório lotou. As pessoas encontram o site no Google e já chamam no WhatsApp."</p>
+                        <strong>Dra. Ana P.</strong><br><span style="font-size: 0.8rem; color: #64748B;">Nutricionista</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p style="font-style: italic; font-size: 0.9rem;">"Precisava de um site rápido para rodar anúncios. O Victor entregou em uma semana e a performance técnica fez diferença."</p>
+                        <strong>R. Almeida</strong><br><span style="font-size: 0.8rem; color: #64748B;">Empresário - Logística</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p style="font-style: italic; font-size: 0.9rem;">"Tinha receio de agências. O atendimento direto com o Victor me deu segurança. Hoje meu escritório tem presença de qualidade."</p>
+                        <strong>Dr. Carlos M.</strong><br><span style="font-size: 0.8rem; color: #64748B;">Advogado</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p style="font-style: italic; font-size: 0.9rem;">"Alunos novos chegando toda semana. O site passa muita credibilidade para os pais que buscam autoescola."</p>
+                        <strong>Marcelo T.</strong><br><span style="font-size: 0.8rem; color: #64748B;">Dono de Autoescola</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p style="font-style: italic; font-size: 0.9rem;">"Minhas joias ficaram lindas na vitrine virtual. Vendo muito mais pelo Instagram mandando o link do site."</p>
+                        <strong>Juliana K.</strong><br><span style="font-size: 0.8rem; color: #64748B;">Joias e Acessórios</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p style="font-style: italic; font-size: 0.9rem;">"Como vendo solução de IA, precisava de um site seguro. O Victor entende muito de cibersegurança."</p>
+                        <strong>Felipe S.</strong><br><span style="font-size: 0.8rem; color: #64748B;">Startup de Tecnologia</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p style="font-style: italic; font-size: 0.9rem;">"Pacientes sempre elogiam a facilidade de achar o endereço e os tratamentos no site."</p>
+                        <strong>Dr. Ricardo</strong><br><span style="font-size: 0.8rem; color: #64748B;">Dentista</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p style="font-style: italic; font-size: 0.9rem;">"Contratei agências caras antes e o resultado foi ruim. O Victor entregou mais por um preço justo."</p>
+                        <strong>Lúcia M.</strong><br><span style="font-size: 0.8rem; color: #64748B;">Fisioterapeuta</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p style="font-style: italic; font-size: 0.9rem;">"Pago a manutenção mensal tranquilo. Saber que meu site está seguro vale cada centavo."</p>
+                        <strong>Fernanda S.</strong><br><span style="font-size: 0.8rem; color: #64748B;">Psicóloga</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p style="font-style: italic; font-size: 0.9rem;">"A Landing Page converte muito bem para meus lançamentos de infoproduto. Recomendo."</p>
+                        <strong>Gustavo B.</strong><br><span style="font-size: 0.8rem; color: #64748B;">Infoprodutor</span>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p style="font-style: italic; font-size: 0.9rem;">"A agenda do consultório lotou. As pessoas encontram o site no Google e já chamam no WhatsApp."</p>
+                        <strong>Dra. Ana P.</strong><br><span style="font-size: 0.8rem; color: #64748B;">Nutricionista</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p style="font-style: italic; font-size: 0.9rem;">"Precisava de um site rápido para rodar anúncios. O Victor entregou em uma semana e a performance técnica fez diferença."</p>
+                        <strong>R. Almeida</strong><br><span style="font-size: 0.8rem; color: #64748B;">Empresário - Logística</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p style="font-style: italic; font-size: 0.9rem;">"Tinha receio de agências. O atendimento direto com o Victor me deu segurança. Hoje meu escritório tem presença de qualidade."</p>
+                        <strong>Dr. Carlos M.</strong><br><span style="font-size: 0.8rem; color: #64748B;">Advogado</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p style="font-style: italic; font-size: 0.9rem;">"Alunos novos chegando toda semana. O site passa muita credibilidade para os pais que buscam autoescola."</p>
+                        <strong>Marcelo T.</strong><br><span style="font-size: 0.8rem; color: #64748B;">Dono de Autoescola</span>
+                    </div>
+                     <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p style="font-style: italic; font-size: 0.9rem;">"Minhas joias ficaram lindas na vitrine virtual. Vendo muito mais pelo Instagram mandando o link do site."</p>
+                        <strong>Juliana K.</strong><br><span style="font-size: 0.8rem; color: #64748B;">Joias e Acessórios</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: #F1F5F9;">
+        <div class="container">
+            <h2 class="text-center mb-5">Investimento</h2>
+            
+            <div class="pricing-grid">
+                
+                <div class="pricing-box">
+                    <span class="pricing-badge">Landing Page (Página Única)</span>
+                    
+                    <h3 style="font-size: 1.5rem; margin: 10px 0 10px;">Site Compacto</h3>
+                    <p style="color: #94A3B8; margin-bottom: 20px;">Ideal para profissionais que estão iniciando sua presença digital e querem resultados rápidos.</p>
+                    
+                    <div style="font-size: 2.5rem; font-weight: 800; line-height: 1; margin-bottom: 8px;">
+                        R$ 1.000
+                    </div>
+                    <p style="margin-bottom: 24px; font-size: 0.9rem; color: #CBD5E1;">Valor único de desenvolvimento</p>
+                    
+                    <div style="border-top: 1px solid #334155; border-bottom: 1px solid #334155; padding: 20px 0; margin-bottom: 24px;">
+                        <div style="font-size: 1.2rem; font-weight: 700; color: #4ADE80; margin-bottom: 4px;">
+                            + R$ 100/mês
+                        </div>
+                        <p style="font-size: 0.85rem; color: #E2E8F0; margin: 0;">Hospedagem + Manutenção + Suporte</p>
+                    </div>
+
+                    <ul class="check-list">
+                        <li>
+                            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            <span>Site em código puro (Leve e Seguro)</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            <span>Design focado em conversão</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            <span>Otimizado para Google (SEO)</span>
+                        </li>
+                    </ul>
+                    <a href="https://bit.ly/3NFNl6U" class="btn" style="background: white; color: #0F172A; width: 100%; font-size: 1rem; margin-top: auto;">
+                        Contratar Landing Page
+                    </a>
+                </div>
+
+                <div class="pricing-box featured">
+                    <span class="pricing-badge" style="background: var(--primary);">Site Institucional</span>
+                    
+                    <h3 style="font-size: 1.5rem; margin: 10px 0 10px;">Estrutura Completa</h3>
+                    <p style="color: #94A3B8; margin-bottom: 20px;">Para negócios estabelecidos que querem elevar sua presença digital de boa para excelente.</p>
+                    
+                    <div style="font-size: 2.5rem; font-weight: 800; line-height: 1; margin-bottom: 8px;">
+                        R$ 3.000
+                    </div>
+                    <p style="margin-bottom: 24px; font-size: 0.9rem; color: #CBD5E1;">Valor único de desenvolvimento</p>
+                    
+                    <div style="border-top: 1px solid #334155; border-bottom: 1px solid #334155; padding: 20px 0; margin-bottom: 24px;">
+                        <div style="font-size: 1.2rem; font-weight: 700; color: #4ADE80; margin-bottom: 4px;">
+                            + R$ 100/mês
+                        </div>
+                        <p style="font-size: 0.85rem; color: #E2E8F0; margin: 0;">Hospedagem + Manutenção + Suporte</p>
+                    </div>
+
+                    <ul class="check-list">
+                        <li>
+                            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            <span>Até 5 páginas (Sobre, Serviços, Contato...)</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            <span>Maior autoridade e informação</span>
+                        </li>
+                         <li>
+                            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            <span>Site em código puro (Leve e Seguro)</span>
+                        </li>
+                         <li>
+                            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            <span>Design focado em conversão</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            <span>Otimizado para Google (SEO)</span>
+                        </li>
+                    </ul>
+                    <a href="https://bit.ly/3NFNl6U" class="btn" style="background: white; color: #0F172A; width: 100%; font-size: 1rem; margin-top: auto;">
+                        Contratar Institucional
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="mb-2">Perguntas Frequentes</h2>
+                <p>Tire suas dúvidas antes de contratar</p>
+            </div>
+
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Quanto tempo leva para ficar pronto?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Em até uma semana após o preenchimento do formulário com suas informações. Trabalho com um cardápio de modelos prontos que personalizo para você, garantindo agilidade sem perder qualidade.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>O que está incluído nos R$ 100/mês?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Este valor cobre os custos de hospedagem do site (para mantê-lo online 24h) e, principalmente, minha disponibilidade para manutenção técnica e edições pontuais de texto ou imagem que você precisar.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>E quanto a edições e atualizações?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Estão inclusas no pacote mensal. Você não precisa se preocupar com a parte técnica. Se precisar trocar uma foto, mudar um telefone ou ajustar um texto, é só me mandar no WhatsApp e eu faço para você. Você foca no seu trabalho, eu cuido do site.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Como funciona o cancelamento?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>O domínio (seu endereço .com.br) é comprado por um período de 1 ano. Por isso, nosso contrato inicial é de 12 meses, garantindo que seu site fique online e atualizado nesse período. Após 1 ano, podemos renovar se você desejar continuar com meus serviços. (E eu farei o possível para que você renove, quero criar uma boa e sólida relação com você profissional).</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>O domínio fica em meu nome?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim, sempre. O domínio é registrado em seu CPF ou CNPJ, garantindo que você é o proprietário legal.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: white; text-align: center;">
+        <div class="container">
+            <h2 style="color: white; margin-bottom: 24px;">Pronto para ter seu site profissional?</h2>
+            <p style="color: #BFDBFE; max-width: 600px; margin: 0 auto 40px;">
+                Pare de perder clientes para quem aparece no Google. Garanta sua presença digital profissional agora.
+            </p>
+            <a href="https://bit.ly/3NFNl6U" class="btn" style="background: var(--cta-color); color: white; padding: 20px 40px; font-size: 1.2rem;">
+                Falar com Victor no WhatsApp
+            </a>
+            <p style="margin-top: 20px; font-size: 1.2rem; opacity: 1.2;">Site seguro e eficiente para sua empresa.</p>
+        </div>
+    </section>
+
+    <footer style="padding: 50px 0; background: white; border-top: 1px solid var(--border-color);">
+        <div class="container" style="text-align: center;">
+            
+            <div class="social-links">
+                <a href="#" class="social-btn" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                </a>
+                
+                <a href="https://bit.ly/4qGvdIM" class="social-btn" aria-label="Instagram" target="_blank">
+                    <svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
+                </a>
+                
+                <a href="https://bit.ly/linkedin-victor-siteprofissional" class="social-btn" aria-label="LinkedIn" target="_blank">
+                    <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                </a>
+                
+                <a href="https://siteprofissional-pro.blogspot.com/" class="social-btn" aria-label="Blog" target="_blank">
+                    <svg viewBox="0 0 24 24"><path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-2 12H7v-2h10v2m0-4H7V9h10v2m0-4H7V5h10v2z"/></svg>
+                </a>
+                
+                <a href="https://bit.ly/3NFNl6U" class="social-btn" aria-label="WhatsApp" target="_blank">
+                    <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.17-3.12.82.83-3.04-.19-.32a8.188 8.188 0 0 1-1.26-4.38c.01-4.54 3.7-8.24 8.24-8.24M16.53 14.33c-.22-.11-1.27-.63-1.46-.71-.19-.08-.32-.11-.46.11-.13.22-.52.63-.63.76-.11.12-.23.13-.45.02-.22-.11-.93-.34-1.77-1.08-.66-.59-1.1-1.32-1.23-1.55-.13-.23-.01-.35.1-.46.1-.1.22-.26.33-.39.11-.13.15-.22.22-.37.08-.15.04-.28-.02-.4-.05-.11-.46-1.11-.63-1.52-.17-.41-.34-.35-.47-.36-.11-.01-.24-.01-.36-.01-.13 0-.33.05-.51.24-.17.19-.67.65-.67 1.59 0 .93.68 1.83.78 1.96.1.13 1.33 2.03 3.22 2.85.45.19.8.31 1.08.4.45.14.86.12 1.18.07.36-.05 1.27-.52 1.45-1.02.18-.51.18-.94.13-1.03-.06-.08-.18-.13-.4-.24z"/></svg>
+                </a>
+            </div>
+
+            <div style="font-weight: 800; font-size: 1.5rem; color: var(--text-primary); margin-bottom: 20px;">
+                Site<span style="color: var(--primary);">Profissional</span>
+            </div>
+            <p style="font-size: 0.9rem; max-width: 500px; margin: 0 auto 30px; color: var(--text-secondary);">
+                Desenvolvimento web profissional para empresas que buscam crescimento online.
+            </p>
+            <p style="font-size: 0.85rem; color: var(--text-light);">
+                © 2026 Site Profissional. Desenvolvido por Victor.<br>
+                Criado por <a href="https://siteprofissional.pro" style="color: var(--primary); text-decoration: none;">siteprofissional.pro</a>
+            </p>
+        </div>
     </footer>
 
+    <a href="https://bit.ly/3NFNl6U" class="floating-whatsapp" target="_blank">
+        <svg fill="currentColor" viewBox="0 0 24 24" style="width: 32px; height: 32px;">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+        </svg>
+        <div class="notification-badge">1</div>
+    </a>
+
     <script>
-        /**
-         * SCROLL REVEAL (Animação ao rolar a página)
-         * Usa a API 'IntersectionObserver' do navegador.
-         * É muito mais performática do que usar 'window.onscroll'.
-         * Ela detecta quando o elemento entra na tela e adiciona a classe .visible
-         */
-        document.addEventListener('DOMContentLoaded', () => {
+        function toggleFAQ(button) {
+            const answer = button.nextElementSibling;
+            const isActive = answer.classList.contains('active');
             
-            // Seleciona todos os elementos com a classe .fade-in
-            const observerOptions = {
-                root: null, // observa em relação à viewport
-                threshold: 0.1, // dispara quando 10% do elemento estiver visível
-                rootMargin: "0px"
-            };
-
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target); // Para de observar depois que animou (performance)
-                    }
-                });
-            }, observerOptions);
-
-            const elements = document.querySelectorAll('.fade-in');
-            elements.forEach(el => observer.observe(el));
-        });
-
-        /**
-         * SMOOTH SCROLL (Rolagem Suave para links internos)
-         * Garante que clicar em "Contato" deslize suavemente até a seção.
-         */
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
+            // Fecha todos os outros itens do FAQ
+            document.querySelectorAll('.faq-answer').forEach(item => {
+                item.classList.remove('active');
             });
-        });
+            document.querySelectorAll('.faq-question').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Abre o item clicado (se não estava aberto)
+            if (!isActive) {
+                answer.classList.add('active');
+                button.classList.add('active');
+            }
+        }
     </script>
+
 </body>
 </html>

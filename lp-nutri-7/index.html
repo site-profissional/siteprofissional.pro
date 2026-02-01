@@ -3,769 +3,579 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Nutrição estratégica para hipertrofia, definição e performance máxima. Transforme seu corpo com estratégia nutricional, não com fome.">
-    <meta name="keywords" content="nutricionista esportivo, dieta para hipertrofia, emagrecimento definitivo, nutrição performance, crossfit nutrição">
     
-    <!-- Open Graph para WhatsApp -->
-    <meta property="og:title" content="NUTRI PERFORMANCE - Coma para Performar">
-    <meta property="og:description" content="Transforme seu corpo com estratégia nutricional. Hipertrofia, Definição e Performance Máxima.">
+    <title>Nutri Performance | Nutricionista Esportivo para Hipertrofia e Resultados</title>
+    <meta name="description" content="Protocolos nutricionais avançados para hipertrofia, definição extrema e performance atlética. Chega de dietas de gaveta. Agende sua consultoria.">
+    <meta name="keywords" content="nutricionista esportivo, dieta hipertrofia, emagrecimento, crossfit, consultoria online, dieta flexível">
+    <meta name="author" content="siteprofissional.pro">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#CCFF00">
+
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://source.unsplash.com/1200x630/?gym,athlete">
-    
-    <title>NUTRI PERFORMANCE | Nutrição Esportiva de Alta Performance</title>
-    
-    <!-- Google Fonts: Teko para títulos, Roboto para texto -->
+    <meta property="og:title" content="Nutri Performance | Evolução Começa no Prato">
+    <meta property="og:description" content="Nutrição estratégica para quem treina de verdade. Protocolos para Hipertrofia e Definição.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1000&auto=format&fit=crop">
+    <meta property="og:url" content="https://nutriperformance.com.br">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HealthAndBeautyBusiness",
+      "name": "Nutri Performance",
+      "image": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438",
+      "telephone": "+5511999999999",
+      "url": "https://nutriperformance.com.br",
+      "priceRange": "$$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Performance, 1000",
+        "addressLocality": "São Paulo",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "08:00",
+        "closes": "20:00"
+      },
+      "description": "Nutricionista Esportivo especializado em alta performance e estética corporal."
+    }
+    </script>
+
     <style>
-        /* ========================
-           VARIÁVEIS CSS - ALTERE AQUI AS CORES PRINCIPAIS
-           ======================== */
+        /* CONFIGURAÇÃO DE CORES (VARIÁVEIS)
+           Altere --neon-color para mudar a cor de destaque do site.
+           Sugestões: #CCFF00 (Verde Neon), #FF003C (Vermelho Neon), #00F0FF (Azul Cyber)
+        */
         :root {
-            --cor-primaria: #E3FF00;        /* Amarelo Neon - Mude para #FF0055 (vermelho) ou #00E5FF (azul) */
-            --cor-primaria-escura: #b3cc00;
-            --fundo-escuro: #0a0a0a;        /* Preto Fosco */
-            --fundo-cinza: #121212;         /* Cinza Chumbo */
-            --fundo-card: #1a1a1a;
-            --texto-branco: #F5F5F5;
-            --texto-cinza: #B0B0B0;
-            --borda-sutil: #2a2a2a;
+            --neon-color: #CCFF00;      /* Amarelo/Verde Volt */
+            --bg-dark: #0a0a0a;         /* Preto Profundo */
+            --bg-card: #121212;         /* Cinza Chumbo */
+            --bg-light: #1c1c1c;        /* Cinza Médio */
+            --text-white: #F5F5F5;
+            --text-gray: #B0B0B0;
+            --font-title: 'Oswald', sans-serif;
+            --font-body: 'Roboto', sans-serif;
+            --container-width: 1200px;
+            --section-padding: 80px 20px;
         }
-        
-        /* ========================
-           RESET E BASE
-           ======================== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+
+        /* RESET E GERAL */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
         body {
-            font-family: 'Roboto', sans-serif;
-            background-color: var(--fundo-escuro);
-            color: var(--texto-branco);
+            background-color: var(--bg-dark);
+            color: var(--text-white);
+            font-family: var(--font-body);
             line-height: 1.6;
             overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
         }
-        
-        h1, h2, h3, h4 {
-            font-family: 'Teko', sans-serif;
+
+        /* TIPOGRAFIA */
+        h1, h2, h3 {
+            font-family: var(--font-title);
+            text-transform: uppercase;
+            line-height: 1.1;
+        }
+
+        h1 {
+            font-size: 3.5rem;
             font-weight: 700;
             letter-spacing: 1px;
-            text-transform: uppercase;
+            margin-bottom: 20px;
         }
-        
-        /* ========================
-           HEADER STICKY
-           ======================== */
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--text-white);
+        }
+
+        h2 span { color: var(--neon-color); }
+
+        p {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        a { text-decoration: none; transition: 0.3s; }
+
+        /* UTILITÁRIOS */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section { padding: var(--section-padding); }
+
+        /* BOTÕES (NEON GLOW) */
+        .btn-neon {
+            display: inline-block;
+            background-color: var(--neon-color);
+            color: #000;
+            font-family: var(--font-title);
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 15px 35px;
+            font-size: 1.1rem;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(204, 255, 0, 0.4);
+            letter-spacing: 1px;
+        }
+
+        .btn-neon:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 25px rgba(204, 255, 0, 0.7);
+            background-color: #d4ff33;
+        }
+
+        .btn-outline {
+            display: inline-block;
+            background-color: transparent;
+            color: var(--neon-color);
+            border: 2px solid var(--neon-color);
+            font-family: var(--font-title);
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 12px 30px;
+            font-size: 1rem;
+            border-radius: 4px;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--neon-color);
+            color: #000;
+            box-shadow: 0 0 15px rgba(204, 255, 0, 0.5);
+        }
+
+        /* HEADER FIXO */
         header {
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(10, 10, 10, 0.95);
+            background-color: rgba(10, 10, 10, 0.95);
             backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
             z-index: 1000;
-            border-bottom: 1px solid var(--borda-sutil);
+            padding: 15px 0;
         }
-        
-        nav {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
+
+        .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .logo {
-            font-size: 1.8rem;
-            font-family: 'Teko', sans-serif;
+            font-family: var(--font-title);
+            font-size: 1.5rem;
             font-weight: 700;
-            color: var(--cor-primaria);
-            letter-spacing: 2px;
+            color: var(--text-white);
+            letter-spacing: 1px;
         }
         
-        .btn-header {
-            background: var(--cor-primaria);
-            color: var(--fundo-escuro);
-            padding: 0.7rem 1.8rem;
-            border: none;
-            border-radius: 4px;
-            font-weight: 700;
-            font-size: 0.9rem;
-            cursor: pointer;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-        }
-        
-        .btn-header:hover {
-            background: var(--cor-primaria-escura);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(227, 255, 0, 0.4);
-        }
-        
-        /* ========================
-           HERO SECTION
-           ======================== */
+        .logo span { color: var(--neon-color); }
+
+        /* HERO SECTION */
         .hero {
-            min-height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), 
-                        url('https://source.unsplash.com/1920x1080/?crossfit,gym,dark') center/cover no-repeat;
+            position: relative;
+            height: 100vh;
             display: flex;
             align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 8rem 2rem 4rem;
-            position: relative;
+            background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Efeito Parallax simples */
         }
-        
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Gradiente escuro para garantir leitura */
+            background: linear-gradient(90deg, #0a0a0a 0%, rgba(10,10,10,0.8) 50%, rgba(10,10,10,0.3) 100%);
+            z-index: 1;
+        }
+
         .hero-content {
-            max-width: 900px;
-            animation: fadeInUp 1s ease;
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
         }
-        
-        .hero h1 {
-            font-size: clamp(3rem, 8vw, 6rem);
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-            color: var(--texto-branco);
-            text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.8);
-        }
-        
-        .hero h1 span {
-            color: var(--cor-primaria);
-        }
-        
+
         .hero-subtitle {
-            font-size: clamp(1.1rem, 2vw, 1.4rem);
-            color: var(--texto-cinza);
-            margin-bottom: 3rem;
-            font-weight: 300;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+            font-size: 1.3rem;
+            color: #ddd;
+            border-left: 4px solid var(--neon-color);
+            padding-left: 15px;
+            margin-bottom: 30px;
         }
-        
-        .btn-cta {
-            background: var(--cor-primaria);
-            color: var(--fundo-escuro);
-            padding: 1.2rem 3rem;
-            border: none;
-            border-radius: 6px;
-            font-weight: 700;
-            font-size: 1.1rem;
-            cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
-            box-shadow: 0 0 30px rgba(227, 255, 0, 0.5);
-            text-decoration: none;
-            display: inline-block;
+
+        /* CARDS DE PÚBLICO (GRID) */
+        .audience {
+            background-color: var(--bg-card);
         }
-        
-        .btn-cta:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 0 50px rgba(227, 255, 0, 0.8);
-        }
-        
-        /* ========================
-           CONTAINER PADRÃO
-           ======================== */
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 5rem 2rem;
-        }
-        
-        .section-title {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            text-align: center;
-            margin-bottom: 1rem;
-            color: var(--texto-branco);
-        }
-        
-        .section-subtitle {
-            text-align: center;
-            color: var(--texto-cinza);
-            font-size: 1.2rem;
-            margin-bottom: 4rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        /* ========================
-           SEÇÃO: PARA QUEM É
-           ======================== */
-        .para-quem {
-            background: var(--fundo-cinza);
-        }
-        
-        .cards-grid {
+
+        .card-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            gap: 30px;
+            margin-top: 50px;
         }
-        
+
         .card {
-            background: var(--fundo-card);
-            border: 1px solid var(--borda-sutil);
+            background-color: var(--bg-light);
+            padding: 40px 30px;
             border-radius: 8px;
-            padding: 2.5rem;
-            text-align: center;
-            transition: all 0.3s ease;
+            border: 1px solid #333;
+            transition: 0.3s;
             position: relative;
             overflow: hidden;
         }
-        
+
+        .card:hover {
+            border-color: var(--neon-color);
+            transform: translateY(-10px);
+        }
+
         .card::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            height: 3px;
-            background: var(--cor-primaria);
+            height: 4px;
+            background-color: var(--neon-color);
             transform: scaleX(0);
+            transform-origin: left;
             transition: transform 0.3s ease;
         }
-        
-        .card:hover::before {
-            transform: scaleX(1);
-        }
-        
-        .card:hover {
-            transform: translateY(-8px);
-            border-color: var(--cor-primaria);
-            box-shadow: 0 10px 40px rgba(227, 255, 0, 0.2);
-        }
-        
+
+        .card:hover::before { transform: scaleX(1); }
+
         .card-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 1.5rem;
-            stroke: var(--cor-primaria);
-            stroke-width: 1.5;
-        }
-        
-        .card h3 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: var(--cor-primaria);
-        }
-        
-        .card p {
-            color: var(--texto-cinza);
-            font-size: 1rem;
-        }
-        
-        /* ========================
-           SEÇÃO: METODOLOGIA
-           ======================== */
-        .metodologia {
-            background: var(--fundo-escuro);
-        }
-        
-        .metodologia-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .metodo-item {
-            background: var(--fundo-card);
-            padding: 2rem;
-            border-radius: 8px;
-            border-left: 4px solid var(--cor-primaria);
-        }
-        
-        .metodo-item h4 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--cor-primaria);
-        }
-        
-        .metodo-item p {
-            color: var(--texto-cinza);
-        }
-        
-        /* ========================
-           SEÇÃO: RESULTADOS
-           ======================== */
-        .resultados {
-            background: var(--fundo-cinza);
-        }
-        
-        .resultados-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .depoimento {
-            background: var(--fundo-card);
-            padding: 2rem;
-            border-radius: 8px;
-            border: 1px solid var(--borda-sutil);
-            position: relative;
-        }
-        
-        .depoimento::before {
-            content: '"';
-            position: absolute;
-            top: -10px;
-            left: 20px;
-            font-size: 5rem;
-            color: var(--cor-primaria);
-            opacity: 0.3;
-            font-family: serif;
-        }
-        
-        .depoimento-texto {
-            color: var(--texto-cinza);
-            font-size: 1rem;
-            margin-bottom: 1.5rem;
-            font-style: italic;
-        }
-        
-        .depoimento-autor {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-        
-        .depoimento-foto {
             width: 50px;
             height: 50px;
-            border-radius: 50%;
-            background: var(--cor-primaria);
+            margin-bottom: 20px;
+            stroke: var(--neon-color); /* Para SVG outline */
+            fill: none;
+            stroke-width: 1.5;
+        }
+
+        .card h3 { font-size: 1.5rem; margin-bottom: 10px; color: #fff; }
+
+        /* METODOLOGIA */
+        .methodology {
+            background-color: var(--bg-dark);
             display: flex;
             align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            color: var(--fundo-escuro);
+            flex-wrap: wrap;
         }
         
-        .depoimento-info h5 {
-            font-size: 1.1rem;
-            color: var(--texto-branco);
-            margin-bottom: 0.2rem;
+        .method-text { flex: 1; min-width: 300px; padding-right: 40px; }
+        .method-image { 
+            flex: 1; 
+            min-width: 300px; 
+            height: 400px; 
+            background-image: url('https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?q=80&w=1469&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            filter: grayscale(100%); /* Estilo Dark */
+            transition: 0.5s;
         }
         
-        .depoimento-info p {
-            color: var(--texto-cinza);
-            font-size: 0.9rem;
-        }
-        
-        /* ========================
-           SEÇÃO: LOCALIZAÇÃO
-           ======================== */
-        .localizacao {
-            background: var(--fundo-escuro);
-        }
-        
-        .localizacao-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+        .method-image:hover { filter: grayscale(0%); }
+
+        .check-list { list-style: none; margin-top: 20px; }
+        .check-list li {
+            margin-bottom: 15px;
+            display: flex;
             align-items: center;
+            font-size: 1.1rem;
+            color: #ddd;
+        }
+        .check-list li svg {
+            width: 20px;
+            height: 20px;
+            stroke: var(--neon-color);
+            margin-right: 15px;
+        }
+
+        /* PROVA SOCIAL */
+        .social-proof {
+            background-color: var(--bg-light);
+            text-align: center;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .testimonial {
+            background: var(--bg-dark);
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 3px solid var(--neon-color);
+            text-align: left;
         }
         
-        .localizacao-info h3 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            color: var(--cor-primaria);
-        }
+        .testimonial p { font-style: italic; color: #ccc; }
+        .client-name { font-weight: 700; color: var(--neon-color); margin-top: 15px; display: block; font-family: var(--font-title); }
+
+        /* LOCALIZAÇÃO E MAPA */
+        .location { background-color: var(--bg-card); }
         
-        .localizacao-item {
-            margin-bottom: 1.5rem;
-        }
-        
-        .localizacao-item h4 {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .localizacao-item p {
-            color: var(--texto-cinza);
-        }
-        
-        .mapa {
+        .map-container {
             width: 100%;
             height: 400px;
+            margin-top: 30px;
             border-radius: 8px;
-            border: 1px solid var(--borda-sutil);
-            filter: grayscale(100%) contrast(1.2);
+            overflow: hidden;
+            border: 1px solid #333;
         }
-        
-        /* ========================
-           CTA FINAL
-           ======================== */
-        .cta-final {
-            background: linear-gradient(135deg, var(--fundo-cinza) 0%, var(--fundo-escuro) 100%);
-            text-align: center;
-            padding: 6rem 2rem;
+
+        /* Filtro CSS para deixar o mapa Escuro/Grayscale */
+        iframe.map-frame {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            filter: grayscale(100%) invert(92%) contrast(83%);
         }
-        
-        .cta-final h2 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            margin-bottom: 1.5rem;
-        }
-        
-        .cta-final p {
-            font-size: 1.3rem;
-            color: var(--texto-cinza);
-            margin-bottom: 3rem;
-        }
-        
-        /* ========================
-           FOOTER
-           ======================== */
+
+        /* FOOTER */
         footer {
-            background: var(--fundo-escuro);
+            background-color: #000;
+            padding: 50px 0 20px;
             text-align: center;
-            padding: 2rem;
-            border-top: 1px solid var(--borda-sutil);
+            border-top: 1px solid #222;
         }
-        
-        footer p {
-            color: var(--texto-cinza);
+
+        .footer-credit {
+            margin-top: 30px;
             font-size: 0.9rem;
+            color: #555;
         }
         
-        footer a {
-            color: var(--cor-primaria);
-            text-decoration: none;
-        }
-        
-        footer a:hover {
-            text-decoration: underline;
-        }
-        
-        /* ========================
-           BOTÃO FLUTUANTE WHATSAPP
-           ======================== */
-        .whatsapp-float {
+        .footer-credit a { color: #777; font-weight: bold; }
+        .footer-credit a:hover { color: var(--neon-color); }
+
+        /* BOTÃO WHATSAPP FLUTUANTE */
+        .float-wa {
             position: fixed;
-            width: 60px;
-            height: 60px;
             bottom: 30px;
             right: 30px;
-            background: #25D366;
+            width: 65px;
+            height: 65px;
+            background-color: #25D366; /* Verde Oficial WA ou use var(--neon-color) */
             border-radius: 50%;
-            box-shadow: 0 5px 25px rgba(37, 211, 102, 0.5);
             display: flex;
             align-items: center;
             justify-content: center;
-            cursor: pointer;
-            z-index: 999;
-            transition: all 0.3s ease;
-            text-decoration: none;
+            z-index: 9999;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+            transition: 0.3s;
+            animation: pulse 2s infinite;
         }
-        
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            box-shadow: 0 8px 35px rgba(37, 211, 102, 0.7);
+
+        .float-wa:hover { transform: scale(1.1); }
+        .float-wa svg { width: 35px; height: 35px; fill: white; }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
-        
-        .whatsapp-float svg {
-            width: 35px;
-            height: 35px;
-            fill: white;
-        }
-        
-        /* ========================
-           ANIMAÇÕES
-           ======================== */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        /* ========================
-           RESPONSIVIDADE
-           ======================== */
+
+        /* RESPONSIVIDADE MOBILE */
         @media (max-width: 768px) {
-            nav {
-                padding: 1rem;
-            }
-            
-            .logo {
-                font-size: 1.4rem;
-            }
-            
-            .btn-header {
-                padding: 0.5rem 1rem;
-                font-size: 0.8rem;
-            }
-            
-            .hero {
-                padding: 6rem 1rem 3rem;
-            }
-            
-            .container {
-                padding: 3rem 1rem;
-            }
-            
-            .localizacao-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .cards-grid,
-            .resultados-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .whatsapp-float {
-                width: 50px;
-                height: 50px;
-                bottom: 20px;
-                right: 20px;
-            }
-            
-            .whatsapp-float svg {
-                width: 28px;
-                height: 28px;
-            }
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+            .hero-subtitle { font-size: 1.1rem; }
+            .methodology { flex-direction: column; }
+            .method-image { width: 100%; margin-top: 30px; height: 300px; }
+            .method-text { padding-right: 0; }
+            .section { padding: 60px 20px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- ========================
-         HEADER FIXO
-         ======================== -->
     <header>
-        <nav>
-            <div class="logo">NUTRI PERFORMANCE</div>
-            <a href="#contato" class="btn-header">Agendar Consultoria</a>
-        </nav>
+        <div class="container header-content">
+            <div class="logo">NUTRI <span>PERFORMANCE</span></div>
+            <a href="https://wa.me/5511999999999" class="btn-outline">Agendar</a>
+        </div>
     </header>
 
-    <!-- ========================
-         HERO SECTION
-         ======================== -->
     <section class="hero">
-        <div class="hero-content">
-            <h1>Sua Evolução <span>Começa no Prato</span></h1>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1>Sua Evolução <br>Começa no <span style="color:var(--neon-color)">Prato</span>.</h1>
             <p class="hero-subtitle">
-                Nutrição estratégica para hipertrofia, definição e performance máxima. 
-                Chega de dietas de gaveta.
+                Nutrição estratégica para hipertrofia, definição extrema e performance máxima. Sem dietas de gaveta. Protocolos individualizados.
             </p>
-            <a href="#contato" class="btn-cta">Quero Atingir Minha Meta</a>
-        </div>
-    </section>
-
-    <!-- ========================
-         SEÇÃO: PARA QUEM É
-         ======================== -->
-    <section class="para-quem">
-        <div class="container">
-            <h2 class="section-title">Para Quem É?</h2>
-            <p class="section-subtitle">
-                Protocolo nutricional personalizado baseado no seu objetivo e metabolismo
-            </p>
-            
-            <div class="cards-grid">
-                <div class="card">
-                    <svg class="card-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <h3>Hipertrofia</h3>
-                    <p>Para quem quer ganhar massa muscular bruta com estratégia de macronutrientes e timing perfeito de refeições.</p>
-                </div>
-                
-                <div class="card">
-                    <svg class="card-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="12" cy="12" r="10" stroke="currentColor"/>
-                        <path d="M12 6V12L16 14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <h3>Definição</h3>
-                    <p>Para quem quer secar gordura mantendo massa muscular. Déficit calórico inteligente sem perda de performance.</p>
-                </div>
-                
-                <div class="card">
-                    <svg class="card-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <h3>Performance</h3>
-                    <p>Para atletas de CrossFit, luta e corrida. Otimização energética para treinos de alta intensidade.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========================
-         SEÇÃO: METODOLOGIA
-         ======================== -->
-    <section class="metodologia">
-        <div class="container">
-            <h2 class="section-title">A Diferença</h2>
-            <p class="section-subtitle">
-                Sem terrorismo nutricional. Protocolo baseado em ciência e resultado real.
-            </p>
-            
-            <div class="metodologia-content">
-                <div class="metodo-item">
-                    <h4>01. Anamnese Completa</h4>
-                    <p>Avaliação detalhada do seu histórico, rotina de treino, metabolismo e objetivos específicos. Entendemos seu corpo antes de prescrever.</p>
-                </div>
-                
-                <div class="metodo-item">
-                    <h4>02. Bioimpedância</h4>
-                    <p>Análise precisa da composição corporal: percentual de gordura, massa magra, água e metabolismo basal. Dados reais, não achismos.</p>
-                </div>
-                
-                <div class="metodo-item">
-                    <h4>03. Plano Estratégico</h4>
-                    <p>Cardápio personalizado com macronutrientes calculados. Flexibilidade para sua rotina sem abrir mão dos resultados.</p>
-                </div>
-                
-                <div class="metodo-item">
-                    <h4>04. App Exclusivo</h4>
-                    <p>Acompanhamento em tempo real via aplicativo. Ajustes semanais baseados na sua evolução e feedback constante.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========================
-         SEÇÃO: RESULTADOS
-         ======================== -->
-    <section class="resultados">
-        <div class="container">
-            <h2 class="section-title">Resultados Reais</h2>
-            <p class="section-subtitle">
-                Protocolo testado e aprovado por atletas e praticantes sérios
-            </p>
-            
-            <div class="resultados-grid">
-                <div class="depoimento">
-                    <p class="depoimento-texto">
-                        "Baixei meu percentual de gordura de 18% para 12% em 8 semanas mantendo toda a força no agachamento. O protocolo é agressivo mas funciona."
-                    </p>
-                    <div class="depoimento-autor">
-                        <div class="depoimento-foto">RC</div>
-                        <div class="depoimento-info">
-                            <h5>Rafael Costa</h5>
-                            <p>CrossFit Athlete</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="depoimento">
-                    <p class="depoimento-texto">
-                        "Ganhei 6kg de massa limpa em 4 meses. Primeira vez que consigo evoluir sem encher de gordura. A estratégia de macros fez toda diferença."
-                    </p>
-                    <div class="depoimento-autor">
-                        <div class="depoimento-foto">MS</div>
-                        <div class="depoimento-info">
-                            <h5>Mariana Silva</h5>
-                            <p>Musculação - Hipertrofia</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="depoimento">
-                    <p class="depoimento-texto">
-                        "Melhorei meu tempo de corrida em 15% ajustando a nutrição pré-treino. Finalmente entendi como comer para performar, não só para emagrecer."
-                    </p>
-                    <div class="depoimento-autor">
-                        <div class="depoimento-foto">TP</div>
-                        <div class="depoimento-info">
-                            <h5>Thiago Prado</h5>
-                            <p>Corredor de Longa Distância</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========================
-         SEÇÃO: LOCALIZAÇÃO
-         ======================== -->
-    <section class="localizacao">
-        <div class="container">
-            <h2 class="section-title">Atendimento</h2>
-            <p class="section-subtitle">
-                Consultoria presencial e online para todo Brasil
-            </p>
-            
-            <div class="localizacao-content">
-                <div class="localizacao-info">
-                    <h3>Híbrido & Flexível</h3>
-                    
-                    <div class="localizacao-item">
-                        <h4>Presencial</h4>
-                        <p>Consultório equipado com bioimpedância profissional e espaço de avaliação completo.</p>
-                        <p style="margin-top: 0.5rem; color: var(--texto-cinza);">📍 São Paulo - SP</p>
-                    </div>
-                    
-                    <div class="localizacao-item">
-                        <h4>Online</h4>
-                        <p>Atendimento via videochamada para qualquer lugar do Brasil. Mesma qualidade, maior comodidade.</p>
-                        <p style="margin-top: 0.5rem; color: var(--texto-cinza);">🌎 Todo Brasil</p>
-                    </div>
-                </div>
-                
-                <iframe 
-                    class="mapa"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0978!2d-46.6333824!3d-23.5505199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1234567890"
-                    allowfullscreen=""
-                    loading="lazy">
-                </iframe>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========================
-         CTA FINAL
-         ======================== -->
-    <section class="cta-final" id="contato">
-        <div class="container">
-            <h2>Pronto Para Transformar?</h2>
-            <p>Agende sua consultoria e comece a comer para performar.</p>
-            <a href="https://wa.me/5511999999999?text=Olá!%20Quero%20agendar%20uma%20consultoria%20nutricional" 
-               target="_blank" 
-               class="btn-cta">
-                Agendar Consultoria Agora
+            <a href="https://wa.me/5511999999999" class="btn-neon">
+                Quero Atingir Minha Meta
             </a>
         </div>
     </section>
 
-    <!-- ========================
-         FOOTER
-         ======================== -->
+    <section class="section audience">
+        <div class="container">
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <h2>Para quem é o <span>Protocolo</span>?</h2>
+                <p>Não atendemos quem busca milagres. Atendemos quem busca resultados através da ciência e consistência.</p>
+            </div>
+            
+            <div class="card-grid">
+                <div class="card">
+                    <svg class="card-icon" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+                    </svg>
+                    <h3>Hipertrofia</h3>
+                    <p>Estratégias de superávit calórico limpo para ganho de volume muscular real, minimizando acúmulo de gordura.</p>
+                </div>
+                <div class="card">
+                    <svg class="card-icon" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z" />
+                    </svg>
+                    <h3>Definição</h3>
+                    <p>Protocolos de cutting agressivo ou gradual para secar gordura e revelar a musculatura construída.</p>
+                </div>
+                <div class="card">
+                    <svg class="card-icon" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <h3>Performance</h3>
+                    <p>Nutrição específica para Crossfit, Lutas e Endurance. Melhore sua recuperação e rendimento no treino.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section methodology">
+        <div class="container" style="display:flex; flex-wrap:wrap; align-items:center;">
+            <div class="method-text">
+                <h2>A Diferença <br><span>Nutri Performance</span></h2>
+                <p>Esqueça o "comer pouco". Para performar, você precisa comer certo. Minha metodologia é baseada em bioquímica, não em achismos.</p>
+                
+                <ul class="check-list">
+                    <li>
+                        <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Anamnese completa e análise de exames
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Cálculo preciso de macronutrientes
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        App exclusivo para acompanhamento
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Sem terrorismo nutricional
+                    </li>
+                </ul>
+                <br>
+                <a href="https://wa.me/5511999999999" class="btn-neon">Ver Planos de Consultoria</a>
+            </div>
+            <div class="method-image"></div>
+        </div>
+    </section>
+
+    <section class="section social-proof">
+        <div class="container">
+            <h2>Resultados Reais</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p>"Estava estagnado há 2 anos na academia. Em 3 meses de protocolo ajustado, baixei de 22% para 14% de BF ganhando força."</p>
+                    <span class="client-name">RODRIGO M., CROSSFIT</span>
+                </div>
+                <div class="testimonial">
+                    <p>"A dieta não é fome, é estratégia. Consegui bater meu peso para a competição sem perder rendimento. Profissional ímpar."</p>
+                    <span class="client-name">CAMILA S., JIU-JITSU</span>
+                </div>
+                <div class="testimonial">
+                    <p>"Achei que nunca ia conseguir ganhar massa por ser ectomorfo. O ajuste de carboidratos mudou meu jogo. +6kg em 4 meses."</p>
+                    <span class="client-name">LUCAS P., MUSCULAÇÃO</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section location">
+        <div class="container">
+            <div style="text-align:center;">
+                <h2>Atendimento <span>Híbrido</span></h2>
+                <p>Consultoria Presencial em São Paulo ou Online para qualquer lugar do mundo.</p>
+            </div>
+            
+            <div class="map-container">
+                <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.065609383616!2d-46.65369688447576!3d-23.566094367657906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div style="text-align:center; margin-top:30px;">
+                <a href="https://wa.me/5511999999999" class="btn-outline">Traçar Rota no Maps</a>
+            </div>
+        </div>
+    </section>
+
     <footer>
-        <p>&copy; 2026 NUTRI PERFORMANCE. Todos os direitos reservados.</p>
-        <p style="margin-top: 0.5rem;">
-            Desenvolvido por <a href="https://siteprofissional.pro" target="_blank">siteprofissional.pro</a>
-        </p>
+        <div class="container">
+            <div class="logo">NUTRI <span>PERFORMANCE</span></div>
+            <p style="margin-top:20px; font-size:0.9rem;">
+                CRN-3 00000<br>
+                Av. Performance, 1000 - São Paulo/SP
+            </p>
+            
+            <div class="footer-credit">
+                <p>&copy; 2024 Nutri Performance. Todos os direitos reservados.</p>
+                <p>Desenvolvido por <a href="https://siteprofissional.pro/" target="_blank">siteprofissional.pro</a></p>
+            </div>
+        </div>
     </footer>
 
-    <!-- ========================
-         BOTÃO FLUTUANTE WHATSAPP
-         ======================== -->
-    <a href="https://wa.me/5511999999999?text=Olá!%20Quero%20agendar%20uma%20consultoria%20nutricional" 
-       target="_blank" 
-       class="whatsapp-float"
-       aria-label="WhatsApp">
-        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-            <path d="M16 0C7.164 0 0 7.164 0 16c0 2.828.736 5.484 2.012 7.796L0 32l8.396-2.004A15.935 15.935 0 0016 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm9.204 22.796c-.396.996-1.968 1.828-2.836 1.932-.732.084-1.668.132-2.696-.168-1.044-.3-2.388-.708-4.104-1.392-3.636-1.452-6.012-5.124-6.192-5.364-.18-.24-1.464-1.944-1.464-3.708s.924-2.628 1.26-2.988c.336-.36.732-.444 1.008-.444.252 0 .504.012.72.012.228 0 .54-.084.84.648.3.732 1.032 2.52 1.128 2.7.096.18.18.42.06.66-.12.24-.192.396-.372.612-.18.216-.36.48-.516.648-.18.192-.
+    <a href="https://wa.me/5511999999999" class="float-wa" target="_blank" aria-label="Falar no WhatsApp">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+    </a>
+
+    <script>
+        console.log("Nutri Performance - Developed by siteprofissional.pro");
+        // Script simples para garantir que o scroll funcione suavemente em todos os navegadores
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

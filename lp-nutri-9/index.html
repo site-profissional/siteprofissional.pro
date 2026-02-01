@@ -3,45 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
-    <title>Nutricionista em Londrina e Cambé | Rafaela Nutrific - Emagrecimento Saudável</title>
-    <meta name="description" content="Alcance seus objetivos sem dietas restritivas. Atendimento clínico e reeducação alimentar em Londrina e Cambé. Agende sua consulta com a Dra. Rafaela.">
-    <meta name="keywords" content="Nutricionista Londrina, Nutricionista Cambé, Emagrecimento, Reeducação Alimentar, Dieta, Saúde">
-    <meta name="author" content="Rafaela Nutrific">
-    <meta name="robots" content="index, follow">
-
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Rafaela Nutrific - Nutrição Clínica e Emagrecimento">
-    <meta property="og:description" content="Nutrição que transforma. Atendimento em Londrina e Cambé. Agende sua consulta.">
-    <meta property="og:url" content="https://rafaelanutrific.com.br">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1200&auto=format&fit=crop">
+    <title>NUTRI PERFORMANCE | Nutricionista Esportivo para Hipertrofia e Definição</title>
+    
+    <meta name="description" content="Protocolos nutricionais avançados para Hipertrofia, Emagrecimento e Performance. Atendimento Online e Presencial. Agende sua consultoria.">
+    <meta name="keywords" content="Nutricionista Esportivo, Dieta Hipertrofia, Crossfit Nutrição, Emagrecimento Rápido, Consultoria Online">
+    <meta name="author" content="Nutri Performance">
+    <meta name="theme-color" content="#CCFF00"> <meta property="og:type" content="website">
+    <meta property="og:title" content="NUTRI PERFORMANCE | Evolução Física Real">
+    <meta property="og:description" content="Coma para performar. Estratégias nutricionais para quem busca o próximo nível.">
+    <meta property="og:url" content="https://nutriperformance.com.br">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1000&auto=format&fit=crop">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Teko:wght@400;600;700&display=swap" rel="stylesheet">
 
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MedicalBusiness",
-      "name": "Rafaela Nutrific",
-      "image": "https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80",
-      "@id": "https://rafaelanutrific.com.br",
-      "url": "https://rafaelanutrific.com.br",
-      "telephone": "+5543999998888",
-      "priceRange": "$$",
+      "@type": "HealthAndBeautyBusiness",
+      "name": "Nutri Performance",
+      "image": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1000",
+      "@id": "https://nutriperformance.com.br",
+      "url": "https://nutriperformance.com.br",
+      "telephone": "+5511999999999",
+      "priceRange": "$$$",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Av. Dos Ipês, 1830-1080",
-        "addressLocality": "Cambé",
-        "addressRegion": "PR",
-        "postalCode": "86180-000",
+        "streetAddress": "Av. Performance, 1000",
+        "addressLocality": "São Paulo",
+        "addressRegion": "SP",
+        "postalCode": "00000-000",
         "addressCountry": "BR"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -23.351672,
-        "longitude": -51.240987
       },
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
@@ -53,663 +48,467 @@
           "Friday"
         ],
         "opens": "08:00",
-        "closes": "18:00"
+        "closes": "20:00"
       },
       "sameAs": [
-        "https://instagram.com/rafaelanutrific_fake",
-        "https://wa.me/5543999998888"
+        "https://instagram.com/nutriperformance"
       ]
     }
     </script>
 
     <style>
-        /* * CONFIGURAÇÕES GERAIS E VARIÁVEIS 
-         * Para alterar a identidade visual, mude as cores em :root
-         */
+        /* --- VARIÁVEIS DE COR (FÁCIL EDIÇÃO) --- */
         :root {
-            /* Paleta de Cores */
-            --primary-color: #74B72E; /* Verde Principal (Ação/Destaque) */
-            --primary-hover: #5a9622;
-            --secondary-color: #8FBC8F; /* Verde Sálvia (Suave/Fundo) */
-            --text-dark: #333333; /* Cinza Chumbo */
-            --text-light: #666666;
-            --white: #FFFFFF;
-            --bg-light: #F4F9F4; /* Fundo muito suave esverdeado */
+            /* DICA DO DEV: Para mudar a cor principal (Neon), altere o código hexadecimal abaixo.
+               Ex: Vermelho (#FF0000), Azul Elétrico (#0088FF), Laranja (#FF8800)
+            */
+            --neon-color: #CCFF00; /* Verde/Amarelo Volt */
             
-            /* Tipografia */
-            --font-title: 'Poppins', sans-serif;
-            --font-body: 'Open Sans', sans-serif;
-            
-            /* Layout */
-            --container-width: 1200px;
-            --header-height: 80px;
-            --border-radius: 12px;
-            --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            --bg-dark: #0a0a0a;    /* Fundo Principal (Preto Profundo) */
+            --bg-card: #141414;    /* Fundo dos Cards (Cinza Chumbo) */
+            --text-white: #F5F5F5; /* Texto Títulos */
+            --text-gray: #B0B0B0;  /* Texto Parágrafos */
+            --font-title: 'Teko', sans-serif;
+            --font-body: 'Roboto', sans-serif;
         }
 
-        /* Reset Básico */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
+        /* RESET BÁSICO */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        
         body {
-            font-family: --font-body;
-            color: var(--text-dark);
+            background-color: var(--bg-dark);
+            color: var(--text-white);
+            font-family: var(--font-body);
             line-height: 1.6;
-            background-color: var(--white);
-            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden; /* Evita scroll horizontal */
         }
 
-        /* Tipografia */
-        h1, h2, h3, h4 {
-            font-family: var(--font-title);
-            font-weight: 600;
-            color: var(--text-dark);
-            line-height: 1.2;
-        }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
+        img { max-width: 100%; display: block; }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: 0.3s;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
-        /* Componentes Utilitários */
+        /* UTILITÁRIOS */
         .container {
-            width: 90%;
-            max-width: var(--container-width);
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 15px;
+            padding: 0 20px;
         }
+        .text-neon { color: var(--neon-color); }
+        .text-center { text-align: center; }
+        .uppercase { text-transform: uppercase; }
 
+        /* BOTÕES (ESTILO NEON GLOW) */
         .btn {
             display: inline-block;
-            padding: 14px 32px;
-            background-color: var(--primary-color);
-            color: var(--white);
+            background-color: var(--neon-color);
+            color: #000; /* Contraste preto no neon */
             font-family: var(--font-title);
-            font-weight: 600;
-            border-radius: 50px;
-            box-shadow: 0 4px 15px rgba(116, 183, 46, 0.4);
+            font-size: 1.4rem;
+            font-weight: 700;
+            padding: 12px 35px;
+            border-radius: 4px; /* Cantos levemente arredondados, mas agressivos */
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid var(--neon-color);
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(204, 255, 0, 0.4); /* Glow inicial */
             transition: all 0.3s ease;
-            text-align: center;
         }
 
         .btn:hover {
-            background-color: var(--primary-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(116, 183, 46, 0.6);
+            background-color: transparent;
+            color: var(--neon-color);
+            box-shadow: 0 0 20px rgba(204, 255, 0, 0.8); /* Glow forte no hover */
+            transform: translateY(-3px);
         }
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .section-title h2 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            color: var(--primary-color);
-        }
-
-        .section-title p {
-            color: var(--text-light);
-            font-size: 1.1rem;
-        }
-
-        section {
-            padding: 80px 0;
-        }
-
-        /* 4.A - HEADER */
+        /* --- HEADER (STICKY) --- */
         header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            background-color: rgba(255, 255, 255, 0.95);
+            padding: 20px 0;
+            background: rgba(10, 10, 10, 0.9); /* Transparência Dark */
             backdrop-filter: blur(10px);
-            height: var(--header-height);
-            display: flex;
-            align-items: center;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        .header-container {
+        .header-flex {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 90%;
-            max-width: var(--container-width);
-            margin: 0 auto;
         }
 
         .logo {
             font-family: var(--font-title);
-            font-size: 1.5rem;
+            font-size: 2rem;
             font-weight: 700;
-            color: var(--primary-color);
-            letter-spacing: -0.5px;
+            letter-spacing: 1px;
+            line-height: 1;
         }
 
-        .logo span {
-            color: var(--text-dark);
-        }
+        .logo span { color: var(--neon-color); }
 
-        .nav-menu {
-            display: flex;
-            gap: 30px;
-        }
-
-        .nav-link {
-            font-family: var(--font-body);
-            font-weight: 600;
-            color: var(--text-dark);
-            font-size: 0.95rem;
-        }
-
-        .nav-link:hover {
-            color: var(--primary-color);
-        }
-
-        /* 4.B - HERO SECTION */
-        #hero {
-            height: 100vh; /* Ocupa tela toda */
+        /* --- HERO SECTION (IMPACTO) --- */
+        .hero {
+            height: 100vh;
             min-height: 600px;
-            display: flex;
-            align-items: center;
-            /* Imagem placeholder de comida saudável/ambiente clean */
-            background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.6)), url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=2070&auto=format&fit=crop');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                        url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop'); /* Imagem de Academia Dark */
             background-size: cover;
             background-position: center;
-            padding-top: var(--header-height);
+            background-attachment: fixed; /* Efeito Parallax */
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Linha decorativa Neon na Hero */
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--neon-color), transparent);
         }
 
         .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-family: var(--font-title);
+            font-size: clamp(3.5rem, 8vw, 6rem); /* Responsivo agressivo */
+            line-height: 0.9;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            margin-bottom: 30px;
             max-width: 600px;
+            border-left: 3px solid var(--neon-color);
+            padding-left: 15px;
         }
 
-        .hero-content h1 {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-            color: var(--text-dark);
+        /* --- SEÇÃO CARDS (SEGMENTAÇÃO) --- */
+        .section-padding { padding: 80px 0; }
+        
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
         }
 
-        .hero-content p {
-            font-size: 1.25rem;
-            color: var(--text-light);
-            margin-bottom: 2.5rem;
+        .card {
+            background-color: var(--bg-card);
+            padding: 40px 30px;
+            border: 1px solid #222;
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
         }
 
-        /* 4.C - SOBRE */
-        #sobre {
-            background-color: var(--white);
+        .card:hover {
+            border-color: var(--neon-color);
+            transform: translateY(-5px);
         }
 
-        .sobre-wrapper {
+        /* Efeito de brilho sutil no card */
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 4px; height: 100%;
+            background: var(--neon-color);
+            opacity: 0;
+            transition: 0.3s;
+        }
+        .card:hover::before { opacity: 1; }
+
+        .icon-box {
+            width: 60px; height: 60px;
+            margin-bottom: 20px;
+        }
+        
+        /* SVG Styling */
+        .icon-box svg {
+            width: 100%; height: 100%;
+            stroke: var(--text-white);
+            fill: none;
+            stroke-width: 1.5;
+            transition: 0.3s;
+        }
+        .card:hover .icon-box svg { stroke: var(--neon-color); }
+
+        .card h3 {
+            font-family: var(--font-title);
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        /* --- METODOLOGIA --- */
+        .methodology {
+            background-color: #0f0f0f;
+            border-top: 1px solid #222;
+            border-bottom: 1px solid #222;
+        }
+
+        .flex-cols {
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
             gap: 50px;
         }
 
-        .sobre-img {
-            flex: 1;
-            position: relative;
-        }
+        .col-text, .col-img { flex: 1; min-width: 300px; }
 
-        .sobre-img img {
-            width: 100%;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
-            /* Imagem de mulher sorrindo / profissional */
-            object-fit: cover;
-            height: 450px;
+        .col-img img {
+            border-radius: 4px;
+            filter: grayscale(100%); /* Deixa imagem P&B */
+            transition: 0.5s;
         }
+        .col-img img:hover { filter: grayscale(0%); }
 
-        .sobre-text {
-            flex: 1;
-        }
-
-        .sobre-text h2 {
-            font-size: 2.2rem;
-            margin-bottom: 1.5rem;
-            color: var(--primary-color);
-        }
-
-        .sobre-text p {
-            margin-bottom: 1rem;
-            font-size: 1.05rem;
-            color: var(--text-light);
-        }
-
-        /* 4.D - SERVIÇOS */
-        #servicos {
-            background-color: var(--bg-light);
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .service-card {
-            background: var(--white);
-            padding: 40px 30px;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .icon-box {
-            width: 70px;
-            height: 70px;
-            background-color: rgba(116, 183, 46, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            color: var(--primary-color);
-        }
-
-        .icon-box svg {
-            width: 32px;
-            height: 32px;
-            fill: currentColor;
-        }
-
-        .service-card h3 {
-            font-size: 1.3rem;
+        .method-list li {
             margin-bottom: 15px;
-        }
-
-        .service-card p {
-            color: var(--text-light);
-            font-size: 0.95rem;
-        }
-
-        /* 4.E - DEPOIMENTOS */
-        #depoimentos {
-            background-color: var(--white);
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .testimonial-card {
-            background-color: var(--white);
-            border: 1px solid #eee;
-            padding: 30px;
-            border-radius: var(--border-radius);
-            position: relative;
-        }
-
-        .testimonial-card::before {
-            content: "“";
-            font-size: 5rem;
-            color: rgba(116, 183, 46, 0.2);
-            position: absolute;
-            top: -10px;
-            left: 20px;
-            font-family: serif;
-        }
-
-        .testimonial-text {
-            font-style: italic;
-            color: var(--text-light);
-            margin-bottom: 20px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .client-info h4 {
-            font-size: 1rem;
-            color: var(--primary-color);
-        }
-
-        .client-info span {
-            font-size: 0.85rem;
-            color: #999;
-        }
-
-        /* 4.F - LOCALIZAÇÃO */
-        #localizacao {
-            background-color: var(--bg-light);
-            padding-bottom: 0;
-        }
-
-        .location-content {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .address-box {
-            background: var(--white);
-            display: inline-block;
-            padding: 20px 40px;
-            border-radius: 50px;
-            box-shadow: var(--shadow);
-            margin-bottom: 30px;
-        }
-
-        .address-box p {
-            font-weight: 600;
-            color: var(--text-dark);
             display: flex;
             align-items: center;
-            gap: 10px;
+            font-size: 1.1rem;
         }
 
+        .check-icon {
+            color: var(--neon-color);
+            margin-right: 15px;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* --- PROVA SOCIAL --- */
+        .social-proof { text-align: center; }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .stat-item h4 {
+            font-family: var(--font-title);
+            font-size: 4rem;
+            color: var(--neon-color);
+            line-height: 1;
+        }
+        .stat-item p { text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; }
+
+        /* --- LOCALIZAÇÃO (MAPA DARK) --- */
+        .location { position: relative; }
+        
         .map-container {
             width: 100%;
-            height: 450px;
-            filter: grayscale(20%); /* Estilo mais sóbrio */
-        }
-        
-        .map-cta {
-            text-align: center;
-            margin: 30px 0;
+            height: 400px;
+            background-color: #222;
         }
 
-        /* 4.G - FOOTER */
+        /* Truque CSS para Mapa Dark Mode */
+        iframe.map-frame {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            filter: grayscale(100%) invert(92%) contrast(83%);
+        }
+
+        /* --- FOOTER --- */
         footer {
-            background-color: var(--text-dark);
-            color: var(--white);
-            padding: 60px 0 20px;
+            background-color: #000;
+            padding: 50px 0 20px;
             text-align: center;
+            border-top: 3px solid var(--neon-color);
         }
 
         .footer-logo {
             font-family: var(--font-title);
-            font-size: 1.8rem;
-            font-weight: 700;
+            font-size: 2.5rem;
             margin-bottom: 20px;
-            display: inline-block;
         }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 30px;
+        
+        .credits {
+            margin-top: 30px;
+            font-size: 0.8rem;
+            color: #555;
         }
+        .credits a { color: #777; font-weight: bold; }
+        .credits a:hover { color: var(--neon-color); }
 
-        .social-icon {
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255,255,255,0.1);
+        /* --- BOTÃO FLUTUANTE WHATSAPP --- */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--neon-color);
+            color: #000;
+            width: 60px; height: 60px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: 0.3s;
-        }
-
-        .social-icon:hover {
-            background-color: var(--primary-color);
-        }
-
-        .social-icon svg {
-            width: 20px;
-            height: 20px;
-            fill: var(--white);
-        }
-
-        .copyright {
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 20px;
-            font-size: 0.85rem;
-            color: #aaa;
-        }
-        
-        .copyright a {
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-
-        /* 5. BOTÃO FLUTUANTE */
-        .whatsapp-float {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25d366;
-            color: #FFF;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 2px 2px 3px #999;
+            box-shadow: 0 0 15px rgba(204, 255, 0, 0.5);
             z-index: 9999;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            transition: 0.3s;
             animation: pulse 2s infinite;
         }
 
-        .whatsapp-float svg {
-            width: 35px;
-            height: 35px;
-            fill: white;
+        .whatsapp-float svg { width: 32px; height: 32px; fill: #000; }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 25px rgba(204, 255, 0, 0.8);
         }
 
         @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+            0% { box-shadow: 0 0 0 0 rgba(204, 255, 0, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(204, 255, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(204, 255, 0, 0); }
         }
 
-        /* Responsividade Mobile-First Ajustes */
+        /* RESPONSIVIDADE */
         @media (max-width: 768px) {
-            .header-container {
-                flex-direction: column;
-                gap: 15px;
-            }
-            
-            .nav-menu {
-                gap: 15px;
-                font-size: 0.9rem;
-            }
-
-            .hero-content h1 {
-                font-size: 2.2rem;
-            }
-
-            .sobre-wrapper {
-                flex-direction: column;
-            }
-            
-            .sobre-img img {
-                height: 300px;
-            }
+            .hero h1 { font-size: 3.5rem; }
+            .btn { width: 100%; text-align: center; }
+            .flex-cols { flex-direction: column; }
+            .header-flex .btn { display: none; } /* Esconde botão do header no mobile */
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="header-container">
-            <a href="#" class="logo">Rafaela <span>Nutrific</span></a>
-            <nav>
-                <ul class="nav-menu">
-                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
-                    <li><a href="#servicos" class="nav-link">Serviços</a></li>
-                    <li><a href="#depoimentos" class="nav-link">Depoimentos</a></li>
-                    <li><a href="#localizacao" class="nav-link">Local</a></li>
-                </ul>
-            </nav>
+        <div class="container header-flex">
+            <div class="logo">NUTRI <span class="text-neon">PERFORMANCE</span></div>
+            <a href="#contato" class="btn" style="font-size: 1.1rem; padding: 8px 25px;">Agendar Consultoria</a>
         </div>
     </header>
 
-    <main>
-        <section id="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Nutrição que transforma sua vida de dentro para fora.</h1>
-                    <p>Emagrecimento definitivo e saúde plena em Londrina e região através da reeducação alimentar sem sofrimento.</p>
-                    <a href="https://wa.me/5543999998888" class="btn">Agendar Minha Consulta</a>
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Sua Evolução <br><span class="text-neon">Começa no Prato.</span></h1>
+            <p>Esqueça dietas de fome. Protocolos nutricionais estratégicos para hipertrofia, definição extrema e performance máxima.</p>
+            <a href="https://wa.me/5511999999999?text=Quero%20atingir%20minha%20meta%20agora!" class="btn">
+                Quero Atingir Minha Meta
+            </a>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="text-center" style="font-family: var(--font-title); font-size: 3rem;">OBJETIVOS CLAROS, <span class="text-neon">RESULTADOS REAIS</span></h2>
+            
+            <div class="grid-cards">
+                <div class="card">
+                    <div class="icon-box">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5h11M6.5 17.5h11M6 9l-3 6h18l-3-6H6z"/></svg>
+                    </div>
+                    <h3>HIPERTROFIA</h3>
+                    <p>Estratégia de superávit calórico limpo. Construa massa muscular densa sem acumular gordura desnecessária.</p>
+                </div>
+
+                <div class="card">
+                    <div class="icon-box">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                    </div>
+                    <h3>DEFINIÇÃO</h3>
+                    <p>Protocolos de queima de gordura preservando a massa magra. O famoso "secar" com qualidade metabólica.</p>
+                </div>
+
+                <div class="card">
+                    <div class="icon-box">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    </div>
+                    <h3>PERFORMANCE</h3>
+                    <p>Nutrição específica para CrossFit, Lutas e Endurance. Recupere mais rápido e treine mais forte.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="sobre">
-            <div class="container">
-                <div class="sobre-wrapper">
-                    <div class="sobre-img">
-                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=1000&auto=format&fit=crop" alt="Dra. Rafaela Nutrific atendendo paciente">
-                    </div>
-                    <div class="sobre-text">
-                        <h2>Abordagem Humanizada e Focada em Você</h2>
-                        <p>Olá! Sou a Dra. Rafaela. Acredito que a nutrição vai muito além de contar calorias. Meu trabalho é ajudar você a fazer as pazes com a comida e alcançar seus objetivos de forma leve.</p>
-                        <p>Com anos de experiência clínica em Londrina e Cambé, desenvolvi um método que une ciência e comportamento, permitindo que você emagreça sem abrir mão do que gosta, mas aprendendo a nutrir seu corpo.</p>
-                        <p><strong>Especialista em:</strong> Emagrecimento, Hipertrofia e Controle de Doenças Crônicas.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="servicos">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Como posso te ajudar?</h2>
-                    <p>Soluções personalizadas para sua saúde.</p>
-                </div>
+    <section class="section-padding methodology">
+        <div class="container flex-cols">
+            <div class="col-text">
+                <h2 style="font-family: var(--font-title); font-size: 3rem; margin-bottom: 20px;">SEM TERRORISMO <span class="text-neon">NUTRICIONAL</span></h2>
+                <p style="margin-bottom: 20px;">Não trabalhamos com "dietas da moda". Trabalhamos com fisiologia e bioquímica. Seu plano é montado com base na sua rotina, seus gostos e sua necessidade metabólica.</p>
                 
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="icon-box">
-                            <svg viewBox="0 0 24 24"><path d="M20,10C22,13 17,22 15,22C13,22 13,21 12,21C11,21 11,22 9,22C7,22 2,13 4,10C6,7 9,7 11,8V5C5.38,8.07 4.11,3.78 4.11,3.78C4.11,3.78 6.77,0.19 11,5V3H13V8C15,7 18,7 20,10Z" /></svg>
-                        </div>
-                        <h3>Reeducação Alimentar</h3>
-                        <p>Aprenda a fazer escolhas inteligentes e monte pratos equilibrados sem precisar seguir dietas da moda.</p>
-                    </div>
+                <ul class="method-list">
+                    <li><span class="check-icon">✓</span> Anamnese Completa e Histórico de Treino</li>
+                    <li><span class="check-icon">✓</span> Avaliação de Composição Corporal</li>
+                    <li><span class="check-icon">✓</span> Plano Alimentar Calculado (Macros e Micros)</li>
+                    <li><span class="check-icon">✓</span> Suporte via WhatsApp para Dúvidas</li>
+                </ul>
+                <br>
+                <a href="#contato" class="btn">Conhecer o Método</a>
+            </div>
+            <div class="col-img">
+                <img src="https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?q=80&w=1469&auto=format&fit=crop" alt="Atleta treinando">
+            </div>
+        </div>
+    </section>
 
-                    <div class="service-card">
-                        <div class="icon-box">
-                            <svg viewBox="0 0 24 24"><path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" /></svg>
-                        </div>
-                        <h3>Emagrecimento</h3>
-                        <p>Estratégias nutricionais validadas para perda de peso sustentável, focando na queima de gordura e manutenção da massa magra.</p>
-                    </div>
-
-                    <div class="service-card">
-                        <div class="icon-box">
-                            <svg viewBox="0 0 24 24"><path d="M19,3H14.82C14.4,1.84 13.3,1 12,1C10.7,1 9.6,1.84 9.18,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M12,3A1,1 0 0,1 13,4A1,1 0 0,1 12,5A1,1 0 0,1 11,4A1,1 0 0,1 12,3M7,7H17V9H7V7M7,11H17V13H7V11M7,15H14V17H7V15Z" /></svg>
-                        </div>
-                        <h3>Nutrição Clínica</h3>
-                        <p>Tratamento nutricional para diabetes, hipertensão, colesterol alto e outras patologias, com análise de exames laboratoriais.</p>
-                    </div>
+    <section class="section-padding social-proof">
+        <div class="container">
+            <h2 style="font-family: var(--font-title); font-size: 3rem;">RESULTADOS <span class="text-neon">QUE FALAM</span></h2>
+            
+            <div class="stats">
+                <div class="stat-item">
+                    <h4>+500</h4>
+                    <p>Atletas Atendidos</p>
+                </div>
+                <div class="stat-item">
+                    <h4>100%</h4>
+                    <p>Foco em Ciência</p>
+                </div>
+                <div class="stat-item">
+                    <h4>+2T</h4>
+                    <p>Gordura Eliminada</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="depoimentos">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Histórias de Sucesso</h2>
-                    <p>O que meus pacientes dizem sobre o acompanhamento.</p>
-                </div>
-
-                <div class="testimonials-grid">
-                    <div class="testimonial-card">
-                        <p class="testimonial-text">"Nunca imaginei que poderia comer pão e emagrecer. A Dra. Rafaela mudou minha visão sobre comida. Perdi 8kg em 3 meses!"</p>
-                        <div class="client-info">
-                            <h4>Mariana Silva</h4>
-                            <span>Paciente de Londrina</span>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <p class="testimonial-text">"O atendimento é excelente. Ela explica tudo com paciência e monta um plano que cabe na rotina corrida. Recomendo demais."</p>
-                        <div class="client-info">
-                            <h4>Carlos Eduardo</h4>
-                            <span>Paciente de Cambé</span>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <p class="testimonial-text">"Fui diagnosticada com pré-diabetes e em 4 meses de tratamento meus exames normalizaram apenas com alimentação."</p>
-                        <div class="client-info">
-                            <h4>Fernanda P.</h4>
-                            <span>Paciente Online</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="localizacao">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Onde me encontrar</h2>
-                </div>
-                
-                <div class="location-content">
-                    <div class="address-box">
-                        <p>
-                            <svg style="width:24px;height:24px;fill:var(--primary-color)" viewBox="0 0 24 24"><path d="M12,2C15.31,2 18,4.66 18,7.95C18,12.41 12,19 12,19C12,19 6,12.41 6,7.95C6,4.66 8.69,2 12,2M12,6A2,2 0 0,0 10,8A2,2 0 0,0 12,10A2,2 0 0,0 14,8A2,2 0 0,0 12,6Z" /></svg>
-                            Av. Dos Ipês, 1830-1080, Cambé - PR
-                        </p>
-                        <p style="margin-top:10px; font-weight:400; font-size:0.9rem;">Atendimento presencial com fácil acesso.</p>
-                    </div>
-                    
-                    <div class="map-cta">
-                        <a href="https://maps.app.goo.gl/CcR7zmmnFYp447J17" target="_blank" class="btn">Traçar Rota no GPS</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22082.78027784855!2d-51.24681377928972!3d-23.35091204364244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94eb435a57af586d%3A0x23ac11a5c614f971!2sLondrina%2C%20PR!5e1!3m2!1spt-BR!2sbr!4v1769139835745!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </section>
-    </main>
+    <section class="location" id="contato">
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.098169974866!2d-46.65390548502223!3d-23.564917684681125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr" class="map-frame" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        
+        <div class="container text-center section-padding">
+            <h2 style="font-family: var(--font-title); font-size: 3rem; margin-bottom: 20px;">AGENDE SUA CONSULTA</h2>
+            <p style="margin-bottom: 30px;">Atendimento Presencial em São Paulo ou Online para todo o mundo.</p>
+            <a href="https://wa.me/5511999999999" class="btn">Chamar no WhatsApp</a>
+        </div>
+    </section>
 
     <footer>
         <div class="container">
-            <a href="#" class="footer-logo">Rafaela Nutrific</a>
+            <div class="footer-logo">NUTRI <span class="text-neon">PERFORMANCE</span></div>
+            <p style="color: #666;">© 2024 Nutri Performance. Todos os direitos reservados.</p>
             
-            <div class="social-links">
-                <a href="https://instagram.com/rafaelanutrific_fake" target="_blank" class="social-icon" aria-label="Instagram">
-                    <svg viewBox="0 0 24 24"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" /></svg>
-                </a>
-                <a href="https://wa.me/5543999998888" target="_blank" class="social-icon" aria-label="WhatsApp">
-                    <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M16.53 13.33C16.29 13.2 15.1 12.63 14.86 12.54C14.63 12.45 14.46 12.41 14.3 12.65C14.13 12.9 13.66 13.45 13.5 13.6C13.37 13.75 13.2 13.78 12.96 13.66C12.72 13.54 11.95 13.29 11.04 12.48C10.33 11.85 9.85 11.07 9.72 10.83C9.58 10.59 9.7 10.46 9.82 10.35C9.93 10.24 10.06 10.07 10.19 9.92C10.3 9.77 10.34 9.66 10.42 9.5C10.5 9.34 10.46 9.19 10.4 9.07C10.33 8.94 9.86 7.78 9.66 7.3C9.46 6.84 9.27 6.9 9.12 6.9C8.98 6.9 8.81 6.9 8.64 6.9C8.47 6.9 8.2 6.96 7.97 7.21C7.74 7.46 7.1 8.06 7.1 9.28C7.1 10.5 8 11.68 8.13 11.84C8.26 12 10 14.68 12.64 15.82C13.27 16.09 13.76 16.25 14.15 16.38C14.9 16.61 15.58 16.59 16.11 16.5C16.71 16.41 17.96 15.75 18.22 15C18.48 14.26 18.48 13.63 18.41 13.5C18.34 13.38 18.17 13.34 17.94 13.22V13.33Z" /></svg>
-                </a>
-            </div>
-
-            <div class="copyright">
-                <p>&copy; 2023 Rafaela Nutrific. Todos os direitos reservados.</p>
-                <p>Desenvolvido por <a href="https://siteprofissional.pro/" target="_blank">siteprofissional.pro</a></p>
+            <div class="credits">
+                Desenvolvido por <a href="https://siteprofissional.pro" target="_blank">siteprofissional.pro</a>
             </div>
         </div>
     </footer>
 
-    <a href="https://wa.me/5543999998888" class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp">
-        <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M16.53 13.33C16.29 13.2 15.1 12.63 14.86 12.54C14.63 12.45 14.46 12.41 14.3 12.65C14.13 12.9 13.66 13.45 13.5 13.6C13.37 13.75 13.2 13.78 12.96 13.66C12.72 13.54 11.95 13.29 11.04 12.48C10.33 11.85 9.85 11.07 9.72 10.83C9.58 10.59 9.7 10.46 9.82 10.35C9.93 10.24 10.06 10.07 10.19 9.92C10.3 9.77 10.34 9.66 10.42 9.5C10.5 9.34 10.46 9.19 10.4 9.07C10.33 8.94 9.86 7.78 9.66 7.3C9.46 6.84 9.27 6.9 9.12 6.9C8.98 6.9 8.81 6.9 8.64 6.9C8.47 6.9 8.2 6.96 7.97 7.21C7.74 7.46 7.1 8.06 7.1 9.28C7.1 10.5 8 11.68 8.13 11.84C8.26 12 10 14.68 12.64 15.82C13.27 16.09 13.76 16.25 14.15 16.38C14.9 16.61 15.58 16.59 16.11 16.5C16.71 16.41 17.96 15.75 18.22 15C18.48 14.26 18.48 13.63 18.41 13.5C18.34 13.38 18.17 13.34 17.94 13.22V13.33Z" /></svg>
+    <a href="https://wa.me/5511999999999" class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp">
+        <svg viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
     </a>
 
 </body>

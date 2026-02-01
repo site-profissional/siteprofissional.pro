@@ -3,868 +3,524 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
-    <!-- SEO Meta Tags -->
-    <title>Nutricionista Esportivo | Performance, Hipertrofia e Emagrecimento Estratégico</title>
-    <meta name="description" content="Nutrição esportiva personalizada para resultados reais. Atendimento individual baseado em ciência para hipertrofia, emagrecimento e performance física. Presencial e online.">
-    <meta name="keywords" content="nutricionista esportivo, nutrição performance, hipertrofia, emagrecimento, nutrição funcional">
-    
-    <!-- Open Graph / WhatsApp / Instagram -->
-    <meta property="og:title" content="Nutricionista Esportivo | Performance e Resultados Reais">
-    <meta property="og:description" content="Transforme seu corpo com nutrição esportiva baseada em ciência. Atendimento personalizado para hipertrofia, emagrecimento e performance.">
-    <meta property="og:image" content="https://via.placeholder.com/1200x630/121212/FFD000?text=Nutri%C3%A7%C3%A3o+Esportiva">
+    <title>Nutricionista Esportivo & Performance | Hipertrofia e Emagrecimento</title>
+    <meta name="description" content="Nutrição Esportiva baseada em ciência para alta performance, hipertrofia e emagrecimento estratégico. Atendimento individualizado presencial e online.">
+    <meta name="keywords" content="nutricionista esportivo, hipertrofia, emagrecimento, dieta para treino, performance, saúde metabólica, nutricionista online">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Nome do Nutricionista">
+    <meta name="theme-color" content="#121212">
+
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://nutricionistaperformance.com.br">
-    
-    <!-- Schema Markup JSON-LD -->
+    <meta property="og:title" content="Nutrição de Alta Performance e Resultados Reais">
+    <meta property="og:description" content="Estratégias nutricionais individualizadas para quem busca evolução física e saúde. Agende sua avaliação.">
+    <meta property="og:url" content="https://www.instagram.com/seuinstagram/">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:site_name" content="Nutrição Esportiva">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "HealthAndBeautyBusiness",
-      "name": "Dr. Rafael Oliveira - Nutricionista Esportivo",
-      "description": "Nutricionista especializado em performance, hipertrofia e emagrecimento estratégico",
-      "url": "https://nutricionistaperformance.com.br",
-      "telephone": "+55-11-99999-9999",
+      "name": "Dr(a). [Nome Sobrenome] - Nutrição Esportiva",
+      "image": "https://www.instagram.com/seuinstagram/",
+      "@id": "https://www.instagram.com/seuinstagram/",
+      "url": "https://www.instagram.com/seuinstagram/",
+      "telephone": "+5500999999999",
       "priceRange": "$$",
-      "areaServed": {
-        "@type": "City",
-        "name": "São Paulo"
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Endereço do Consultório",
+        "addressLocality": "Sua Cidade",
+        "addressRegion": "SP",
+        "postalCode": "00000-000",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -23.5505,
+        "longitude": -46.6333
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "08:00",
+        "closes": "18:00"
       },
       "sameAs": [
-        "https://instagram.com/nutriperformance"
+        "https://www.instagram.com/seuinstagram/"
       ],
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "5.0",
-        "reviewCount": "200"
-      },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Serviços de Nutrição",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Nutrição para Hipertrofia"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Emagrecimento Estratégico"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Performance Esportiva"
-            }
-          }
-        ]
+        "reviewCount": "215"
       }
     }
     </script>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
     <style>
-        /* ===================================
-           RESET E VARIÁVEIS CSS
-           =================================== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        /* --- 1. Variáveis e Reset --- */
         :root {
-            /* Cores Primárias - Performance e Energia */
-            --cor-fundo-primario: #121212;      /* Preto profundo - base */
-            --cor-fundo-secundario: #1A1A1A;    /* Cinza escuro - camadas */
-            --cor-energia: #FFD000;              /* Amarelo elétrico - destaque */
-            --cor-cta: #00FF88;                  /* Verde neon - ação */
-            --cor-cta-hover: #00CC6F;            /* Verde neon hover */
-            
-            /* Cores de Texto */
-            --cor-texto-primario: #F4F4F4;       /* Branco suave */
-            --cor-texto-secundario: #CFCFCF;     /* Cinza claro */
-            --cor-texto-escuro: #121212;         /* Texto sobre fundos claros */
+            /* Paleta de Cores: Performance Dark */
+            --bg-dark: #121212;       /* Preto Profundo */
+            --bg-card: #1E1E1E;       /* Cinza Chumbo */
+            --primary: #FFD000;       /* Amarelo Elétrico (Energia) */
+            --primary-hover: #E6BC00; 
+            --text-white: #F4F4F4;    /* Branco Suave */
+            --text-gray: #CFCFCF;     /* Cinza Claro */
+            --border-color: #333333;
             
             /* Tipografia */
-            --font-titulo: 'Poppins', sans-serif;
-            --font-texto: 'Inter', sans-serif;
+            --font-heading: 'Oswald', sans-serif;
+            --font-body: 'Inter', sans-serif;
             
             /* Espaçamentos */
-            --espacamento-section: 80px;
-            --espacamento-mobile: 50px;
+            --spacing-container: 20px;
+            --spacing-section: 80px;
         }
 
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
         body {
-            font-family: var(--font-texto);
-            background-color: var(--cor-fundo-primario);
-            color: var(--cor-texto-primario);
+            font-family: var(--font-body);
+            background-color: var(--bg-dark);
+            color: var(--text-white);
             line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
             overflow-x: hidden;
         }
 
-        /* ===================================
-           HEADER - Fixo e Discreto
-           =================================== */
+        /* --- 2. Utilitários --- */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-container);
+        }
+
+        .text-center { text-align: center; }
+        .text-primary { color: var(--primary); }
+        
+        h1, h2, h3 {
+            font-family: var(--font-heading);
+            text-transform: uppercase;
+            line-height: 1.2;
+            letter-spacing: 0.5px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-white);
+        }
+
+        p {
+            font-size: 1rem;
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+        }
+
+        a { text-decoration: none; transition: 0.3s ease; }
+
+        /* --- 3. Botões (CTA) --- */
+        .btn {
+            display: inline-block;
+            padding: 16px 32px;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            text-transform: uppercase;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: #000;
+            box-shadow: 0 4px 15px rgba(255, 208, 0, 0.3);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 208, 0, 0.5);
+        }
+
+        /* --- 4. Header Fixo --- */
         header {
             position: fixed;
             top: 0;
             left: 0;
-            right: 0;
-            background-color: rgba(18, 18, 18, 0.95);
+            width: 100%;
+            padding: 20px 0;
+            background: rgba(18, 18, 18, 0.95);
             backdrop-filter: blur(10px);
-            padding: 20px 5%;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            z-index: 1000;
+        }
+
+        .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(255, 208, 0, 0.1);
         }
 
         .logo {
-            font-family: var(--font-titulo);
-            font-size: 1.3rem;
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
             font-weight: 700;
-            color: var(--cor-texto-primario);
+            color: var(--text-white);
         }
+        
+        .logo span { color: var(--primary); }
 
-        .header-link {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--cor-texto-secundario);
-            text-decoration: none;
-            font-size: 0.95rem;
-            transition: color 0.3s ease;
+        .social-link svg {
+            fill: var(--text-white);
+            width: 24px;
+            height: 24px;
         }
+        .social-link:hover svg { fill: var(--primary); }
 
-        .header-link:hover {
-            color: var(--cor-energia);
-        }
-
-        /* ===================================
-           HERO SECTION - Impacto Máximo
-           =================================== */
+        /* --- 5. Hero Section (Impacto) --- */
         .hero {
-            min-height: 100vh;
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
             display: flex;
             align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 120px 5% 80px;
-            position: relative;
-            background: linear-gradient(135deg, #121212 0%, #1A1A1A 100%);
-            overflow: hidden;
-        }
-
-        /* Efeito de energia no background */
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(255, 208, 0, 0.08) 0%, transparent 70%);
-            border-radius: 50%;
-            animation: pulse 8s ease-in-out infinite;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: -30%;
-            left: -10%;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(0, 255, 136, 0.06) 0%, transparent 70%);
-            border-radius: 50%;
-            animation: pulse 6s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 0.6; }
-            50% { transform: scale(1.1); opacity: 0.8; }
+            background: linear-gradient(180deg, rgba(18,18,18,0.7) 0%, rgba(18,18,18,1) 100%), 
+                        url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
         }
 
         .hero-content {
-            max-width: 900px;
-            position: relative;
-            z-index: 2;
+            max-width: 800px;
+            margin-top: 60px; /* Offset header */
         }
 
         .hero h1 {
-            font-family: var(--font-titulo);
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 25px;
-            color: var(--cor-texto-primario);
-        }
-
-        .hero h1 span {
-            color: var(--cor-energia);
-        }
-
-        .hero-subtitle {
-            font-size: clamp(1rem, 2vw, 1.3rem);
-            color: var(--cor-texto-secundario);
-            margin-bottom: 40px;
-            font-weight: 400;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* Botões CTA */
-        .cta-button {
-            display: inline-block;
-            background: var(--cor-cta);
-            color: var(--cor-texto-escuro);
-            padding: 18px 45px;
-            font-size: 1.1rem;
-            font-weight: 700;
-            text-decoration: none;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-            font-family: var(--font-titulo);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
-        }
-
-        .cta-button:hover {
-            background: var(--cor-cta-hover);
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(0, 255, 136, 0.4);
-        }
-
-        /* ===================================
-           SECTIONS - Layout Padrão
-           =================================== */
-        section {
-            padding: var(--espacamento-section) 5%;
-        }
-
-        .section-title {
-            font-family: var(--font-titulo);
-            font-size: clamp(1.8rem, 4vw, 2.5rem);
-            font-weight: 700;
-            text-align: center;
+            font-size: 2.8rem;
             margin-bottom: 20px;
-            color: var(--cor-texto-primario);
+        }
+        
+        .hero-sub {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 40px;
+            border-left: 3px solid var(--primary);
+            padding-left: 20px;
         }
 
-        .section-subtitle {
-            text-align: center;
-            color: var(--cor-texto-secundario);
-            font-size: 1.1rem;
-            margin-bottom: 60px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* ===================================
-           SEÇÃO - PARA QUEM É
-           =================================== */
-        .para-quem {
-            background-color: var(--cor-fundo-secundario);
-        }
-
-        .cards-grid {
+        /* --- 6. Grid Sections (Público & Método) --- */
+        .section-padding { padding: var(--spacing-section) 0; }
+        
+        .grid-cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
+            margin-top: 40px;
         }
 
         .card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 208, 0, 0.15);
-            border-radius: 15px;
-            padding: 35px 25px;
-            text-align: center;
-            transition: all 0.3s ease;
+            background-color: var(--bg-card);
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s;
         }
 
         .card:hover {
-            transform: translateY(-8px);
-            border-color: var(--cor-energia);
-            box-shadow: 0 10px 30px rgba(255, 208, 0, 0.15);
+            transform: translateY(-5px);
+            border-color: var(--primary);
         }
 
-        .card-icon {
-            width: 70px;
-            height: 70px;
-            margin: 0 auto 20px;
-            fill: var(--cor-energia);
+        .icon-box {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 20px;
+        }
+        
+        .icon-box svg {
+            width: 100%;
+            height: 100%;
+            fill: var(--primary);
         }
 
         .card h3 {
-            font-family: var(--font-titulo);
-            font-size: 1.3rem;
-            margin-bottom: 12px;
-            color: var(--cor-texto-primario);
+            color: var(--text-white);
+            margin-bottom: 10px;
+            font-size: 1.25rem;
         }
 
-        .card p {
-            color: var(--cor-texto-secundario);
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        /* ===================================
-           SEÇÃO - MÉTODO DE TRABALHO
-           =================================== */
-        .metodo {
-            background: linear-gradient(to bottom, var(--cor-fundo-primario), var(--cor-fundo-secundario));
-        }
-
-        .steps {
+        /* --- 7. Método (Steps) --- */
+        .method-section { background-color: #161616; }
+        
+        .step-item {
             display: flex;
             flex-direction: column;
-            gap: 40px;
-            max-width: 900px;
-            margin: 0 auto;
+            gap: 15px;
         }
-
-        .step {
-            display: flex;
-            gap: 25px;
-            align-items: flex-start;
-        }
-
+        
         .step-number {
-            font-family: var(--font-titulo);
+            font-family: var(--font-heading);
             font-size: 3rem;
-            font-weight: 800;
-            color: var(--cor-energia);
+            color: rgba(255, 255, 255, 0.1);
+            font-weight: 700;
             line-height: 1;
-            min-width: 70px;
         }
 
-        .step-content h3 {
-            font-family: var(--font-titulo);
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            color: var(--cor-texto-primario);
-        }
-
-        .step-content p {
-            color: var(--cor-texto-secundario);
-            font-size: 1.05rem;
-            line-height: 1.7;
-        }
-
-        /* ===================================
-           SEÇÃO - AUTORIDADE E CONFIANÇA
-           =================================== */
-        .autoridade {
-            background-color: var(--cor-fundo-secundario);
-            text-align: center;
-        }
-
-        .stats {
+        /* --- 8. Autoridade --- */
+        .authority-stats {
             display: flex;
             justify-content: center;
-            gap: 60px;
+            gap: 40px;
             flex-wrap: wrap;
-            margin-bottom: 50px;
-        }
-
-        .stat-item {
+            margin: 40px 0;
             text-align: center;
         }
 
         .stat-number {
-            font-family: var(--font-titulo);
-            font-size: 3.5rem;
-            font-weight: 800;
-            color: var(--cor-energia);
-            line-height: 1;
-            margin-bottom: 10px;
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            color: var(--primary);
+            font-weight: 700;
+            display: block;
         }
+        
+        .stat-label { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
 
-        .stat-label {
-            color: var(--cor-texto-secundario);
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .trust-text {
-            max-width: 700px;
-            margin: 0 auto;
-            color: var(--cor-texto-secundario);
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
-
-        /* ===================================
-           SEÇÃO - SOBRE O NUTRICIONISTA
-           =================================== */
-        .sobre {
-            background-color: var(--cor-fundo-primario);
-        }
-
-        .sobre-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .sobre-content h3 {
-            font-family: var(--font-titulo);
-            font-size: 1.6rem;
-            color: var(--cor-energia);
-            margin-bottom: 20px;
-        }
-
-        .sobre-content p {
-            color: var(--cor-texto-secundario);
-            font-size: 1.05rem;
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-
-        .credenciais {
-            list-style: none;
-            margin-top: 30px;
-        }
-
-        .credenciais li {
-            padding: 12px 0;
-            color: var(--cor-texto-secundario);
-            font-size: 1rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .credenciais li:before {
-            content: "✓";
-            color: var(--cor-energia);
-            font-weight: bold;
-            margin-right: 12px;
-        }
-
-        /* ===================================
-           SEÇÃO - CTA FINAL
-           =================================== */
-        .cta-final {
-            background: linear-gradient(135deg, #1A1A1A 0%, #121212 100%);
-            text-align: center;
-            padding: 100px 5%;
-        }
-
-        .cta-final h2 {
-            font-family: var(--font-titulo);
-            font-size: clamp(1.8rem, 4vw, 2.8rem);
-            margin-bottom: 20px;
-        }
-
-        .cta-final p {
-            color: var(--cor-texto-secundario);
-            font-size: 1.1rem;
-            margin-bottom: 40px;
-        }
-
-        .microcopy {
-            margin-top: 20px;
-            color: var(--cor-texto-secundario);
-            font-size: 0.9rem;
-        }
-
-        /* ===================================
-           BOTÃO FLUTUANTE WHATSAPP (MOBILE)
-           =================================== */
+        /* --- 9. Botão Flutuante (Sticky) --- */
         .whatsapp-float {
             position: fixed;
-            bottom: 25px;
-            right: 25px;
-            background: #25D366;
-            color: white;
             width: 60px;
             height: 60px;
-            border-radius: 50%;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 9999;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-            z-index: 9999;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            animation: float-pulse 2s ease-in-out infinite;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            animation: pulse 2s infinite;
         }
 
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
-        }
-
-        @keyframes float-pulse {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
-        }
-
-        .whatsapp-icon {
-            width: 32px;
-            height: 32px;
+        .whatsapp-float svg {
+            width: 35px;
+            height: 35px;
             fill: white;
         }
 
-        /* ===================================
-           FOOTER
-           =================================== */
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        /* --- 10. Footer --- */
         footer {
-            background-color: #0D0D0D;
-            padding: 50px 5%;
+            background-color: #000;
+            padding: 50px 0 20px;
+            border-top: 1px solid #333;
             text-align: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
-
-        .footer-name {
-            font-family: var(--font-titulo);
-            font-size: 1.4rem;
-            color: var(--cor-texto-primario);
-            margin-bottom: 20px;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-bottom: 30px;
-            flex-wrap: wrap;
-        }
-
-        .footer-links a {
-            color: var(--cor-texto-secundario);
-            text-decoration: none;
-            font-size: 0.95rem;
-            transition: color 0.3s ease;
-        }
-
-        .footer-links a:hover {
-            color: var(--cor-energia);
-        }
-
+        
         .footer-credit {
-            color: rgba(207, 207, 207, 0.5);
-            font-size: 0.85rem;
-            margin-top: 30px;
+            font-size: 0.8rem;
+            color: #555;
+            margin-top: 20px;
         }
+        .footer-credit a { color: #777; }
 
-        .footer-credit a {
-            color: var(--cor-energia);
-            text-decoration: none;
-        }
-
-        /* ===================================
-           RESPONSIVIDADE - MOBILE FIRST
-           =================================== */
+        /* --- Responsividade (Media Queries) --- */
         @media (max-width: 768px) {
-            :root {
-                --espacamento-section: var(--espacamento-mobile);
-            }
-
-            header {
-                padding: 15px 5%;
-            }
-
-            .logo {
-                font-size: 1.1rem;
-            }
-
-            .hero {
-                padding: 100px 5% 60px;
-            }
-
-            .cards-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            .step {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .step-number {
-                font-size: 2.5rem;
-            }
-
-            .stats {
-                gap: 40px;
-            }
-
-            .stat-number {
-                font-size: 2.8rem;
-            }
-
-            .whatsapp-float {
-                width: 55px;
-                height: 55px;
-                bottom: 20px;
-                right: 20px;
-            }
-
-            .whatsapp-icon {
-                width: 28px;
-                height: 28px;
-            }
-        }
-
-        @media (min-width: 1400px) {
-            .hero-content,
-            .cards-grid,
-            .steps,
-            .sobre-content {
-                max-width: 1200px;
-            }
+            .hero h1 { font-size: 2rem; }
+            .hero-sub { border-left: none; padding-left: 0; }
+            .authority-stats { gap: 20px; }
+            h2 { font-size: 1.75rem; }
         }
     </style>
 </head>
 <body>
 
-    <!-- ===================================
-         HEADER - Fixo e Discreto
-         =================================== -->
     <header>
-        <div class="logo">Dr. Rafael Oliveira</div>
-        <a href="https://instagram.com/nutriperformance" class="header-link" target="_blank">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-            </svg>
-            @nutriperformance
-        </a>
-    </header>
-
-    <!-- ===================================
-         HERO SECTION - Impacto Máximo
-         =================================== -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>
-                Nutrição Esportiva para <span>Performance</span>, Hipertrofia e Resultados Reais
-            </h1>
-            <p class="hero-subtitle">
-                Abordagem individual, baseada em ciência, focada em evolução física sustentável
-            </p>
-            <a href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma avaliação nutricional." class="cta-button">
-                Agendar Avaliação
+        <div class="container header-content">
+            <div class="logo">NUTRI <span>PERFORMANCE</span></div>
+            <a href="#" class="social-link" aria-label="Instagram">
+                <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
             </a>
         </div>
-    </section>
+    </header>
 
-    <!-- ===================================
-         SEÇÃO - PARA QUEM É O ACOMPANHAMENTO
-         =================================== -->
-    <section class="para-quem">
-        <h2 class="section-title">Para Quem é o Acompanhamento</h2>
-        <p class="section-subtitle">
-            Estratégias nutricionais direcionadas para diferentes objetivos de performance e composição corporal
-        </p>
-        
-        <div class="cards-grid">
-            <!-- Card 1 - Musculação -->
-            <div class="card">
-                <svg class="card-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8 28h4v8H8zm44 0h4v8h-4zM20 20h4v24h-4zm20 0h4v24h-4zM28 16h8v32h-8z"/>
-                </svg>
-                <h3>Musculação e Hipertrofia</h3>
-                <p>Protocolos nutricionais para maximizar ganho de massa muscular com estratégia individualizada</p>
-            </div>
-
-            <!-- Card 2 - Crossfit/Esportes -->
-            <div class="card">
-                <svg class="card-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M32 8l8 16h16l-12 12 4 16-16-8-16 8 4-16-12-12h16z"/>
-                </svg>
-                <h3>Crossfit e Esportes</h3>
-                <p>Nutrição focada em performance, energia e recuperação para atletas de alta intensidade</p>
-            </div>
-
-            <!-- Card 3 - Emagrecimento -->
-            <div class="card">
-                <svg class="card-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M32 4C16 4 4 16 4 32s12 28 28 28 28-12 28-28S48 4 32 4zm0 8l8 12H24l8-12zm-12 20l12 16-12 8V32zm24 0v24l-12-8 12-16z"/>
-                </svg>
-                <h3>Emagrecimento Estratégico</h3>
-                <p>Perda de gordura preservando massa muscular, com abordagem sustentável e baseada em evidências</p>
-            </div>
-
-            <!-- Card 4 - Saúde -->
-            <div class="card">
-                <svg class="card-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M32 8C18 8 8 18 8 32s10 24 24 24 24-10 24-24S46 8 32 8zm0 4c11 0 20 9 20 20s-9 20-20 20-20-9-20-20 9-20 20-20zm-4 8v12h-8v8h8v8h8v-8h8v-8h-8V20h-8z"/>
-                </svg>
-                <h3>Performance e Saúde</h3>
-                <p>Otimização metabólica, energia sustentada e saúde de longo prazo através da nutrição</p>
-            </div>
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Nutrição Esportiva para <span class="text-primary">Performance</span>, Hipertrofia e Resultados Reais</h1>
+            <p class="hero-sub">Abordagem 100% individual, baseada em evidência científica, focada na sua evolução física sustentável.</p>
+            <a href="https://wa.me/5500999999999" class="btn btn-primary" target="_blank">Agendar Avaliação Agora</a>
         </div>
     </section>
 
-    <!-- ===================================
-         SEÇÃO - MÉTODO DE TRABALHO
-         =================================== -->
-    <section class="metodo">
-        <h2 class="section-title">Método de Trabalho</h2>
-        <p class="section-subtitle">
-            Processo estruturado e personalizado para resultados consistentes
-        </p>
-        
-        <div class="steps">
-            <!-- Passo 1 -->
-            <div class="step">
-                <div class="step-number">01</div>
-                <div class="step-content">
-                    <h3>Avaliação Individual Completa</h3>
-                    <p>
-                        Análise detalhada do histórico, objetivos, rotina de treino, exames laboratoriais e composição corporal. 
-                        Cada protocolo é único e considera suas particularidades metabólicas e comportamentais.
-                    </p>
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="text-center">Para Quem é o <span class="text-primary">Acompanhamento</span></h2>
+            <div class="grid-cards">
+                <div class="card">
+                    <div class="icon-box">
+                        <svg viewBox="0 0 24 24"><path d="M20.57 14.86L22 13.43L20.57 12L17 15.57L8.43 7L12 3.43L10.57 2L9.14 3.43L7.71 2L5.57 4.14L4.14 2.71L2.71 4.14l2.35 2.35L2 9.57L5.57 13.14L9.14 9.57L17.71 18.14L14.14 21.71L15.57 23.14L17 21.71L18.43 23.14L20.57 21L22 22.43L23.43 21L21.29 18.86L23.43 16.71L22 15.29l-1.43 1.43L20.57 14.86z"/></svg>
+                    </div>
+                    <h3>Hipertrofia</h3>
+                    <p>Para quem treina musculação e busca ganho de massa magra limpa, com estratégia de macronutrientes ajustada.</p>
                 </div>
-            </div>
-
-            <!-- Passo 2 -->
-            <div class="step">
-                <div class="step-number">02</div>
-                <div class="step-content">
-                    <h3>Estratégia Nutricional Personalizada</h3>
-                    <p>
-                        Desenvolvimento de plano alimentar baseado em evidências científicas, ajustado ao seu estilo de vida, 
-                        preferências alimentares e demandas energéticas. Foco em praticidade e aderência.
-                    </p>
+                <div class="card">
+                    <div class="icon-box">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                    </div>
+                    <h3>Performance</h3>
+                    <p>Atletas de Crossfit, corrida ou lutas que precisam melhorar o rendimento, recuperação e energia nos treinos.</p>
                 </div>
-            </div>
-
-            <!-- Passo 3 -->
-            <div class="step">
-                <div class="step-number">03</div>
-                <div class="step-content">
-                    <h3>Acompanhamento Contínuo</h3>
-                    <p>
-                        Monitoramento regular da evolução, ajustes estratégicos conforme necessário e suporte constante. 
-                        O processo é dinâmico e se adapta às suas respostas individuais ao protocolo.
-                    </p>
+                <div class="card">
+                    <div class="icon-box">
+                        <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+                    </div>
+                    <h3>Emagrecimento</h3>
+                    <p>Estratégia para redução de gordura corporal preservando a massa muscular. Sem dietas restritivas extremas.</p>
+                </div>
+                <div class="card">
+                    <div class="icon-box">
+                        <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                    </div>
+                    <h3>Saúde Metabólica</h3>
+                    <p>Ajuste de exames bioquímicos, melhora do sono, disposição e prevenção de doenças através da nutrição.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===================================
-         SEÇÃO - AUTORIDADE E CONFIANÇA
-         =================================== -->
-    <section class="autoridade">
-        <h2 class="section-title">Autoridade e Confiança</h2>
-        
-        <div class="stats">
-            <div class="stat-item">
-                <div class="stat-number">200+</div>
-                <div class="stat-label">Pacientes Atendidos</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">5.0</div>
-                <div class="stat-label">Avaliação Média</div>
+    <section class="section-padding method-section">
+        <div class="container">
+            <h2 class="text-center">Como Funciona o <span class="text-primary">Método</span></h2>
+            <div class="grid-cards">
+                <div class="step-item card">
+                    <span class="step-number">01</span>
+                    <h3>Avaliação Completa</h3>
+                    <p>Análise detalhada da sua rotina, treinos, exames laboratoriais e composição corporal.</p>
+                </div>
+                <div class="step-item card">
+                    <span class="step-number">02</span>
+                    <h3>Planejamento Estratégico</h3>
+                    <p>Elaboração de um plano alimentar 100% calculado para sua meta, com opções flexíveis.</p>
+                </div>
+                <div class="step-item card">
+                    <span class="step-number">03</span>
+                    <h3>Acompanhamento</h3>
+                    <p>Monitoramento de resultados, ajustes na dieta conforme evolução e suporte via WhatsApp.</p>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="trust-text">
-            <p>
-                Cada protocolo é desenvolvido com base em evidências científicas atualizadas e adaptado às 
-                necessidades individuais. O acompanhamento é ético, transparente e focado em resultados 
-                sustentáveis de longo prazo. Não existe fórmula mágica — existe ciência, consistência e 
-                trabalho individualizado.
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="text-center">Compromisso com <span class="text-primary">Seu Resultado</span></h2>
+            
+            <div class="authority-stats">
+                <div>
+                    <span class="stat-number">+200</span>
+                    <span class="stat-label">Pacientes Atendidos</span>
+                </div>
+                <div>
+                    <span class="stat-number">5.0</span>
+                    <span class="stat-label">Avaliação Média</span>
+                </div>
+                <div>
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Individualizado</span>
+                </div>
+            </div>
+            
+            <p class="text-center" style="max-width: 700px; margin: 0 auto;">
+                "Não trabalho com dietas de gaveta. Meu foco é entender a sua fisiologia e aplicar a nutrição esportiva para que você atinja o seu máximo potencial, seja no esporte ou na estética."
             </p>
         </div>
     </section>
 
-    <!-- ===================================
-         SEÇÃO - SOBRE O NUTRICIONISTA
-         =================================== -->
-    <section class="sobre">
-        <h2 class="section-title">Sobre o Nutricionista</h2>
-        
-        <div class="sobre-content">
-            <h3>Dr. Rafael Oliveira</h3>
-            <p>
-                Nutricionista especializado em nutrição esportiva e performance, com foco em 
-                atendimento individualizado baseado em evidências científicas. Experiência em 
-                protocolos para hipertrofia, emagrecimento estratégico e otimização metabólica.
+    <section class="section-padding" style="background: #1A1A1A; border-top: 1px solid #333;">
+        <div class="container">
+            <h2 class="text-primary">Sobre o Nutricionista</h2>
+            <p style="max-width: 800px;">
+                Sou Nutricionista Esportivo, pós-graduado em Nutrição Esportiva e Fisiologia do Exercício. Minha prática clínica é pautada na ciência e na experiência prática de quem vive o esporte.
             </p>
-            <p>
-                A abordagem integra conhecimento técnico atualizado com compreensão das demandas 
-                práticas e comportamentais de cada indivíduo, priorizando resultados sustentáveis 
-                e saúde de longo prazo.
+            <p style="max-width: 800px;">
+                Acredito que a dieta deve ser uma ferramenta de potencialização do treino, e não um fardo. Por isso, desenvolvo estratégias que geram aderência e consistência a longo prazo.
             </p>
-
-            <ul class="credenciais">
-                <li>Graduação em Nutrição - Universidade Federal</li>
-                <li>Especialização em Nutrição Esportiva</li>
-                <li>Pós-graduação em Fisiologia do Exercício</li>
-                <li>Atualização constante em protocolos baseados em evidência</li>
-                <li>Registro ativo no Conselho Regional de Nutricionistas</li>
+            <ul style="color: var(--text-gray); margin-left: 20px; margin-bottom: 20px;">
+                <li>Especialista em Nutrição Esportiva</li>
+                <li>Foco em Modulação Hormonal e Metabólica</li>
+                <li>Cursos de extensão em Bioquímica do Exercício</li>
             </ul>
         </div>
     </section>
 
-    <!-- ===================================
-         SEÇÃO - CTA FINAL FORTE
-         =================================== -->
-    <section class="cta-final">
-        <h2>Pronto para Evoluir com Estratégia?</h2>
-        <p>Agende sua avaliação nutricional e inicie sua jornada com acompanhamento profissional</p>
-        
-        <a href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma avaliação nutricional." class="cta-button">
-            Falar com o Nutricionista no WhatsApp
-        </a>
-        
-        <p class="microcopy">Atendimento Profissional • Presencial e Online</p>
+    <section class="section-padding text-center" style="background: linear-gradient(rgba(18,18,18,0.9), rgba(18,18,18,0.9)), url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center;">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 10px;">Pronto para Mudar seu Físico?</h2>
+            <p style="color: #fff; margin-bottom: 30px;">Agende sua consulta e tenha um plano desenhado para você.</p>
+            <a href="https://wa.me/5500999999999" class="btn btn-primary" style="padding: 20px 40px; font-size: 1.2rem;">Falar com o Nutricionista</a>
+            <p style="font-size: 0.8rem; margin-top: 20px; color: #ccc;">Atendimento Presencial e Online para todo o Brasil.</p>
+        </div>
     </section>
 
-    <!-- ===================================
-         BOTÃO FLUTUANTE WHATSAPP
-         Fixo no canto inferior direito com animação pulse
-         Z-index alto para ficar acima de todos os elementos
-         =================================== -->
-    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma avaliação nutricional." 
-       class="whatsapp-float" 
-       target="_blank"
-       aria-label="Falar no WhatsApp">
-        <svg class="whatsapp-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-        </svg>
+    <a href="https://wa.me/5500999999999" class="whatsapp-float" target="_blank" aria-label="Falar no WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
     </a>
 
-    <!-- ===================================
-         FOOTER
-         =================================== -->
     <footer>
-        <div class="footer-name">Dr. Rafael Oliveira</div>
-        <div class="footer-name" style="font-size: 0.9rem; font-weight: 400; margin-bottom: 25px;">
-            Nutricionista Esportivo - CRN 12345
-        </div>
-        
-        <div class="footer-links">
-            <a href="https://instagram.com/nutriperformance" target="_blank">Instagram</a>
-            <a href="https://wa.me/5511999999999" target="_blank">WhatsApp</a>
-            <a href="mailto:contato@nutriperformance.com.br">E-mail</a>
-        </div>
-
-        <div class="footer-credit">
-            Criado por <a href="https://siteprofissional.pro/" target="_blank">siteprofissional.pro</a>
+        <div class="container">
+            <h3 style="color: #fff;">NUTRI <span class="text-primary">PERFORMANCE</span></h3>
+            <div style="margin-top: 20px;">
+                <a href="#" style="color: #fff; margin: 0 10px;">Instagram</a>
+                <a href="#" style="color: #fff; margin: 0 10px;">WhatsApp</a>
+            </div>
+            <p class="footer-credit">
+                &copy; 2024 Todos os direitos reservados.<br>
+                Criado por <a href="https://siteprofissional.pro/" target="_blank">siteprofissional.pro</a>
+            </p>
         </div>
     </footer>
 
+    <script>
+        // Smooth scrolling para links internos (compatibilidade extra)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        console.log("Nutri Performance - Landing Page Carregada com Sucesso.");
+    </script>
 </body>
 </html>

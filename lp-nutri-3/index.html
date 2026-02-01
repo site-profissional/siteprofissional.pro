@@ -2,30 +2,69 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Nutricionista Esportiva | Performance e Saúde</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Nutricionista em Londrina e Cambé | Rafaela Nutrific - Emagrecimento Saudável</title>
+    <meta name="description" content="Alcance seus objetivos sem dietas restritivas. Atendimento clínico e reeducação alimentar em Londrina e Cambé. Agende sua consulta com a Dra. Rafaela.">
+    <meta name="keywords" content="nutricionista londrina, nutricionista cambé, emagrecimento saudável, reeducação alimentar, nutrição clínica">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Nutricionista em Londrina e Cambé | Rafaela Nutrific">
+    <meta property="og:description" content="Alcance seus objetivos sem dietas restritivas. Atendimento clínico e reeducação alimentar em Londrina e Cambé.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://source.unsplash.com/800x600/?nutritionist,healthy">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Schema Markup JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "name": "Rafaela Nutrific - Nutricionista",
+      "image": "https://source.unsplash.com/800x600/?nutritionist",
+      "description": "Nutrição Clínica, Reeducação Alimentar e Emagrecimento Saudável em Londrina e Cambé",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Dos Ipês, 1830-1080",
+        "addressLocality": "Cambé",
+        "addressRegion": "PR",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -23.351672,
+        "longitude": -51.240987
+      },
+      "telephone": "+5543999998888",
+      "priceRange": "$$",
+      "openingHours": "Mo-Fr 08:00-18:00"
+    }
+    </script>
 
-    <!-- ===============================
-         GOOGLE FONT
-         Fonte mais firme e direta
-    ================================ -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- ===============================
-         CSS EMBUTIDO – MOBILE FIRST
-         Paleta energética controlada
-    ================================ -->
     <style>
+        /* ========================================
+           VARIÁVEIS CSS - Cores Principais
+           Altere aqui para mudar a identidade visual
+        ======================================== */
         :root {
-            --verde-escuro: #1f5e53;
-            --verde-energia: #2f8f6b;
-            --cinza-claro: #f4f6f6;
-            --off-white: #fbfcfc;
-            --texto-principal: #1f2d2a;
-            --texto-secundario: #5f6f6a;
-            --borda-firme: #d3ddda;
+            --cor-principal: #74B72E; /* Verde Sálvia - Cor de destaque */
+            --cor-principal-hover: #8FBC8F; /* Verde mais suave no hover */
+            --cor-branco: #FFFFFF;
+            --cor-texto: #333333; /* Cinza Chumbo Suave */
+            --cor-texto-claro: #666666;
+            --cor-fundo-claro: #F9F9F9;
+            --sombra-suave: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --sombra-media: 0 8px 24px rgba(0, 0, 0, 0.12);
         }
 
+        /* ========================================
+           RESET E CONFIGURAÇÕES GERAIS
+        ======================================== */
         * {
             margin: 0;
             padding: 0;
@@ -33,324 +72,675 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--off-white);
-            color: var(--texto-principal);
-            line-height: 1.65;
+            font-family: 'Open Sans', sans-serif;
+            color: var(--cor-texto);
+            line-height: 1.6;
+            overflow-x: hidden;
         }
 
-        /* ===============================
-           CONTAINER MOBILE-FIRST
-        ================================ */
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* ========================================
+           HEADER - Menu de Navegação
+        ======================================== */
+        header {
+            background: var(--cor-branco);
+            box-shadow: var(--sombra-suave);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 1rem 0;
+        }
+
         .container {
-            max-width: 720px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        section {
-            padding: 56px 0;
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
         }
 
-        h1 {
-            font-size: 2.1rem;
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
             font-weight: 700;
-            margin-bottom: 14px;
+            color: var(--cor-principal);
+            letter-spacing: -0.5px;
         }
 
-        h2 {
-            font-size: 1.45rem;
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: var(--cor-texto);
             font-weight: 600;
-            margin-bottom: 20px;
+            transition: color 0.3s ease;
+            font-size: 0.95rem;
         }
 
-        p {
-            font-size: 1rem;
-            color: var(--texto-secundario);
-            margin-bottom: 14px;
+        .nav-links a:hover {
+            color: var(--cor-principal);
         }
 
-        /* ===============================
-           BOTÃO WHATSAPP – CTA FIRME
-        ================================ */
-        .btn-whatsapp {
-            display: block;
-            width: 100%;
-            background-color: var(--verde-escuro);
-            color: #ffffff;
-            text-align: center;
-            padding: 18px;
-            border-radius: 10px;
-            font-size: 1.05rem;
-            font-weight: 600;
-            text-decoration: none;
-            margin-top: 16px;
-        }
-
-        .btn-whatsapp:hover {
-            background-color: var(--verde-energia);
-        }
-
-        .microtexto {
-            font-size: 0.85rem;
-            color: var(--texto-secundario);
-            margin-top: 8px;
-            text-align: center;
-        }
-
-        /* ===============================
-           HERO ENERGÉTICO
-        ================================ */
+        /* ========================================
+           HERO SECTION - Seção Principal
+        ======================================== */
         .hero {
-            background: linear-gradient(135deg, var(--verde-escuro), var(--verde-energia));
-            color: #ffffff;
+            background: linear-gradient(135deg, rgba(116, 183, 46, 0.05) 0%, rgba(255, 255, 255, 1) 100%);
+            padding: 80px 20px;
+            text-align: center;
         }
 
-        .hero h1,
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--cor-texto);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
         .hero p {
-            color: #ffffff;
+            font-size: 1.2rem;
+            color: var(--cor-texto-claro);
+            margin-bottom: 2rem;
         }
 
         .hero-image {
+            margin: 2rem auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--sombra-media);
+            max-width: 700px;
+        }
+
+        .hero-image img {
             width: 100%;
-            height: 240px;
-            background-color: rgba(255,255,255,0.15);
-            border-radius: 14px;
-            margin: 24px 0;
-            display: flex;
+            height: auto;
+        }
+
+        /* ========================================
+           BOTÕES (CTAs)
+        ======================================== */
+        .btn {
+            display: inline-block;
+            padding: 16px 40px;
+            background: var(--cor-principal);
+            color: var(--cor-branco);
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: var(--sombra-suave);
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background: var(--cor-principal-hover);
+            transform: translateY(-2px);
+            box-shadow: var(--sombra-media);
+        }
+
+        /* ========================================
+           SOBRE - Seção da Nutricionista
+        ======================================== */
+        .sobre {
+            padding: 80px 20px;
+            background: var(--cor-branco);
+        }
+
+        .sobre-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
             align-items: center;
-            justify-content: center;
-            font-size: 0.9rem;
-            color: #e6f2ef;
+            max-width: 1000px;
+            margin: 0 auto;
         }
 
-        /* ===============================
-           BLOCOS OBJETIVOS
-        ================================ */
-        .cards {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
+        .sobre-foto {
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
         }
 
-        .card {
-            background-color: #ffffff;
-            border: 1px solid var(--borda-firme);
-            border-radius: 14px;
-            padding: 22px;
-            font-size: 0.95rem;
-            color: var(--texto-secundario);
+        .sobre-foto img {
+            width: 100%;
+            border-radius: 50%;
+            box-shadow: var(--sombra-media);
         }
 
-        /* ===============================
-           FUNDO CINZA CLARO
-        ================================ */
-        .bg-claro {
-            background-color: var(--cinza-claro);
+        .sobre-texto h2 {
+            font-size: 2rem;
+            color: var(--cor-principal);
+            margin-bottom: 1.5rem;
         }
 
-        /* ===============================
-           CTA FINAL
-        ================================ */
-        .cta-final {
-            background-color: var(--verde-escuro);
+        .sobre-texto p {
+            font-size: 1.1rem;
+            color: var(--cor-texto-claro);
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        /* ========================================
+           SERVIÇOS - Cards de Atendimento
+        ======================================== */
+        .servicos {
+            padding: 80px 20px;
+            background: var(--cor-fundo-claro);
+        }
+
+        .servicos h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            color: var(--cor-texto);
+            margin-bottom: 3rem;
+        }
+
+        .servicos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .servico-card {
+            background: var(--cor-branco);
+            padding: 2.5rem 2rem;
+            border-radius: 16px;
+            box-shadow: var(--sombra-suave);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .servico-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--sombra-media);
+        }
+
+        .servico-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1.5rem;
+            fill: var(--cor-principal);
+        }
+
+        .servico-card h3 {
+            font-size: 1.4rem;
+            color: var(--cor-principal);
+            margin-bottom: 1rem;
+        }
+
+        .servico-card p {
+            color: var(--cor-texto-claro);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        /* ========================================
+           DEPOIMENTOS - Prova Social
+        ======================================== */
+        .depoimentos {
+            padding: 80px 20px;
+            background: var(--cor-branco);
+        }
+
+        .depoimentos h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            color: var(--cor-texto);
+            margin-bottom: 3rem;
+        }
+
+        .depoimentos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .depoimento-card {
+            background: var(--cor-fundo-claro);
+            padding: 2rem;
+            border-radius: 16px;
+            border-left: 4px solid var(--cor-principal);
+            box-shadow: var(--sombra-suave);
+        }
+
+        .depoimento-texto {
+            font-style: italic;
+            color: var(--cor-texto-claro);
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .depoimento-autor {
+            font-weight: 600;
+            color: var(--cor-principal);
+        }
+
+        /* ========================================
+           LOCALIZAÇÃO - Mapa e Endereço
+        ======================================== */
+        .localizacao {
+            padding: 80px 20px;
+            background: var(--cor-fundo-claro);
+        }
+
+        .localizacao h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            color: var(--cor-texto);
+            margin-bottom: 1rem;
+        }
+
+        .localizacao-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--cor-texto-claro);
+            margin-bottom: 2rem;
+        }
+
+        .localizacao-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .endereco {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .endereco p {
+            font-size: 1.1rem;
+            color: var(--cor-texto);
+            margin-bottom: 1rem;
+        }
+
+        .mapa-container {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--sombra-media);
+            margin-bottom: 2rem;
+        }
+
+        .btn-rota {
+            display: block;
+            width: fit-content;
+            margin: 0 auto;
+        }
+
+        /* ========================================
+           FOOTER - Rodapé
+        ======================================== */
+        footer {
+            background: var(--cor-texto);
+            color: var(--cor-branco);
+            padding: 3rem 20px 2rem;
             text-align: center;
         }
 
-        .cta-final h2,
-        .cta-final p {
-            color: #ffffff;
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
         }
 
-        .cta-final .btn-whatsapp {
-            background-color: #ffffff;
-            color: var(--verde-escuro);
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
         }
 
-        /* ===============================
-           DESKTOP (ADAPTAÇÃO)
-        ================================ */
-        @media (min-width: 900px) {
-            .container {
-                max-width: 1100px;
+        .social-links a {
+            color: var(--cor-branco);
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--cor-principal);
+        }
+
+        .copyright {
+            font-size: 0.9rem;
+            color: #999;
+            margin-bottom: 0.5rem;
+        }
+
+        .creditos {
+            font-size: 0.85rem;
+            color: #999;
+        }
+
+        .creditos a {
+            color: var(--cor-principal);
+            transition: color 0.3s ease;
+        }
+
+        .creditos a:hover {
+            color: var(--cor-principal-hover);
+        }
+
+        /* ========================================
+           BOTÃO FLUTUANTE DO WHATSAPP
+        ======================================== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: var(--cor-branco);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            transition: transform 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        .whatsapp-float svg {
+            width: 32px;
+            height: 32px;
+            fill: var(--cor-branco);
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+            }
+            50% {
+                box-shadow: 0 4px 20px rgba(37, 211, 102, 0.7);
+            }
+        }
+
+        /* ========================================
+           RESPONSIVIDADE MOBILE-FIRST
+        ======================================== */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.9rem;
             }
 
-            .hero-grid {
-                display: grid;
-                grid-template-columns: 1.1fr 0.9fr;
-                gap: 60px;
-                align-items: center;
+            .hero h1 {
+                font-size: 1.8rem;
             }
 
-            h1 {
-                font-size: 2.6rem;
+            .hero p {
+                font-size: 1rem;
             }
 
-            .btn-whatsapp {
-                width: auto;
-                display: inline-block;
-                padding: 16px 36px;
+            .sobre-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .sobre-texto h2 {
+                font-size: 1.6rem;
+            }
+
+            .servicos h2,
+            .depoimentos h2,
+            .localizacao h2 {
+                font-size: 1.8rem;
+            }
+
+            .whatsapp-float {
+                width: 55px;
+                height: 55px;
+                bottom: 15px;
+                right: 15px;
+            }
+
+            .whatsapp-float svg {
+                width: 28px;
+                height: 28px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 1.2rem;
+            }
+
+            .nav-links {
+                width: 100%;
+                justify-content: center;
+                margin-top: 1rem;
+            }
+
+            .hero {
+                padding: 60px 20px;
+            }
+
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .btn {
+                padding: 14px 30px;
+                font-size: 0.95rem;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- ===============================
-         HERO ENERGÉTICO
-    ================================ -->
-    <section class="hero">
-        <div class="container hero-grid">
-            <div>
-                <h1>Nutrição para evoluir no treino e no desempenho</h1>
+    <!-- ========================================
+         HEADER - Menu de Navegação
+    ======================================== -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Rafaela Nutrific</div>
+                <ul class="nav-links">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#localizacao">Localização</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-                <p>
-                    Sou <strong>Ricardo Almeida</strong>, nutricionista esportivo.
-                    Trabalho com atletas e praticantes de atividade física
-                    que buscam melhorar performance com responsabilidade.
-                </p>
+    <!-- ========================================
+         HERO SECTION - Seção Principal
+    ======================================== -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Nutrição que transforma sua vida de dentro para fora</h1>
+                <p>Emagrecimento definitivo e saúde plena em Londrina e região</p>
+                <a href="https://wa.me/5543999998888" class="btn" target="_blank">Agendar Minha Consulta</a>
+            </div>
+            <div class="hero-image">
+                <img src="https://source.unsplash.com/800x600/?healthy-food,fruits" alt="Alimentação saudável com frutas e vegetais frescos">
+            </div>
+        </div>
+    </section>
 
-                <a href="https://wa.me/5500000000000" target="_blank" class="btn-whatsapp">
-                    Falar com a nutricionista
-                </a>
-
-                <div class="microtexto">
-                    Acompanhamento profissional e responsável
+    <!-- ========================================
+         SOBRE - Seção da Nutricionista
+    ======================================== -->
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <div class="sobre-content">
+                <div class="sobre-foto">
+                    <img src="https://source.unsplash.com/400x400/?smiling-woman-doctor,nutritionist" alt="Dra. Rafaela Nutrific - Nutricionista">
+                </div>
+                <div class="sobre-texto">
+                    <h2>Dra. Rafaela Nutrific</h2>
+                    <p>Olá! Sou apaixonada por ajudar pessoas a transformarem sua relação com a comida. Minha abordagem é humanizada, sem julgamentos e focada em resultados sustentáveis.</p>
+                    <p>Acredito que a nutrição vai muito além de dietas restritivas. Meu objetivo é promover mudanças reais no seu estilo de vida, respeitando suas preferências e rotina, para que você alcance saúde plena e bem-estar duradouro.</p>
+                    <p>Com formação em Nutrição Clínica e especialização em Emagrecimento Saudável, atendo pacientes em Londrina e Cambé com dedicação e cuidado individualizado.</p>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- PLACEHOLDER IMAGEM ESPORTIVA -->
-            <!-- Substituir por imagem com sensação de ação / treino -->
-            <div class="hero-image">
-                Imagem esportiva / Foto da nutricionista
+    <!-- ========================================
+         SERVIÇOS - Cards de Atendimento
+    ======================================== -->
+    <section id="servicos" class="servicos">
+        <div class="container">
+            <h2>Como Posso Te Ajudar</h2>
+            <div class="servicos-grid">
+                
+                <!-- Card 1: Reeducação Alimentar -->
+                <div class="servico-card">
+                    <svg class="servico-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    <h3>Reeducação Alimentar</h3>
+                    <p>Aprenda a fazer escolhas conscientes e equilibradas, transformando sua relação com a comida de forma natural e prazerosa.</p>
+                </div>
+
+                <!-- Card 2: Emagrecimento -->
+                <div class="servico-card">
+                    <svg class="servico-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.5.67s.74 2.65.74 4.8c0 2.06-1.35 3.73-3.41 3.73-2.07 0-3.63-1.67-3.63-3.73l.03-.36C5.21 7.51 4 10.62 4 14c0 4.42 3.58 8 8 8s8-3.58 8-8C20 8.61 17.41 3.8 13.5.67zM11.71 19c-1.78 0-3.22-1.4-3.22-3.14 0-1.62 1.05-2.76 2.81-3.12 1.77-.36 3.6-1.21 4.62-2.58.39 1.29.59 2.65.59 4.04 0 2.65-2.15 4.8-4.8 4.8z"/>
+                    </svg>
+                    <h3>Emagrecimento Saudável</h3>
+                    <p>Perda de peso sustentável e definitiva, sem dietas restritivas. Foco em saúde, qualidade de vida e resultados duradouros.</p>
+                </div>
+
+                <!-- Card 3: Nutrição Clínica -->
+                <div class="servico-card">
+                    <svg class="servico-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 3H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-1.4c0-2.33 4.67-3.6 7-3.6s7 1.27 7 3.6V19z"/>
+                    </svg>
+                    <h3>Nutrição Clínica</h3>
+                    <p>Tratamento nutricional para diabetes, hipertensão, colesterol alto e outras condições. Interpretação de exames e acompanhamento individualizado.</p>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- ===============================
-         BENEFÍCIOS
-    ================================ -->
-    <section>
+    <!-- ========================================
+         DEPOIMENTOS - Prova Social
+    ======================================== -->
+    <section id="depoimentos" class="depoimentos">
         <div class="container">
-            <h2>Benefícios do acompanhamento esportivo</h2>
+            <h2>O Que Dizem Meus Pacientes</h2>
+            <div class="depoimentos-grid">
+                
+                <div class="depoimento-card">
+                    <p class="depoimento-texto">"A Dra. Rafaela mudou completamente minha vida! Emagreci 15kg em 6 meses e aprendi a ter uma relação saudável com a comida. Sem sofrimento, sem restrições absurdas. Só gratidão!"</p>
+                    <p class="depoimento-autor">— Maria Silva, Londrina</p>
+                </div>
 
-            <div class="cards">
-                <div class="card">Mais energia e rendimento nos treinos</div>
-                <div class="card">Melhor recuperação muscular</div>
-                <div class="card">Apoio nutricional alinhado ao seu objetivo</div>
-                <div class="card">Consistência sem extremos</div>
+                <div class="depoimento-card">
+                    <p class="depoimento-texto">"Profissional extremamente atenciosa e competente. Ela entende que cada pessoa é única e monta um plano alimentar totalmente personalizado. Meu diabetes está controlado graças ao acompanhamento dela."</p>
+                    <p class="depoimento-autor">— João Santos, Cambé</p>
+                </div>
+
+                <div class="depoimento-card">
+                    <p class="depoimento-texto">"Já tentei várias dietas antes, mas sempre desistia. Com a Rafaela foi diferente: ela me ensinou a comer de verdade, respeitando minhas preferências. Hoje me sinto mais disposta e feliz!"</p>
+                    <p class="depoimento-autor">— Ana Paula, Londrina</p>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- ===============================
-         COMO A NUTRIÇÃO APOIA
-    ================================ -->
-    <section class="bg-claro">
+    <!-- ========================================
+         LOCALIZAÇÃO - Mapa e Endereço
+    ======================================== -->
+    <section id="localizacao" class="localizacao">
         <div class="container">
-            <h2>Como a nutrição apoia o desempenho</h2>
-
-            <p>
-                A alimentação correta ajuda a sustentar treinos,
-                melhorar a recuperação e favorecer a composição corporal
-                de forma saudável.
-            </p>
-
-            <p>
-                O foco está em estratégia, constância e acompanhamento,
-                não em soluções rápidas.
-            </p>
-        </div>
-    </section>
-
-    <!-- ===============================
-         SOBRE
-    ================================ -->
-    <section>
-        <div class="container">
-            <h2>Sobre a nutricionista</h2>
-
-            <p>
-                Sou nutricionista com atuação em nutrição esportiva,
-                acompanhando pessoas fisicamente ativas em diferentes níveis.
-            </p>
-
-            <p>
-                O trabalho é baseado em ciência, planejamento
-                e acompanhamento contínuo.
-            </p>
-        </div>
-    </section>
-
-    <!-- ===============================
-         FORMAÇÃO
-    ================================ -->
-    <section class="bg-claro">
-        <div class="container">
-            <h2>Formação e especializações</h2>
-
-            <p>Graduação em Nutrição – Universidade Anhembi Morumbi</p>
-            <p>Registro profissional – CRN 3-98765</p>
-            <p>Especialização em Nutrição Esportiva e Performance</p>
-        </div>
-    </section>
-
-    <!-- ===============================
-         PARA QUEM É
-    ================================ -->
-    <section>
-        <div class="container">
-            <h2>Para quem é o atendimento</h2>
-
-            <div class="cards">
-                <div class="card">Praticantes de musculação e treinos funcionais</div>
-                <div class="card">Atletas amadores</div>
-                <div class="card">Pessoas fisicamente ativas</div>
-                <div class="card">Quem busca melhorar desempenho com saúde</div>
+            <h2>Onde Estou</h2>
+            <p class="localizacao-subtitle">Atendimento presencial com fácil acesso</p>
+            <div class="localizacao-content">
+                <div class="endereco">
+                    <p><strong>📍 Av. Dos Ipês, 1830-1080, Cambé - PR</strong></p>
+                    <p>Atendo pacientes de Londrina, Cambé e região</p>
+                </div>
+                <div class="mapa-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22082.78027784855!2d-51.24681377928972!3d-23.35091204364244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94eb435a57af586d%3A0x23ac11a5c614f971!2sLondrina%2C%20PR!5e1!3m2!1spt-BR!2sbr!4v1769139835745!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <a href="https://maps.app.goo.gl/CcR7zmmnFYp447J17" class="btn btn-rota" target="_blank">Traçar Rota</a>
             </div>
         </div>
     </section>
 
-    <!-- ===============================
-         DIFERENCIAIS
-    ================================ -->
-    <section class="bg-claro">
-        <div class="container">
-            <h2>Diferenciais</h2>
-
-            <div class="cards">
-                <div class="card">Acompanhamento individualizado</div>
-                <div class="card">Planejamento alinhado ao treino</div>
-                <div class="card">Foco em saúde e performance</div>
-                <div class="card">Sem promessas irreais</div>
+    <!-- ========================================
+         FOOTER - Rodapé
+    ======================================== -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://wa.me/5543999998888" target="_blank">WhatsApp</a>
+                <a href="https://instagram.com/rafaelanutrific_fake" target="_blank">Instagram</a>
             </div>
+            <p class="copyright">&copy; 2026 Rafaela Nutrific - Todos os direitos reservados</p>
+            <p class="creditos">Desenvolvido por <a href="https://siteprofissional.pro/" target="_blank">siteprofissional.pro</a></p>
         </div>
-    </section>
+    </footer>
 
-    <!-- ===============================
-         CTA FINAL
-    ================================ -->
-    <section class="cta-final">
-        <div class="container">
-            <h2>Vamos alinhar sua nutrição ao seu treino</h2>
-
-            <p>
-                Se você busca melhorar desempenho com orientação profissional,
-                estou à disposição para conversar.
-            </p>
-
-            <a href="https://wa.me/5500000000000" target="_blank" class="btn-whatsapp">
-                Falar com a nutricionista
-            </a>
-
-            <div class="microtexto">
-                Acompanhamento profissional e responsável
-            </div>
-
-            <!-- PLACEHOLDER IMAGEM FINAL -->
-            <!-- Substituir por imagem esportiva de apoio -->
-        </div>
-    </section>
-
-</body>
-</html>
+    <!-- ========================================
+         BOTÃO FLUTUANTE DO WHATSAPP
+    ======================================== -->
+    <a href="https://wa.me/5543999998888" class="whatsapp-float" target="_blank" aria-label="Fale comigo no WhatsApp">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.8936.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+</svg>
+</a>
+<!-- ========================================
+     SCRIPT - Navegação Suave
+======================================== -->
+<script>
+    // Navegação suave ao clicar nos links do menu
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+</script>

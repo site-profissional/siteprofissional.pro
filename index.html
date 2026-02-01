@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Site Profissional | Criação de Sites para Profissionais e Empresas</title>
-    <meta name="description" content="Desenvolvimento de sites profissionais com metodologia exclusiva. Segurança, performance e foco em autoridade para médicos, advogados e empresas.">
+    <title>Site Profissional | Criação de Sites e Gestão de Tráfego</title>
+    <meta name="description" content="Desenvolvimento de sites profissionais e gestão de tráfego pago (Google e Meta Ads). Segurança, performance e vendas para sua empresa.">
     
     <meta name="geo.region" content="BR-SP" />
     <meta name="geo.placename" content="Ourinhos" />
@@ -17,7 +17,7 @@
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "name": "Site Profissional",
-      "description": "Criação de sites profissionais de alta performance e landing pages.",
+      "description": "Criação de sites profissionais de alta performance e gestão de tráfego pago.",
       "image": "https://siteprofissional.com.br/logo.png",
       "url": "https://siteprofissional.com.br",
       "telephone": "+5514997715865",
@@ -36,7 +36,7 @@
       "founder": {
         "@type": "Person",
         "name": "Victor",
-        "jobTitle": "Programador Web"
+        "jobTitle": "Programador Web e Gestor de Tráfego"
       }
     }
     </script>
@@ -240,7 +240,7 @@
             display: flex;
             gap: 2rem;
             width: max-content;
-            animation: scroll 60s linear infinite;
+            animation: scroll 80s linear infinite;
         }
 
         .scroller-inner:hover {
@@ -339,7 +339,7 @@
             text-transform: uppercase; display: inline-block; margin-bottom: 20px;
         }
 
-        /* FAQ */
+        /* FAQ - CORRIGIDO */
         .faq-item {
             background: white;
             border: 1px solid var(--border-color);
@@ -354,10 +354,18 @@
             transition: background 0.2s;
         }
         .faq-question:hover { background: #F8FAFC; }
+        
+        /* A altura agora é controlada via JS, não mais CSS fixo */
         .faq-answer {
-            max-height: 0; overflow: hidden; transition: max-height 0.3s ease; padding: 0 24px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            padding: 0 24px;
         }
-        .faq-answer.active { max-height: 300px; padding: 0 24px 20px 24px; }
+        .faq-answer.active {
+            padding-bottom: 20px;
+        }
+        
         .faq-icon { transition: transform 0.3s; font-size: 1.2rem; color: var(--primary); }
         .faq-question.active .faq-icon { transform: rotate(45deg); }
 
@@ -457,31 +465,55 @@
                 <div class="card">
                     <div class="icon-box">🔍</div>
                     <h3 class="mb-2">Aparecer no Google</h3>
-                    <p>Se você não aparece nas buscas, está entregando clientes para o concorrente que aparece.</p>
+                    <p>Se você não aparece nas buscas, está entregando clientes de bandeja para o concorrente que aparece.</p>
                 </div>
 
                 <div class="card">
                     <div class="icon-box">💼</div>
                     <h3 class="mb-2">Credibilidade</h3>
-                    <p>Instagram é bom, mas um site próprio transmite autoridade institucional e profissionalismo.</p>
+                    <p>Instagram é bom, mas um site próprio transmite autoridade institucional. É o seu cartão de visitas digital.</p>
                 </div>
 
                 <div class="card">
-                    <div class="icon-box">📱</div>
-                    <h3 class="mb-2">Vendas 24/7</h3>
-                    <p>Enquanto você dorme, seu site apresenta seus serviços e captura contatos de clientes.</p>
+                    <div class="icon-box">🔒</div>
+                    <h3 class="mb-2">Cibersegurança aplicada</h3>
+                    <p>Segurança de verdade. Código desenvolvido utilizando principios de cibersegurança.</p>
+                </div>
+
+                <div class="card">
+                    <div class="icon-box">📈</div>
+                    <h3 class="mb-2">Pronto para Anúncios</h3>
+                    <p>Estrutura preparada para receber o Pixel do Facebook e Tags do Google. Essencial para campanhas de tráfego pago.</p>
                 </div>
 
                 <div class="card">
                     <div class="icon-box">⚡</div>
                     <h3 class="mb-2">Performance Extrema</h3>
-                    <p>Otimização focada nos Core Web Vitals do Google. Código limpo, sem excesso de plugins que travam o site.</p>
+                    <p>Otimização focada. Código limpo, sem plugins pesados que travam o carregamento.</p>
+                </div>
+
+                <div class="card">
+                    <div class="icon-box">🏠</div>
+                    <h3 class="mb-2">Sua Casa Própria</h3>
+                    <p>Redes sociais mudam o algoritmo e derrubam seu alcance. O site é seu terreno próprio, onde você dita as regras.</p>
                 </div>
 
                 <div class="card">
                     <div class="icon-box">📱</div>
                     <h3 class="mb-2">Mobile First Real</h3>
-                    <p>O site é projetado primeiro para celulares (onde estão 90% dos seus clientes) e depois adaptado para desktop.</p>
+                    <p>Projetado primeiro para celulares (onde estão 90% dos seus clientes) e adaptado perfeitamente para desktop.</p>
+                </div>
+
+                <div class="card">
+                    <div class="icon-box">🕒</div>
+                    <h3 class="mb-2">Vendas 24/7</h3>
+                    <p>Enquanto você dorme, seu site apresenta seus serviços, tira dúvidas e captura contatos de clientes.</p>
+                </div>
+
+                <div class="card">
+                    <div class="icon-box">🤖</div>
+                    <h3 class="mb-2">Automação de Atendimento</h3>
+                    <p>Botões de WhatsApp estratégicos e links rápidos que filtram o cliente antes dele chegar no seu pessoal.</p>
                 </div>
             </div>
         </div>
@@ -492,13 +524,12 @@
             <div class="grid-2">
                 <div>
                     <div class="expert-photo" style="
-    background-image: url('assets/images/foto-victor-siteprofissional.png');
-    background-size: cover;
-    background-position: center top;
-">
-    <div class="expert-label">Victor • Programador Web</div>
-</div>
-
+                        background-image: url('assets/images/foto-victor-siteprofissional.png');
+                        background-size: cover;
+                        background-position: center top;
+                    ">
+                        <div class="expert-label">Victor • Programador Web</div>
+                    </div>
                 </div>
                 
                 <div>
@@ -513,19 +544,19 @@
                         <ul class="check-list" style="color: var(--text-primary);">
                             <li style="color: var(--text-primary);">
                                 <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                                <span><strong>Certificado Google</strong> em TI e Cibersegurança</span>
+                            </li>
+                            <li style="color: var(--text-primary);">
+                                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
                                 <span><strong>Análise e Desenvolvimento de Sistemas</strong></span>
                             </li>
                             <li style="color: var(--text-primary);">
                                 <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                                <span><strong>Cibersegurança</strong></span>
+                                <span><strong>Cibersegurança</strong> </span>
                             </li>
                             <li style="color: var(--text-primary);">
                                 <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
                                 <span><strong>Engenharia de Software</strong> (Cursando)</span>
-                            </li>
-                            <li style="color: var(--text-primary);">
-                                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                                <span><strong>+100 Projetos Desenvolvidos</strong></span>
                             </li>
                         </ul>
                     </div>
@@ -562,18 +593,19 @@
                     <div class="timeline-number">3</div>
                     <div class="timeline-content">
                         <h3 class="mb-1">Sistema (System)</h3>
-                        <p>Site programado, seguro e disponível para ser usado nas redes sociais, Google Business e Google Ads.</p>
+                        <p>Site programado, seguro e disponível para ser usado nas redes sociais, Google Business/Ads e Meta Ads (Facebook e Instagram).</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
     <section>
         <div class="container-fluid" style="overflow: hidden;">
             <div class="container">
                 <div class="text-center mb-5">
                     <h2 class="mb-2">O que os clientes falam</h2>
-                    <p>Resultados reais de quem já tem um site profissional</p>
+                    <p>Resultados reais, quebra de objeções e gratidão de quem já contratou</p>
                 </div>
             </div>
 
@@ -586,91 +618,77 @@
                     </div>
                     <div class="testimonial-card">
                         <div class="stars">★★★★★</div>
-                        <p style="font-style: italic; font-size: 0.9rem;">"Precisava de um site rápido para rodar anúncios. O Victor entregou em uma semana e a performance técnica fez diferença."</p>
+                        <p style="font-style: italic; font-size: 0.9rem;">"Tinha medo de ser difícil de mexer, mas o Victor deixou tudo automático. Só recebo os pedidos no Zap."</p>
+                        <strong>Sr. João M.</strong><br><span style="font-size: 0.8rem; color: #64748B;">Marido de Aluguel</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p style="font-style: italic; font-size: 0.9rem;">"Achei que site era coisa cara e demorada. O Victor entregou em 6 dias e o preço foi muito justo pelo retorno."</p>
+                        <strong>Amanda S.</strong><br><span style="font-size: 0.8rem; color: #64748B;">Esteticista</span>
+                    </div>
+                     <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p style="font-style: italic; font-size: 0.9rem;">"Eu moro em outro estado e fui atendido perfeitamente. Profissional de confiança, cumpriu tudo que prometeu."</p>
+                        <strong>Ricardo L.</strong><br><span style="font-size: 0.8rem; color: #64748B;">Consultor Financeiro - MG</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p style="font-style: italic; font-size: 0.9rem;">"Meu site carrega muito mais rápido que o da concorrência. Isso passa uma imagem muito profissional."</p>
+                        <strong>Dra. Beatriz</strong><br><span style="font-size: 0.8rem; color: #64748B;">Advogada Trabalhista</span>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p style="font-style: italic; font-size: 0.9rem;">"Começamos os anúncios no Google numa terça, na quarta já tinha cliente ligando. O tráfego pago funciona mesmo."</p>
                         <strong>R. Almeida</strong><br><span style="font-size: 0.8rem; color: #64748B;">Empresário - Logística</span>
                     </div>
                     <div class="testimonial-card">
                         <div class="stars">★★★★★</div>
-                        <p style="font-style: italic; font-size: 0.9rem;">"Tinha receio de agências. O atendimento direto com o Victor me deu segurança. Hoje meu escritório tem presença de qualidade."</p>
-                        <strong>Dr. Carlos M.</strong><br><span style="font-size: 0.8rem; color: #64748B;">Advogado</span>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="stars">★★★★★</div>
-                        <p style="font-style: italic; font-size: 0.9rem;">"Alunos novos chegando toda semana. O site passa muita credibilidade para os pais que buscam autoescola."</p>
-                        <strong>Marcelo T.</strong><br><span style="font-size: 0.8rem; color: #64748B;">Dono de Autoescola</span>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="stars">★★★★★</div>
-                        <p style="font-style: italic; font-size: 0.9rem;">"Minhas joias ficaram lindas na vitrine virtual. Vendo muito mais pelo Instagram mandando o link do site."</p>
+                        <p style="font-style: italic; font-size: 0.9rem;">"O Victor me explicou que eu precisava investir na plataforma além da gestão. Coloquei R$500 e voltou R$4.000 em vendas."</p>
                         <strong>Juliana K.</strong><br><span style="font-size: 0.8rem; color: #64748B;">Joias e Acessórios</span>
                     </div>
                     <div class="testimonial-card">
                         <div class="stars">★★★★★</div>
-                        <p style="font-style: italic; font-size: 0.9rem;">"Como vendo solução de IA, precisava de um site seguro. O Victor entende muito de cibersegurança."</p>
-                        <strong>Felipe S.</strong><br><span style="font-size: 0.8rem; color: #64748B;">Startup de Tecnologia</span>
+                        <p style="font-style: italic; font-size: 0.9rem;">"Eu gastava dinheiro impulsionando errado no Instagram. Com a gestão profissional do Victor, meu custo por cliente caiu pela metade."</p>
+                        <strong>Marcelo T.</strong><br><span style="font-size: 0.8rem; color: #64748B;">Dono de Autoescola</span>
                     </div>
                     <div class="testimonial-card">
                         <div class="stars">★★★★★</div>
-                        <p style="font-style: italic; font-size: 0.9rem;">"Pacientes sempre elogiam a facilidade de achar o endereço e os tratamentos no site."</p>
-                        <strong>Dr. Ricardo</strong><br><span style="font-size: 0.8rem; color: #64748B;">Dentista</span>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="stars">★★★★★</div>
-                        <p style="font-style: italic; font-size: 0.9rem;">"Contratei agências caras antes e o resultado foi ruim. O Victor entregou mais por um preço justo."</p>
-                        <strong>Lúcia M.</strong><br><span style="font-size: 0.8rem; color: #64748B;">Fisioterapeuta</span>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="stars">★★★★★</div>
-                        <p style="font-style: italic; font-size: 0.9rem;">"Pago a manutenção mensal tranquilo. Saber que meu site está seguro vale cada centavo."</p>
-                        <strong>Fernanda S.</strong><br><span style="font-size: 0.8rem; color: #64748B;">Psicóloga</span>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="stars">★★★★★</div>
-                        <p style="font-style: italic; font-size: 0.9rem;">"A Landing Page converte muito bem para meus lançamentos de infoproduto. Recomendo."</p>
+                        <p style="font-style: italic; font-size: 0.9rem;">"Obrigado Victor! A Landing Page ficou linda e os anúncios no Facebook estão trazendo leads qualificados todo dia."</p>
                         <strong>Gustavo B.</strong><br><span style="font-size: 0.8rem; color: #64748B;">Infoprodutor</span>
                     </div>
 
                     <div class="testimonial-card">
                         <div class="stars">★★★★★</div>
-                        <p style="font-style: italic; font-size: 0.9rem;">"A agenda do consultório lotou. As pessoas encontram o site no Google e já chamam no WhatsApp."</p>
-                        <strong>Dra. Ana P.</strong><br><span style="font-size: 0.8rem; color: #64748B;">Nutricionista</span>
+                        <p style="font-style: italic; font-size: 0.9rem;">"Como vendo solução de IA, precisava de um site seguro. A certificação dele em cibersegurança me deixou tranquilo."</p>
+                        <strong>Felipe S.</strong><br><span style="font-size: 0.8rem; color: #64748B;">Startup de Tecnologia</span>
                     </div>
                     <div class="testimonial-card">
                         <div class="stars">★★★★★</div>
-                        <p style="font-style: italic; font-size: 0.9rem;">"Precisava de um site rápido para rodar anúncios. O Victor entregou em uma semana e a performance técnica fez diferença."</p>
-                        <strong>R. Almeida</strong><br><span style="font-size: 0.8rem; color: #64748B;">Empresário - Logística</span>
+                        <p style="font-style: italic; font-size: 0.9rem;">"Atendimento nota 10. Ele não fala 'techinês', explica tudo de forma simples para quem é leigo como eu."</p>
+                        <strong>Dra. Lúcia M.</strong><br><span style="font-size: 0.8rem; color: #64748B;">Fisioterapeuta</span>
                     </div>
                     <div class="testimonial-card">
                         <div class="stars">★★★★★</div>
-                        <p style="font-style: italic; font-size: 0.9rem;">"Tinha receio de agências. O atendimento direto com o Victor me deu segurança. Hoje meu escritório tem presença de qualidade."</p>
-                        <strong>Dr. Carlos M.</strong><br><span style="font-size: 0.8rem; color: #64748B;">Advogado</span>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="stars">★★★★★</div>
-                        <p style="font-style: italic; font-size: 0.9rem;">"Alunos novos chegando toda semana. O site passa muita credibilidade para os pais que buscam autoescola."</p>
-                        <strong>Marcelo T.</strong><br><span style="font-size: 0.8rem; color: #64748B;">Dono de Autoescola</span>
-                    </div>
-                     <div class="testimonial-card">
-                        <div class="stars">★★★★★</div>
-                        <p style="font-style: italic; font-size: 0.9rem;">"Minhas joias ficaram lindas na vitrine virtual. Vendo muito mais pelo Instagram mandando o link do site."</p>
-                        <strong>Juliana K.</strong><br><span style="font-size: 0.8rem; color: #64748B;">Joias e Acessórios</span>
+                        <p style="font-style: italic; font-size: 0.9rem;">"Pago a manutenção mensal sorrindo. Qualquer alteração que peço ele faz na hora. Suporte incrível."</p>
+                        <strong>Fernanda S.</strong><br><span style="font-size: 0.8rem; color: #64748B;">Psicóloga</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section style="background: #F1F5F9;">
+    <section style="background: #F1F5F9;" id="investimento">
         <div class="container">
             <h2 class="text-center mb-5">Investimento</h2>
             
-            <div class="pricing-grid">
+            <div class="pricing-grid mb-5">
                 
                 <div class="pricing-box">
                     <span class="pricing-badge">Landing Page (Página Única)</span>
                     
                     <h3 style="font-size: 1.5rem; margin: 10px 0 10px;">Site Compacto</h3>
-                    <p style="color: #94A3B8; margin-bottom: 20px;">Ideal para profissionais que estão iniciando sua presença digital.</p>
+                    <p style="color: #94A3B8; margin-bottom: 20px;">Foco total em conversão. Ideal para profissionais e campanhas de anúncios.</p>
                     
                     <div style="font-size: 2.5rem; font-weight: 800; line-height: 1; margin-bottom: 8px;">
                         R$ 1.000
@@ -691,11 +709,11 @@
                         </li>
                         <li>
                             <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                            <span>Design focado em conversão</span>
+                            <span>Design focado em vendas</span>
                         </li>
                         <li>
                             <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                            <span>Otimizado para Google (SEO)</span>
+                            <span>Disponível 24h (Contrato 12 meses)</span>
                         </li>
                     </ul>
                     <a href="https://bit.ly/3NFNl6U" class="btn" style="background: white; color: #0F172A; width: 100%; font-size: 1rem; margin-top: auto;">
@@ -707,10 +725,11 @@
                     <span class="pricing-badge" style="background: var(--primary);">Site Institucional</span>
                     
                     <h3 style="font-size: 1.5rem; margin: 10px 0 10px;">Estrutura Completa</h3>
-                    <p style="color: #94A3B8; margin-bottom: 20px;">3-5 Páginas, ideal para negócios estabelecidos que querem elevar sua presença digital de boa para excelente.</p>
+                    <p style="color: #94A3B8; margin-bottom: 20px;">Múltiplas páginas. Ideal para empresas estabelecidas que querem autoridade máxima.</p>
                     
+                    <div style="font-size: 1.5rem; font-weight: 600; color: #94A3B8; margin-bottom: -5px;">A partir de</div>
                     <div style="font-size: 2.5rem; font-weight: 800; line-height: 1; margin-bottom: 8px;">
-                        R$ 3.000
+                        R$ 2.000
                     </div>
                     <p style="margin-bottom: 24px; font-size: 0.9rem; color: #CBD5E1;">Valor único de desenvolvimento</p>
                     
@@ -724,30 +743,49 @@
                     <ul class="check-list">
                         <li>
                             <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                            <span>Até 5 páginas (Sobre, Serviços, Contato...)</span>
+                            <span>Até 5 páginas (Sobre, Serviços...)</span>
                         </li>
                         <li>
                             <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                            <span>Maior autoridade e informação</span>
+                            <span>SEO Avançado para Google</span>
                         </li>
                          <li>
                             <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                            <span>Site em código puro (Leve e Seguro)</span>
-                        </li>
-                         <li>
-                            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                            <span>Design focado em conversão</span>
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                            <span>Otimizado para Google (SEO)</span>
+                            <span>Disponível 24h (Contrato 12 meses)</span>
                         </li>
                     </ul>
                     <a href="https://bit.ly/3NFNl6U" class="btn" style="background: white; color: #0F172A; width: 100%; font-size: 1rem; margin-top: auto;">
                         Contratar Institucional
                     </a>
                 </div>
+            </div>
 
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div style="background: #1E293B; border-radius: 16px; border: 1px solid #334155; padding: 40px; color: white;">
+                    <div class="text-center mb-4">
+                        <h3 style="font-size: 1.8rem; margin-bottom: 10px;">Gestão de Anúncios (Tráfego Pago)</h3>
+                        <p style="color: #94A3B8;">Leve clientes qualificados para o seu site novo todos os dias.</p>
+                    </div>
+
+                    <div class="grid-2">
+                        <div style="background: #0F172A; padding: 25px; border-radius: 12px; border: 1px solid #334155;">
+                            <h4 style="color: white; margin-bottom: 10px;">Google Ads <span style="color: #94A3B8; font-size: 0.8em;">OU</span> Meta Ads</h4>
+                            <p style="font-size: 0.9rem; color: #CBD5E1; margin-bottom: 15px;">Escolha entre aparecer nas pesquisas do Google ou no Instagram/Facebook.</p>
+                            <div style="font-size: 2rem; font-weight: 800; color: white; margin-bottom: 5px;">R$ 400<span style="font-size: 1rem; color: #94A3B8; font-weight: 400;">/mês</span></div>
+                            <a href="https://bit.ly/3NFNl6U" style="color: var(--primary); font-weight: 600; text-decoration: none; font-size: 0.9rem;">Contratar Individual →</a>
+                        </div>
+
+                        <div style="background: linear-gradient(135deg, #0F172A 0%, #1E3A8A 100%); padding: 25px; border-radius: 12px; border: 1px solid var(--primary);">
+                            <div style="display: flex; justify-content: space-between; align-items: start;">
+                                <h4 style="color: white; margin-bottom: 10px;">Combo Tração Total</h4>
+                                <span style="background: #16A34A; color: white; font-size: 0.7rem; padding: 2px 8px; border-radius: 10px; font-weight: bold;">MAIS VENDIDO</span>
+                            </div>
+                            <p style="font-size: 0.9rem; color: #BFDBFE; margin-bottom: 15px;">Gestão completa: Google Ads (Pesquisa) + Meta Ads (Insta/Face) juntos.</p>
+                            <div style="font-size: 2rem; font-weight: 800; color: white; margin-bottom: 5px;">R$ 600<span style="font-size: 1rem; color: #BFDBFE; font-weight: 400;">/mês</span></div>
+                            <a href="https://bit.ly/3NFNl6U" style="color: white; font-weight: 600; text-decoration: underline; font-size: 0.9rem;">Quero o Combo →</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -756,73 +794,127 @@
         <div class="container">
             <div class="text-center mb-5">
                 <h2 class="mb-2">Perguntas Frequentes</h2>
-                <p>Tire suas dúvidas antes de contratar</p>
+                <p>Tire suas dúvidas sobre Sites e Anúncios</p>
             </div>
 
             <div style="max-width: 800px; margin: 0 auto;">
+                
                 <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)">
-                        <span>Quanto tempo leva para ficar pronto?</span>
+                        <span>Quanto tempo leva para o site ficar pronto?</span>
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Em até uma semana após o preenchimento do formulário com suas informações. Trabalho com um cardápio de modelos prontos que personalizo para você, garantindo agilidade sem perder qualidade.</p>
+                        <p>Em até uma semana após o preenchimento do formulário com suas informações. Trabalho com modelos de alta conversão que personalizo para o seu negócio, garantindo agilidade sem perder qualidade.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)">
-                        <span>O que está incluído nos R$ 100/mês?</span>
+                        <span>O que está incluído nos R$ 100/mês do site?</span>
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Este valor cobre os custos de hospedagem do site (para mantê-lo online 24h) e, principalmente, minha disponibilidade para manutenção técnica e edições pontuais de texto ou imagem que você precisar.</p>
+                        <p>Este valor cobre a hospedagem (para manter o site online 24h) e, principalmente, minha disponibilidade para manutenção técnica e edições. Se precisar trocar uma foto, texto ou telefone, eu faço para você. Você foca no seu trabalho, eu cuido da parte técnica.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)">
-                        <span>E quanto a edições e atualizações?</span>
+                        <span>Nos anúncios (Tráfego Pago), eu pago só o valor da gestão?</span>
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Estão inclusas no pacote mensal. Você não precisa se preocupar com a parte técnica. Se precisar trocar uma foto, mudar um telefone ou ajustar um texto, é só me mandar no WhatsApp e eu faço para você. Você foca no seu trabalho, eu cuido do site.</p>
+                        <p>Não. Existem dois custos separados: <br>
+                        1. O <strong>valor da minha gestão</strong> que é pelo meu trabalho de criar, otimizar e monitorar as campanhas.<br>
+                        2. O <strong>orçamento da plataforma</strong> (pago diretamente ao Google ou Facebook), que é o dinheiro usado para mostrar os anúncios.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)">
-                        <span>Como funciona o cancelamento?</span>
+                        <span>Quanto preciso investir no Facebook/Instagram Ads?</span>
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>O domínio (seu endereço .com.br) é comprado por um período de 1 ano. Por isso, nosso contrato inicial é de 12 meses, garantindo que seu site fique online e atualizado nesse período. Após 1 ano, podemos renovar se você desejar continuar com meus serviços. (E eu farei o possível para que você renove, quero criar uma boa e sólida relação com você profissional).</p>
+                        <p>Para ter bons resultados iniciais, recomendo um investimento na plataforma de <strong>R$ 300 a R$ 600 por mês</strong>. Isso garante que seus anúncios alcancem um número relevante de pessoas diariamente.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question" onclick="toggleFAQ(this)">
-                        <span>O domínio fica em meu nome?</span>
+                        <span>Quanto preciso investir no Google Ads?</span>
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Sim, sempre. O domínio é registrado em seu CPF ou CNPJ, garantindo que você é o proprietário legal.</p>
+                        <p>Assim como no Meta, recomendo iniciar com um orçamento de mídia entre <strong>R$ 300 e R$ 600 por mês</strong>. Isso permite comprar palavras-chave suficientes para aparecer nas pesquisas quando seu cliente procurar seu serviço.</p>
                     </div>
                 </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>E se eu contratar o Combo (Google + Meta)?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Para o Combo Tração Total, o ideal para uma estrutura sólida é um investimento total em mídia de <strong>R$600 a R$ 1.000 por mês</strong> (divididos sendo 50% para Google e 50% para Meta). Isso maximiza sua presença em todas as frentes.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Em quanto tempo tenho resultados?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>O site gera autoridade imediata. Já nos anúncios, os primeiros contatos costumam chegar nos primeiros dias, mas a campanha fica "inteligente" e otimizada (trazendo resultados mais baratos) ao longo do primeiro mês.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>O domínio (nome do site) fica em meu nome?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim, sempre. O domínio é registrado no seu CPF ou CNPJ. Você é o proprietário legal do seu endereço na internet.</p>
+                    </div>
+                </div>
+
+                 <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>O site é seguro contra invasões?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim. Desenvolvo o site em código puro, sem brechas de plugins desatualizados (comum em Wordpress). Seu site estara ciberseguro.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Como funciona o contrato?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>O contrato inicial do site é de 12 meses, garantindo a continuidade do serviço e do domínio. Para a gestão de tráfego, trabalhamos com renovação mensal, sem multa de fidelidade, pois confio que os resultados farão você querer continuar.</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
     <section style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: white; text-align: center;">
         <div class="container">
-            <h2 style="color: white; margin-bottom: 24px;">Pronto para ter seu site profissional?</h2>
+            <h2 style="color: white; margin-bottom: 24px;">Pronto para vender mais?</h2>
             <p style="color: #BFDBFE; max-width: 600px; margin: 0 auto 40px;">
-                Pare de perder clientes para quem aparece no Google. Garanta sua presença digital profissional agora.
+                Garanta sua presença digital profissional e leve clientes qualificados para o seu negócio agora.
             </p>
             <a href="https://bit.ly/3NFNl6U" class="btn" style="background: var(--cta-color); color: white; padding: 20px 40px; font-size: 1.2rem;">
                 Falar com Victor no WhatsApp
             </a>
-		<p style="margin-top: 20px; font-size: 1.2rem; color: #ffffff;">Site seguro e eficiente para sua empresa.</p>
+        <p style="margin-top: 20px; font-size: 1.2rem; color: #ffffff;">Site seguro e Tráfego eficiente.</p>
         </div>
     </section>
 
@@ -855,7 +947,7 @@
                 Site<span style="color: var(--primary);">Profissional</span>
             </div>
             <p style="font-size: 0.9rem; max-width: 500px; margin: 0 auto 30px; color: var(--text-secondary);">
-                Desenvolvimento web profissional para empresas que buscam crescimento online.
+                Desenvolvimento web profissional e Gestão de Tráfego para empresas que buscam crescimento.
             </p>
             <p style="font-size: 0.85rem; color: var(--text-light);">
                 © 2026 Site Profissional.<br>
@@ -874,20 +966,23 @@
     <script>
         function toggleFAQ(button) {
             const answer = button.nextElementSibling;
-            const isActive = answer.classList.contains('active');
             
-            // Fecha todos os outros itens do FAQ
-            document.querySelectorAll('.faq-answer').forEach(item => {
-                item.classList.remove('active');
+            // Verifica se este botão JÁ está aberto
+            const isAlreadyOpen = button.classList.contains('active');
+
+            // 1. FECHA TODOS (Reseta tudo)
+            document.querySelectorAll('.faq-question').forEach(btn => {
+                btn.classList.remove('active');
+                btn.nextElementSibling.classList.remove('active');
+                btn.nextElementSibling.style.maxHeight = null;
             });
-            document.querySelectorAll('.faq-question').forEach(item => {
-                item.classList.remove('active');
-            });
-            
-            // Abre o item clicado (se não estava aberto)
-            if (!isActive) {
-                answer.classList.add('active');
+
+            // 2. Se o botão clicado NÃO estava aberto, abre ele agora
+            if (!isAlreadyOpen) {
                 button.classList.add('active');
+                answer.classList.add('active');
+                // Define a altura exata do conteúdo para a animação funcionar
+                answer.style.maxHeight = answer.scrollHeight + 40 + "px"; // +40px de margem de segurança
             }
         }
     </script>

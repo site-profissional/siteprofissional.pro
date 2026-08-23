@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Crie ensaios fotográficos profissionais em 10 minutos usando apenas seu celular. Método validado com IA.">
+    <title>Estúdio Águia IA | Ensaios Profissionais no Celular</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '4159177891014013');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=4159177891014013&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+    <style>
+        :root {
+            --bg-dark: #09090b;
+            --bg-card: #18181b;
+            --primary: #8b5cf6;
+            --primary-glow: rgba(139, 92, 246, 0.5);
+            --secondary: #06b6d4;
+            --accent: #f59e0b;
+            --text-light: #f4f4f5;
+            --text-gray: #a1a1aa;
+            --whatsapp: #25d366;
+            --gradient-main: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
+            --danger: #ef4444;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            font-family: 'Outfit', sans-serif;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        a { text-decoration: none; }
+        ul { list-style: none; }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .text-gradient { background: var(--gradient-main); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800; }
+        .section-padding { padding: 60px 0; }
+        .center { text-align: center; }
+
+        /* BOTÕES */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            padding: 18px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn:active { transform: scale(0.96); }
+
+        .btn-primary {
+            background: var(--gradient-main);
+            color: white;
+            box-shadow: 0 10px 30px -5px var(--primary-glow);
+            animation: pulse-glow 2s infinite;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 10px 30px -5px var(--primary-glow); }
+            50% { box-shadow: 0 15px 40px 0px var(--primary-glow); }
+        }
+
+        .btn-whatsapp {
+            background-color: var(--whatsapp);
+            color: white;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--text-light);
+        }
+
+        /* DELAY (esconde botão inicialmente) */
+        .btn-delay {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.5s;
+        }
+
+        .btn-delay.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* HEADER */
+        header {
+            padding: 20px 0;
+            background: rgba(9, 9, 11, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #27272a;
+        }
+
+        .logo { 
+            font-size: 1.4rem; 
+            font-weight: 800; 
+            display: flex; 
+            align-items: center; 
+            gap: 8px; 
+            justify-content: center; 
+        }
+
+        /* HERO */
+        .hero {
+            padding: 80px 20px 40px;
+            text-align: center;
+            background: radial-gradient(circle at top center, rgba(139, 92, 246, 0.15), transparent 70%);
+        }
+
+        .hero h1 { 
+            font-size: 2.4rem; 
+            line-height: 1.1; 
+            margin-bottom: 15px; 
+            font-weight: 800;
+        }
+
+        .hero .subtitle {
+            color: var(--text-light);
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 10px;
+            font-weight: 600;
+        }
+
+        .hero p { 
+            color: var(--text-gray); 
+            font-size: 1.05rem; 
+            max-width: 600px; 
+            margin: 0 auto 30px; 
+        }
+
+        /* VSL (Vídeo) */
+        .vsl-container {
+            max-width: 700px;
+            margin: 40px auto;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            border: 2px solid #27272a;
+        }
+
+        .vsl-container video,
+        .vsl-container iframe {
+            width: 100%;
+            aspect-ratio: 16/9;
+            display: block;
+        }
+
+        /* TIMER DE URGÊNCIA */
+        .urgency-bar {
+            background: linear-gradient(90deg, var(--danger), var(--accent));
+            color: white;
+            padding: 12px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 0.95rem;
+            position: sticky;
+            top: 72px;
+            z-index: 99;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .timer {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: #000;
+            background: white;
+            padding: 2px 10px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-left: 5px;
+        }
+
+        /* GALERIA */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        @media(min-width: 768px) { 
+            .gallery-grid { grid-template-columns: repeat(5, 1fr); } 
+        }
+
+        .gallery-item {
+            position: relative;
+            aspect-ratio: 9/16;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #27272a;
+            border: 1px solid #3f3f46;
+        }
+
+        .gallery-item img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            transition: transform 0.5s; 
+        }
+
+        .gallery-item:hover img { transform: scale(1.1); }
+
+        /* FEATURES */
+        .method-section { 
+            background: #121214; 
+            border-top: 1px solid #27272a; 
+            border-bottom: 1px solid #27272a; 
+        }
+        
+        .feature-box {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+            text-align: left;
+            background: var(--bg-card);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #27272a;
+        }
+
+        .feature-icon { 
+            font-size: 1.5rem; 
+            color: var(--secondary); 
+            background: rgba(6, 182, 212, 0.1); 
+            padding: 10px; 
+            border-radius: 8px; 
+            min-width: 50px;
+            text-align: center;
+        }
+
+        /* PROVA SOCIAL */
+        .testimonial-box {
+            background: var(--bg-card);
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-box .author {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+
+        .testimonial-box .author i {
+            color: var(--whatsapp);
+        }
+
+        /* PRICING CARDS */
+        .pricing-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        @media(min-width: 768px) { 
+            .pricing-wrapper { 
+                flex-direction: row; 
+                justify-content: center; 
+                align-items: stretch; 
+            } 
+        }
+
+        .card {
+            background: var(--bg-card);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid #27272a;
+            position: relative;
+            flex: 1;
+            max-width: 450px;
+            margin: 0 auto;
+        }
+
+        .card.featured {
+            border: 2px solid var(--accent);
+            background: linear-gradient(180deg, rgba(245, 158, 11, 0.05) 0%, var(--bg-card) 100%);
+            transform: scale(1.02);
+            box-shadow: 0 0 40px rgba(245, 158, 11, 0.15);
+        }
+
+        .badge-promo {
+            position: absolute;
+            top: -15px; 
+            left: 50%; 
+            transform: translateX(-50%);
+            background: var(--accent);
+            color: #000;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            box-shadow: 0 5px 15px rgba(245, 158, 11, 0.4);
+        }
+
+        /* STACK DE VALOR */
+        .value-stack {
+            background: rgba(255,255,255,0.03);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border: 1px dashed #3f3f46;
+        }
+
+        .value-stack .item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #27272a;
+        }
+
+        .value-stack .item:last-child {
+            border-bottom: none;
+            font-weight: 800;
+            font-size: 1.1rem;
+            padding-top: 15px;
+            margin-top: 10px;
+            border-top: 2px solid var(--accent);
+        }
+
+        .value-stack .old-value {
+            text-decoration: line-through;
+            color: #666;
+        }
+
+        .price-tag { 
+            font-size: 3.5rem; 
+            font-weight: 800; 
+            color: var(--text-light); 
+            margin: 15px 0; 
+        }
+
+        .price-tag span { 
+            font-size: 1rem; 
+            color: var(--text-gray); 
+            font-weight: 400; 
+        }
+
+        .check-list li { 
+            margin-bottom: 12px; 
+            display: flex; 
+            align-items: center; 
+            gap: 10px; 
+            color: var(--text-gray); 
+            font-size: 0.95rem; 
+        }
+
+        .check-list i { color: var(--primary); }
+        .card.featured .check-list i { color: var(--accent); }
+
+        /* GARANTIA */
+        .guarantee-box {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(6, 182, 212, 0.1));
+            border: 2px solid #22c55e;
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            max-width: 600px;
+            margin: 40px auto;
+        }
+
+        .guarantee-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .guarantee-box .shield {
+            font-size: 3rem;
+            color: #22c55e;
+            margin-bottom: 15px;
+        }
+
+        /* FAQ */
+        .faq-item {
+            border-bottom: 1px solid #27272a;
+            margin-bottom: 10px;
+        }
+
+        .faq-question {
+            padding: 20px 0;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            color: var(--text-gray);
+            padding-right: 10px;
+        }
+
+        .faq-answer p { padding-bottom: 20px; }
+        .faq-item.active .faq-answer { max-height: 300px; }
+        .faq-item.active i { transform: rotate(180deg); transition: 0.3s; }
+
+        /* FOOTER */
+        footer {
+            border-top: 1px solid #27272a;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-bolt" style="color: var(--accent)"></i> ESTÚDIO ÁGUIA
+            </div>
+        </div>
+    </header>
+
+    <!-- BARRA DE URGÊNCIA -->
+    <div class="urgency-bar">
+        ⚠️ Oferta Especial Encerra em: <span class="timer" id="countdown">14:59</span>
+    </div>
+
+    <section class="hero">
+        <div class="container">
+            <div style="display:inline-block; padding: 5px 15px; background: rgba(255,255,255,0.1); border-radius: 50px; font-size: 0.8rem; margin-bottom: 15px;">
+                ✨ Método Validado com IA
+            </div>
+            
+            <h1>Crie Ensaios de Estúdio Profissionais<br><span class="text-gradient">em 10 Minutos pelo Celular</span></h1>
+            
+            <p class="subtitle">Sem Fotógrafo • Sem Equipamento • Sem Sair de Casa</p>
+            
+            <p>Aprenda o método exato que uso para gerar fotos de R$500 usando apenas IA e seu smartphone. Mesmo que você nunca tenha mexido com tecnologia.</p>
+
+            <!-- VSL (SUBSTITUA PELO SEU VÍDEO) -->
+            <div class="vsl-container">
+                <!-- OPÇÃO 1: Vídeo do YouTube -->
+                <!-- <iframe src="https://www.youtube.com/embed/SEU_VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope" allowfullscreen></iframe> -->
+                
+                <!-- OPÇÃO 2: Vídeo Local -->
+                <video controls poster="assets/thumbnail.jpg">
+                    <source src="assets/demo-video.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeo.
+                </video>
+                
+                <!-- OPÇÃO 3: Placeholder (enquanto não tem vídeo) -->
+                <!-- <div style="aspect-ratio: 16/9; background: #27272a; display: flex; align-items: center; justify-content: center; color: #666;">
+                    <div style="text-align: center;">
+                        <i class="fas fa-play-circle" style="font-size: 4rem;"></i>
+                        <p>Vídeo de Demonstração</p>
+                    </div>
+                </div> -->
+            </div>
+
+            <a href="#escolha" class="btn btn-primary btn-delay" id="ctaButton" style="max-width: 400px;">
+                QUERO APRENDER AGORA <i class="fas fa-arrow-down"></i>
+            </a>
+
+            <p style="font-size: 0.85rem; margin-top: 10px; opacity: 0.7;">
+                🔒 Acesso Imediato | ⚡ 100% Online
+            </p>
+        </div>
+    </section>
+
+    <!-- PROVA SOCIAL -->
+    <section class="section-padding" style="background: #121214; border-top: 1px solid #27272a;">
+        <div class="container">
+            <h2 class="center" style="margin-bottom: 10px;">Veja o que nossos alunos dizem</h2>
+            <p class="center" style="color: var(--text-gray); margin-bottom: 30px;">Resultados reais de pessoas comuns como você</p>
+
+            <div style="max-width: 700px; margin: 0 auto;">
+                <div class="testimonial-box">
+                    <p>"Fiz 20 fotos em 1 hora e economizei mais de R$500 de fotógrafo! Agora faço pra minha família inteira 🤩"</p>
+                    <div class="author">
+                        <i class="fab fa-whatsapp"></i>
+                        <span><b>Maria Silva</b>, 34 anos - São Paulo</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-box">
+                    <p>"Nunca imaginei que seria tão fácil. Assisti as aulas pelo celular e em 30 minutos já tinha meu primeiro ensaio pronto!"</p>
+                    <div class="author">
+                        <i class="fab fa-whatsapp"></i>
+                        <span><b>Carlos Mendes</b>, 28 anos - Rio de Janeiro</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-box">
+                    <p>"Restaurei fotos antigas da minha avó que estavam perdidas. Ela chorou de emoção. Valeu cada centavo! ❤️"</p>
+                    <div class="author">
+                        <i class="fab fa-whatsapp"></i>
+                        <span><b>Ana Paula</b>, 41 anos - Minas Gerais</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERIA -->
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="center" style="margin-bottom: 30px;">Resultados Reais 📸</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="assets/Gemini_Generated_Image_2kybl92kybl92kyb.png" alt="Ensaio IA 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/Gemini_Generated_Image_5evyh5evyh5evyh5.png" alt="Ensaio IA 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/Gemini_Generated_Image_64s52264s52264s5.png" alt="Ensaio IA 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/Gemini_Generated_Image_caf8m4caf8m4caf8.png" alt="Ensaio IA 4">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/Gemini_Generated_Image_exq6gzexq6gzexq6.png" alt="Ensaio IA 5">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/Gemini_Generated_Image_h4545ih4545ih454.png" alt="Ensaio IA 6">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/Gemini_Generated_Image_lyugsllyugsllyug.png" alt="Ensaio IA 7">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/Gemini_Generated_Image_t1d0e6t1d0e6t1d0.png" alt="Ensaio IA 8">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/Gemini_Generated_Image_tw89mjtw89mjtw89.png" alt="Ensaio IA 9">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/Gemini_Generated_Image_xlhflvxlhflvxlhf.png" alt="Ensaio IA 10">
+                </div>
+            </div>
+            <p class="center" style="margin-top: 15px; font-size: 0.9rem; opacity: 0.7;">*Fotos 100% geradas com nosso método</p>
+        </div>
+    </section>
+
+    <!-- MÉTODO -->
+    <section class="section-padding method-section">
+        <div class="container">
+            <h2 class="center" style="margin-bottom: 10px;">Não é mágica, é <span class="text-gradient">Método</span></h2>
+            <p class="center" style="margin-bottom: 40px; color: var(--text-gray);">Um processo passo a passo que qualquer pessoa consegue seguir.</p>
+
+            <div class="feature-box">
+                <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+                <div>
+                    <h3>Tudo pelo Celular</h3>
+                    <p style="font-size: 0.95rem; color: #888;">Não precisa de computador potente. Funciona em qualquer smartphone (Android ou iOS). Todo processamento é na nuvem.</p>
+                </div>
+            </div>
+
+            <div class="feature-box">
+                <div class="feature-icon"><i class="fas fa-clock"></i></div>
+                <div>
+                    <h3>Resultados em Minutos</h3>
+                    <p style="font-size: 0.95rem; color: #888;">As aulas são diretas ao ponto. Em menos de 30 minutos você já gera sua primeira foto profissional.</p>
+                </div>
+            </div>
+            
+            <div class="feature-box">
+                <div class="feature-icon"><i class="fas fa-infinity"></i></div>
+                <div>
+                    <h3>Fotos Ilimitadas</h3>
+                    <p style="font-size: 0.95rem; color: #888;">Pague uma vez, use para sempre. Crie quantas fotos quiser para você, família ou até vender para outras pessoas.</p>
+                </div>
+            </div>
+
+            <div class="feature-box">
+                <div class="feature-icon"><i class="fas fa-headset"></i></div>
+                <div>
+                    <h3>Suporte Dedicado</h3>
+                    <p style="font-size: 0.95rem; color: #888;">Grupo exclusivo de alunos + suporte direto comigo para tirar todas as suas dúvidas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREÇOS -->
+    <section id="escolha" class="section-padding">
+        <div class="container">
+            <h2 class="center">Escolha o melhor para você</h2>
+            
+            <div class="pricing-wrapper">
+                
+                <!-- OPÇÃO 1: SERVIÇO -->
+                <div class="card">
+                    <h3>💎 Eu Faço Pra Você</h3>
+                    <p style="color: #666; font-size: 0.9rem;">Receba tudo pronto e editado.</p>
+                    
+                    <div class="price-tag">R$ 25<span>/5 fotos</span></div>
+                    
+                    <ul class="check-list">
+                        <li><i class="fas fa-check"></i> 5 Fotos Profissionais</li>
+                        <li><i class="fas fa-check"></i> Entrega em 24h</li>
+                        <li><i class="fas fa-check"></i> Alta Resolução</li>
+                        <li style="opacity: 0.5;"><i class="fas fa-times"></i> Sem acesso ao método</li>
+                        <li style="opacity: 0.5;"><i class="fas fa-times"></i> Limitado a 5 fotos</li>
+                    </ul>
+
+                    <a href="https://wa.me/5514998951657?text=Vim%20pelo%20site%20e%20quero%20que%20voce%20gere%205%20fotos%20profissionais%20pra%20mim" 
+                       target="_blank" 
+                       class="btn btn-whatsapp" 
+                       style="margin-top: 20px;"
+                       onclick="fbq('track', 'Contact');">
+                        <i class="fab fa-whatsapp"></i> CONTRATAR AGORA
+                    </a>
+                </div>
+
+                <!-- OPÇÃO 2: CURSO (DESTAQUE) -->
+                <div class="card featured">
+                    <div class="badge-promo">Mais Vendido 🔥</div>
+                    
+                    <h3>🚀 Você Aprende a Fazer</h3>
+                    <p style="color: #666; font-size: 0.9rem;">Liberdade para criar SEMPRE.</p>
+
+                    <!-- STACK DE VALOR -->
+                    <div class="value-stack">
+                        <div class="item">
+                            <span>✅ Método Completo IA</span>
+                            <span class="old-value">R$ 97</span>
+                        </div>
+                        <div class="item">
+                            <span>✅ Módulo Restauração</span>
+                            <span class="old-value">R$ 47</span>
+                        </div>
+                        <div class="item">
+                            <span>✅ Comandos Secretos</span>
+                            <span class="old-value">R$ 27</span>
+                        </div>
+                        <div class="item">
+                            <span>✅ Suporte VIP</span>
+                            <span class="old-value">R$ 37</span>
+                        </div>
+                        <div class="item">
+                            <span style="color: var(--accent);">VALOR TOTAL:</span>
+                            <span style="text-decoration: line-through; color: #666;">R$ 208</span>
+                        </div>
+                    </div>
+                    
+                    <div class="price-tag">R$ 47<span>/pagamento único</span></div>
+                    <p style="text-align: center; color: var(--accent); font-weight: 700; margin-bottom: 20px;">
+                        Economize R$ 161 🎉
+                    </p>
+                    
+                    <ul class="check-list">
+                        <li><i class="fas fa-check-circle"></i> <b>Fotos ILIMITADAS Forever</b></li>
+                        <li><i class="fas fa-check-circle"></i> Funciona em Celular e PC</li>
+                        <li><i class="fas fa-check-circle"></i> Acesso Imediato e Vitalício</li>
+                        <li><i class="fas fa-check-circle"></i> Bônus: Restauração de Fotos</li>
+                        <li><i class="fas fa-check-circle"></i> Grupo VIP de Alunos</li>
+                        <li><i class="fas fa-check-circle"></i> Suporte Direto Comigo</li>
+                    </ul>
+
+                    <a href="https://pay.kirvano.com/a3cf15c6-3000-4204-ad3a-2454bcbb4bdd"
+                       target="_blank"
+                       class="btn btn-primary btn-delay"
+                       style="margin-top: 20px;"
+                       onclick="fbq('track', 'Lead');">
+                        QUERO APRENDER AGORA <i class="fas fa-rocket"></i>
+                    </a>
+
+                    <p style="text-align: center; font-size: 0.8rem; margin-top: 10px; color: #666;">
+                        🔒 Pagamento 100% Seguro | ⚡ Acesso Instantâneo
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- GARANTIA -->
+            <div class="guarantee-box">
+                <div class="shield">🛡️</div>
+                <h3>Garantia Blindada de 7 Dias</h3>
+                <p style="color: var(--text-gray); font-size: 1.05rem;">
+                    Se você assistir as aulas e não conseguir gerar sua primeira foto profissional, 
+                    <b style="color: var(--text-light);">eu devolvo seu dinheiro + te dou R$20 de crédito de bônus</b>. 
+                    Sem perguntas, sem burocracia.
+                </p>
+                <p style="margin-top: 15px; font-weight: 700; color: #22c55e;">
+                    Você só tem a ganhar. O risco é TODO MEU.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="center" style="margin-bottom: 30px;">Perguntas Frequentes</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">Preciso de computador potente ou iPhone caro? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">
+                    <p>Não! O método funciona em QUALQUER celular (Android ou iOS simples) ou computador básico. Todo processamento é feito na nuvem pela IA. Se você consegue usar WhatsApp, consegue usar nosso método.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Nunca mexi com IA. Vou conseguir? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">
+                    <p>COM CERTEZA! O curso não é técnico, é PRÁTICO. Mostro na tela onde clicar, passo a passo, como se você fosse meu aluno particular. Você só precisa copiar o que eu faço.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Quanto tempo demora para aprender? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">
+                    <p>As aulas são objetivas. Em menos de 30 minutos assistindo, você já estará gerando suas primeiras fotos. Sem enrolação, direto ao ponto.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Qual a diferença entre contratar o serviço e comprar o curso? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">
+                    <p><b>Serviço (R$25):</b> Eu faço 5 fotos pra você UMA VEZ. <br><b>Curso (R$47):</b> Você aprende e faz QUANTAS FOTOS QUISER, para sempre. É como ensinar a pescar ao invés de dar o peixe.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Como recebo o acesso? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">
+                    <p>É automático! Assim que o pagamento for aprovado (leva segundos no PIX), você recebe um e-mail com login e senha para acessar a área de membros imediatamente.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">E se eu me arrepender? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">
+                    <p>Você tem 7 dias de garantia INCONDICIONAL. Se não gostar, é só me mandar uma mensagem e eu devolvo 100% do seu dinheiro + te dou R$20 de bônus. Simples assim.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Posso usar as fotos para vender? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">
+                    <p>SIM! Muitos alunos fazem isso. Você pode usar para você, família, redes sociais ou até oferecer como serviço para outras pessoas e lucrar com o método.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ÚLTIMA CHAMADA -->
+    <section class="section-padding" style="background: #121214; border-top: 1px solid #27272a;">
+        <div class="container center">
+            <h2 style="margin-bottom: 15px;">Última chance de garantir o desconto</h2>
+            <p style="color: var(--text-gray); max-width: 600px; margin: 0 auto 30px;">
+                Quando o timer zerar, o preço volta para R$97. Não perca essa oportunidade.
+            </p>
+            
+            <a href="#escolha" class="btn btn-primary btn-delay" style="max-width: 400px; margin: 0 auto;">
+                GARANTIR MINHA VAGA AGORA <i class="fas fa-crown"></i>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="logo" style="justify-content: center; margin-bottom: 20px; opacity: 0.7;">
+                <i class="fas fa-bolt"></i> ESTÚDIO ÁGUIA
+            </div>
+            <p>&copy; 2026 Todos os direitos reservados.</p>
+            <div style="margin-top: 20px; font-size: 0.8rem; opacity: 0.5;">
+                <a href="#" style="color: #666;">Termos de Uso</a> | 
+                <a href="#" style="color: #666;">Políticas de Privacidade</a>
+                <br><br>
+                Este site não é afiliado ao Facebook ou a qualquer entidade da Meta.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ===== TIMER DE URGÊNCIA (15 minutos) =====
+        let timeLeft = 15 * 60; // 15 minutos em segundos
+        
+        function updateTimer() {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            document.getElementById('countdown').textContent = 
+                `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            
+            if (timeLeft > 0) {
+                timeLeft--;
+            } else {
+                // Quando acabar, pode redirecionar ou mudar o preço
+                document.getElementById('countdown').textContent = "EXPIROU!";
+                document.getElementById('countdown').style.background = "var(--danger)";
+                document.getElementById('countdown').style.color = "white";
+            }
+        }
+        
+        setInterval(updateTimer, 1000);
+
+        // ===== DELAY NO BOTÃO (mostra após 30 segundos ou 50% da página) =====
+        let buttonShown = false;
+        
+        // Opção 1: Delay por tempo (30 segundos)
+        setTimeout(() => {
+            showButton();
+        }, 30000);
+        
+        // Opção 2: Delay por scroll (50% da página)
+        window.addEventListener('scroll', () => {
+            if (buttonShown) return;
+            
+            const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+            if (scrollPercent > 50) {
+                showButton();
+            }
+        });
+        
+        function showButton() {
+            if (buttonShown) return;
+            buttonShown = true;
+            
+            document.querySelectorAll('.btn-delay').forEach(btn => {
+                btn.classList.add('show');
+            });
+        }
+
+        // ===== FAQ TOGGLE =====
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const parent = item.parentElement;
+                
+                // Fecha outros FAQs
+                document.querySelectorAll('.faq-item').forEach(faq => {
+                    if (faq !== parent) {
+                        faq.classList.remove('active');
+                    }
+                });
+                
+                // Toggle no clicado
+                parent.classList.toggle('active');
+            });
+        });
+
+        // ===== SMOOTH SCROLL =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // ===== EVENTO DO FACEBOOK PIXEL NO BOTÃO =====
+        // Já está inline nos botões com onclick="fbq('track', 'Lead')"
+    </script>
+</body>
+</html>

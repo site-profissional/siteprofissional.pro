@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const inputName = document.getElementById('user-name');
   const inputBirthDate = document.getElementById('birth-date');
   const inputRefDate = document.getElementById('ref-date');
-  const inputBusinessDate = document.getElementById('business-date');
   const btnPrint = document.getElementById('btn-print-report');
   const btnReset = document.getElementById('btn-reset-form');
 
@@ -47,11 +46,9 @@ document.addEventListener('DOMContentLoaded', function () {
   try {
     const savedName = localStorage.getItem('rciclos_user_name');
     const savedBirth = localStorage.getItem('rciclos_user_birth');
-    const savedBusiness = localStorage.getItem('rciclos_business_date');
 
     if (savedName) inputName.value = savedName;
     if (savedBirth) inputBirthDate.value = savedBirth;
-    if (savedBusiness) inputBusinessDate.value = savedBusiness;
 
     // Se já temos nome e data de nascimento salvos, calcula automaticamente
     if (savedBirth) {
@@ -123,12 +120,10 @@ document.addEventListener('DOMContentLoaded', function () {
   btnReset.addEventListener('click', function () {
     inputName.value = '';
     inputBirthDate.value = '';
-    inputBusinessDate.value = '';
     inputRefDate.value = todayStr;
     try {
       localStorage.removeItem('rciclos_user_name');
       localStorage.removeItem('rciclos_user_birth');
-      localStorage.removeItem('rciclos_business_date');
     } catch (e) {}
     resultsContainer.style.display = 'none';
   });
@@ -141,7 +136,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const name = inputName.value.trim() || 'Buscador da Luz';
     const birthVal = inputBirthDate.value;
     const refVal = inputRefDate.value || todayStr;
-    const busVal = inputBusinessDate.value;
 
     if (!birthVal) {
       alert('Por favor, informe a Data de Nascimento para calcular os Ciclos.');
@@ -156,23 +150,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const [rYear, rMonth, rDay] = refVal.split('-').map(Number);
     const refDate = new Date(rYear, rMonth - 1, rDay, 12, 0, 0);
 
-    let businessDate = null;
-    if (busVal) {
-      const [busY, busM, busD] = busVal.split('-').map(Number);
-      businessDate = new Date(busY, busM - 1, busD, 12, 0, 0);
-    }
-
     // Salva preferências no navegador
     try {
       localStorage.setItem('rciclos_user_name', name);
       localStorage.setItem('rciclos_user_birth', birthVal);
-      if (busVal) localStorage.setItem('rciclos_business_date', busVal);
     } catch (e) {}
 
-    // Geração do relatório consolidado através do CyclesEngine
+    // Geração do relatório consolidado através do CyclesEngine (baseado no aniversário pessoal)
     currentReport = CyclesEngine.generateFullReport(name, birthDate, {
-      referenceDate: refDate,
-      businessStartDate: businessDate
+      referenceDate: refDate
     });
 
     // Renderização dos blocos visuais na página
@@ -318,15 +304,12 @@ document.addEventListener('DOMContentLoaded', function () {
   function renderBusinessCycle(report) {
     const container = document.getElementById('business-timeline-container');
     const bCycle = report.businessCycle;
-    const isCustom = report.isBusinessCustomDate;
 
     let html = `
       <div class="section-intro" style="margin-bottom: 24px;">
         <h3 style="font-family: var(--font-serif); color: var(--gold-primary); font-size: 1.4rem;">Ciclo Nº 3: O Ciclo dos Negócios e Empreendimentos</h3>
         <p style="color: var(--text-secondary); font-size: 0.95rem;">
-          ${isCustom 
-            ? 'Calculado com base na <strong>Data de Fundação do Empreendimento</strong> fornecida.' 
-            : 'Calculado com base no seu <strong>Aniversário Pessoal</strong> (padrão ensinado no livro para negócios individuais e autônomos).'}
+          Calculado com base no seu <strong>Aniversário Pessoal</strong> (padrão clássico ensinado na obra para negócios individuais, autônomos e empreendimentos).
           Acompanhe os períodos para lançamentos, contratos, expansão de crédito, investimentos e auditorias.
         </p>
       </div>

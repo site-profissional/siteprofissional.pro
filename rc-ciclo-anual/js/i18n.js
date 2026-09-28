@@ -30,8 +30,6 @@
       'form_birth_label': 'Data de Nascimento (Obrigatória)',
       'form_ref_label': 'Data de Análise',
       'form_ref_opt': '(Padrão: Hoje)',
-      'form_biz_label': 'Data de Fundação do Negócio',
-      'form_biz_opt': '(Opcional para Ciclo 3)',
       'form_btn_reset': 'Limpar Dados',
       'form_btn_submit': 'Calcular Meus Ciclos da Vida ➔',
 
@@ -83,8 +81,6 @@
       'form_birth_label': 'Date of Birth (Required)',
       'form_ref_label': 'Analysis Date',
       'form_ref_opt': '(Default: Today)',
-      'form_biz_label': 'Business Foundation Date',
-      'form_biz_opt': '(Optional for Cycle 3)',
       'form_btn_reset': 'Clear Data',
       'form_btn_submit': 'Calculate My Life Cycles ➔',
 

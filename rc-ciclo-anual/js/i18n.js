@@ -18,7 +18,7 @@
       'nav_annual': 'Ciclos do Ano',
       
       // Cabeçalho Principal
-      'header_badge': 'Sistema Cósmico Rosacruz • AMORC',
+      'header_badge': '✦ Sistema Rosacruz',
       'header_title': 'Ciclos do Ano <span>Harvey Spencer Lewis</span>',
       'header_subtitle': 'Cálculo exato e relatório interpretativo fiel baseado no livro de <strong>Harvey Spencer Lewis, F.R.C., Ph.D.</strong> (Primeiro Imperator da AMORC).',
 
@@ -26,10 +26,8 @@
       'form_title': '⚖ Inserir Dados para Geração do Relatório Pessoal',
       'form_subtitle': 'Informe o nome e a data de nascimento para calcular todas as oitavas rítmicas ensinadas na obra.',
       'form_name_label': 'Nome Completo',
-      'form_name_placeholder': 'Ex: Maria de Fátima',
+      'form_name_placeholder': 'Ex: Nomelindo dos Santos',
       'form_birth_label': 'Data de Nascimento (Obrigatória)',
-      'form_ref_label': 'Data de Análise',
-      'form_ref_opt': '(Padrão: Hoje)',
       'form_btn_reset': 'Limpar Dados',
       'form_btn_submit': 'Calcular Meus Ciclos da Vida ➔',
 
@@ -72,7 +70,7 @@
       'nav_annual': 'Annual Cycles',
       
       // Main Header
-      'header_badge': 'Rosicrucian Cosmic System • AMORC',
+      'header_badge': '✦ Rosicrucian System',
       'header_title': 'ANNUAL CYCLES <span>HARVEY SPENCER LEWIS</span>',
       'header_subtitle': 'Exact calculation and faithful interpretive report based on the book by <strong>Harvey Spencer Lewis, F.R.C., Ph.D.</strong> (First Imperator of AMORC).',
 
@@ -82,8 +80,6 @@
       'form_name_label': 'Full Name',
       'form_name_placeholder': 'Ex: John Doe',
       'form_birth_label': 'Date of Birth (Required)',
-      'form_ref_label': 'Analysis Date',
-      'form_ref_opt': '(Default: Today)',
       'form_btn_reset': 'Clear Data',
       'form_btn_submit': 'Calculate My Life Cycles ➔',
 

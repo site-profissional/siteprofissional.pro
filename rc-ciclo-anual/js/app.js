@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function () {
   btnReset.addEventListener('click', function () {
     inputName.value = '';
     inputBirthDate.value = '';
-    inputRefDate.value = todayStr;
+    if (inputRefDate) inputRefDate.value = todayStr;
     try {
       localStorage.removeItem('rciclos_user_name');
       localStorage.removeItem('rciclos_user_birth');
@@ -135,7 +135,6 @@ document.addEventListener('DOMContentLoaded', function () {
   function calculateAndRender() {
     const name = inputName.value.trim() || 'Buscador da Luz';
     const birthVal = inputBirthDate.value;
-    const refVal = inputRefDate.value || todayStr;
 
     if (!birthVal) {
       alert('Por favor, informe a Data de Nascimento para calcular os Ciclos.');
@@ -147,8 +146,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const [bYear, bMonth, bDay] = birthVal.split('-').map(Number);
     const birthDate = new Date(bYear, bMonth - 1, bDay, 12, 0, 0);
 
-    const [rYear, rMonth, rDay] = refVal.split('-').map(Number);
-    const refDate = new Date(rYear, rMonth - 1, rDay, 12, 0, 0);
+    // Data de referência: dinamicamente hoje para frente
+    let refDate;
+    if (inputRefDate && inputRefDate.value) {
+      const [rYear, rMonth, rDay] = inputRefDate.value.split('-').map(Number);
+      refDate = new Date(rYear, rMonth - 1, rDay, 12, 0, 0);
+    } else {
+      const currentNow = new Date();
+      refDate = new Date(currentNow.getFullYear(), currentNow.getMonth(), currentNow.getDate(), 12, 0, 0);
+    }
 
     // Salva preferências no navegador
     try {

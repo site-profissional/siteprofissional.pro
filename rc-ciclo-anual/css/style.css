@@ -1351,45 +1351,74 @@ body {
     margin-bottom: 10px !important;
   }
 
-  /* Caixas de Ações Auspiciosas e Desfavoráveis */
+  /* Caixas de Ações Auspiciosas e Desfavoráveis - Fundo branco e texto em alto contraste para impressão e PDF */
   .dos-donts-grid {
-    background: #f8fafc !important;
-    border: 1px solid #e2e8f0 !important;
+    background: transparent !important;
+    border: none !important;
     gap: 10px !important;
-    padding: 8px 10px !important;
+    padding: 0 !important;
     margin-top: 10px !important;
     page-break-inside: avoid !important;
     break-inside: avoid !important;
   }
 
+  .dos-box,
+  .donts-box {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    border-radius: 6px !important;
+    padding: 8px 12px !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    box-shadow: none !important;
+  }
+
+  .dos-box {
+    border: 1px solid #10b981 !important;
+    border-top: 3px solid #059669 !important;
+  }
+
+  .donts-box {
+    border: 1px solid #ef4444 !important;
+    border-top: 3px solid #dc2626 !important;
+  }
+
   .dos-box h5 {
-    color: #065f46 !important;
+    color: #047857 !important;
     font-weight: 800 !important;
-    font-size: 7.5pt !important;
+    font-size: 8.5pt !important;
     margin-bottom: 4px !important;
   }
 
   .donts-box h5 {
-    color: #991b1b !important;
+    color: #b91c1c !important;
     font-weight: 800 !important;
-    font-size: 7.5pt !important;
+    font-size: 8.5pt !important;
     margin-bottom: 4px !important;
+  }
+
+  .dos-box ul,
+  .donts-box ul {
+    list-style: none !important;
+    padding-left: 0 !important;
+    margin: 0 !important;
   }
 
   .dos-box li,
   .donts-box li {
-    color: #1e293b !important;
+    color: #000000 !important;
     font-size: 8.5pt !important;
     margin-bottom: 3px !important;
     line-height: 1.35 !important;
+    background: transparent !important;
   }
 
   .dos-box li::before {
-    color: #047857 !important;
+    color: #059669 !important;
   }
 
   .donts-box li::before {
-    color: #b91c1c !important;
+    color: #dc2626 !important;
   }
 
   /* Cartão do Ciclo da Alma */

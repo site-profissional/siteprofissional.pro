@@ -123,10 +123,10 @@
   }
   </script>
 
-  <!-- Fontes do Google: Cinzel (Nobreza Clássica) e Inter (Leitura Nítida) -->
+  <!-- Fontes Clássicas e Modernas do Google -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
   <!-- Folha de Estilos Principal -->
   <link rel="stylesheet" href="css/style.css">
@@ -167,13 +167,13 @@
     </div>
   </nav>
 
-  <div class="site-wrapper">
+  <div class="container site-wrapper">
 
     <!-- ========================================================================= -->
     <!-- CABEÇALHO DO SISTEMA                                                      -->
     <!-- ========================================================================= -->
     <header class="site-header">
-      <div class="site-badge" data-i18n="header_badge">Sistema Cósmico Rosacruz • AMORC</div>
+      <div class="badge-sublime" data-i18n="header_badge">✦ Sistema Cósmico Rosacruz • AMORC</div>
       <h1 class="site-title" data-i18n="header_title">Ciclos do Ano <span>Harvey Spencer Lewis</span></h1>
       <p class="site-subtitle" data-i18n="header_subtitle">
         Cálculo exato e relatório interpretativo fiel baseado no livro de <strong>Harvey Spencer Lewis, F.R.C., Ph.D.</strong> (Primeiro Imperator da AMORC).
@@ -232,7 +232,7 @@
       <div id="hero-card-container"></div>
 
       <!-- Barra de Navegação de Abas -->
-      <nav class="tabs-navigation no-print" aria-label="Navegação dos Ciclos">
+      <nav class="tabs-navigation view-mode-tabs no-print" aria-label="Navegação dos Ciclos">
         <button class="tab-btn active" data-tab="tab-personal" data-i18n="tab_personal">🌟 1. Ano Pessoal (52 Dias)</button>
         <button class="tab-btn" data-tab="tab-business" data-i18n="tab_business">💼 2. Negócios e Finanças</button>
         <button class="tab-btn" data-tab="tab-health" data-i18n="tab_health">🌿 3. Saúde e Biorritmo</button>
@@ -242,8 +242,8 @@
       </nav>
 
       <!-- Botão de Ação Rápida de Impressão -->
-      <div class="no-print" style="text-align: right; margin-bottom: 20px;">
-        <button type="button" id="btn-print-report" class="btn-secondary" data-i18n="btn_print">
+      <div class="no-print" style="display: flex; justify-content: flex-end; margin-bottom: 24px;">
+        <button type="button" id="btn-print-report" class="btn-action" data-i18n="btn_print">
           🖨 Imprimir / Salvar em PDF
         </button>
       </div>
@@ -318,26 +318,35 @@
       </div>
     </section>
 
-    <!-- ========================================================================= -->
-    <!-- RODAPÉ DO SITE (COM A REGRA MANDATÓRIA)                                   -->
-    <!-- ========================================================================= -->
-    <footer class="site-footer">
-      <div class="footer-content">
-        <p class="footer-quote" data-i18n="footer_quote">
-          "O homem ou é vítima do destino ou senhor de seu próprio destino. O autodomínio é a chave da maestria cósmica."
-        </p>
-        <p class="footer-copy" data-i18n="footer_copy">
-          Baseado na obra literária "Self-Mastery and Fate with the Cycles of Life" por Harvey Spencer Lewis. Tradução e cálculos para fins de estudo e autodomínio pessoal.
-        </p>
-        
-        <!-- REGRA OBRIGATÓRIA: Última coisa escrita, com o link azul -->
-        <p class="developer-credit">
-          SITE DESENVOLVIDO POR <a href="https://siteprofissional.pro" target="_blank" rel="noopener noreferrer" style="color: blue !important; text-decoration: underline;">siteprofissional.pro</a>
-        </p>
-      </div>
-    </footer>
-
   </div>
+
+  <!-- ========================================================================= -->
+  <!-- RODAPÉ INSTITUCIONAL (PADRONIZADO COM O CICLO DIÁRIO E REGRA OBRIGATÓRIA)  -->
+  <!-- ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-quote" data-i18n="footer_quote">
+        "Aquele que escolhe com retidão e trabalha em harmonia com a lei torna-se o senhor de seu destino; enquanto aquele que falha em escolher com retidão e opera fora da harmonia com a lei é escravo do fado e vítima de um destino criado inconscientemente."
+      </div>
+      <div class="footer-meta" data-i18n="footer_meta">
+        — Harvey Spencer Lewis, <em>Autodomínio e Destino com os Ciclos da Vida</em> (Capítulo 2, pág. 24)
+      </div>
+
+      <!-- Fonte Oficial Rosacruz e Download Gratuito do Livro -->
+      <div class="footer-rosicrucian-source">
+        <strong data-i18n="footer_source_label">Fonte da Obra e Download Gratuito do Livro (em inglês):</strong><br>
+        <span data-i18n="footer_source_org">Disponibilizado publicamente pela Grande Loja da Jurisdição de Língua Inglesa da Ordem Rosacruz (AMORC):</span><br>
+        <a href="https://www.rosicrucian.org/rosicrucian-books-self-mastery-and-fate-with-the-cycles-of-life" target="_blank" rel="noopener noreferrer" class="footer-rosicrucian-link">
+          https://www.rosicrucian.org/rosicrucian-books-self-mastery-and-fate-with-the-cycles-of-life
+        </a>
+      </div>
+      
+      <!-- AVISO CRÍTICO: Regra inegociável do usuário - Última coisa escrita no rodapé -->
+      <div class="footer-signature developer-credit">
+        SITE DESENVOLVIDO POR <a href="https://siteprofissional.pro" target="_blank" rel="noopener noreferrer" style="color: #2563eb !important; text-decoration: underline; font-weight: bold;">SITEPROFISSIONAL.PRO</a>
+      </div>
+    </div>
+  </footer>
 
   <!-- Scripts do Motor de Cálculo, Internacionalização e Aplicação -->
   <script src="js/cycles-engine.js"></script>

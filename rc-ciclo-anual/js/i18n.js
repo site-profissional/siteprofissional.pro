@@ -58,8 +58,11 @@
       'faq_a5': 'Não. Harvey Spencer Lewis enfatiza categoricamente na obra que este sistema não se fundamenta na astrologia convencional nem em mapas astrais. Trata-se de um sistema rítmico, harmônico e matemático baseado em ciclos universais e solares naturais de oitavas e frequências, análogo aos biorritmos e às leis de periodicidade que regem o universo físico e psíquico.',
 
       // Rodapé
-      'footer_quote': '"O homem ou é vítima do destino ou senhor de seu próprio destino. O autodomínio é a chave da maestria cósmica."',
-      'footer_copy': 'Baseado na obra literária "Self-Mastery and Fate with the Cycles of Life" por Harvey Spencer Lewis. Tradução e cálculos para fins de estudo e autodomínio pessoal.'
+      'footer_quote': '"Aquele que escolhe com retidão e trabalha em harmonia com a lei torna-se o senhor de seu destino; enquanto aquele que falha em escolher com retidão e opera fora da harmonia com a lei é escravo do fado e vítima de um destino criado inconscientemente."',
+      'footer_meta': '— Harvey Spencer Lewis, <em>Autodomínio e Destino com os Ciclos da Vida</em> (Capítulo 2, pág. 24)',
+      'footer_copy': 'Baseado na obra literária "Self-Mastery and Fate with the Cycles of Life" por Harvey Spencer Lewis. Tradução e cálculos para fins de estudo e autodomínio pessoal.',
+      'footer_source_label': 'Fonte da Obra e Download Gratuito do Livro (em inglês):',
+      'footer_source_org': 'Disponibilizado publicamente pela Grande Loja da Jurisdição de Língua Inglesa da Ordem Rosacruz (AMORC):'
     },
     'en-US': {
       // Metadata and Titles
@@ -109,8 +112,11 @@
       'faq_a5': 'No. Harvey Spencer Lewis explicitly clarifies in the book that this cosmic system is entirely independent of traditional astrology and horoscopes. It is based upon universal harmonic octaves, mathematical periodicity, and natural biorhythms governing the physical and mental constitution of human beings.',
 
       // Footer
-      'footer_quote': '"Man is either a victim of fate or the master of his own destiny. Self-mastery is the golden key to cosmic attunement."',
-      'footer_copy': 'Faithfully based upon the literary classic "Self-Mastery and Fate with the Cycles of Life" by Harvey Spencer Lewis. Calculations and interpretation for personal study and self-mastery.'
+      'footer_quote': '"Aquele que escolhe com retidão e trabalha em harmonia com a lei torna-se o senhor de seu destino; enquanto aquele que falha em escolher com retidão e opera fora da harmonia com a lei é escravo do fado e vítima de um destino criado inconscientemente."',
+      'footer_meta': '— Harvey Spencer Lewis, <em>Autodomínio e Destino com os Ciclos da Vida</em> (Capítulo 2, pág. 24)',
+      'footer_copy': 'Faithfully based upon the literary classic "Self-Mastery and Fate with the Cycles of Life" by Harvey Spencer Lewis. Calculations and interpretation for personal study and self-mastery.',
+      'footer_source_label': 'Official Rosicrucian Source & Free Book Download (English):',
+      'footer_source_org': 'Publicly provided by the English Grand Lodge of the Rosicrucian Order (AMORC):'
     }
   };
 

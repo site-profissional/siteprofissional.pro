@@ -1181,6 +1181,16 @@ body {
 }
 
 @media print {
+  :root {
+    --gold-primary: #0f172a !important;
+    --gold-light: #0f172a !important;
+    --gold-hover: #0f172a !important;
+    --text-gold: #0f172a !important;
+    --gold-border: #cbd5e1 !important;
+    --border-gold: #cbd5e1 !important;
+    --border-gold-bright: #0f172a !important;
+  }
+
   /* Configuração geral de página A4 */
   @page {
     margin: 12mm 10mm 12mm 10mm;
@@ -1204,6 +1214,56 @@ body {
     line-height: 1.4;
     margin: 0 !important;
     padding: 0 !important;
+  }
+
+  /* TODOS OS ESCRITOS AMARELOS / DOURADOS PASSAM A SER PRETOS NA IMPRESSÃO */
+  .section-intro h3,
+  .section-intro h3[style],
+  .section-intro p strong,
+  .user-identity h3,
+  .hero-item-label,
+  .hero-item-val,
+  .hero-item h4,
+  .hero-item h4[style],
+  .period-title-group h4,
+  .period-badge-num,
+  .period-card.is-active .period-badge-num,
+  .period-card.is-active::after,
+  .soul-header h3,
+  .soul-card h4,
+  .soul-card h4[style],
+  .septennial-card h4,
+  .septennial-card h4[style],
+  .septennial-badge,
+  .printable-doc h2,
+  .printable-doc h3,
+  [style*="var(--gold-primary)"],
+  [style*="var(--gold-light)"],
+  [style*="var(--text-gold)"],
+  [style*="color: #d4af37"],
+  [style*="color: #f6e088"],
+  [style*="color: #fbbf24"],
+  [style*="color: #fde68a"],
+  [style*="color: #e6ca65"],
+  [style*="color: #f59e0b"],
+  [style*="color: #b45309"],
+  [style*="color: #92400e"] {
+    color: #0f172a !important;
+  }
+
+  #results-section h1,
+  #results-section h2,
+  #results-section h3,
+  #results-section h4,
+  #results-section h5,
+  #results-section h6,
+  #results-section strong {
+    color: #0f172a !important;
+  }
+
+  [style*="border-bottom: 2px solid var(--gold-primary)"],
+  [style*="border-bottom: 1px solid var(--gold-primary)"] {
+    border-bottom-color: #cbd5e1 !important;
   }
 
   /* Oculta elementos irrelevantes na impressão */
@@ -1330,7 +1390,7 @@ body {
   }
 
   .hero-item-label {
-    color: #92400e !important;
+    color: #0f172a !important;
     font-weight: 700 !important;
     font-size: 7.5pt !important;
     margin-bottom: 3px !important;
@@ -1403,9 +1463,9 @@ body {
   }
 
   .period-card.is-active .period-badge-num {
-    background: #fde68a !important;
-    color: #78350f !important;
-    border-color: #b45309 !important;
+    background: #f1f5f9 !important;
+    color: #0f172a !important;
+    border-color: #0f172a !important;
   }
 
   .period-title-group h4 {
@@ -1573,7 +1633,7 @@ body {
   }
 
   .septennial-badge {
-    color: #92400e !important;
+    color: #0f172a !important;
     font-weight: 700 !important;
     font-size: 7.5pt !important;
   }
@@ -1608,7 +1668,7 @@ body {
   }
 
   .footer-quote {
-    color: #92400e !important;
+    color: #334155 !important;
     font-style: italic !important;
     font-size: 9pt !important;
     margin-bottom: 6px !important;

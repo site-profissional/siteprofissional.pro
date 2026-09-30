@@ -506,66 +506,100 @@ body {
 }
 
 /* ==========================================================================
-   7. BARRA DE NAVEGAÇÃO POR ABAS (ROLAGEM FLUIDA NO CELULAR)
+   7. FLUXO CONTÍNUO DOS RITMOS BÁSICOS (VISUALIZAÇÃO POR EXTENSO PARA BAIXO)
+   Sem abas ou menus, ideal para leitura contínua e acessibilidade
    ========================================================================== */
-.tabs-navigation {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none; /* Firefox */
-  padding: 4px 2px 14px 2px;
-  margin-bottom: 20px;
-}
-
-.tabs-navigation::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
-}
-
-.tab-btn {
-  flex-shrink: 0; /* Impede esmagamento no celular */
-  white-space: nowrap;
-  background: var(--bg-card);
-  color: var(--text-muted);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: var(--radius-full);
-  padding: 10px 20px;
-  font-family: var(--font-display);
-  font-size: 0.85rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all var(--transition-fast);
-  outline: none;
-}
-
-.tab-btn:hover {
-  color: var(--gold-light);
-  border-color: var(--border-gold);
-  background: var(--bg-card-hover);
-}
-
-.tab-btn.active {
-  background: var(--gold-primary);
-  color: #0a0e17;
-  border-color: var(--gold-light);
-  box-shadow: 0 0 15px var(--gold-glow);
-  font-weight: 700;
-}
-
-.print-action-wrapper {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 24px;
-}
-
-.tab-content {
-  display: none;
-  animation: fadeIn 0.3s ease-in-out;
-}
-
-.tab-content.active {
+.cycle-section-block {
   display: block;
+  margin-bottom: 52px;
+  animation: fadeIn 0.4s ease;
+}
+
+/* Contêiner dos Botões de Ação de Impressão Centralizados */
+.print-action-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 36px auto;
+  text-align: center;
+}
+
+.print-action-bottom {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-top: 30px;
+  border-top: 1px solid var(--border-gold);
+}
+
+/* Botão Centralizado, Amplo e em Alto Destaque para Impressão e PDF */
+.btn-print-large {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 18px 46px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-family: var(--font-display);
+  letter-spacing: 0.5px;
+  color: #0a0e17;
+  background: linear-gradient(135deg, #fde68a 0%, #d4af37 55%, #b45309 100%);
+  border: 2px solid #fef08a;
+  border-radius: var(--radius-full);
+  box-shadow: 0 8px 28px rgba(212, 175, 55, 0.4), 0 2px 6px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  min-width: 340px;
+  max-width: 100%;
+  text-decoration: none;
+}
+
+.btn-print-large:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 36px rgba(212, 175, 55, 0.6), 0 4px 12px rgba(0, 0, 0, 0.6);
+  background: linear-gradient(135deg, #ffffff 0%, #fcd34d 40%, #d4af37 100%);
+  color: #050811;
+  border-color: #ffffff;
+}
+
+.btn-print-large:active {
+  transform: translateY(-1px) scale(0.99);
+}
+
+@media (max-width: 768px) {
+  .btn-print-large {
+    min-width: 100%;
+    width: 100%;
+    font-size: 1.12rem;
+    padding: 16px 20px;
+  }
+}
+
+/* Introdução padronizada de seções */
+.section-intro {
+  margin-bottom: 24px;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  padding-bottom: 14px;
+}
+
+.section-intro h3 {
+  font-family: var(--font-display);
+  color: var(--gold-light);
+  font-size: 1.45rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.section-intro p {
+  font-family: var(--font-serif);
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.section-intro p strong {
+  color: var(--gold-light);
 }
 
 @keyframes fadeIn {
@@ -862,6 +896,234 @@ body {
   color: var(--gold-light);
   border: 1px solid rgba(212, 175, 55, 0.35);
   font-family: var(--font-display);
+}
+
+.table-hour-cell {
+  font-family: var(--font-mono);
+  color: var(--text-gold);
+}
+
+.cell-active-vibration {
+  background: rgba(212, 175, 55, 0.25) !important;
+}
+
+.cell-active-vibration .cell-vibration {
+  background: var(--gold-primary);
+  color: #0a0e17;
+  border-color: #ffffff;
+  box-shadow: 0 0 10px var(--gold-glow);
+}
+
+/* Card da Vibração de Nascimento */
+.birth-vibration-card {
+  background: linear-gradient(135deg, #1b263b 0%, #111a29 100%);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.birth-vibration-title {
+  font-family: var(--font-display);
+  color: var(--gold-light);
+  font-size: 1.12rem;
+}
+
+.birth-vibration-sub {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Guia das 7 Vibrações */
+.vibrations-guide-header {
+  font-family: var(--font-display);
+  color: var(--gold-light);
+  font-size: 1.18rem;
+  margin: 28px 0 16px;
+}
+
+.vibrations-guide-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.vibration-guide-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  transition: all var(--transition-fast);
+}
+
+.vibration-guide-card:hover {
+  border-color: var(--border-gold);
+}
+
+.vibration-planet-name {
+  color: var(--gold-light);
+  font-size: 0.95rem;
+}
+
+.vibration-tone-text {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.vibration-fav-text {
+  font-size: 0.86rem;
+  color: #a7f3d0;
+  margin-bottom: 6px;
+  line-height: 1.45;
+}
+
+.vibration-unfav-text {
+  font-size: 0.86rem;
+  color: #fecdd3;
+  line-height: 1.45;
+}
+
+/* Septênios (144 Anos) */
+.septennial-hero-box {
+  background: linear-gradient(145deg, #172236 0%, #101928 100%);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.septennial-hero-title {
+  font-family: var(--font-display);
+  color: var(--gold-light);
+  font-size: 1.32rem;
+  margin-bottom: 8px;
+}
+
+.septennial-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.septennial-row-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  transition: all var(--transition-fast);
+}
+
+.septennial-row-card.is-current {
+  border-color: var(--gold-primary);
+  background: linear-gradient(145deg, #19273c 0%, #121c2c 100%);
+  box-shadow: 0 0 16px rgba(212, 175, 55, 0.2);
+}
+
+.septennial-age-range {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-gold);
+}
+
+.septennial-period-name {
+  font-family: var(--font-display);
+  color: var(--gold-light);
+  font-size: 1.05rem;
+  margin: 2px 0;
+}
+
+.septennial-period-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Tag de Período e Caixa de Saúde do Ciclo Anual */
+.period-name-tag {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.period-health-box {
+  background: rgba(212, 175, 55, 0.08);
+  border-left: 3px solid var(--gold-primary);
+  padding: 12px 16px;
+  border-radius: 4px;
+  margin-bottom: 14px;
+  font-size: 0.9rem;
+  color: var(--text-main);
+  line-height: 1.5;
+}
+
+/* Cosmobiologia */
+.cosmo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.cosmo-card {
+  padding: 22px;
+}
+
+.cosmo-lunar {
+  border-top: 3px solid var(--gold-primary);
+}
+
+.cosmo-solar {
+  border-top: 3px solid #f59e0b;
+}
+
+.cosmo-chrono {
+  border-top: 3px solid #10b981;
+}
+
+.cosmo-header-flex {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.cosmo-icon {
+  font-size: 2.2rem;
+}
+
+.cosmo-card-title {
+  font-family: var(--font-display);
+  color: var(--gold-light);
+  font-size: 1.15rem;
+}
+
+.solar-title {
+  color: #fbbf24;
+}
+
+.chrono-title {
+  color: #6ee7b7;
+}
+
+.cosmo-card-sub {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  display: block;
+}
+
+.cosmo-card-body {
+  font-size: 0.9rem;
+  color: var(--text-main);
+  line-height: 1.55;
+  margin-bottom: 8px;
 }
 
 /* ==========================================================================
@@ -1205,20 +1467,45 @@ body {
 
 /* ==========================================================================
    15. ESTILOS DE IMPRESSÃO / SALVAMENTO EM PDF (@media print)
+   Otimizado para fundo branco no gráfico de biorritmos e economia de tinta
    ========================================================================== */
 @media print {
-  body {
-    background: #ffffff !important;
-    color: #000000 !important;
-    font-size: 10.5pt;
+  @page {
+    margin: 12mm 10mm 12mm 10mm;
+    size: A4 portrait;
   }
 
+  *, *::before, *::after {
+    text-shadow: none !important;
+    box-shadow: none !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  html, body {
+    min-height: auto !important;
+    height: auto !important;
+    display: block !important;
+    background: #ffffff !important;
+    color: #0f172a !important;
+    font-size: 9.5pt;
+    line-height: 1.4;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Oculta elementos desnecessários na impressão */
   .no-print, 
   .global-navbar, 
+  .site-header,
   .form-card, 
   .tabs-navigation, 
   .geo-faq-section, 
   .legal-disclaimer,
+  .btn-print-large,
+  .btn-print-dossier,
+  .print-action-center,
+  #btn-print-report,
   button {
     display: none !important;
   }
@@ -1226,42 +1513,333 @@ body {
   .site-wrapper {
     max-width: 100% !important;
     padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
   }
 
   #results-section {
     display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
+  /* Todas as seções em fluxo contínuo para rolagem e impressão direta */
+  .cycle-section-block,
   .tab-content {
     display: block !important;
-    margin-bottom: 24px;
-    page-break-inside: avoid;
+    opacity: 1 !important;
+    visibility: visible !important;
+    animation: none !important;
+    transform: none !important;
+    margin-bottom: 24px !important;
+    page-break-inside: auto;
   }
 
-  .hero-card, 
-  .bio-card, 
-  .period-item-card, 
+  .section-intro {
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+    margin-top: 18px !important;
+    margin-bottom: 12px !important;
+    border-bottom: 1.5px solid #cbd5e1 !important;
+    padding-bottom: 4px !important;
+  }
+
+  .section-intro h3 {
+    color: #0f172a !important;
+    font-size: 13pt !important;
+    font-weight: 800 !important;
+  }
+
+  .section-intro p {
+    color: #334155 !important;
+    font-size: 9pt !important;
+  }
+
+  /* Gráfico dos Biorritmos: Fundo branco e traços nítidos */
   .biorhythm-chart-card {
     background: #ffffff !important;
-    color: #000000 !important;
-    border: 1px solid #cccccc !important;
+    color: #0f172a !important;
+    border: 1.5px solid #cbd5e1 !important;
+    border-radius: 8px !important;
+    padding: 12px 16px !important;
+    margin-bottom: 16px !important;
     box-shadow: none !important;
-    page-break-inside: avoid;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
   }
 
-  .site-title, 
-  .hero-profile h3, 
-  .period-title,
-  .bio-name {
-    color: #000000 !important;
+  .chart-title h3 {
+    color: #0f172a !important;
+    font-size: 12pt !important;
+    font-weight: 700 !important;
+  }
+
+  .chart-title p {
+    color: #475569 !important;
+    font-size: 8.5pt !important;
+  }
+
+  .chart-legend, .legend-item {
+    color: #0f172a !important;
+    font-size: 8.5pt !important;
   }
 
   .canvas-wrapper {
     background: #ffffff !important;
-    border: 1px solid #000000 !important;
+    border: 1.5px solid #cbd5e1 !important;
+    border-radius: 6px !important;
+    box-shadow: none !important;
+    height: 260px !important;
+  }
+
+  #biorhythm-canvas {
+    background: #ffffff !important;
+  }
+
+  /* Cards e componentes com contraste claro */
+  .hero-card {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    border: 1.5px solid #cbd5e1 !important;
+    border-radius: 8px !important;
+    padding: 14px 18px !important;
+    box-shadow: none !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    margin-bottom: 16px !important;
+  }
+
+  .hero-profile h3 {
+    color: #0f172a !important;
+    font-size: 14pt !important;
+  }
+
+  .hero-meta {
+    color: #475569 !important;
+    font-size: 9pt !important;
+  }
+
+  .hero-meta strong {
+    color: #0f172a !important;
+  }
+
+  .hero-clock-box {
+    background: #f8fafc !important;
+    border: 1px solid #cbd5e1 !important;
+    color: #0f172a !important;
+    padding: 12px !important;
+  }
+
+  .clock-time {
+    color: #0f172a !important;
+    text-shadow: none !important;
+    font-size: 1.8rem !important;
+  }
+
+  .bio-card,
+  .period-item-card {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    border: 1px solid #cbd5e1 !important;
+    box-shadow: none !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    margin-bottom: 12px !important;
+  }
+
+  .bio-name,
+  .period-title {
+    color: #0f172a !important;
+    font-weight: 700 !important;
+  }
+
+  .period-item-card.is-current {
+    border: 2px solid #0f172a !important;
+    background: #f8fafc !important;
+  }
+
+  .custom-table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+  }
+
+  .custom-table th {
+    background: #f1f5f9 !important;
+    color: #0f172a !important;
+    border: 1px solid #cbd5e1 !important;
+    font-size: 8.5pt !important;
+    padding: 6px 8px !important;
+  }
+
+  .custom-table td {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    border: 1px solid #e2e8f0 !important;
+    font-size: 8.5pt !important;
+    padding: 6px 8px !important;
+  }
+
+  .actions-box.fav {
+    background: #f0fdf4 !important;
+    border-color: #86efac !important;
+    color: #166534 !important;
+  }
+
+  .actions-box.unfav {
+    background: #fef2f2 !important;
+    border-color: #fca5a5 !important;
+    color: #991b1b !important;
+  }
+
+  /* ========================================================================
+     DA SEÇÃO 3 (HORAS SIGNIFICATIVAS) ATÉ O FINAL: FUNDO BRANCO E TEXTO PRETO
+     Elimina qualquer fundo escuro ou gradiente e garante impressão nítida
+     ======================================================================== */
+  :root {
+    --gold-primary: #0f172a !important;
+    --gold-light: #0f172a !important;
+    --gold-hover: #0f172a !important;
+    --text-gold: #0f172a !important;
+    --border-gold: #cbd5e1 !important;
+  }
+
+  .birth-vibration-card,
+  .vibration-guide-card,
+  .septennial-hero-box,
+  .septennial-row-card,
+  .cosmo-card,
+  .period-health-box,
+  #results-section div[style*="background"] {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    background-image: none !important;
+    color: #0f172a !important;
+    border: 1px solid #cbd5e1 !important;
+    box-shadow: none !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .birth-vibration-card {
+    border: 1.5px solid #cbd5e1 !important;
+    margin-bottom: 14px !important;
+    padding: 12px 16px !important;
+  }
+
+  .septennial-hero-box {
+    border: 1.5px solid #cbd5e1 !important;
+    margin-bottom: 14px !important;
+    padding: 14px 18px !important;
+  }
+
+  .septennial-row-card {
+    padding: 10px 14px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .septennial-row-card.is-current {
+    background: #f8fafc !important;
+    border: 2px solid #0f172a !important;
+  }
+
+  .cosmo-card {
+    border: 1px solid #cbd5e1 !important;
+    padding: 14px 16px !important;
+  }
+
+  .cosmo-lunar {
+    border-top: 3px solid #0f172a !important;
+  }
+
+  .cosmo-solar {
+    border-top: 3px solid #d97706 !important;
+  }
+
+  .cosmo-chrono {
+    border-top: 3px solid #059669 !important;
+  }
+
+  .cell-vibration {
+    background: #f1f5f9 !important;
+    color: #0f172a !important;
+    border: 1.5px solid #cbd5e1 !important;
+  }
+
+  .cell-active-vibration {
+    background: #f1f5f9 !important;
+  }
+
+  .cell-active-vibration .cell-vibration {
+    background: #0f172a !important;
+    color: #ffffff !important;
+    border-color: #0f172a !important;
+    box-shadow: none !important;
+  }
+
+  /* TODOS OS ESCRITOS AMARELOS / DOURADOS PASSAM A SER PRETOS NA IMPRESSÃO */
+  .section-intro h3,
+  .section-intro p strong,
+  .birth-vibration-title,
+  .birth-vibration-card h4,
+  .vibrations-guide-header,
+  .vibration-planet-name,
+  .septennial-hero-title,
+  .septennial-period-name,
+  .cosmo-card-title,
+  .solar-title,
+  .chrono-title,
+  .period-name-tag,
+  .period-dates,
+  .septennial-age-range,
+  .table-hour-cell,
+  .clock-time,
+  [style*="var(--gold-primary)"],
+  [style*="var(--gold-light)"],
+  [style*="var(--text-gold)"],
+  [style*="color: #d4af37"],
+  [style*="color: #f6e088"],
+  [style*="color: #fbbf24"],
+  [style*="color: #fde68a"],
+  [style*="color: #e6ca65"],
+  [style*="color: #f59e0b"],
+  [style*="color: #b45309"],
+  [style*="color: #92400e"] {
+    color: #0f172a !important;
+  }
+
+  #results-section h1,
+  #results-section h2,
+  #results-section h3,
+  #results-section h4,
+  #results-section h5,
+  #results-section h6,
+  #results-section strong {
+    color: #0f172a !important;
+  }
+
+  .vibration-fav-text,
+  .vibration-unfav-text,
+  .cosmo-card-body,
+  .cosmo-card-sub,
+  .septennial-period-desc {
+    color: #1e293b !important;
+  }
+
+  .vibration-fav-text strong,
+  .vibration-unfav-text strong {
+    color: #0f172a !important;
+  }
+
+  /* Rodapé do documento impresso: Regra obrigatória do link azul */
+  .footer-signature {
+    color: #0f172a !important;
+    font-size: 8.5pt !important;
+    font-weight: 700 !important;
   }
 
   .footer-signature a {
-    color: #2563eb !important;
+    color: #0000ff !important;
+    text-decoration: underline !important;
+    font-weight: bold !important;
   }
 }

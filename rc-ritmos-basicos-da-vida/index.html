@@ -240,53 +240,51 @@
     </section>
 
     <!-- ========================================================================= -->
-    <!-- SEÇÃO DE RESULTADOS E RELATÓRIOS (APARECE APÓS O CÁLCULO)                  -->
+    <!-- SEÇÃO DE RESULTADOS E RELATÓRIOS (FLUXO CONTÍNUO PARA LEITURA LINEAR)     -->
     <!-- ========================================================================= -->
     <main id="results-section" style="display: none;">
 
       <!-- Bloco de Destaque: Síntese Pessoal e Relógio Cósmico em Tempo Real -->
       <div id="hero-card-container"></div>
 
-      <!-- Barra de Navegação de Abas (Com rolagem horizontal suave no celular) -->
-      <nav class="tabs-navigation view-mode-tabs no-print" aria-label="Navegação dos Ritmos">
-        <button type="button" class="tab-btn active" data-tab="tab-biorhythms" aria-selected="true">⚡ 1. Biorritmos (23, 28 e 33 Dias)</button>
-        <button type="button" class="tab-btn" data-tab="tab-annual" aria-selected="false">🗓 2. Ciclo Anual (52 Dias)</button>
-        <button type="button" class="tab-btn" data-tab="tab-daily" aria-selected="false">⏱ 3. Horas Significativas (24h)</button>
-        <button type="button" class="tab-btn" data-tab="tab-septennial" aria-selected="false">🏛 4. Septênios (144 Anos)</button>
-        <button type="button" class="tab-btn" data-tab="tab-cosmic" aria-selected="false">☀️ 5. Cosmobiologia (Sol, Lua & Saúde)</button>
-      </nav>
-
-      <!-- Botão de Ação Rápida de Impressão / Salvar PDF -->
-      <div class="no-print print-action-wrapper">
-        <button type="button" id="btn-print-report" class="btn-action">
+      <!-- Botão Centralizado e Grande de Impressão / Salvar em PDF (Logo abaixo do resumo) -->
+      <div class="print-action-center no-print">
+        <button type="button" class="btn-action btn-print-dossier btn-print-large">
           🖨 Imprimir / Salvar Mapa em PDF
         </button>
       </div>
 
-      <!-- Aba 1: Biorritmos Clássicos (Canvas Interativo e Cards Físico, Emocional, Intelectual) -->
-      <section id="tab-biorhythms" class="tab-content active" aria-labelledby="tab-biorhythms">
+      <!-- Seção 1: Biorritmos Clássicos (23, 28 e 33 Dias) -->
+      <section id="section-biorhythms" class="cycle-section-block">
         <div id="tab-biorhythms-content"></div>
       </section>
 
-      <!-- Aba 2: Ciclo Anual dos 52 Dias -->
-      <section id="tab-annual" class="tab-content" aria-labelledby="tab-annual">
+      <!-- Seção 2: Ciclo Anual dos 52 Dias -->
+      <section id="section-annual" class="cycle-section-block">
         <div id="tab-annual-content"></div>
       </section>
 
-      <!-- Aba 3: Horas Significativas de 24 Horas e Tabela Semanal A a G -->
-      <section id="tab-daily" class="tab-content" aria-labelledby="tab-daily">
+      <!-- Seção 3: Horas Significativas de 24 Horas e Tabela Semanal A a G -->
+      <section id="section-daily" class="cycle-section-block">
         <div id="tab-daily-content"></div>
       </section>
 
-      <!-- Aba 4: Septênios e o Ciclo Maior de 144 Anos -->
-      <section id="tab-septennial" class="tab-content" aria-labelledby="tab-septennial">
+      <!-- Seção 4: Septênios e o Ciclo Maior de 144 Anos -->
+      <section id="section-septennial" class="cycle-section-block">
         <div id="tab-septennial-content"></div>
       </section>
 
-      <!-- Aba 5: Cosmobiologia (Efeito Takata, Fases Lunares e Cronobiologia) -->
-      <section id="tab-cosmic" class="tab-content" aria-labelledby="tab-cosmic">
+      <!-- Seção 5: Cosmobiologia (Efeito Takata, Fases Lunares e Cronobiologia) -->
+      <section id="section-cosmic" class="cycle-section-block">
         <div id="tab-cosmic-content"></div>
       </section>
+
+      <!-- Botão Centralizado e Grande de Impressão / Salvar em PDF (Fim das informações dos ritmos) -->
+      <div class="print-action-center print-action-bottom no-print">
+        <button type="button" class="btn-action btn-print-dossier btn-print-large">
+          🖨 Imprimir / Salvar Mapa em PDF
+        </button>
+      </div>
 
     </main>
 

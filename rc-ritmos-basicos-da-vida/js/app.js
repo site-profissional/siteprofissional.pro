@@ -15,11 +15,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const inputBirthDate = document.getElementById("birth-date");
   const inputBirthTime = document.getElementById("birth-time");
   const btnReset = document.getElementById("btn-reset-form");
-  const btnPrint = document.getElementById("btn-print-report");
   const resultsSection = document.getElementById("results-section");
   const heroContainer = document.getElementById("hero-card-container");
-  const tabButtons = document.querySelectorAll(".tab-btn");
-  const tabContents = document.querySelectorAll(".tab-content");
+  const printButtons = document.querySelectorAll(".btn-print-large, .btn-print-dossier, #btn-print-report");
 
   // Armazena em memória de sessão o último cálculo para redesenho responsivo do Canvas
   let ultimoCalculo = null;
@@ -43,41 +41,47 @@ document.addEventListener("DOMContentLoaded", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
-  // Botão de Impressão / Salvar PDF
-  if (btnPrint) {
-    btnPrint.addEventListener("click", () => {
-      window.print();
+  // Botões de Impressão / Salvar PDF em Destaque
+  printButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      acionarImpressao();
     });
+  });
+
+  // Dispara a rotina de impressão garantindo gráfico com fundo branco
+  function acionarImpressao() {
+    if (ultimoCalculo) {
+      desenharGraficoBiorritmos(
+        ultimoCalculo.birthDate,
+        ultimoCalculo.targetDate,
+        ultimoCalculo.totalDays,
+        true // isPrintMode = true (fundo branco)
+      );
+    }
+    window.print();
   }
 
-  // Alternância de Abas com acessibilidade ARIA e redesenho automático do Canvas
-  tabButtons.forEach(btn => {
-    btn.addEventListener("click", () => {
-      const targetTab = btn.getAttribute("data-tab");
-      
-      tabButtons.forEach(b => {
-        b.classList.remove("active");
-        b.setAttribute("aria-selected", "false");
-      });
-      tabContents.forEach(c => c.classList.remove("active"));
+  // Eventos de antes e depois da impressão no navegador (compatível com Ctrl+P ou menu do navegador)
+  window.addEventListener("beforeprint", () => {
+    if (ultimoCalculo) {
+      desenharGraficoBiorritmos(
+        ultimoCalculo.birthDate,
+        ultimoCalculo.targetDate,
+        ultimoCalculo.totalDays,
+        true // isPrintMode = true (fundo branco para economia de tinta)
+      );
+    }
+  });
 
-      btn.classList.add("active");
-      btn.setAttribute("aria-selected", "true");
-      
-      const content = document.getElementById(targetTab);
-      if (content) content.classList.add("active");
-
-      // Se abrir a aba de biorritmos, força o redesenho com as dimensões corretas da tela
-      if (targetTab === "tab-biorhythms" && ultimoCalculo) {
-        setTimeout(() => {
-          desenharGraficoBiorritmos(
-            ultimoCalculo.birthDate,
-            ultimoCalculo.targetDate,
-            ultimoCalculo.totalDays
-          );
-        }, 60);
-      }
-    });
+  window.addEventListener("afterprint", () => {
+    if (ultimoCalculo) {
+      desenharGraficoBiorritmos(
+        ultimoCalculo.birthDate,
+        ultimoCalculo.targetDate,
+        ultimoCalculo.totalDays,
+        false // isPrintMode = false (retorna ao visual noturno padrão)
+      );
+    }
   });
 
   // Redesenho responsivo automático quando a janela for redimensionada ou houver rotação de tela
@@ -185,13 +189,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         <div class="hero-clock-box">
           <div class="clock-header">
-            <span style="font-size: 0.85rem; color: var(--text-gold); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600;">
+            <span class="clock-badge-title">
               ⏱ Horas Significativas (Agora)
             </span>
             <span class="cell-vibration">${diario.vibrationLetter}</span>
           </div>
           <div class="clock-time" id="live-clock-time">--:--:--</div>
-          <div style="font-size: 0.92rem; font-weight: 600; color: var(--gold-light); margin-top: 4px;">
+          <div class="clock-window-label">
             ${diario.window.label}
           </div>
           <div style="font-size: 0.82rem; color: var(--text-muted);">
@@ -217,6 +221,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!container) return;
 
     container.innerHTML = `
+      <div class="section-intro">
+        <h3>⚡ 1. Biorritmos (23, 28 e 33 Dias)</h3>
+        <p>Curvas biológicas periódicas iniciadas no nascimento: ciclos Físico (23 dias), Emocional (28 dias) e Intelectual (33 dias), com cálculo inclusivo tradicional.</p>
+      </div>
+
       <div class="biorhythm-chart-card">
         <div class="chart-header">
           <div class="chart-title">
@@ -241,7 +250,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <!-- FÍSICO -->
         <div class="bio-card card-phys">
           <div class="bio-card-header">
-            <span class="bio-name" style="color: #fca5a5;">⚡ Biorritmo Físico</span>
+            <span class="bio-name">⚡ Biorritmo Físico</span>
             <span class="bio-val-pill ${bio.physical.phaseClass}">Dia ${bio.physical.value} / 23</span>
           </div>
           <div style="font-size: 0.82rem; color: var(--text-muted); font-family: var(--font-mono);">
@@ -256,7 +265,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <!-- EMOCIONAL -->
         <div class="bio-card card-emot">
           <div class="bio-card-header">
-            <span class="bio-name" style="color: #7dd3fc;">🌊 Biorritmo Emocional</span>
+            <span class="bio-name">🌊 Biorritmo Emocional</span>
             <span class="bio-val-pill ${bio.emotional.phaseClass}">Dia ${bio.emotional.value} / 28</span>
           </div>
           <div style="font-size: 0.82rem; color: var(--text-muted); font-family: var(--font-mono);">
@@ -271,7 +280,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <!-- INTELECTUAL -->
         <div class="bio-card card-intel">
           <div class="bio-card-header">
-            <span class="bio-name" style="color: #6ee7b7;">💡 Biorritmo Intelectual</span>
+            <span class="bio-name">💡 Biorritmo Intelectual</span>
             <span class="bio-val-pill ${bio.intellectual.phaseClass}">Dia ${bio.intellectual.value} / 33</span>
           </div>
           <div style="font-size: 0.82rem; color: var(--text-muted); font-family: var(--font-mono);">
@@ -296,13 +305,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const formatarDataCurta = (d) => d.toLocaleDateString("pt-BR", { day: "2-digit", month: "long" });
 
     let html = `
-      <div style="margin-bottom: 20px;">
-        <h3 style="font-family: var(--font-display); color: var(--gold-light); font-size: 1.3rem; margin-bottom: 4px;">
-          O Ciclo Anual da Vida Humana (Períodos de 52 Dias)
-        </h3>
-        <p style="color: var(--text-muted); font-size: 0.92rem;">
-          Iniciado na data do aniversário natalício, o ano pessoal divide-se em 7 períodos contíguos de aproximadamente 52 dias. O período destacado abaixo representa onde você está hoje.
-        </p>
+      <div class="section-intro">
+        <h3>🗓 2. Ciclo Anual (52 Dias)</h3>
+        <p>Iniciado na data do aniversário natalício, o ano pessoal divide-se em 7 períodos contíguos de aproximadamente 52 dias (52 dias, 3 horas e 25 minutos). O período destacado abaixo representa onde você se encontra hoje.</p>
       </div>
 
       <div class="annual-schedule-list">
@@ -316,7 +321,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="${cardClass}">
           <div class="period-header">
             <div>
-              <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-gold); text-transform: uppercase;">
+              <span class="period-name-tag">
                 ${p.name}
               </span>
               <h4 class="period-title">${p.title}</h4>
@@ -331,7 +336,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ${p.description}
           </p>
 
-          <div style="background: rgba(212, 175, 55, 0.08); border-left: 3px solid var(--gold-primary); padding: 10px 14px; border-radius: 4px; margin-bottom: 14px; font-size: 0.88rem;">
+          <div class="period-health-box">
             <strong>🌿 Saúde & Fisiologia no Período:</strong> ${p.health}
           </div>
 
@@ -365,25 +370,21 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!container) return;
 
     let html = `
-      <div style="margin-bottom: 25px;">
-        <h3 style="font-family: var(--font-display); color: var(--gold-light); font-size: 1.3rem; margin-bottom: 4px;">
-          Os Períodos Diários de Horas Significativas (24 Horas)
-        </h3>
-        <p style="color: var(--text-muted); font-size: 0.92rem;">
-          O dia de 24 horas divide-se em 7 períodos iguais de 3 horas e 35 minutos. Cada período vibra numa nota musical e frequência planetária impessoal da cosmologia tradicional.
-        </p>
+      <div class="section-intro">
+        <h3>⏱ 3. Horas Significativas (24h)</h3>
+        <p>O dia de 24 horas divide-se em 7 períodos harmônicos de 3 horas e 35 minutos. Cada período vibra numa nota musical e frequência planetária impessoal da cosmologia tradicional.</p>
       </div>
     `;
 
     // Bloco da vibração de nascimento se calculada
     if (vibNasc) {
       html += `
-        <div style="background: linear-gradient(135deg, #1b263b 0%, #111a29 100%); border: 1px solid var(--border-gold); border-radius: var(--radius-md); padding: 20px; margin-bottom: 25px;">
+        <div class="birth-vibration-card">
           <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
             <span class="cell-vibration" style="width: 34px; height: 34px; line-height: 34px; font-size: 1.1rem;">${vibNasc.letter}</span>
             <div>
-              <h4 style="font-family: var(--font-display); color: var(--gold-light); font-size: 1.1rem;">Vibração do Seu Nascimento: Letra "${vibNasc.letter}" (${vibNasc.info.planet} / Nota ${vibNasc.info.note})</h4>
-              <span style="font-size: 0.85rem; color: var(--text-muted);">${vibNasc.window.label}</span>
+              <h4 class="birth-vibration-title">Vibração do Seu Nascimento: Letra "${vibNasc.letter}" (${vibNasc.info.planet} / Nota ${vibNasc.info.note})</h4>
+              <span class="birth-vibration-sub">${vibNasc.window.label}</span>
             </div>
           </div>
           <p style="font-size: 0.9rem; color: var(--text-main); margin-bottom: 8px;">
@@ -416,12 +417,12 @@ document.addEventListener("DOMContentLoaded", () => {
     MoralesEngine.dailyWindows.forEach((win, wIdx) => {
       html += `<tr>`;
       html += `<td><strong>${win.index}º Período</strong></td>`;
-      html += `<td style="font-family: var(--font-mono); color: var(--text-gold);">${win.start} às ${win.end}</td>`;
+      html += `<td class="table-hour-cell">${win.start} às ${win.end}</td>`;
       for (let day = 0; day < 7; day++) {
         const letter = MoralesEngine.weeklyMatrix[day][wIdx];
         const isCurrent = (day === diario.dayOfWeek && wIdx === MoralesEngine.dailyWindows.indexOf(diario.window));
-        const cellStyle = isCurrent ? "background: rgba(212, 175, 55, 0.25); font-weight: bold; border: 1px solid var(--gold-primary);" : "";
-        html += `<td style="${cellStyle}"><span class="cell-vibration">${letter}</span></td>`;
+        const cellClass = isCurrent ? "cell-active-vibration" : "";
+        html += `<td class="${cellClass}"><span class="cell-vibration">${letter}</span></td>`;
       }
       html += `</tr>`;
     });
@@ -432,25 +433,25 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
 
       <!-- Guia de Aplicação das Letras A a G -->
-      <h4 style="font-family: var(--font-display); color: var(--gold-light); font-size: 1.15rem; margin: 30px 0 16px;">
+      <h4 class="vibrations-guide-header">
         Guia das 7 Vibrações Planetárias (A a G)
       </h4>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
+      <div class="vibrations-guide-grid">
     `;
 
     Object.keys(MoralesEngine.vibrationsInfo).forEach(letter => {
       const v = MoralesEngine.vibrationsInfo[letter];
       html += `
-        <div style="background: var(--bg-card); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-md); padding: 16px;">
+        <div class="vibration-guide-card">
           <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
             <span class="cell-vibration">${letter}</span>
             <div>
-              <strong style="color: var(--gold-light);">${v.planet} (Nota ${v.note})</strong>
-              <div style="font-size: 0.78rem; color: var(--text-muted);">${v.tone}</div>
+              <strong class="vibration-planet-name">${v.planet} (Nota ${v.note})</strong>
+              <div class="vibration-tone-text">${v.tone}</div>
             </div>
           </div>
-          <p style="font-size: 0.85rem; color: #a7f3d0; margin-bottom: 6px;"><strong>✓ Favorável:</strong> ${v.favorable}</p>
-          <p style="font-size: 0.85rem; color: #fecdd3;"><strong>✕ Evitar:</strong> ${v.unfavorable}</p>
+          <p class="vibration-fav-text"><strong>✓ Favorável:</strong> ${v.favorable}</p>
+          <p class="vibration-unfav-text"><strong>✕ Evitar:</strong> ${v.unfavorable}</p>
         </div>
       `;
     });
@@ -467,18 +468,14 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!container) return;
 
     let html = `
-      <div style="margin-bottom: 25px;">
-        <h3 style="font-family: var(--font-display); color: var(--gold-light); font-size: 1.3rem; margin-bottom: 4px;">
-          O Ciclo de 144 Anos e os Graus de 7 Anos (Septênios)
-        </h3>
-        <p style="color: var(--text-muted); font-size: 0.92rem;">
-          Na tradição Rosacruz, a existência humana aperfeiçoa-se através de ciclos sucessivos de 7 anos solares. Cada degrau desenvolve uma oitava superior da personalidade-alma.
-        </p>
+      <div class="section-intro">
+        <h3>🏛 4. Septênios (144 Anos)</h3>
+        <p>Na tradição Rosacruz, a existência humana aperfeiçoa-se através de ciclos sucessivos de 7 anos solares e o grande ciclo cósmico de 144 anos.</p>
       </div>
 
-      <div style="background: linear-gradient(145deg, #172236 0%, #101928 100%); border: 1px solid var(--border-gold); border-radius: var(--radius-lg); padding: 24px; margin-bottom: 25px;">
+      <div class="septennial-hero-box">
         <span class="badge-sublime" style="margin-bottom: 8px;">SEU SEPTÊNIO ATUAL (IDADE: ${idadeAnos} ANOS)</span>
-        <h4 style="font-family: var(--font-display); color: var(--gold-light); font-size: 1.35rem; margin-bottom: 6px;">
+        <h4 class="septennial-hero-title">
           ${setenio.period}º Período: ${setenio.base} (Idade de ${setenio.range[0]} a ${setenio.range[1]} Anos)
         </h4>
         <p style="font-size: 0.95rem; color: var(--text-main); line-height: 1.6; margin-bottom: 12px;">
@@ -486,19 +483,18 @@ document.addEventListener("DOMContentLoaded", () => {
         </p>
       </div>
 
-      <div style="display: flex; flex-direction: column; gap: 12px;">
+      <div class="septennial-list-container">
     `;
 
     MoralesEngine.septennialPeriods.forEach(s => {
       const isCurrent = (s.period === setenio.period);
-      const border = isCurrent ? "border: 1px solid var(--gold-primary); background: #192437;" : "border: 1px solid rgba(255,255,255,0.06); background: var(--bg-card);";
 
       html += `
-        <div style="${border} border-radius: var(--radius-md); padding: 16px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+        <div class="septennial-row-card ${isCurrent ? 'is-current' : ''}">
           <div>
-            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-gold);">Idade ${s.range[0]} a ${s.range[1]} anos</span>
-            <h5 style="font-family: var(--font-display); color: var(--gold-light); font-size: 1.05rem;">${s.period}º Período: ${s.base}</h5>
-            <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 4px;">${s.desc}</p>
+            <span class="septennial-age-range">Idade ${s.range[0]} a ${s.range[1]} anos</span>
+            <h5 class="septennial-period-name">${s.period}º Período: ${s.base}</h5>
+            <p class="septennial-period-desc">${s.desc}</p>
           </div>
           ${isCurrent ? '<span class="badge-sublime" style="margin:0;">★ ATUAL</span>' : ''}
         </div>
@@ -517,49 +513,45 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!container) return;
 
     container.innerHTML = `
-      <div style="margin-bottom: 25px;">
-        <h3 style="font-family: var(--font-display); color: var(--gold-light); font-size: 1.3rem; margin-bottom: 4px;">
-          Cosmobiologia: Influências do Sol, da Lua e Crononutrição (Capítulos I e V)
-        </h3>
-        <p style="color: var(--text-muted); font-size: 0.92rem;">
-          Pesquisas científicas e preceitos médicos rosacruzes sobre a influência do cosmos nos fluidos e no metabolismo humano.
-        </p>
+      <div class="section-intro">
+        <h3>☀️ 5. Cosmobiologia (Sol, Lua & Saúde)</h3>
+        <p>Pesquisas científicas e preceitos médicos rosacruzes sobre a influência do cosmos nos fluidos, no sono e no metabolismo humano (Capítulos I e V).</p>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+      <div class="cosmo-grid">
         <!-- Card Lunar -->
-        <div class="bio-card" style="border-top: 3px solid var(--gold-primary);">
-          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
-            <span style="font-size: 2.2rem;">${lua.icon}</span>
+        <div class="bio-card cosmo-card cosmo-lunar">
+          <div class="cosmo-header-flex">
+            <span class="cosmo-icon">${lua.icon}</span>
             <div>
-              <h4 style="font-family: var(--font-display); color: var(--gold-light); font-size: 1.15rem;">${lua.phaseName} (Dia Lunar ${lua.phaseAgeDays})</h4>
-              <span style="font-size: 0.8rem; color: var(--text-muted);">Marés Biológicas e Fisiologia</span>
+              <h4 class="cosmo-card-title">${lua.phaseName} (Dia Lunar ${lua.phaseAgeDays})</h4>
+              <span class="cosmo-card-sub">Marés Biológicas e Fisiologia</span>
             </div>
           </div>
-          <p style="font-size: 0.9rem; color: var(--text-main); line-height: 1.55;">
+          <p class="cosmo-card-body">
             ${lua.recommendation}
           </p>
         </div>
 
         <!-- Card Solar (Manchas Solares e Efeito Takata) -->
-        <div class="bio-card" style="border-top: 3px solid #f59e0b;">
-          <h4 style="font-family: var(--font-display); color: #fbbf24; font-size: 1.15rem; margin-bottom: 8px;">
+        <div class="bio-card cosmo-card cosmo-solar">
+          <h4 class="cosmo-card-title solar-title">
             ☀️ Ciclo Solar de 11 Anos & Efeito Takata
           </h4>
-          <p style="font-size: 0.9rem; color: var(--text-main); line-height: 1.55; margin-bottom: 8px;">
+          <p class="cosmo-card-body">
             O médico japonês Dr. Maki Takata demonstrou que as manchas solares e tempestades geomagnéticas alteram instantaneamente o índice de floculação do soro sanguíneo humano.
           </p>
-          <p style="font-size: 0.85rem; color: var(--text-muted);">
+          <p class="cosmo-card-sub">
             Em fases de intensa atividade solar, mantenha atitude serena, hidratação redobrada e pratique exercícios de relaxamento e meditação rosacruz.
           </p>
         </div>
 
         <!-- Card Crononutrição e Sono -->
-        <div class="bio-card" style="border-top: 3px solid #10b981;">
-          <h4 style="font-family: var(--font-display); color: #6ee7b7; font-size: 1.15rem; margin-bottom: 8px;">
+        <div class="bio-card cosmo-card cosmo-chrono">
+          <h4 class="cosmo-card-title chrono-title">
             🥗 Crononutrição e o Relógio Metabólico
           </h4>
-          <p style="font-size: 0.9rem; color: var(--text-main); line-height: 1.55; margin-bottom: 8px;">
+          <p class="cosmo-card-body">
             <strong>Pela Manhã:</strong> Carboidratos são prontamente queimados como energia ativa. O pico da pressão ocorre entre 8h e 10h.<br>
             <strong>À Tarde:</strong> A força muscular máxima ocorre entre 14h e 18h (ideal para exercícios físicos).<br>
             <strong>À Noite:</strong> A insulina perde eficiência e por volta da meia-noite o fígado ativa a síntese de colesterol. Evite farinhas e açúcares tarde da noite.
@@ -571,8 +563,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // =========================================================================
   // 7. DESENHO DO GRÁFICO SINUSOIDAL NO CANVAS (ALTA RESOLUÇÃO & RESPONSIVO)
+  // Suporta modo tela noturno e modo impressão com fundo branco impecável
   // =========================================================================
-  function desenharGraficoBiorritmos(birthDate, targetDate, totalDaysCenter) {
+  function desenharGraficoBiorritmos(birthDate, targetDate, totalDaysCenter, isPrintMode = false) {
     const canvas = document.getElementById("biorhythm-canvas");
     if (!canvas) return;
 
@@ -597,54 +590,107 @@ document.addEventListener("DOMContentLoaded", () => {
     const amplitude = (height / 2) * 0.72;
     const stepX = width / (windowDays - 1);
 
-    // Fundo limpo noturno
-    ctx.fillStyle = "#0d131f";
-    ctx.fillRect(0, 0, width, height);
+    if (isPrintMode) {
+      // Fundo branco limpo para impressão (atendendo ao requisito do usuário)
+      ctx.fillStyle = "#ffffff";
+      ctx.fillRect(0, 0, width, height);
 
-    // Linhas de Grade Horizontal (+100%, -100%)
-    ctx.strokeStyle = "rgba(255, 255, 255, 0.08)";
-    ctx.lineWidth = 1;
-    ctx.beginPath();
-    ctx.moveTo(0, centerY - amplitude);
-    ctx.lineTo(width, centerY - amplitude);
-    ctx.moveTo(0, centerY + amplitude);
-    ctx.lineTo(width, centerY + amplitude);
-    ctx.stroke();
+      // Linhas de Grade Horizontal (+100%, -100%) em cinza suave
+      ctx.strokeStyle = "rgba(0, 0, 0, 0.12)";
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(0, centerY - amplitude);
+      ctx.lineTo(width, centerY - amplitude);
+      ctx.moveTo(0, centerY + amplitude);
+      ctx.lineTo(width, centerY + amplitude);
+      ctx.stroke();
 
-    // Rótulos de porcentagem na grade (+100%, 0, -100%)
-    ctx.fillStyle = "rgba(255, 255, 255, 0.35)";
-    ctx.font = "10px JetBrains Mono, monospace";
-    ctx.fillText("+100%", 8, centerY - amplitude + 12);
-    ctx.fillText("-100%", 8, centerY + amplitude - 4);
+      // Rótulos de porcentagem na grade (+100%, -100%)
+      ctx.fillStyle = "rgba(0, 0, 0, 0.65)";
+      ctx.font = "bold 10px JetBrains Mono, monospace";
+      ctx.fillText("+100%", 8, centerY - amplitude + 12);
+      ctx.fillText("-100%", 8, centerY + amplitude - 4);
 
-    // EIXO ZERO (Linha Crítica)
-    ctx.strokeStyle = "rgba(212, 175, 55, 0.5)";
-    ctx.lineWidth = 1.5;
-    ctx.setLineDash([4, 4]);
-    ctx.beginPath();
-    ctx.moveTo(0, centerY);
-    ctx.lineTo(width, centerY);
-    ctx.stroke();
-    ctx.setLineDash([]);
+      // EIXO ZERO (Linha Crítica) em tom âmbar / ouro escuro de alto contraste
+      ctx.strokeStyle = "#b45309";
+      ctx.lineWidth = 1.8;
+      ctx.setLineDash([4, 4]);
+      ctx.beginPath();
+      ctx.moveTo(0, centerY);
+      ctx.lineTo(width, centerY);
+      ctx.stroke();
+      ctx.setLineDash([]);
 
-    // LINHA VERTICAL DO DIA DE HOJE / ALVO (offset 0 = índice 5)
+      // LINHA VERTICAL DO DIA DE HOJE / ALVO (offset 0 = índice 5)
+      const targetX = (-offsetStart) * stepX;
+      ctx.strokeStyle = "rgba(0, 0, 0, 0.45)";
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(targetX, 0);
+      ctx.lineTo(targetX, height);
+      ctx.stroke();
+
+      // Marcador textual "HOJE"
+      ctx.fillStyle = "#111827";
+      ctx.font = "bold 11px Inter, sans-serif";
+      ctx.fillText("HOJE", targetX + 4, 16);
+    } else {
+      // Fundo limpo noturno para tela
+      ctx.fillStyle = "#0d131f";
+      ctx.fillRect(0, 0, width, height);
+
+      // Linhas de Grade Horizontal (+100%, -100%)
+      ctx.strokeStyle = "rgba(255, 255, 255, 0.08)";
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(0, centerY - amplitude);
+      ctx.lineTo(width, centerY - amplitude);
+      ctx.moveTo(0, centerY + amplitude);
+      ctx.lineTo(width, centerY + amplitude);
+      ctx.stroke();
+
+      // Rótulos de porcentagem na grade (+100%, 0, -100%)
+      ctx.fillStyle = "rgba(255, 255, 255, 0.35)";
+      ctx.font = "10px JetBrains Mono, monospace";
+      ctx.fillText("+100%", 8, centerY - amplitude + 12);
+      ctx.fillText("-100%", 8, centerY + amplitude - 4);
+
+      // EIXO ZERO (Linha Crítica)
+      ctx.strokeStyle = "rgba(212, 175, 55, 0.5)";
+      ctx.lineWidth = 1.5;
+      ctx.setLineDash([4, 4]);
+      ctx.beginPath();
+      ctx.moveTo(0, centerY);
+      ctx.lineTo(width, centerY);
+      ctx.stroke();
+      ctx.setLineDash([]);
+
+      // LINHA VERTICAL DO DIA DE HOJE / ALVO (offset 0 = índice 5)
+      const targetX = (-offsetStart) * stepX;
+      ctx.strokeStyle = "rgba(255, 255, 255, 0.4)";
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(targetX, 0);
+      ctx.lineTo(targetX, height);
+      ctx.stroke();
+
+      // Marcador textual "HOJE / CONSULTA"
+      ctx.fillStyle = "#f3f4f6";
+      ctx.font = "bold 10px Inter, sans-serif";
+      ctx.fillText("HOJE", targetX + 4, 16);
+    }
+
+    // Cores das 3 curvas canônicas (mais contrastadas na impressão em fundo branco)
+    const corFisico = isPrintMode ? "#dc2626" : "#ef4444";
+    const corEmocional = isPrintMode ? "#0284c7" : "#38bdf8";
+    const corIntelectual = isPrintMode ? "#059669" : "#10b981";
+
     const targetX = (-offsetStart) * stepX;
-    ctx.strokeStyle = "rgba(255, 255, 255, 0.4)";
-    ctx.lineWidth = 2;
-    ctx.beginPath();
-    ctx.moveTo(targetX, 0);
-    ctx.lineTo(targetX, height);
-    ctx.stroke();
-
-    // Marcador textual "HOJE / CONSULTA"
-    ctx.fillStyle = "#f3f4f6";
-    ctx.font = "bold 10px Inter, sans-serif";
-    ctx.fillText("HOJE", targetX + 4, 16);
 
     // Função auxiliar para calcular e traçar cada onda sinusoidal
     function traçarOnda(cycleDays, strokeColor) {
       ctx.strokeStyle = strokeColor;
-      ctx.lineWidth = 2.5;
+      ctx.lineWidth = isPrintMode ? 2.8 : 2.5;
       ctx.beginPath();
 
       for (let i = 0; i < windowDays; i++) {
@@ -674,12 +720,12 @@ document.addEventListener("DOMContentLoaded", () => {
       ctx.beginPath();
       ctx.arc(targetX, centerYVal, 5, 0, Math.PI * 2);
       ctx.fill();
-      ctx.strokeStyle = "#ffffff";
+      ctx.strokeStyle = isPrintMode ? "#0f172a" : "#ffffff";
       ctx.lineWidth = 1.5;
       ctx.stroke();
 
-      // Se houver dia sob hover/touch, desenha ponto nele também
-      if (canvasHoverIndex !== null && canvasHoverIndex >= 0 && canvasHoverIndex < windowDays) {
+      // Se houver dia sob hover/touch e não estiver imprimindo, desenha ponto nele também
+      if (!isPrintMode && canvasHoverIndex !== null && canvasHoverIndex >= 0 && canvasHoverIndex < windowDays) {
         const hOffset = offsetStart + canvasHoverIndex;
         const hDays = totalDaysCenter + hOffset;
         const hRest = hDays % cycleDays || cycleDays;
@@ -695,12 +741,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Traça as 3 curvas canônicas de biorritmos
-    traçarOnda(23, "#ef4444"); // Físico (Vermelho)
-    traçarOnda(28, "#38bdf8"); // Emocional (Ciano)
-    traçarOnda(33, "#10b981"); // Intelectual (Verde)
+    traçarOnda(23, corFisico);      // Físico (23 dias)
+    traçarOnda(28, corEmocional);   // Emocional (28 dias)
+    traçarOnda(33, corIntelectual); // Intelectual (33 dias)
 
-    // Se o usuário estiver tocando/passando o mouse em um dia, traça uma linha guia vertical suave
-    if (canvasHoverIndex !== null && canvasHoverIndex >= 0 && canvasHoverIndex < windowDays) {
+    // Se o usuário estiver tocando/passando o mouse em um dia (apenas em tela)
+    if (!isPrintMode && canvasHoverIndex !== null && canvasHoverIndex >= 0 && canvasHoverIndex < windowDays) {
       const hoverX = canvasHoverIndex * stepX;
       ctx.strokeStyle = "rgba(212, 175, 55, 0.7)";
       ctx.lineWidth = 1.5;
@@ -721,8 +767,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Renderiza rótulos de datas na base do gráfico
-    ctx.fillStyle = "rgba(255, 255, 255, 0.45)";
-    ctx.font = "9px JetBrains Mono, monospace";
+    ctx.fillStyle = isPrintMode ? "rgba(15, 23, 42, 0.8)" : "rgba(255, 255, 255, 0.45)";
+    ctx.font = isPrintMode ? "bold 9px JetBrains Mono, monospace" : "9px JetBrains Mono, monospace";
     for (let i = 0; i < windowDays; i += 5) {
       const curDate = new Date(targetDate);
       curDate.setDate(curDate.getDate() + (offsetStart + i));

@@ -160,7 +160,7 @@
       <!-- Identificação do Módulo Atual -->
       <a href="./index.html" class="global-nav-brand" title="Ritmos Básicos da Vida - Pedro Raul Morales">
         <span class="global-nav-brand-symbol">✦</span>
-        <span class="global-nav-brand-text">Ritmos <span>da Vida</span></span>
+        <span class="global-nav-brand-text">Ritmos Básicos <span>da Vida</span></span>
       </a>
       
       <!-- Links Rápidos para os Outros Módulos da Tradição -->
@@ -184,14 +184,9 @@
   <div class="container site-wrapper">
 
     <!-- ========================================================================= -->
-    <!-- CABEÇALHO DO SISTEMA COM AVISO CLARO DE INDEPENDÊNCIA                     -->
+    <!-- CABEÇALHO DO SISTEMA                                                      -->
     <!-- ========================================================================= -->
     <header class="site-header">
-      <!-- Badge deixando explícito que se trata de estudo independente e não representa a AMORC -->
-      <div class="badge-sublime" title="Iniciativa autônoma e educacional">
-        ✦ Estudo Independente sobre a Obra • Não Representa a AMORC
-      </div>
-      
       <h1 class="site-title">Ritmos Básicos da Vida <span>Pedro Raul Morales, F.R.C.</span></h1>
       
       <p class="site-subtitle">
@@ -207,7 +202,6 @@
         <h2>⚖ Inserir Dados para Geração do Mapa Pessoal</h2>
         <p class="form-instruction">
           Informe sua data natalícia para calcular os ciclos harmônicos, oitavas de biorritmo e a contagem exata de dias vividos.
-          <span class="form-privacy-note">🔒 Sistema estático e autônomo: nenhum dado é enviado para servidores ou gravado em banco de dados.</span>
         </p>
       </div>
 
@@ -219,16 +213,16 @@
             <input type="text" id="user-name" class="form-control" placeholder="Ex: Buscador da Luz Maior" required autocomplete="name">
           </div>
 
-          <!-- Data de Nascimento -->
+          <!-- Data de Nascimento Facilitada (Aceita digitação contínua ou com barras) -->
           <div class="form-group">
             <label for="birth-date">Data de Nascimento (Obrigatória)</label>
-            <input type="date" id="birth-date" class="form-control" required>
+            <input type="text" id="birth-date" class="form-control" placeholder="DD/MM/AAAA (ex: 10/09/1980)" inputmode="numeric" maxlength="10" autocomplete="bday" required>
           </div>
 
-          <!-- Hora de Nascimento (Opcional) -->
+          <!-- Hora de Nascimento Facilitada (Aceita digitação contínua ou com dois-pontos) -->
           <div class="form-group">
             <label for="birth-time">Hora de Nascimento (Opcional - Vibração Horária)</label>
-            <input type="time" id="birth-time" class="form-control">
+            <input type="text" id="birth-time" class="form-control" placeholder="HH:MM (ex: 14:30 ou 03:00)" inputmode="numeric" maxlength="5">
           </div>
         </div>
 
@@ -301,14 +295,22 @@
       </div>
 
       <div class="geo-faq-list">
-        <!-- PERGUNTA PRIORITÁRIA DE PRIVACIDADE E SESSÃO EXIGIDA PELO USUÁRIO -->
+        <!-- PERGUNTA PRIORITÁRIA DE PRIVACIDADE E SESSÃO -->
         <details class="geo-faq-item" open>
-          <summary>Minhas informações pessoais e datas de nascimento ficam salvas?</summary>
+          <summary>Meus dados ficam salvos em algum banco de dados?</summary>
           <p>
-            <strong>Não, absolutamente nenhuma informação é salva ou gravada.</strong> Não usamos banco de dados, servidores de armazenamento, telemetria ou rastreadores de qualquer natureza. Este sistema é 100% autônomo, estático e opera exclusivamente no lado do cliente (client-side), rodando diretamente na memória do seu próprio navegador.
+            Não. O sistema não armazena dados pessoais de ninguém em nenhum banco de dados ou servidor. É um sistema 100% estático que executa o cálculo diretamente no seu próprio navegador, gerando o resultado na hora com total privacidade e segurança. Seus dados são utilizados exclusivamente durante a sua sessão de uso e jamais são enviados para servidores externos.
           </p>
+        </details>
+
+        <!-- ONDE ENCONTRAR O LIVRO -->
+        <details class="geo-faq-item">
+          <summary>Onde encontrar esse livro?</summary>
           <p>
-            Seus dados são inseridos e duram <strong>somente o seu tempo de sessão</strong>. O autor, os desenvolvedores e quaisquer terceiros <strong>não têm e nunca terão acesso aos seus dados ou às suas informações pessoais</strong>. Ao fechar a aba ou recarregar a página, todos os dados são instantaneamente destruídos da memória volátil.
+            A monografia <em>"Ritmos Básicos da Vida"</em>, de autoria de Pedro Raul Morales, F.R.C., pode ser adquirida através do site oficial da Ordem Rosacruz (AMORC) pelo link:<br>
+            <a href="https://www.ordemrosacruz.org.br/br/ritmos-basicos-da-vida-pedro-raul-morales" target="_blank" rel="noopener noreferrer" style="color: #38bdf8; text-decoration: underline; word-break: break-all; font-weight: 500;">
+              https://www.ordemrosacruz.org.br/br/ritmos-basicos-da-vida-pedro-raul-morales
+            </a>
           </p>
         </details>
 

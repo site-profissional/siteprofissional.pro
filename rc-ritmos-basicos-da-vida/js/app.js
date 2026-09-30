@@ -26,6 +26,132 @@ document.addEventListener("DOMContentLoaded", () => {
   // Inicia relógio ao vivo para o ciclo diário
   iniciarRelogioAoVivo();
 
+  // =========================================================================
+  // MÁSCARA AUTOMÁTICA E VALIDAÇÃO NUMÉRICA: DATA DE NASCIMENTO (DD/MM/AAAA)
+  // Aceita apenas números. Digitando 10091980 formata automaticamente 10/09/1980.
+  // =========================================================================
+  if (inputBirthDate) {
+    let lastDateVal = "";
+    inputBirthDate.addEventListener("input", function (e) {
+      const isDelete = e.inputType === "deleteContentBackward" || e.inputType === "deleteContentForward" || (this.value.length < lastDateVal.length);
+      let digits = this.value.replace(/\D/g, "");
+      if (digits.length > 8) {
+        digits = digits.slice(0, 8);
+      }
+
+      let formatted = "";
+      if (digits.length > 4) {
+        formatted = digits.slice(0, 2) + "/" + digits.slice(2, 4) + "/" + digits.slice(4);
+      } else if (digits.length > 2) {
+        formatted = digits.slice(0, 2) + "/" + digits.slice(2);
+      } else {
+        formatted = digits;
+      }
+
+      this.value = formatted;
+      lastDateVal = this.value;
+    });
+
+    // Impede a entrada de qualquer caractere não numérico no teclado físico
+    inputBirthDate.addEventListener("keydown", function (e) {
+      const allowedKeys = ["Backspace", "Delete", "Tab", "ArrowLeft", "ArrowRight", "Enter", "Home", "End"];
+      if (allowedKeys.includes(e.key) || e.ctrlKey || e.metaKey) {
+        return;
+      }
+      if (!/^[0-9]$/.test(e.key)) {
+        e.preventDefault();
+      }
+    });
+  }
+
+  // =========================================================================
+  // MÁSCARA AUTOMÁTICA E VALIDAÇÃO NUMÉRICA: HORA DE NASCIMENTO (HH:MM)
+  // Aceita apenas números. Limitado a 24h. Se digitar 3 no início, entende 03:
+  // =========================================================================
+  function formatarHoraInteligente(val, isDelete) {
+    let digits = val.replace(/\D/g, "");
+    if (digits.length === 0) return "";
+
+    // Se o primeiro dígito for > 2 (ex: 3 a 9), sabe que é 03h, 04h... pois o dia só vai até 23h
+    if (digits.length === 1 && parseInt(digits[0], 10) > 2) {
+      return isDelete ? digits : "0" + digits + ":";
+    }
+
+    // Se tiver 2 dígitos, valida limite de 23 horas
+    if (digits.length === 2) {
+      let h = parseInt(digits, 10);
+      if (h > 23) digits = "23";
+      return isDelete ? digits : digits + ":";
+    }
+
+    // Se tiver 3 dígitos, analisa os minutos
+    if (digits.length === 3) {
+      let h = parseInt(digits.slice(0, 2), 10);
+      if (h > 23) h = 23;
+      let mFirst = parseInt(digits[2], 10);
+      // Minutos variam de 0 a 59. Se o primeiro dígito do minuto for > 5 (ex: 8), interpreta como 08 minutos
+      if (mFirst > 5) {
+        return String(h).padStart(2, "0") + ":0" + mFirst;
+      }
+      return String(h).padStart(2, "0") + ":" + digits[2];
+    }
+
+    // 4 dígitos ou mais: formata HH:MM com teto em 23:59
+    if (digits.length >= 4) {
+      let h = parseInt(digits.slice(0, 2), 10);
+      let m = parseInt(digits.slice(2, 4), 10);
+      if (h > 23) h = 23;
+      if (m > 59) m = 59;
+      return String(h).padStart(2, "0") + ":" + String(m).padStart(2, "0");
+    }
+
+    return digits;
+  }
+
+  if (inputBirthTime) {
+    let lastTimeVal = "";
+    inputBirthTime.addEventListener("input", function (e) {
+      const isDelete = e.inputType === "deleteContentBackward" || e.inputType === "deleteContentForward" || (this.value.length < lastTimeVal.length);
+      this.value = formatarHoraInteligente(this.value, isDelete);
+      lastTimeVal = this.value;
+    });
+
+    // Impede a entrada de qualquer caractere não numérico no teclado físico
+    inputBirthTime.addEventListener("keydown", function (e) {
+      const allowedKeys = ["Backspace", "Delete", "Tab", "ArrowLeft", "ArrowRight", "Enter", "Home", "End"];
+      if (allowedKeys.includes(e.key) || e.ctrlKey || e.metaKey) {
+        return;
+      }
+      if (!/^[0-9]$/.test(e.key)) {
+        e.preventDefault();
+      }
+    });
+  }
+
+  /**
+   * Converte a data de nascimento (DD/MM/AAAA ou 8 dígitos) em objeto Date válido
+   */
+  function parseBirthDateInput(val) {
+    if (!val) return null;
+    const clean = val.replace(/\D/g, "");
+    if (clean.length !== 8) return null;
+
+    const day = parseInt(clean.slice(0, 2), 10);
+    const month = parseInt(clean.slice(2, 4), 10);
+    const year = parseInt(clean.slice(4, 8), 10);
+
+    if (month < 1 || month > 12) return null;
+    if (day < 1 || day > 31) return null;
+    if (year < 1850 || year > 2100) return null;
+
+    const dateObj = new Date(year, month - 1, day, 12, 0, 0);
+    if (dateObj.getFullYear() !== year || dateObj.getMonth() !== (month - 1) || dateObj.getDate() !== day) {
+      return null;
+    }
+
+    return { day, month, year, dateObj };
+  }
+
   // Tratamento do formulário de submissão
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -104,22 +230,44 @@ document.addEventListener("DOMContentLoaded", () => {
   // =========================================================================
   function executarCalculo() {
     const nome = inputName.value.trim() || "Estudante Rosacruz";
-    const dataNascVal = inputBirthDate.value;
-    const horaNascVal = inputBirthTime ? inputBirthTime.value : "";
+    const parsedBirth = parseBirthDateInput(inputBirthDate.value);
 
-    if (!dataNascVal) {
-      alert("Por favor, selecione sua data de nascimento.");
+    if (!parsedBirth) {
+      alert("Por favor, digite uma data de nascimento válida no formato DD/MM/AAAA.");
+      inputBirthDate.focus();
       return;
     }
 
-    const birthDate = new Date(dataNascVal + "T00:00:00");
+    const birthDate = parsedBirth.dateObj;
     // A data de consulta/cálculo é sempre a data atual ("hoje")
     const targetDate = new Date();
     targetDate.setHours(0, 0, 0, 0);
 
     if (targetDate < birthDate) {
       alert("A data de nascimento informada não pode estar no futuro.");
+      inputBirthDate.focus();
       return;
+    }
+
+    // Processa a hora de nascimento opcional
+    let horaNascVal = "";
+    if (inputBirthTime && inputBirthTime.value.trim()) {
+      const cleanTime = inputBirthTime.value.replace(/\D/g, "");
+      if (cleanTime.length >= 1) {
+        let h = 0, m = 0;
+        if (cleanTime.length === 1 || cleanTime.length === 2) {
+          h = parseInt(cleanTime, 10);
+        } else if (cleanTime.length === 3) {
+          h = parseInt(cleanTime.slice(0, 2), 10);
+          m = parseInt(cleanTime[2], 10) * 10;
+        } else {
+          h = parseInt(cleanTime.slice(0, 2), 10);
+          m = parseInt(cleanTime.slice(2, 4), 10);
+        }
+        if (h > 23) h = 23;
+        if (m > 59) m = 59;
+        horaNascVal = String(h).padStart(2, "0") + ":" + String(m).padStart(2, "0");
+      }
     }
 
     // 1. Cálculos matemáticos usando o motor de Pedro Raul Morales

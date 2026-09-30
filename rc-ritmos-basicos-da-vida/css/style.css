@@ -463,6 +463,12 @@ body {
   border: 1px solid var(--border-gold);
 }
 
+.pill-lunar {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
 /* Caixa do Relógio Cósmico em Tempo Real */
 .hero-clock-box {
   background: rgba(10, 14, 23, 0.6);
@@ -1494,7 +1500,7 @@ body {
     padding: 0 !important;
   }
 
-  /* Oculta elementos desnecessários na impressão */
+  /* Oculta elementos desnecessários na impressão (relógio em tempo real e horas do dia não entram no relatório anual) */
   .no-print, 
   .global-navbar, 
   .site-header,
@@ -1506,6 +1512,10 @@ body {
   .btn-print-dossier,
   .print-action-center,
   #btn-print-report,
+  .hero-clock-box,
+  #section-daily,
+  #tab-daily,
+  #tab-daily-content,
   button {
     display: none !important;
   }
@@ -1607,6 +1617,15 @@ body {
     page-break-inside: avoid !important;
     break-inside: avoid !important;
     margin-bottom: 16px !important;
+    display: block !important;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+  }
+
+  .badge-sublime {
+    background: #f1f5f9 !important;
+    border: 1px solid #cbd5e1 !important;
+    color: #0f172a !important;
   }
 
   .hero-profile h3 {
@@ -1615,7 +1634,7 @@ body {
   }
 
   .hero-meta {
-    color: #475569 !important;
+    color: #334155 !important;
     font-size: 9pt !important;
   }
 
@@ -1623,17 +1642,47 @@ body {
     color: #0f172a !important;
   }
 
-  .hero-clock-box {
-    background: #f8fafc !important;
-    border: 1px solid #cbd5e1 !important;
+  .hero-current-desc,
+  .hero-card p {
     color: #0f172a !important;
-    padding: 12px !important;
+    line-height: 1.5 !important;
   }
 
-  .clock-time {
+  .hero-pill {
+    border: 1px solid #cbd5e1 !important;
+    font-weight: 700 !important;
+    font-size: 8pt !important;
+    padding: 3px 8px !important;
+  }
+
+  .pill-phys {
+    background: #fee2e2 !important;
+    color: #991b1b !important;
+    border-color: #fca5a5 !important;
+  }
+
+  .pill-emot {
+    background: #e0f2fe !important;
+    color: #0369a1 !important;
+    border-color: #7dd3fc !important;
+  }
+
+  .pill-intel {
+    background: #dcfce7 !important;
+    color: #166534 !important;
+    border-color: #86efac !important;
+  }
+
+  .pill-annual {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+  }
+
+  .pill-lunar {
+    background: #f1f5f9 !important;
     color: #0f172a !important;
-    text-shadow: none !important;
-    font-size: 1.8rem !important;
+    border-color: #cbd5e1 !important;
   }
 
   .bio-card,
@@ -1701,6 +1750,8 @@ body {
     --gold-hover: #0f172a !important;
     --text-gold: #0f172a !important;
     --border-gold: #cbd5e1 !important;
+    --text-main: #0f172a !important;
+    --text-muted: #334155 !important;
   }
 
   .birth-vibration-card,
@@ -1830,11 +1881,55 @@ body {
     color: #0f172a !important;
   }
 
-  /* Rodapé do documento impresso: Regra obrigatória do link azul */
+  /* Rodapé do documento impresso: Fundo 100% branco, sem caixas pretas e regra obrigatória do link azul */
+  .site-footer {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    background-image: none !important;
+    border-top: 1.5px solid #cbd5e1 !important;
+    color: #334155 !important;
+    padding: 18px 0 12px !important;
+    margin-top: 24px !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .footer-quote {
+    color: #1e293b !important;
+    font-size: 10pt !important;
+    line-height: 1.5 !important;
+    max-width: 100% !important;
+  }
+
+  .footer-meta {
+    color: #475569 !important;
+    font-size: 8.5pt !important;
+    margin-bottom: 12px !important;
+  }
+
+  .footer-source {
+    background: #f8fafc !important;
+    background-color: #f8fafc !important;
+    background-image: none !important;
+    border: 1px solid #cbd5e1 !important;
+    color: #334155 !important;
+    font-size: 8pt !important;
+    padding: 10px 14px !important;
+    margin: 0 auto 16px !important;
+    max-width: 100% !important;
+  }
+
+  .footer-source strong {
+    color: #0f172a !important;
+  }
+
   .footer-signature {
     color: #0f172a !important;
     font-size: 8.5pt !important;
     font-weight: 700 !important;
+    border-top: 1px solid #cbd5e1 !important;
+    margin-top: 14px !important;
+    padding-top: 12px !important;
   }
 
   .footer-signature a {

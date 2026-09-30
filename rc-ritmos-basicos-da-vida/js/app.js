@@ -314,7 +314,7 @@ document.addEventListener("DOMContentLoaded", () => {
     heroContainer.innerHTML = `
       <div class="hero-card">
         <div class="hero-profile">
-          <div class="badge-sublime" style="margin-bottom: 8px;">✦ Mapa Pessoal Rosacruz</div>
+          <div class="badge-sublime" style="margin-bottom: 8px;">✦ Ritmos Básicos da Vida</div>
           <h3>${nome}</h3>
           <p class="hero-meta">
             Nascimento: <strong>${formatarData(birthDate)}</strong> | 
@@ -322,7 +322,7 @@ document.addEventListener("DOMContentLoaded", () => {
             Dias Vividos: <strong>${diasInfo.totalDays.toLocaleString("pt-BR")} dias</strong>
           </p>
 
-          <p style="font-size: 0.92rem; color: var(--text-main); margin-bottom: 12px; line-height: 1.55;">
+          <p class="hero-current-desc" style="font-size: 0.92rem; color: var(--text-main); margin-bottom: 12px; line-height: 1.55;">
             Atualmente vivenciando o <strong>${anual.current.name}</strong> do ciclo anual (${anual.current.title}) e o <strong>${setenio.period}º Septênio de Vida</strong> (${setenio.base}).
           </p>
 
@@ -331,7 +331,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <span class="hero-pill pill-emot">Emocional: Dia ${bio.emotional.value} (${bio.emotional.phase})</span>
             <span class="hero-pill pill-intel">Intelectual: Dia ${bio.intellectual.value} (${bio.intellectual.phase})</span>
             <span class="hero-pill pill-annual">Ano Pessoal: ${anual.current.name}</span>
-            <span class="hero-pill" style="background: rgba(255,255,255,0.08); color: #fff;">${lua.icon} ${lua.phaseName}</span>
+            <span class="hero-pill pill-lunar">${lua.icon} ${lua.phaseName}</span>
           </div>
         </div>
 

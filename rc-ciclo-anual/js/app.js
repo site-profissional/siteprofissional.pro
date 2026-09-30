@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const inputName = document.getElementById('user-name');
   const inputBirthDate = document.getElementById('birth-date');
   const inputRefDate = document.getElementById('ref-date');
-  const btnPrint = document.getElementById('btn-print-report');
   const btnReset = document.getElementById('btn-reset-form');
 
   // Relógio Diário ao Vivo
@@ -25,14 +24,75 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Painéis de Conteúdo
   const resultsContainer = document.getElementById('results-section');
-  const tabButtons = document.querySelectorAll('.tab-btn');
-  const tabPanels = document.querySelectorAll('.tab-content');
 
   // Estado Atual do Usuário
   let currentReport = null;
 
   // =======================================================================================
-  // 1. INICIALIZAÇÃO DE DATAS E RECUPERAÇÃO DE DADOS SALVOS
+  // 1. MÁSCARA AUTOMÁTICA E FACILITADORA PARA DATA DE NASCIMENTO (MOBILE FRIENDLY)
+  // Aceita apenas números. Se o usuário digitar 10092001, entende 10/09/2001.
+  // =======================================================================================
+
+  if (inputBirthDate) {
+    // Formatação em tempo real conforme a digitação
+    inputBirthDate.addEventListener('input', function () {
+      // Extrai apenas dígitos
+      let digits = this.value.replace(/\D/g, '');
+      if (digits.length > 8) {
+        digits = digits.slice(0, 8);
+      }
+
+      // Aplica a máscara DD/MM/AAAA
+      let formatted = '';
+      if (digits.length > 4) {
+        formatted = digits.slice(0, 2) + '/' + digits.slice(2, 4) + '/' + digits.slice(4);
+      } else if (digits.length > 2) {
+        formatted = digits.slice(0, 2) + '/' + digits.slice(2);
+      } else {
+        formatted = digits;
+      }
+
+      this.value = formatted;
+    });
+
+    // Impede a entrada de qualquer caractere não numérico no teclado físico
+    inputBirthDate.addEventListener('keydown', function (e) {
+      const allowedKeys = ['Backspace', 'Delete', 'Tab', 'ArrowLeft', 'ArrowRight', 'Enter', 'Home', 'End'];
+      if (allowedKeys.includes(e.key) || e.ctrlKey || e.metaKey) {
+        return;
+      }
+      if (!/^[0-9]$/.test(e.key)) {
+        e.preventDefault();
+      }
+    });
+  }
+
+  /**
+   * Converte e valida a entrada de data (DD/MM/AAAA ou 8 dígitos contínuos) em um objeto Date
+   */
+  function parseBirthDateInput(val) {
+    if (!val) return null;
+    const clean = val.replace(/\D/g, '');
+    if (clean.length !== 8) return null;
+
+    const day = parseInt(clean.slice(0, 2), 10);
+    const month = parseInt(clean.slice(2, 4), 10);
+    const year = parseInt(clean.slice(4, 8), 10);
+
+    if (month < 1 || month > 12) return null;
+    if (day < 1 || day > 31) return null;
+    if (year < 1850 || year > 2100) return null;
+
+    const dateObj = new Date(year, month - 1, day, 12, 0, 0);
+    if (dateObj.getFullYear() !== year || dateObj.getMonth() !== (month - 1) || dateObj.getDate() !== day) {
+      return null;
+    }
+
+    return { day, month, year, dateObj };
+  }
+
+  // =======================================================================================
+  // 2. INICIALIZAÇÃO DE DATAS E RECUPERAÇÃO DE DADOS SALVOS
   // =======================================================================================
 
   // Configura a data de referência padrão para a data de hoje (formato YYYY-MM-DD)
@@ -47,11 +107,19 @@ document.addEventListener('DOMContentLoaded', function () {
     const savedName = localStorage.getItem('rciclos_user_name');
     const savedBirth = localStorage.getItem('rciclos_user_birth');
 
-    if (savedName) inputName.value = savedName;
-    if (savedBirth) inputBirthDate.value = savedBirth;
+    if (savedName && inputName) inputName.value = savedName;
+    if (savedBirth && inputBirthDate) {
+      // Converte se estiver no formato antigo YYYY-MM-DD
+      if (/^\d{4}-\d{2}-\d{2}$/.test(savedBirth)) {
+        const [y, m, d] = savedBirth.split('-');
+        inputBirthDate.value = `${d}/${m}/${y}`;
+      } else {
+        inputBirthDate.value = savedBirth;
+      }
+    }
 
-    // Se já temos nome e data de nascimento salvos, calcula automaticamente
-    if (savedBirth) {
+    // Se já temos nome e data de nascimento válidos salvos, calcula automaticamente
+    if (inputBirthDate && parseBirthDateInput(inputBirthDate.value)) {
       calculateAndRender();
     }
   } catch (err) {
@@ -59,54 +127,18 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // =======================================================================================
-  // 2. GERENCIAMENTO DE ABAS E NAVEGAÇÃO
+  // 3. EVENTOS DOS BOTÕES DE IMPRESSÃO / SALVAR EM PDF (GRANDES E CENTRALIZADOS)
   // =======================================================================================
 
-  tabButtons.forEach(btn => {
-    btn.addEventListener('click', function () {
-      const targetId = this.getAttribute('data-tab');
-
-      // Atualiza botões
-      tabButtons.forEach(b => b.classList.remove('active'));
-      this.classList.add('active');
-
-      // Atualiza painéis
-      tabPanels.forEach(panel => {
-        panel.classList.remove('active');
-        if (panel.id === targetId) {
-          panel.classList.add('active');
-        }
+  function setupPrintButtons() {
+    const printButtons = document.querySelectorAll('.btn-print-dossier, #btn-print-report');
+    printButtons.forEach(btn => {
+      btn.addEventListener('click', function () {
+        window.print();
       });
     });
-  });
-
-  // =======================================================================================
-  // 3. RELÓGIO CÓSMICO DIÁRIO EM TEMPO REAL (Opcional se presente no DOM)
-  // =======================================================================================
-
-  function updateLiveCosmicClock() {
-    if (!liveClockEl) return;
-    const now = new Date();
-    const timeStr = now.toLocaleTimeString('pt-BR', { hour12: false });
-    const dateStr = now.toLocaleDateString('pt-BR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
-
-    liveClockEl.textContent = timeStr;
-    if (liveDateEl) liveDateEl.textContent = dateStr.charAt(0).toUpperCase() + dateStr.slice(1);
-
-    // Consulta o motor dos ciclos para o período do dia corrente
-    const dailyInfo = CyclesEngine.calculateDailyCycle(now);
-    const activeSlot = dailyInfo.currentPeriod;
-
-    if (liveLetterEl) liveLetterEl.textContent = activeSlot.letter;
-    if (liveTitleEl) liveTitleEl.textContent = `${activeSlot.timeRange} — Letra [ ${activeSlot.letter} ]: ${activeSlot.title}`;
-    if (liveDescEl) liveDescEl.textContent = activeSlot.description;
   }
-
-  // Inicia e mantém o relógio apenas se ele estiver presente na página
-  if (liveClockEl) {
-    updateLiveCosmicClock();
-    setInterval(updateLiveCosmicClock, 1000);
-  }
+  setupPrintButtons();
 
   // =======================================================================================
   // 4. SUBMISSÃO DO FORMULÁRIO E PROCESSAMENTO DOS CICLOS
@@ -128,23 +160,18 @@ document.addEventListener('DOMContentLoaded', function () {
     resultsContainer.style.display = 'none';
   });
 
-  btnPrint.addEventListener('click', function () {
-    window.print();
-  });
-
   function calculateAndRender() {
     const name = inputName.value.trim() || 'Buscador da Luz';
-    const birthVal = inputBirthDate.value;
+    const birthVal = inputBirthDate.value.trim();
 
-    if (!birthVal) {
-      alert('Por favor, informe a Data de Nascimento para calcular os Ciclos.');
+    const parsedBirth = parseBirthDateInput(birthVal);
+    if (!parsedBirth) {
+      alert('Por favor, informe uma Data de Nascimento válida no formato DD/MM/AAAA (ex: 10/09/1980 ou 10091980).');
       inputBirthDate.focus();
       return;
     }
 
-    // Criação dos objetos Date com compensação de fuso para dia/mês/ano local
-    const [bYear, bMonth, bDay] = birthVal.split('-').map(Number);
-    const birthDate = new Date(bYear, bMonth - 1, bDay, 12, 0, 0);
+    const birthDate = parsedBirth.dateObj;
 
     // Data de referência: dinamicamente hoje para frente
     let refDate;
@@ -159,7 +186,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Salva preferências no navegador
     try {
       localStorage.setItem('rciclos_user_name', name);
-      localStorage.setItem('rciclos_user_birth', birthVal);
+      localStorage.setItem('rciclos_user_birth', inputBirthDate.value);
     } catch (e) {}
 
     // Geração do relatório consolidado através do CyclesEngine (baseado no aniversário pessoal)
@@ -167,7 +194,7 @@ document.addEventListener('DOMContentLoaded', function () {
       referenceDate: refDate
     });
 
-    // Renderização dos blocos visuais na página
+    // Renderização dos blocos visuais na página em fluxo contínuo
     renderHeroCard(currentReport);
     renderPersonalYearlyCycle(currentReport);
     renderBusinessCycle(currentReport);

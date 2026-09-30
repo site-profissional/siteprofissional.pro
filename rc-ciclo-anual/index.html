@@ -116,6 +116,30 @@
               "@type": "Answer",
               "text": "Não. Harvey Spencer Lewis enfatiza categoricamente na obra que este sistema não se fundamenta na astrologia convencional. Trata-se de um sistema rítmico, harmônico e matemático baseado em ciclos universais e biorritmos naturais de oitavas e frequências."
             }
+          },
+          {
+            "@type": "Question",
+            "name": "Meus dados ficam salvos em algum banco de dados?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Não. O sistema não armazena dados pessoais de ninguém em servidores ou bancos de dados. É um sistema totalmente estático e seguro executado diretamente no navegador do usuário, onde o cálculo e o resultado saem na hora."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Esse mapa tem algum custo?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Não, este mapa não tem nenhum custo. Todo o projeto deste sistema foi feito para gerar valor e auxiliar rosacruzes e buscadores da luz maior a terem seus mapas dos ciclos da vida com a técnica ensinada pelo querido Harvey Spencer Lewis."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Onde encontrar o livro que gerou esse sistema?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "O livro físico 'Autodomínio e Destino com os Ciclos da Vida' pode ser adquirido no site da AMORC brasileira (https://www.ordemrosacruz.org.br/br/autodominio-e-o-destino-com-os-ciclos-da-vida-harvey-spencer-lewis) ou o PDF gratuito em inglês no site da AMORC americana (https://www.rosicrucian.org/rosicrucian-books-self-mastery-and-fate-with-the-cycles-of-life)."
+            }
           }
         ]
       }
@@ -195,14 +219,14 @@
         <div class="form-grid">
           <!-- Nome do Usuário -->
           <div class="form-group">
-            <label for="user-name" data-i18n="form_name_label">Nome Completo</label>
-            <input type="text" id="user-name" class="form-control" placeholder="Ex: Nomelindo dos Santos" data-i18n-placeholder="form_name_placeholder" required>
+            <label for="user-name" data-i18n="form_name_label">Nome</label>
+            <input type="text" id="user-name" class="form-control" placeholder="Seu Nome Aqui" data-i18n-placeholder="form_name_placeholder" required>
           </div>
 
-          <!-- Data de Nascimento -->
+          <!-- Data de Nascimento Facilitada para Mobile e Digitação -->
           <div class="form-group">
             <label for="birth-date" data-i18n="form_birth_label">Data de Nascimento (Obrigatória)</label>
-            <input type="date" id="birth-date" class="form-control" required>
+            <input type="text" id="birth-date" class="form-control" placeholder="DD/MM/AAAA (ex: 10/09/1980)" inputmode="numeric" maxlength="10" autocomplete="bday" required>
           </div>
         </div>
 
@@ -221,52 +245,49 @@
       <!-- Bloco de Destaque: Momento Presente -->
       <div id="hero-card-container"></div>
 
-      <!-- Barra de Navegação de Abas -->
-      <nav class="tabs-navigation view-mode-tabs no-print" aria-label="Navegação dos Ciclos">
-        <button class="tab-btn active" data-tab="tab-personal" data-i18n="tab_personal">🌟 1. Ano Pessoal (52 Dias)</button>
-        <button class="tab-btn" data-tab="tab-business" data-i18n="tab_business">💼 2. Negócios e Finanças</button>
-        <button class="tab-btn" data-tab="tab-health" data-i18n="tab_health">🌿 3. Saúde e Biorritmo</button>
-        <button class="tab-btn" data-tab="tab-soul" data-i18n="tab_soul">✨ 4. Ciclo da Alma (Tabela F)</button>
-        <button class="tab-btn" data-tab="tab-septennial" data-i18n="tab_septennial">🏛 5. Grandes Septênios (7 Anos)</button>
-        <button class="tab-btn" data-tab="tab-report" data-i18n="tab_report">📄 6. Relatório de Impressão</button>
-      </nav>
-
-      <!-- Botão de Ação Rápida de Impressão -->
-      <div class="no-print" style="display: flex; justify-content: flex-end; margin-bottom: 24px;">
-        <button type="button" id="btn-print-report" class="btn-action" data-i18n="btn_print">
+      <!-- Botão Centralizado e Grande de Impressão / Salvar em PDF (Logo abaixo dos 4 quadros) -->
+      <div class="print-action-center no-print">
+        <button type="button" class="btn-action btn-print-dossier btn-print-large" data-i18n="btn_print">
           🖨 Imprimir / Salvar em PDF
         </button>
       </div>
 
-      <!-- Aba 1: Ciclo Anual da Vida Pessoal (Ciclo Nº 2 - 52 Dias) -->
-      <section id="tab-personal" class="tab-content active">
+      <!-- Seção 1: Ciclo Anual da Vida Pessoal (Ciclo Nº 2 - 52 Dias) -->
+      <section id="tab-personal" class="cycle-section-block">
         <div id="personal-timeline-container"></div>
       </section>
 
-      <!-- Aba 2: Ciclo dos Negócios e Empreendimentos (Ciclo Nº 3) -->
-      <section id="tab-business" class="tab-content">
+      <!-- Seção 2: Ciclo dos Negócios e Empreendimentos (Ciclo Nº 3) -->
+      <section id="tab-business" class="cycle-section-block">
         <div id="business-timeline-container"></div>
       </section>
 
-      <!-- Aba 3: Ciclo da Saúde e Vitalidade (Ciclo Nº 4 e Cap. 10) -->
-      <section id="tab-health" class="tab-content">
+      <!-- Seção 3: Ciclo da Saúde e Vitalidade (Ciclo Nº 4 e Cap. 10) -->
+      <section id="tab-health" class="cycle-section-block">
         <div id="health-timeline-container"></div>
       </section>
 
-      <!-- Aba 4: O Ciclo da Alma (Capítulo 14, 15, 16 - Tabela F) -->
-      <section id="tab-soul" class="tab-content">
+      <!-- Seção 4: O Ciclo da Alma (Capítulo 14, 15, 16 - Tabela F) -->
+      <section id="tab-soul" class="cycle-section-block">
         <div id="soul-cycle-container"></div>
       </section>
 
-      <!-- Aba 6: Grandes Ciclos de 7 Anos & Reencarnação de 144 Anos -->
-      <section id="tab-septennial" class="tab-content">
+      <!-- Seção 5: Grandes Ciclos de 7 Anos & Reencarnação de 144 Anos -->
+      <section id="tab-septennial" class="cycle-section-block">
         <div id="septennial-container"></div>
       </section>
 
-      <!-- Aba 7: Relatório Completo para Impressão -->
-      <section id="tab-report" class="tab-content">
+      <!-- Botão Centralizado e Grande de Impressão / Salvar em PDF (Fim das informações do ciclo anual) -->
+      <div class="print-action-center print-action-bottom no-print">
+        <button type="button" class="btn-action btn-print-dossier btn-print-large" data-i18n="btn_print">
+          🖨 Imprimir / Salvar em PDF
+        </button>
+      </div>
+
+      <!-- Container do Relatório de Impressão (Mantido internamente para compatibilidade de rotinas) -->
+      <div id="tab-report" style="display: none;">
         <div id="printable-report-container"></div>
-      </section>
+      </div>
 
     </main>
 
@@ -304,6 +325,21 @@
         <details class="geo-faq-item">
           <summary data-i18n="faq_q5">Os ciclos ensinados por Harvey Spencer Lewis têm relação com astrologia?</summary>
           <p data-i18n="faq_a5">Não. Harvey Spencer Lewis enfatiza categoricamente na obra que este sistema não se fundamenta na astrologia convencional nem em mapas astrais. Trata-se de um sistema rítmico, harmônico e matemático baseado em ciclos universais e solares naturais de oitavas e frequências, análogo aos biorritmos e às leis de periodicidade que regem o universo físico e psíquico.</p>
+        </details>
+
+        <details class="geo-faq-item">
+          <summary data-i18n="faq_q6">Meus dados ficam salvos em algum banco de dados?</summary>
+          <p data-i18n="faq_a6">Não. O sistema não armazena dados pessoais de ninguém em nenhum banco de dados ou servidor. É um sistema 100% estático que executa o cálculo diretamente no seu navegador, gerando o resultado na hora com total privacidade e segurança.</p>
+        </details>
+
+        <details class="geo-faq-item">
+          <summary data-i18n="faq_q7">Esse mapa tem algum custo?</summary>
+          <p data-i18n="faq_a7">Não, o cálculo e o relatório não têm custo algum. Todo o projeto deste sistema foi feito para gerar valor e auxiliar rosacruzes e buscadores da luz maior a terem seus mapas dos ciclos da vida calculados com a técnica tradicional ensinada pelo querido Harvey Spencer Lewis.</p>
+        </details>
+
+        <details class="geo-faq-item">
+          <summary data-i18n="faq_q8">Onde encontrar o livro que gerou esse sistema?</summary>
+          <p data-i18n="faq_a8">O livro físico em português ("Autodomínio e Destino com os Ciclos da Vida") pode ser adquirido diretamente no site da AMORC brasileira (<a href="https://www.ordemrosacruz.org.br/br/autodominio-e-o-destino-com-os-ciclos-da-vida-harvey-spencer-lewis" target="_blank" rel="noopener noreferrer">https://www.ordemrosacruz.org.br/br/autodominio-e-o-destino-com-os-ciclos-da-vida-harvey-spencer-lewis</a>). Já a versão clássica em inglês ("Self-Mastery and Fate with the Cycles of Life") pode ser baixada gratuitamente em PDF no site oficial da AMORC americana, através do link disponível no rodapé deste site (<a href="https://www.rosicrucian.org/rosicrucian-books-self-mastery-and-fate-with-the-cycles-of-life" target="_blank" rel="noopener noreferrer">https://www.rosicrucian.org/rosicrucian-books-self-mastery-and-fate-with-the-cycles-of-life</a>).</p>
         </details>
       </div>
     </section>

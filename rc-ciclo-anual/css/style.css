@@ -512,6 +512,77 @@ body {
   display: block;
 }
 
+/* ==========================================================================
+   FLUXO CONTÍNUO DOS CICLOS (VISUALIZAÇÃO POR EXTENSO PARA BAIXO)
+   Ideal para leitura linear e acessibilidade de membros idosos
+   ========================================================================== */
+.cycle-section-block {
+  display: block;
+  margin-bottom: 52px;
+  animation: fadeIn 0.4s ease;
+}
+
+/* Contêiner dos Botões de Ação de Impressão Centralizados */
+.print-action-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 36px auto;
+  text-align: center;
+}
+
+.print-action-bottom {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-top: 30px;
+  border-top: 1px solid var(--border-gold);
+}
+
+/* Botão Centralizado, Amplo e em Alto Destaque para Impressão e PDF */
+.btn-print-large {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 18px 46px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-family: var(--font-display);
+  letter-spacing: 0.5px;
+  color: #0a0e17;
+  background: linear-gradient(135deg, #fde68a 0%, #d4af37 55%, #b45309 100%);
+  border: 2px solid #fef08a;
+  border-radius: var(--radius-full);
+  box-shadow: 0 8px 28px rgba(212, 175, 55, 0.4), 0 2px 6px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  min-width: 340px;
+  max-width: 100%;
+  text-decoration: none;
+}
+
+.btn-print-large:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 36px rgba(212, 175, 55, 0.6), 0 4px 12px rgba(0, 0, 0, 0.6);
+  background: linear-gradient(135deg, #ffffff 0%, #fcd34d 40%, #d4af37 100%);
+  color: #050811;
+  border-color: #ffffff;
+}
+
+.btn-print-large:active {
+  transform: translateY(-1px) scale(0.99);
+}
+
+@media (max-width: 768px) {
+  .btn-print-large {
+    min-width: 100%;
+    width: 100%;
+    font-size: 1.12rem;
+    padding: 16px 20px;
+  }
+}
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(6px); }
   to { opacity: 1; transform: translateY(0); }
@@ -1144,6 +1215,9 @@ body {
   .geo-faq-section,
   .no-print,
   #btn-print-report,
+  .btn-print-dossier,
+  .btn-print-large,
+  .print-action-center,
   #tab-report {
     display: none !important;
   }
@@ -1166,7 +1240,8 @@ body {
   }
 
   /* Exibe todas as seções do dossiê com opacidade total (remove o fadeIn que causava invisibilidade) */
-  .tab-content {
+  .tab-content,
+  .cycle-section-block {
     display: block !important;
     opacity: 1 !important;
     visibility: visible !important;

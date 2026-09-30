@@ -25,13 +25,13 @@
       // Formulário
       'form_title': '⚖ Inserir Dados para Geração do Relatório Pessoal',
       'form_subtitle': 'Informe o nome e a data de nascimento para calcular todas as oitavas rítmicas ensinadas na obra.',
-      'form_name_label': 'Nome Completo',
-      'form_name_placeholder': 'Ex: Nomelindo dos Santos',
+      'form_name_label': 'Nome',
+      'form_name_placeholder': 'Seu Nome Aqui',
       'form_birth_label': 'Data de Nascimento (Obrigatória)',
       'form_btn_reset': 'Limpar Dados',
       'form_btn_submit': 'Calcular Meus Ciclos da Vida ➔',
 
-      // Abas de Navegação dos Resultados
+      // Abas e Botão de Impressão dos Resultados
       'tab_personal': '🌟 1. Ano Pessoal (52 Dias)',
       'tab_business': '💼 2. Negócios e Finanças',
       'tab_health': '🌿 3. Saúde e Biorritmo',
@@ -54,6 +54,12 @@
       'faq_a4': 'Enquanto os Ciclos do Ano (períodos de 52 dias) norteiam grandes projetos, investimentos, cirurgias e planos de médio a longo prazo a partir do aniversário natalício, os Ciclos Diários dividem o dia de 24 horas em 7 períodos exatos de 3 horas, 25 minutos e 43 segundos para orientar decisões cotidianas imediatas, tais como contatos com autoridades, assinaturas, concentração e repouso.',
       'faq_q5': 'Os ciclos ensinados por Harvey Spencer Lewis têm relação com astrologia?',
       'faq_a5': 'Não. Harvey Spencer Lewis enfatiza categoricamente na obra que este sistema não se fundamenta na astrologia convencional nem em mapas astrais. Trata-se de um sistema rítmico, harmônico e matemático baseado em ciclos universais e solares naturais de oitavas e frequências, análogo aos biorritmos e às leis de periodicidade que regem o universo físico e psíquico.',
+      'faq_q6': 'Meus dados ficam salvos em algum banco de dados?',
+      'faq_a6': 'Não. O sistema não armazena dados pessoais de ninguém em nenhum banco de dados ou servidor. É um sistema 100% estático que executa o cálculo diretamente no seu navegador, gerando o resultado na hora com total privacidade e segurança.',
+      'faq_q7': 'Esse mapa tem algum custo?',
+      'faq_a7': 'Não, o cálculo e o relatório não têm custo algum. Todo o projeto deste sistema foi feito para gerar valor e auxiliar rosacruzes e buscadores da luz maior a terem seus mapas dos ciclos da vida calculados com a técnica tradicional ensinada pelo querido Harvey Spencer Lewis.',
+      'faq_q8': 'Onde encontrar o livro que gerou esse sistema?',
+      'faq_a8': 'O livro físico em português ("Autodomínio e Destino com os Ciclos da Vida") pode ser adquirido diretamente no site da AMORC brasileira (<a href="https://www.ordemrosacruz.org.br/br/autodominio-e-o-destino-com-os-ciclos-da-vida-harvey-spencer-lewis" target="_blank" rel="noopener noreferrer">Ordem Rosacruz AMORC Brasil</a>). Já a versão clássica em inglês ("Self-Mastery and Fate with the Cycles of Life") pode ser baixada gratuitamente em PDF no site oficial da AMORC americana, através do link disponível no rodapé deste site (<a href="https://www.rosicrucian.org/rosicrucian-books-self-mastery-and-fate-with-the-cycles-of-life" target="_blank" rel="noopener noreferrer">Rosicrucian Order AMORC</a>).',
 
       // Rodapé
       'footer_quote': '"Aquele que escolhe com retidão e trabalha em harmonia com a lei torna-se o senhor de seu destino; enquanto aquele que falha em escolher com retidão e opera fora da harmonia com a lei é escravo do fado e vítima de um destino criado inconscientemente."',
@@ -77,13 +83,13 @@
       // Form
       'form_title': '⚖ Enter Data for Personal Report Generation',
       'form_subtitle': 'Provide your full name and date of birth to calculate all rhythmic octaves taught in the book.',
-      'form_name_label': 'Full Name',
-      'form_name_placeholder': 'Ex: John Doe',
+      'form_name_label': 'Name',
+      'form_name_placeholder': 'Your Name Here',
       'form_birth_label': 'Date of Birth (Required)',
       'form_btn_reset': 'Clear Data',
       'form_btn_submit': 'Calculate My Life Cycles ➔',
 
-      // Tabs
+      // Tabs and Print Button
       'tab_personal': '🌟 1. Personal Year (52 Days)',
       'tab_business': '💼 2. Business & Finances',
       'tab_health': '🌿 3. Health & Biorhythm',
@@ -106,6 +112,12 @@
       'faq_a4': 'While Annual Cycles (52-day periods) govern major endeavors, financial investments, surgical procedures, and long-range planning from birthday to birthday, the Daily Cycles divide each 24-hour day into seven exact periods of 3 hours, 25 minutes, and 43 seconds to assist with routine decisions such as dealing with officials, signing documents, mental focus, and rest.',
       'faq_q5': 'Do the cycles of Harvey Spencer Lewis rely on astrology?',
       'faq_a5': 'No. Harvey Spencer Lewis explicitly clarifies in the book that this cosmic system is entirely independent of traditional astrology and horoscopes. It is based upon universal harmonic octaves, mathematical periodicity, and natural biorhythms governing the physical and mental constitution of human beings.',
+      'faq_q6': 'Are my personal details saved in any database?',
+      'faq_a6': 'No. The system does not store any personal data in external servers or databases. It is a fully static and secure client-side application executed directly within your device browser, generating results instantly in real time.',
+      'faq_q7': 'Does this life cycles map have any cost?',
+      'faq_a7': 'No, this map is entirely free of charge. This system was designed to provide value and assist Rosicrucian students and sincere seekers of greater light in accessing their personal cycles of life based on the classical teachings of Dr. Harvey Spencer Lewis.',
+      'faq_q8': 'Where can I find the book that originated this system?',
+      'faq_a8': 'The physical book in Portuguese can be purchased from the Brazilian Grand Lodge (<a href="https://www.ordemrosacruz.org.br/br/autodominio-e-o-destino-com-os-ciclos-da-vida-harvey-spencer-lewis" target="_blank" rel="noopener noreferrer">AMORC Brasil</a>). The original English edition in free PDF format is publicly provided by the English Grand Lodge of AMORC (<a href="https://www.rosicrucian.org/rosicrucian-books-self-mastery-and-fate-with-the-cycles-of-life" target="_blank" rel="noopener noreferrer">Rosicrucian Order AMORC</a>), with direct link also provided in the footer of this site.',
 
       // Footer
       'footer_quote': '"Aquele que escolhe com retidão e trabalha em harmonia com a lei torna-se o senhor de seu destino; enquanto aquele que falha em escolher com retidão e opera fora da harmonia com a lei é escravo do fado e vítima de um destino criado inconscientemente."',

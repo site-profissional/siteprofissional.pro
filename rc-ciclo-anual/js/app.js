@@ -522,7 +522,7 @@ document.addEventListener('DOMContentLoaded', function () {
             RELATÓRIO DOS CICLOS DA VIDA
           </h2>
           <p style="font-size: 0.9rem; color: var(--text-secondary);">
-            Baseado fielmente na obra clássica de <em>Harvey Spencer Lewis, F.R.C., Ph.D.</em> — AMORC
+            Baseado na obra clássica de <em>Harvey Spencer Lewis, F.R.C., Ph.D.</em> (Estudo Independente • Obra de 1929)
           </p>
         </div>
 
@@ -573,6 +573,11 @@ document.addEventListener('DOMContentLoaded', function () {
         <p style="margin-bottom: 14px; line-height: 1.6;">${pCycle.activePeriod.business.description}</p>
         <p style="margin-bottom: 8px;"><strong>Saúde e Vitalidade (Ciclo 4):</strong> ${pCycle.activePeriod.health.name} — Alerta: ${pCycle.activePeriod.health.warning}</p>
         <p style="margin-bottom: 16px; line-height: 1.6;">${pCycle.activePeriod.health.recommendation}</p>
+
+        <!-- Aviso Legal e Isenção de Responsabilidade no Relatório Impresso -->
+        <div style="margin-top: 35px; padding: 14px 18px; border-top: 1px solid var(--border-subtle); background: rgba(0, 0, 0, 0.2); border-radius: 6px; font-size: 0.76rem; color: var(--text-secondary); line-height: 1.5; text-align: justify;">
+          <strong style="color: var(--gold-light);">⚖ Aviso Legal & Isenção de Responsabilidade:</strong> Este relatório constitui um estudo pessoal e acadêmico independente fundamentado na obra histórica "Self-Mastery and Fate with the Cycles of Life" (1929) de Harvey Spencer Lewis. Não possui natureza oficial, chancela ou filiação institucional com a Ordem Rosacruz AMORC, GLP ou Suprema Grande Loja. As diretrizes aqui dispostas possuem finalidade exclusivamente reflexiva e educativa, não configurando e não substituindo diagnósticos, prescrições ou tratamentos médicos, nem consultoria financeira, jurídica ou de investimentos.
+        </div>
       </div>
     `;
   }

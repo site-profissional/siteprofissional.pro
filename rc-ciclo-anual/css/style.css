@@ -1111,6 +1111,18 @@ body {
   line-height: 1.65;
 }
 
+.geo-faq-item a {
+  color: var(--gold-light);
+  word-break: break-all;
+  overflow-wrap: anywhere;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.geo-faq-item a:hover {
+  color: #ffffff;
+}
+
 /* ==========================================================================
    10. RODAPÉ INSTITUCIONAL (PADRONIZADO COM O CICLO DIÁRIO E REGRA MANDATÓRIA)
    ========================================================================== */
@@ -1158,6 +1170,73 @@ body {
 
 .footer-rosicrucian-link:hover {
   color: #ffffff;
+}
+
+/* Termo de Isenção e Aviso Legal Discreto (Estudo Independente) */
+.footer-legal-container {
+  max-width: 820px;
+  margin: 15px auto 20px;
+  text-align: left;
+}
+
+.footer-legal-details {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-sm);
+  background: rgba(15, 23, 42, 0.4);
+  transition: all 0.2s ease;
+}
+
+.footer-legal-details[open] {
+  border-color: rgba(212, 175, 55, 0.25);
+  background: rgba(15, 23, 42, 0.85);
+}
+
+.footer-legal-summary {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  cursor: pointer;
+  padding: 10px 16px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+  user-select: none;
+}
+
+.footer-legal-summary::-webkit-details-marker {
+  display: none;
+}
+
+.footer-legal-summary:hover {
+  color: var(--gold-light);
+}
+
+.footer-legal-content {
+  padding: 16px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 0.78rem;
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+.footer-legal-content h4 {
+  color: var(--gold-light);
+  font-size: 0.85rem;
+  margin: 12px 0 4px;
+  font-family: var(--font-sans);
+  font-weight: 600;
+}
+
+.footer-legal-content h4:first-child {
+  margin-top: 0;
+}
+
+.footer-legal-content p {
+  margin-bottom: 8px;
 }
 
 .footer-signature, .developer-credit {

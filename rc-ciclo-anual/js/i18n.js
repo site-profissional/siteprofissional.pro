@@ -49,14 +49,14 @@
       'hero_consultation': 'Consulta',
       'hero_tuning_active': 'Sintonia Cósmica Ativa',
       'hero_personal_cycle_label': 'Ciclo Pessoal Atual (52 Dias)',
-      'hero_period_label': '{num}º Período',
+      'hero_period_label': '{num} Período',
       'hero_progress_day': 'Dia {elapsed} de {total}',
       'hero_progress_left': 'Faltam {remaining} dias',
       'hero_septennial_label': 'Grande Ciclo da Vida (Septênio)',
-      'hero_septennial_val': '{num}º Ciclo de 7 Anos ({range})',
+      'hero_septennial_val': '{num} Ciclo de 7 Anos ({range})',
       'hero_septennial_year': '{year}º ano do septênio: <em>{title}</em>',
       'hero_soul_label': 'Ciclo da Alma (Missão Solar)',
-      'hero_soul_val': '{num}º Período da Alma ({polarity})',
+      'hero_soul_val': '{num} Período da Alma ({polarity})',
       'hero_health_label': 'Ciclo da Saúde e Vitalidade',
       'hero_health_alert': 'Alerta: {warning}',
 
@@ -304,10 +304,16 @@
     }
   };
 
+  // Estado em memória do idioma ativo
+  let activeLanguage = null;
+
   /**
-   * Obtém o idioma ativo, considerando query param (?lang=en ou ?lang=pt) e LocalStorage
+   * Obtém o idioma ativo, considerando estado em memória, query param (?lang=en ou ?lang=pt) e LocalStorage
    */
   function getCurrentLang() {
+    if (activeLanguage) {
+      return activeLanguage;
+    }
     try {
       // 1. Verifica parâmetro de URL
       if (typeof window !== 'undefined' && window.location && window.location.search) {
@@ -315,9 +321,11 @@
         const urlLang = params.get('lang');
         if (urlLang) {
           if (urlLang.toLowerCase().startsWith('en')) {
+            activeLanguage = 'en-US';
             return 'en-US';
           }
           if (urlLang.toLowerCase().startsWith('pt')) {
+            activeLanguage = 'pt-BR';
             return 'pt-BR';
           }
         }
@@ -326,9 +334,11 @@
       // 2. Verifica LocalStorage
       const saved = localStorage.getItem('rciclos_lang');
       if (saved && (saved === 'en-US' || saved === 'pt-BR')) {
+        activeLanguage = saved;
         return saved;
       }
     } catch (e) {}
+    activeLanguage = 'pt-BR';
     return 'pt-BR';
   }
 
@@ -337,6 +347,7 @@
    */
   function setLanguage(lang) {
     if (lang !== 'pt-BR' && lang !== 'en-US') lang = 'pt-BR';
+    activeLanguage = lang;
     try {
       localStorage.setItem('rciclos_lang', lang);
       // Atualiza URL de forma limpa sem recarregar a página
@@ -416,6 +427,12 @@
         text = text.replace(new RegExp('\\{' + k + '\\}', 'g'), replacements[k]);
       });
     }
+
+    // Higienização defensiva contra duplicações de símbolos ordinais (ex: "4ºº", "4°°", "4ªª")
+    if (typeof text === 'string') {
+      text = text.replace(/([0-9]+[º°ª])[º°ª]+/g, '$1');
+    }
+
     return text;
   }
 

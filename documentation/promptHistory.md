@@ -630,3 +630,38 @@ Analise o projeto existente primeiro e tome decisões baseadas nele.
 Não peça confirmação para alterações normais necessárias dentro desse escopo.
 Implemente, teste, revise, faça commit e push.
 ```
+
+
+### Prompt 2
+```text
+dentro da pasta programador tem as pastas com nome da cidade, vc nao tinha criado a de ourinhos, eu criei e coloquei o index la, atualiza no github e no sitemap, pode criar uma para bauru, assis, londrina, birigui, nesse mesmo padrao, um modelo simples replicavel que edita poucas coisas
+ai pode criar uma para cada capital do Brasil Rio Branco
+Maceió
+Macapá
+Manaus
+Salvador
+Fortaleza
+Brasília
+Vitória
+Goiânia
+São Luís
+Cuiabá
+Campo Grande
+Belo Horizonte
+Belém
+João Pessoa
+Curitiba
+Recife
+Teresina
+Rio de Janeiro
+Natal
+Porto Alegre
+Porto Velho
+Boa Vista
+Florianópolis
+São Paulo
+Aracaju
+Palmas
+
+dentro da pasta programador, ai dentro tem uma pasta para cada cidade...
+```

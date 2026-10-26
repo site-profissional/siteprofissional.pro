@@ -1,5 +1,8 @@
 .agents/
 .env
 ambiente-teste/
-
 .ag-kit-backups/
+
+# Arquivos legados mantidos apenas localmente
+index - old.html
+index - Copia gemini - Copia.html

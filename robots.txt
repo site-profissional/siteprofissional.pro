@@ -1,0 +1,12 @@
+# robots.txt para siteprofissional.pro
+# Permite indexação de conteúdo público e bloqueia ambientes de desenvolvimento/teste
+
+User-agent: *
+Allow: /
+
+# Ambientes de teste e protótipos em desenvolvimento
+Disallow: /dev/
+Disallow: /rc-ciclo-anual/ambiente-teste/
+
+# Sitemap Oficial
+Sitemap: https://siteprofissional.pro/sitemap.xml

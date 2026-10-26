@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Não Encontrada (404) | Site Profissional</title>
+    <meta name="description" content="A página que você está procurando não foi encontrada ou foi movida. Retorne para a página inicial do Site Profissional.">
+    <meta name="robots" content="noindex, follow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* Variáveis de estilo compartilhadas com a identidade visual do site */
+        :root {
+            --bg-body: #F8FAFC;
+            --bg-surface: #FFFFFF;
+            --text-primary: #0F172A;
+            --text-secondary: #475569;
+            --text-light: #94A3B8;
+            --primary: #2563EB;
+            --primary-dark: #1E40AF;
+            --cta-color: #16A34A;
+            --cta-hover: #15803D;
+            --border-color: #E2E8F0;
+            --container-width: 900px;
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-color);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            text-align: center;
+            text-decoration: none;
+            display: block;
+        }
+
+        .logo span { color: var(--primary); }
+
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+        }
+
+        .error-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 48px 32px;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+        }
+
+        .error-code {
+            font-size: clamp(3.5rem, 8vw, 6rem);
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1;
+            margin-bottom: 16px;
+            letter-spacing: -0.04em;
+        }
+
+        h1 {
+            font-size: clamp(1.5rem, 3.5vw, 2rem);
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+
+        p {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            margin-bottom: 32px;
+        }
+
+        .actions {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media(min-width: 500px) {
+            .actions {
+                flex-direction: row;
+            }
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 28px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.25s ease;
+            font-size: 1rem;
+            width: 100%;
+        }
+
+        @media(min-width: 500px) {
+            .btn { width: auto; }
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: #ffffff;
+            box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-outline:hover {
+            background-color: #F1F5F9;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            padding: 36px 0;
+            background: #ffffff;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho com logo do site -->
+    <header>
+        <div class="container">
+            <a href="/" class="logo" aria-label="Página Inicial do Site Profissional">
+                Site<span>Profissional</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal do erro 404 -->
+    <main>
+        <div class="error-card">
+            <div class="error-code">404</div>
+            <h1>Página não encontrada</h1>
+            <p>
+                O endereço que você tentou acessar não existe, foi alterado ou está temporariamente indisponível. Utilize as opções abaixo para navegar com segurança.
+            </p>
+            <div class="actions">
+                <a href="/" class="btn btn-primary">Voltar para o início</a>
+                <a href="/programador/" class="btn btn-outline">Criação de Sites em Ourinhos</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Rodapé com link obrigatório conforme padrão do projeto -->
+    <footer>
+        <div class="container">
+            <p style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 8px;">
+                © 2026 Site Profissional. Todos os direitos reservados.
+            </p>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">
+                SITE DESENVOLVIDO POR <a href="https://siteprofissional.pro" style="color: #2563EB; font-weight: 600; text-decoration: none;">SITEPROFISSIONAL.PRO</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

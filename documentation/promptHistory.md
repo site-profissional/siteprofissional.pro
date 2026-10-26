@@ -665,3 +665,52 @@ Palmas
 
 dentro da pasta programador, ai dentro tem uma pasta para cada cidade...
 ```
+
+
+### Prompt 3
+```text
+analisa o seo se os das cidades da pasta programador esta para ranquear nas cidades , tem q ter seo e geo bom para meu site ranquear no google
+```
+
+
+### Prompt 4
+```text
+me da a lista de links que ficou ai desse meu dominio siteprofissional.pro
+```
+
+
+### Prompt 5
+```text
+fazer correcoes nos sites de cidades
+
+correções
+
+eu abri uns e
+
+Destaque nas Buscas Locais
+Ao pesquisar termos como "criação de sites em Bauru", "advogado em Bauru" ou serviços locais, seu site estruturado aparece diretamente para quem tem intenção imediata de compra.
+
+isso ta sem sentido, não faz sentido falar de busca criação de sites em x cidade
+isso é bom pra mim não para o profissionao ou empresário q vai ler a pagina
+
+fala sobre destaque no google
+pesquisar sobre x empresa na cidade ou x serviço na cidade
+aparecer no google
+
+
+na aba
+Preparado para Mecanismos de IA
+Com dados estruturados Schema.org e semântica clara, assistentes como ChatGPT, Perplexity e Gemini conseguem ler e citar os dados da sua empresa em respostas locais em Bauru.
+fala que hoje as pessoas usam e buscam as coisas nas ia, gpt gemini, grok e outras, trabalhamos com tecnologias que farão as ia indicar sua empresa
+
+ajustar isso
+Autoridade Institucional
+Redes sociais mudam algoritmos com frequência. Ter um endereço oficial (.com.br) confere respaldo de mercado, transmitindo muito mais segurança para fechar contratos em Bauru.
+
+falar q toda empresa precisa de site
+
+aqui
+Velocidade em Redes Móveis
+Código leve desenvolvido em HTML e CSS limpos, sem ferramentas sobrecarregadas. Abre em menos de 1 segundo mesmo na internet 4G do celular.
+falar sobre html css e js, código puro com técnicas de engenharia de software e cibersegurança para carregar rápido e ser seguro sem plugins vulneráveis
+```
